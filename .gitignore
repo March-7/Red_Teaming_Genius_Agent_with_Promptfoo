@@ -1,8 +1,12 @@
 node_modules/
+.venv/
+__pycache__/
+.pytest_cache/
 .env
 .env.*
 !.env.example
 .promptfoo/
 promptfoo.db
 *.log
+logs/
 .DS_Store

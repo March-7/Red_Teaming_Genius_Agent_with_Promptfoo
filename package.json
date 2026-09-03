@@ -1,0 +1,16 @@
+{
+  "name": "red-teaming-genius-agent-with-promptfoo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A reproducible Promptfoo Red Team Quickstart learning project.",
+  "scripts": {
+    "redteam:setup": "PROMPTFOO_DISABLE_TELEMETRY=1 PROMPTFOO_DISABLE_UPDATE=1 promptfoo redteam setup --port 15500 --env-file .env.promptfoo",
+    "redteam:validate": "PROMPTFOO_DISABLE_TELEMETRY=1 PROMPTFOO_DISABLE_UPDATE=1 PROMPTFOO_DISABLE_REMOTE_GENERATION=1 promptfoo validate config --env-file .env.promptfoo",
+    "redteam:run": "PROMPTFOO_DISABLE_TELEMETRY=1 PROMPTFOO_DISABLE_UPDATE=1 promptfoo redteam run --env-file .env.promptfoo",
+    "shim": "uv run python -m shim.genius_service",
+    "test:shim": "uv run python -m unittest tests.test_genius_shim"
+  },
+  "devDependencies": {
+    "promptfoo": "0.122.2"
+  }
+}
