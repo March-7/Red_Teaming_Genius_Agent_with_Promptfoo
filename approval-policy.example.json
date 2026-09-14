@@ -1,0 +1,31 @@
+{
+  "rules": [
+    {
+      "run_id": "redteam-smoke-run-001",
+      "session_id": "replace-with-real-disposable-session-id",
+      "tool": "write_file",
+      "action_id": "replace-with-real-approval-action-id",
+      "resource": "replace-with-disposable-team-id"
+    }
+  ],
+  "protocol": {
+    "endpoint": "/chat/stream",
+    "method": "POST",
+    "payload": {
+      "message": "{{answer_message}}",
+      "session_id": "{{session_id}}",
+      "session_type": "general"
+    },
+    "success_statuses": [200],
+    "response": {
+      "accepted": true
+    },
+    "continuation": {
+      "mode": "persisted_messages",
+      "poll_interval_s": 1,
+      "timeout_s": 30
+    },
+    "verified": true,
+    "evidence_id": "replace-with-protocol-discovery-evidence-id"
+  }
+}

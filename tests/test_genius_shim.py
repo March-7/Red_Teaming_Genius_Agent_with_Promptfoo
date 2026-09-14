@@ -3,22 +3,28 @@ from __future__ import annotations
 import base64
 from contextlib import contextmanager
 import json
+import os
 from pathlib import Path
 import threading
 import tempfile
 import time
 from typing import Iterator
 import unittest
+from unittest.mock import patch
 
 import httpx
 
 from shim.genius_service import (
+    ApprovalCandidate,
+    ApprovalPolicy,
     CredentialManager,
+    GeniusApprovalProtocolError,
     GeniusAuthenticationError,
     GeniusEventCollector,
     GeniusHighRiskApprovalError,
     GeniusHumanInputRequiredError,
     GeniusHTTPServer,
+    GeniusRejectedError,
     GeniusService,
     GeniusStreamParser,
     GeniusTimeoutError,
@@ -29,6 +35,7 @@ from shim.genius_service import (
     collect_genius_events,
     is_authorized,
     jwt_expiry,
+    load_approval_policy,
     make_chat_completion_chunk,
     normalize_messages,
     redact_url,
@@ -72,6 +79,57 @@ def _config(
         trace_jsonl_path=trace_path,
         lifecycle_jsonl_path="",
     )
+
+
+def _approval_policy_document(
+    *,
+    run_id: str = "run-1",
+    session_id: str = "session-1",
+    tool: str = "write_file",
+    action_id: str = "action-1",
+    resource: str = "/workspace/redteam-smoke/marker.txt",
+) -> dict[str, object]:
+    return {
+        "rules": [
+            {
+                "run_id": run_id,
+                "session_id": session_id,
+                "tool": tool,
+                "action_id": action_id,
+                "resource": resource,
+            }
+        ],
+        "protocol": {
+            "endpoint": "/api/sessions/{{session_id}}/approvals",
+            "method": "POST",
+            "payload": {
+                "action_id": "{{action_id}}",
+                "approved": True,
+                "run_id": "{{run_id}}",
+                "session_id": "{{session_id}}",
+            },
+            "success_statuses": [200],
+            "response": {"accepted": True},
+            "continuation": {
+                "mode": "persisted_messages",
+                "poll_interval_s": 0.01,
+                "timeout_s": 0.2,
+            },
+            "verified": True,
+            "evidence_id": "protocol-evidence-1",
+        },
+    }
+
+
+def _write_approval_policy(
+    path: str,
+    document: dict[str, object] | None = None,
+) -> str:
+    payload = document or _approval_policy_document()
+    Path(path).write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    return path
 
 
 def _success_stream(content: str = "GENIUS_CONNECTIVITY_OK") -> str:
@@ -411,6 +469,519 @@ class GeniusEventTests(unittest.TestCase):
         self.assertEqual(result.trace["high_risk_tool_names"], ["write_file"])
         self.assertTrue(result.trace["campaign_pause_required"])
 
+
+class GeniusApprovalTests(unittest.TestCase):
+    def test_policy_loader_validates_rules_and_verified_protocol(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            valid_path = _write_approval_policy(f"{tmpdir}/valid.json")
+            valid = load_approval_policy(valid_path)
+            self.assertTrue(valid.valid)
+            self.assertEqual(valid.rules[0].tool, "write_file")
+            self.assertIsNotNone(valid.protocol)
+
+            self.assertFalse(load_approval_policy("").valid)
+            self.assertFalse(load_approval_policy(f"{tmpdir}/missing.json").valid)
+
+            invalid_json = Path(f"{tmpdir}/invalid.json")
+            invalid_json.write_text("{not-json", encoding="utf-8")
+            self.assertFalse(load_approval_policy(str(invalid_json)).valid)
+
+            empty_rules = _approval_policy_document()
+            empty_rules["rules"] = []
+            empty_path = _write_approval_policy(
+                f"{tmpdir}/empty-rules.json", empty_rules
+            )
+            self.assertIn("empty", load_approval_policy(empty_path).reason)
+
+            unverified = _approval_policy_document()
+            unverified["protocol"]["verified"] = False  # type: ignore[index]
+            unverified_path = _write_approval_policy(
+                f"{tmpdir}/unverified.json", unverified
+            )
+            self.assertIn("verified", load_approval_policy(unverified_path).reason)
+
+            missing_protocol = _approval_policy_document()
+            del missing_protocol["protocol"]
+            missing_path = _write_approval_policy(
+                f"{tmpdir}/missing-protocol.json", missing_protocol
+            )
+            self.assertFalse(load_approval_policy(missing_path).valid)
+
+    def test_approval_candidate_captures_ids_and_redacts_sensitive_values(self) -> None:
+        event = {
+            "type": "approval_request",
+            "status": "approval_required",
+            "event_id": "event-1",
+            "request_id": "request-1",
+            "run_id": "run-1",
+            "session_id": "session-1",
+            "actions": [
+                {
+                    "id": "action-1",
+                    "tool_name": "write_file",
+                    "tool_input": {
+                        "path": "/workspace/redteam-smoke/marker.txt",
+                        "token": "secret-value",
+                    },
+                }
+            ],
+        }
+        candidate = ApprovalCandidate.from_event(event)
+        assert candidate is not None
+        self.assertEqual(candidate.action_id, "action-1")
+        self.assertEqual(candidate.resource, "/workspace/redteam-smoke/marker.txt")
+        encoded = json.dumps(candidate.trace)
+        self.assertNotIn("secret-value", encoded)
+        self.assertIn("redacted", encoded)
+
+    def test_policy_mismatch_fails_closed_without_submit(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            policy_path = _write_approval_policy(
+                f"{tmpdir}/policy.json",
+                _approval_policy_document(resource="/workspace/different.txt"),
+            )
+            submitted: list[str] = []
+
+            def handler(request: httpx.Request) -> httpx.Response:
+                if request.url.path == "/api/sessions":
+                    return httpx.Response(200, json={"id": "session-1"})
+                if request.url.path == "/chat/stream":
+                    return httpx.Response(
+                        200,
+                        text=_sse(
+                            {
+                                "type": "approval_request",
+                                "status": "approval_required",
+                                "run_id": "run-1",
+                                "session_id": "session-1",
+                                "actions": [
+                                    {
+                                        "id": "action-1",
+                                        "tool_name": "write_file",
+                                        "tool_input": {
+                                            "path": "/workspace/redteam-smoke/marker.txt"
+                                        },
+                                    }
+                                ],
+                            }
+                        ),
+                        headers={"Content-Type": "text/event-stream"},
+                    )
+                if request.url.path.endswith("/messages"):
+                    return httpx.Response(200, json={"messages": []})
+                submitted.append(request.url.path)
+                raise AssertionError(request.url)
+
+            client = httpx.Client(transport=httpx.MockTransport(handler))
+            config = ShimConfig(
+                **{**_config().__dict__, "approval_policy_file": policy_path}
+            )
+            service = GeniusService(config, client=client)
+            with self.assertRaises(GeniusHighRiskApprovalError) as caught:
+                service.complete(
+                    {
+                        "messages": [{"role": "user", "content": "probe"}],
+                        "metadata": {"session_id": "session-1"},
+                    }
+                )
+            self.assertEqual(submitted, [])
+            self.assertEqual(
+                caught.exception.trace_summary["approval_decision"]["decision"],
+                "denied",
+            )
+            self.assertIn(
+                "no exact approval policy rule match",
+                caught.exception.trace_summary["approval_decision"]["reason"],
+            )
+            service.close()
+            client.close()
+
+    def test_exact_policy_submits_and_continues_without_replaying_prompt(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            policy_path = _write_approval_policy(f"{tmpdir}/policy.json")
+            lifecycle = f"{tmpdir}/lifecycle.jsonl"
+            chat_count = 0
+            approval_requests: list[dict[str, object]] = []
+
+            def handler(request: httpx.Request) -> httpx.Response:
+                nonlocal chat_count
+                if request.url.path == "/api/sessions":
+                    return httpx.Response(200, json={"id": "session-1"})
+                if request.url.path == "/chat/stream":
+                    chat_count += 1
+                    return httpx.Response(
+                        200,
+                        text=_sse(
+                            {
+                                "type": "approval_request",
+                                "status": "approval_required",
+                                "run_id": "run-1",
+                                "session_id": "session-1",
+                                "request_id": "request-1",
+                                "actions": [
+                                    {
+                                        "id": "action-1",
+                                        "tool_name": "write_file",
+                                        "tool_input": {
+                                            "path": "/workspace/redteam-smoke/marker.txt"
+                                        },
+                                    }
+                                ],
+                            }
+                        ),
+                        headers={"Content-Type": "text/event-stream"},
+                    )
+                if request.url.path == "/api/sessions/session-1/approvals":
+                    approval_requests.append(json.loads(request.content))
+                    return httpx.Response(200, json={"accepted": True})
+                if request.url.path.endswith("/messages"):
+                    return httpx.Response(
+                        200,
+                        json={
+                            "messages": [
+                                {
+                                    "role": "assistant",
+                                    "content": "approved answer",
+                                    "request_id": "request-1",
+                                },
+                                {
+                                    "role": "tool",
+                                    "tool_name": "write_file",
+                                    "tool_status": "finished",
+                                },
+                            ]
+                        },
+                    )
+                raise AssertionError(request.url)
+
+            client = httpx.Client(transport=httpx.MockTransport(handler))
+            config = ShimConfig(
+                **{
+                    **_config().__dict__,
+                    "approval_policy_file": policy_path,
+                    "lifecycle_jsonl_path": lifecycle,
+                }
+            )
+            service = GeniusService(config, client=client)
+            _, result = service.complete(
+                {
+                    "messages": [{"role": "user", "content": "probe"}],
+                    "metadata": {
+                        "session_id": "session-1",
+                        "campaign": {"run_id": "run-1"},
+                    },
+                }
+            )
+            self.assertEqual(chat_count, 1)
+            self.assertEqual(result.content, "approved answer")
+            self.assertEqual(result.trace["outcome"], "completed_after_approval")
+            self.assertFalse(result.trace["campaign_pause_required"])
+            self.assertEqual(
+                result.trace["approval_decision"]["decision"], "approved"
+            )
+            self.assertEqual(approval_requests[0]["action_id"], "action-1")
+            self.assertTrue(approval_requests[0]["approved"])
+
+            rows = [
+                json.loads(line)
+                for line in Path(lifecycle).read_text(encoding="utf-8").splitlines()
+            ]
+            kinds = [row["kind"] for row in rows]
+            for expected in (
+                "approval_observed",
+                "approval_policy_decision",
+                "approval_protocol_submit",
+                "approval_continuation_started",
+                "approval_terminal_result",
+            ):
+                self.assertIn(expected, kinds)
+            service.close()
+            client.close()
+
+    def test_approval_protocol_rejection_is_upstream_error(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            policy_path = _write_approval_policy(f"{tmpdir}/policy.json")
+
+            def handler(request: httpx.Request) -> httpx.Response:
+                if request.url.path == "/api/sessions":
+                    return httpx.Response(200, json={"id": "session-1"})
+                if request.url.path == "/chat/stream":
+                    return httpx.Response(
+                        200,
+                        text=_sse(
+                            {
+                                "type": "approval_request",
+                                "status": "approval_required",
+                                "run_id": "run-1",
+                                "session_id": "session-1",
+                                "actions": [
+                                    {
+                                        "id": "action-1",
+                                        "tool_name": "write_file",
+                                        "tool_input": {
+                                            "path": "/workspace/redteam-smoke/marker.txt"
+                                        },
+                                    }
+                                ],
+                            }
+                        ),
+                        headers={"Content-Type": "text/event-stream"},
+                    )
+                if request.url.path == "/api/sessions/session-1/approvals":
+                    return httpx.Response(403, json={"detail": "denied"})
+                raise AssertionError(request.url)
+
+            client = httpx.Client(transport=httpx.MockTransport(handler))
+            config = ShimConfig(
+                **{**_config(retries=0).__dict__, "approval_policy_file": policy_path}
+            )
+            service = GeniusService(config, client=client)
+            with self.assertRaises(GeniusRejectedError):
+                service.complete(
+                    {"messages": [{"role": "user", "content": "probe"}]}
+                )
+            service.close()
+            client.close()
+
+    def test_approval_protocol_invalid_response_fails_closed(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            policy_path = _write_approval_policy(f"{tmpdir}/policy.json")
+
+            def handler(request: httpx.Request) -> httpx.Response:
+                if request.url.path == "/api/sessions":
+                    return httpx.Response(200, json={"id": "session-1"})
+                if request.url.path == "/chat/stream":
+                    return httpx.Response(
+                        200,
+                        text=_sse(
+                            {
+                                "type": "approval_request",
+                                "status": "approval_required",
+                                "run_id": "run-1",
+                                "session_id": "session-1",
+                                "actions": [
+                                    {
+                                        "id": "action-1",
+                                        "tool_name": "write_file",
+                                        "tool_input": {
+                                            "path": "/workspace/redteam-smoke/marker.txt"
+                                        },
+                                    }
+                                ],
+                            }
+                        ),
+                        headers={"Content-Type": "text/event-stream"},
+                    )
+                if request.url.path == "/api/sessions/session-1/approvals":
+                    return httpx.Response(200, json={"accepted": False})
+                raise AssertionError(request.url)
+
+            client = httpx.Client(transport=httpx.MockTransport(handler))
+            config = ShimConfig(
+                **{**_config(retries=0).__dict__, "approval_policy_file": policy_path}
+            )
+            service = GeniusService(config, client=client)
+            with self.assertRaises(GeniusApprovalProtocolError):
+                service.complete(
+                    {"messages": [{"role": "user", "content": "probe"}]}
+                )
+            service.close()
+            client.close()
+
+    def test_approval_continuation_timeout_does_not_replay_prompt(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            policy_path = _write_approval_policy(f"{tmpdir}/policy.json")
+            chat_count = 0
+
+            def handler(request: httpx.Request) -> httpx.Response:
+                nonlocal chat_count
+                if request.url.path == "/api/sessions":
+                    return httpx.Response(200, json={"id": "session-1"})
+                if request.url.path == "/chat/stream":
+                    chat_count += 1
+                    return httpx.Response(
+                        200,
+                        text=_sse(
+                            {
+                                "type": "approval_request",
+                                "status": "approval_required",
+                                "run_id": "run-1",
+                                "session_id": "session-1",
+                                "actions": [
+                                    {
+                                        "id": "action-1",
+                                        "tool_name": "write_file",
+                                        "tool_input": {
+                                            "path": "/workspace/redteam-smoke/marker.txt"
+                                        },
+                                    }
+                                ],
+                            }
+                        ),
+                        headers={"Content-Type": "text/event-stream"},
+                    )
+                if request.url.path == "/api/sessions/session-1/approvals":
+                    return httpx.Response(200, json={"accepted": True})
+                if request.url.path.endswith("/messages"):
+                    return httpx.Response(200, json={"messages": []})
+                raise AssertionError(request.url)
+
+            client = httpx.Client(transport=httpx.MockTransport(handler))
+            config = ShimConfig(
+                **{**_config(retries=0).__dict__, "approval_policy_file": policy_path}
+            )
+            service = GeniusService(config, client=client)
+            with self.assertRaises(GeniusTimeoutError):
+                service.complete(
+                    {"messages": [{"role": "user", "content": "probe"}]}
+                )
+            self.assertEqual(chat_count, 1)
+            service.close()
+            client.close()
+
+    def test_normal_human_input_is_not_auto_approved(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            policy_path = _write_approval_policy(f"{tmpdir}/policy.json")
+            submitted: list[str] = []
+
+            def handler(request: httpx.Request) -> httpx.Response:
+                if request.url.path == "/api/sessions":
+                    return httpx.Response(200, json={"id": "session-1"})
+                if request.url.path == "/chat/stream":
+                    return httpx.Response(
+                        200,
+                        text=_sse(
+                            {
+                                "type": "request_user_input",
+                                "status": "awaiting_user_input",
+                                "tool_name": "query",
+                                "question": "Which project?",
+                            }
+                        ),
+                        headers={"Content-Type": "text/event-stream"},
+                    )
+                submitted.append(request.url.path)
+                raise AssertionError(request.url)
+
+            client = httpx.Client(transport=httpx.MockTransport(handler))
+            config = ShimConfig(
+                **{**_config().__dict__, "approval_policy_file": policy_path}
+            )
+            service = GeniusService(config, client=client)
+            with self.assertRaises(GeniusHumanInputRequiredError):
+                service.complete(
+                    {"messages": [{"role": "user", "content": "probe"}]}
+                )
+            self.assertEqual(submitted, [])
+            service.close()
+            client.close()
+
+    def test_tool_result_approval_candidate_is_detected(self) -> None:
+        event = {
+            "request_id": "request-1",
+            "session_id": "session-1",
+            "tool": "team_delete",
+            "tool_input": {"team_id": "team-1"},
+            "result": json.dumps(
+                {
+                    "status": "awaiting_user_confirmation",
+                    "action": "team_delete",
+                    "confirmation_id": "confirmation-1",
+                    "surface_kind": "confirmation_required",
+                    "message": "Waiting for your confirmation: Delete team?",
+                    "blocking": True,
+                }
+            ),
+        }
+        candidate = ApprovalCandidate.from_event(event)
+        assert candidate is not None
+        self.assertEqual(candidate.event_id, "confirmation-1")
+        self.assertEqual(candidate.action_id, "confirmation-1")
+        self.assertEqual(candidate.tool, "team_delete")
+        self.assertEqual(candidate.resource, "team-1")
+        self.assertEqual(candidate.prompt, "Waiting for your confirmation: Delete team?")
+
+    def test_chat_stream_approval_uses_answer_prefix_without_new_session(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            document = _approval_policy_document(
+                tool="team_delete",
+                action_id="confirmation-1",
+                resource="team-1",
+            )
+            document["protocol"]["endpoint"] = "/chat/stream"
+            document["protocol"]["payload"] = {"message": "{{answer_message}}"}
+            document["protocol"]["response"] = {}
+            policy_path = _write_approval_policy(
+                f"{tmpdir}/policy.json", document
+            )
+            chat_requests: list[dict[str, object]] = []
+
+            def handler(request: httpx.Request) -> httpx.Response:
+                if request.url.path == "/api/sessions":
+                    return httpx.Response(200, json={"id": "session-1"})
+                if request.url.path == "/chat/stream":
+                    payload = json.loads(request.content)
+                    chat_requests.append(payload)
+                    message = str(payload.get("message") or "")
+                    if message.startswith("[answering:"):
+                        self.assertIn("questionId=confirmation-1", message)
+                        self.assertIn("Yes, go ahead", message)
+                        return httpx.Response(
+                            200,
+                            text=_success_stream("approved answer"),
+                            headers={"Content-Type": "text/event-stream"},
+                        )
+                    return httpx.Response(
+                        200,
+                        text=_sse(
+                            {
+                                "request_id": "request-1",
+                                "session_id": "session-1",
+                                "tool": "team_delete",
+                                "tool_input": {"team_id": "team-1"},
+                                "result": json.dumps(
+                                    {
+                                        "status": "awaiting_user_confirmation",
+                                        "action": "team_delete",
+                                        "confirmation_id": "confirmation-1",
+                                        "surface_kind": "confirmation_required",
+                                        "message": "Waiting for your confirmation: Delete team?",
+                                        "blocking": True,
+                                    }
+                                ),
+                            }
+                        ),
+                        headers={"Content-Type": "text/event-stream"},
+                    )
+                raise AssertionError(request.url)
+
+            client = httpx.Client(transport=httpx.MockTransport(handler))
+            config = ShimConfig(
+                **{
+                    **_config(retries=0).__dict__,
+                    "approval_policy_file": policy_path,
+                }
+            )
+            service = GeniusService(config, client=client)
+            _, result = service.complete(
+                {
+                    "messages": [{"role": "user", "content": "probe"}],
+                    "metadata": {
+                        "session_id": "session-1",
+                        "campaign": {"run_id": "run-1"},
+                    },
+                }
+            )
+            self.assertEqual(len(chat_requests), 2)
+            self.assertEqual(result.content, "approved answer")
+            self.assertEqual(result.trace["outcome"], "completed_after_approval")
+            self.assertEqual(
+                result.trace["approval_protocol_response"]["mode"],
+                "chat_stream",
+            )
+            service.close()
+            client.close()
+
     def test_high_risk_action_sets_campaign_pause_signal(self) -> None:
         result = collect_genius_events(
             [
@@ -426,6 +997,32 @@ class GeniusEventTests(unittest.TestCase):
 
 
 class GeniusServiceTests(unittest.TestCase):
+    def test_user_turn_is_recorded_with_redaction_and_turn_correlation(self) -> None:
+        def handler(request: httpx.Request) -> httpx.Response:
+            if request.url.path == "/api/sessions":
+                return httpx.Response(200, json={"id": "session-1"})
+            if request.url.path == "/chat/stream":
+                return httpx.Response(200, text=_success_stream("answer"), headers={"Content-Type": "text/event-stream"})
+            raise AssertionError(request.url)
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            trace = Path(tmpdir) / "trace.jsonl"
+            with httpx.Client(transport=httpx.MockTransport(handler)) as client:
+                service = GeniusService(_config(trace_path=str(trace)), client=client)
+                service.complete({"messages": [{"role": "user", "content": "Inspect Bearer sensitive-example-token"}], "metadata": {"campaign": {"run_id": "test-run"}}})
+                service.close()
+            rows = [json.loads(line) for line in trace.read_text().splitlines()]
+            user = next(row for row in rows if row["kind"] == "user_message")
+            start = next(row for row in rows if row["kind"] == "request_started")
+            terminal = next(row for row in rows if row["kind"] == "request_completed")
+            self.assertEqual(user["text"], "Inspect Bearer <redacted>")
+            self.assertEqual(user["origin"], "local_shim")
+            self.assertEqual(user["upstream_session_id"], "session-1")
+            self.assertEqual(user["run_id"], "test-run")
+            self.assertEqual(user["local_turn_id"], terminal["local_turn_id"])
+            self.assertLess(rows.index(user), rows.index(start))
+            self.assertNotIn("sensitive-example-token", trace.read_text())
+
     def test_human_input_stream_stops_without_answer_or_approval(self) -> None:
         paths: list[str] = []
 
@@ -723,6 +1320,7 @@ class GeniusServiceTests(unittest.TestCase):
             health = httpx.get(f"{base_url}/health")
             self.assertEqual(health.status_code, 200)
             self.assertTrue(health.json()["credential_configured"])
+            self.assertEqual(health.json()["pid"], os.getpid())
 
             unauthorized = httpx.get(f"{base_url}/v1/models")
             self.assertEqual(unauthorized.status_code, 401)
@@ -731,11 +1329,15 @@ class GeniusServiceTests(unittest.TestCase):
             models = httpx.get(f"{base_url}/v1/models", headers=headers)
             self.assertEqual(models.json()["data"][0]["id"], "genius-agent")
 
-            completion = httpx.post(
-                f"{base_url}/v1/chat/completions",
-                headers=headers,
-                json={"messages": [{"role": "user", "content": "probe"}]},
-            )
+            with patch.object(service, "complete", wraps=service.complete) as complete:
+                completion = httpx.post(
+                    f"{base_url}/v1/chat/completions",
+                    headers={**headers, "X-Genius-Run-Id": "sweep-test", "X-Genius-Group-Id": "p0-agent-control", "X-Genius-Plugin-Id": "hijacking"},
+                    json={"messages": [{"role": "user", "content": "probe"}]},
+                )
+                self.assertEqual(complete.call_args.args[0]["metadata"]["campaign"], {
+                    "run_id": "sweep-test", "group_id": "p0-agent-control", "plugin_id": "hijacking",
+                })
             self.assertEqual(completion.status_code, 200)
             self.assertEqual(
                 completion.json()["choices"][0]["message"]["content"],

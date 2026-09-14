@@ -96,6 +96,14 @@ credential. The real website credential remains in the ignored `.env` file.
 - A normal clarification request becomes `genius_human_input_required`.
 - A write, delete, shell, Python, SQL update, batch, or skill-script approval
   becomes `genius_high_risk_approval_blocked`.
+- With `GENIUS_APPROVAL_POLICY_FILE` unset, invalid, or non-matching, the shim
+  keeps the same default-deny behavior and does not submit an approval.
+- A valid policy can approve exactly one `run_id`, `session_id`, `tool`,
+  `action_id`, and `resource`. Any missing field or dimension mismatch denies
+  the approval.
+- Approved requests are submitted only through a `verified` protocol entry,
+  then continued through persisted messages for the same upstream session. The
+  shim does not replay the original prompt or create a new session.
 - Authentication, provider rejection, timeout, and protocol incompatibility are
   classified as errors rather than model refusals.
 - Retries are permitted only before text, reasoning, status, or tool progress
@@ -104,6 +112,56 @@ credential. The real website credential remains in the ignored `.env` file.
 Genius uses private web-product endpoints, not a documented stable public API.
 Run one authorized connectivity check after a product update before attempting
 any larger evaluation.
+
+## Controlled approval policy
+
+Set `GENIUS_APPROVAL_POLICY_FILE` to a local JSON or YAML file. The file is
+intentionally not committed with real identifiers. Use
+`approval-policy.example.json` as a shape reference and replace the synthetic
+values only in a local, Git-ignored file.
+
+The policy has two required parts:
+
+- `rules`: exact allow rules. Every rule must provide `run_id`, `session_id`,
+  `tool`, `action_id`, and `resource`; no wildcards are accepted.
+- `protocol`: the verified approval endpoint, method, payload template,
+  success statuses, response check, and persisted-message continuation
+  settings. `verified` must be `true`, and `evidence_id` must identify the
+  protocol-discovery record.
+
+The shim rereads `GENIUS_APPROVAL_POLICY_FILE` before each approval decision.
+This allows a live smoke run to update the exact `confirmation_id` after the
+first default-deny request without restarting the service or losing the local
+session mapping.
+
+The verified protocol uses `POST /chat/stream` with an ordinary chat message
+prefixed by `[answering: questionId=<confirmation_id>]`. See
+`docs/genius_approval_protocol.md` for the observed request and continuation
+semantics.
+
+The shim redacts approval evidence before writing trace/lifecycle files. If a
+protocol is unverified, its response does not match the verified contract, or
+continuation times out, the request fails closed.
+
+Genius sessions use isolated workspaces. A resource created in one session is not
+necessarily visible in another session. Live approval smoke cases must keep
+create, approve, and verify steps tied to a tracked run and session.
+
+## Live controlled approval smoke
+
+After the offline suite passes, a live smoke run may use only a disposable test
+account action such as creating and deleting a `redteam-smoke` Team.
+
+Run two cases:
+
+1. Use a deliberately non-matching policy and verify that the shim returns
+   `genius_high_risk_approval_blocked` and the Team is not deleted.
+2. Use an exact policy for that run/session/tool/action/Team ID, verify that
+   the shim submits the approval, continues the same session, receives a
+   terminal result, and deletes the disposable Team.
+
+Do not use this smoke path for broad destructive testing, Skill publishing,
+scheduling, data exfiltration, or operations against other users or tenants.
 
 ## Offline verification
 
@@ -114,6 +172,18 @@ Genius or any model provider:
 npm run test:shim
 ```
 
+Validate the example policy shape independently with the policy loader tests:
+
+```bash
+uv run python -m unittest tests.test_genius_shim.GeniusApprovalTests
+```
+
 Do not run a live request until authorization, account isolation, attack scope,
 sensitive-data handling, side-effect policy, rate limits, and budget have been
 confirmed.
+
+
+## 2026-09-13 记录重置
+
+用户要求正式 P0 评测前清空测试记录；旧 smoke、viewer 演示、QA 截图和三个 hijacking run 已删除。
+上文涉及的历史日志/截图路径不再代表当前存在的文件，测试代码与配置仍保留。

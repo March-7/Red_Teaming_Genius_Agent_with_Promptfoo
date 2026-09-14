@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 import base64
 import fcntl
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
@@ -23,6 +23,7 @@ from uuid import uuid4
 import httpx
 import httpcore
 from dotenv import load_dotenv
+import yaml
 
 
 LOGGER = logging.getLogger(__name__)
@@ -65,6 +66,9 @@ HIGH_RISK_TOOL_NAMES = {
     "write_file",
 }
 CAMPAIGN_HEADER_FIELDS = {
+    "X-Genius-Run-Id": "run_id",
+    "X-Genius-Group-Id": "group_id",
+    "X-Genius-Plugin-Id": "plugin_id",
     "X-ChemSec-Campaign-Id": "campaign_id",
     "X-ChemSec-Manifest-Hash": "manifest_hash",
     "X-ChemSec-Stage": "stage",
@@ -127,6 +131,10 @@ class GeniusHumanInputRequiredError(GeniusError):
 
 class GeniusHighRiskApprovalError(GeniusHumanInputRequiredError):
     code = "genius_high_risk_approval_blocked"
+
+
+class GeniusApprovalProtocolError(GeniusCompatibilityError):
+    code = "genius_approval_protocol_unverified"
 
 
 class _RetryableUpstreamError(GeniusError):
@@ -279,6 +287,446 @@ HUMAN_INPUT_EVENT_TYPES = {
 }
 
 
+APPROVAL_POLICY_REQUIRED_FIELDS = (
+    "run_id",
+    "session_id",
+    "tool",
+    "action_id",
+    "resource",
+)
+APPROVAL_PROTOCOL_REQUIRED_FIELDS = (
+    "endpoint",
+    "method",
+    "payload",
+    "success_statuses",
+    "continuation",
+    "verified",
+    "evidence_id",
+)
+
+
+@dataclass(frozen=True)
+class ApprovalPolicyRule:
+    run_id: str
+    session_id: str
+    tool: str
+    action_id: str
+    resource: str
+
+    def matches(
+        self,
+        *,
+        run_id: str | None,
+        session_id: str | None,
+        tool: str | None,
+        action_id: str | None,
+        resource: str | None,
+    ) -> bool:
+        return (
+            self.run_id == run_id
+            and self.session_id == session_id
+            and self.tool == tool
+            and self.action_id == action_id
+            and self.resource == resource
+        )
+
+    @classmethod
+    def from_mapping(cls, value: Any) -> "ApprovalPolicyRule":
+        if not isinstance(value, dict):
+            raise ValueError("approval policy rule must be an object")
+        fields: dict[str, str] = {}
+        for name in APPROVAL_POLICY_REQUIRED_FIELDS:
+            item = value.get(name)
+            if not isinstance(item, str) or not item.strip():
+                raise ValueError(f"approval policy rule field {name!r} is required")
+            fields[name] = item.strip()
+        return cls(**fields)
+
+
+@dataclass(frozen=True)
+class ApprovalProtocol:
+    endpoint: str
+    method: str
+    payload: dict[str, Any]
+    success_statuses: tuple[int, ...]
+    continuation: dict[str, Any]
+    verified: bool
+    evidence_id: str
+    response: dict[str, Any] = field(default_factory=dict)
+
+    @classmethod
+    def from_mapping(cls, value: Any) -> "ApprovalProtocol":
+        if not isinstance(value, dict):
+            raise ValueError("approval protocol must be an object")
+        missing = [
+            name for name in APPROVAL_PROTOCOL_REQUIRED_FIELDS if name not in value
+        ]
+        if missing:
+            raise ValueError(
+                "approval protocol missing fields: " + ", ".join(sorted(missing))
+            )
+        endpoint = value["endpoint"]
+        method = value["method"]
+        payload = value["payload"]
+        statuses = value["success_statuses"]
+        continuation = value["continuation"]
+        verified = value["verified"]
+        evidence_id = value["evidence_id"]
+        if not isinstance(endpoint, str) or not endpoint.startswith("/"):
+            raise ValueError("approval protocol endpoint must be an absolute path")
+        if not isinstance(method, str) or method.upper() not in {"POST", "PUT"}:
+            raise ValueError("approval protocol method must be POST or PUT")
+        if not isinstance(payload, dict):
+            raise ValueError("approval protocol payload must be an object")
+        if not isinstance(statuses, list) or not statuses:
+            raise ValueError("approval protocol success_statuses must be a list")
+        parsed_statuses: list[int] = []
+        for status in statuses:
+            if not isinstance(status, int) or not 200 <= status < 300:
+                raise ValueError("approval protocol success_statuses must be 2xx")
+            parsed_statuses.append(status)
+        if not isinstance(continuation, dict):
+            raise ValueError("approval protocol continuation must be an object")
+        mode = continuation.get("mode")
+        if mode != "persisted_messages":
+            raise ValueError("approval continuation mode must be persisted_messages")
+        for field_name in ("poll_interval_s", "timeout_s"):
+            number = continuation.get(field_name)
+            if not isinstance(number, (int, float)) or number <= 0:
+                raise ValueError(
+                    f"approval continuation {field_name} must be positive"
+                )
+        if verified is not True:
+            raise ValueError("approval protocol must be explicitly verified")
+        if not isinstance(evidence_id, str) or not evidence_id.strip():
+            raise ValueError("approval protocol evidence_id is required")
+        response = value.get("response", {})
+        if not isinstance(response, dict):
+            raise ValueError("approval protocol response must be an object")
+        return cls(
+            endpoint=endpoint,
+            method=method.upper(),
+            payload=dict(payload),
+            success_statuses=tuple(parsed_statuses),
+            continuation=dict(continuation),
+            verified=True,
+            evidence_id=evidence_id.strip(),
+            response=dict(response),
+        )
+
+
+@dataclass(frozen=True)
+class ApprovalPolicy:
+    rules: tuple[ApprovalPolicyRule, ...] = ()
+    protocol: ApprovalProtocol | None = None
+    valid: bool = False
+    reason: str = "not_configured"
+
+    @classmethod
+    def disabled(cls, reason: str) -> "ApprovalPolicy":
+        return cls(reason=reason)
+
+
+@dataclass(frozen=True)
+class ApprovalCandidate:
+    event_id: str | None
+    action_id: str | None
+    request_id: str | None
+    session_id: str | None
+    run_id: str | None
+    tool: str | None
+    resource: str | None
+    prompt: str | None
+    event_types: tuple[str, ...]
+    states: tuple[str, ...]
+    trace: dict[str, Any]
+
+    @classmethod
+    def from_event(cls, event: dict[str, Any]) -> "ApprovalCandidate | None":
+        containers = _nested_dicts(event)
+        for container in list(containers):
+            for key in ("approval", "human_input", "interaction", "prompt"):
+                nested = container.get(key)
+                if isinstance(nested, dict):
+                    containers.append(nested)
+
+        tool_result_payload: dict[str, Any] | None = None
+        for container in containers:
+            for key in ("tool_result", "result", "toolResult"):
+                parsed = _parse_tool_result(container.get(key))
+                if parsed is not None and (
+                    parsed.get("confirmation_id")
+                    or parsed.get("surface_kind") == "confirmation_required"
+                    or parsed.get("status") == "awaiting_user_confirmation"
+                ):
+                    tool_result_payload = parsed
+                    break
+            if tool_result_payload is not None:
+                break
+
+        event_types = tuple(
+            sorted(
+                {
+                    _normalized_state(container.get(key))
+                    for container in containers
+                    for key in ("event", "type", "kind", "interaction_type")
+                }
+                - {""}
+            )
+        )
+        states = tuple(
+            sorted(
+                {
+                    _normalized_state(container.get(key))
+                    for container in containers
+                    for key in ("status", "state")
+                }
+                - {""}
+            )
+        )
+        explicit_flag = any(
+            container.get(key) is True
+            for container in containers
+            for key in (
+                "approval_required",
+                "awaiting_user",
+                "awaiting_user_input",
+                "human_input_required",
+                "input_required",
+                "requires_approval",
+                "requires_confirmation",
+                "requires_user_input",
+            )
+        )
+        if not (
+            set(event_types).intersection(HUMAN_INPUT_EVENT_TYPES)
+            or set(states).intersection(HUMAN_INPUT_STATES)
+            or explicit_flag
+            or tool_result_payload is not None
+        ):
+            return None
+
+        if tool_result_payload is not None:
+            confirmation_id = tool_result_payload.get("confirmation_id")
+            if not isinstance(confirmation_id, str) or not confirmation_id.strip():
+                return None
+            tool = _first_string(containers, ("tool", "tool_name", "name"))
+            resource = _approval_resource(containers, [])
+            prompt = tool_result_payload.get("message")
+            if not isinstance(prompt, str):
+                prompt = None
+            trace = sanitize_value(
+                {
+                    "event_types": list(event_types),
+                    "states": list(states),
+                    "tool_names": [tool] if tool else [],
+                    "high_risk_tool_names": [tool]
+                    if tool in HIGH_RISK_TOOL_NAMES
+                    else [],
+                    "event_id": confirmation_id,
+                    "action_id": confirmation_id,
+                    "request_id": _first_string(containers, ("request_id",)),
+                    "session_id": _first_string(
+                        containers, ("session_id", "agent_session_id")
+                    ),
+                    "run_id": _first_string(
+                        containers, ("run_id", "campaign_id", "sample_id")
+                    ),
+                    "tool": tool,
+                    "resource": resource,
+                    "prompt": prompt,
+                    "confirmation_id": confirmation_id,
+                    "surface_kind": tool_result_payload.get("surface_kind"),
+                    "blocking": tool_result_payload.get("blocking"),
+                }
+            )
+            return cls(
+                event_id=confirmation_id,
+                action_id=confirmation_id,
+                request_id=_first_string(containers, ("request_id",)),
+                session_id=_first_string(
+                    containers, ("session_id", "agent_session_id")
+                ),
+                run_id=_first_string(
+                    containers, ("run_id", "campaign_id", "sample_id")
+                ),
+                tool=tool,
+                resource=resource,
+                prompt=prompt,
+                event_types=event_types,
+                states=states,
+                trace=trace,
+            )
+
+        actions = [
+            action
+            for container in containers
+            for action in (
+                container.get("actions")
+                if isinstance(container.get("actions"), list)
+                else []
+            )
+            if isinstance(action, dict)
+        ]
+        tool_names = tuple(
+            sorted(
+                {
+                    str(value)
+                    for container in [*containers, *actions]
+                    for key in ("tool_name", "name")
+                    if isinstance((value := container.get(key)), str) and value
+                }
+            )
+        )
+        high_risk = tuple(
+            sorted(set(tool_names).intersection(HIGH_RISK_TOOL_NAMES))
+        )
+        event_id = _first_string(
+            containers, ("id", "event_id", "interaction_id", "approval_id")
+        )
+        action_id = _first_string(
+            [*containers, *actions],
+            ("action_id", "tool_call_id", "call_id", "id"),
+        )
+        request_id = _first_string(containers, ("request_id",))
+        session_id = _first_string(containers, ("session_id", "agent_session_id"))
+        run_id = _first_string(containers, ("run_id", "campaign_id", "sample_id"))
+        tool = next(iter(tool_names), None)
+        resource = _approval_resource(containers, actions)
+        prompt = _first_string(containers, ("question", "prompt", "message"))
+        tool_input = next(
+            (
+                container.get("tool_input")
+                for container in [*containers, *actions]
+                if container.get("tool_input") is not None
+            ),
+            None,
+        )
+        trace = sanitize_value(
+            {
+                "event_types": list(event_types),
+                "states": list(states),
+                "tool_names": list(tool_names),
+                "high_risk_tool_names": list(high_risk),
+                "event_id": event_id,
+                "action_id": action_id,
+                "request_id": request_id,
+                "session_id": session_id,
+                "run_id": run_id,
+                "tool": tool,
+                "resource": resource,
+                "prompt": prompt,
+                "tool_input": tool_input,
+            }
+        )
+        return cls(
+            event_id=event_id,
+            action_id=action_id,
+            request_id=request_id,
+            session_id=session_id,
+            run_id=run_id,
+            tool=tool,
+            resource=resource,
+            prompt=prompt,
+            event_types=event_types,
+            states=states,
+            trace=trace,
+        )
+
+
+def _first_string(
+    containers: list[dict[str, Any]],
+    keys: tuple[str, ...],
+) -> str | None:
+    for container in containers:
+        for key in keys:
+            value = container.get(key)
+            if isinstance(value, str) and value.strip():
+                return value.strip()
+    return None
+
+
+def _approval_resource(
+    containers: list[dict[str, Any]],
+    actions: list[dict[str, Any]],
+) -> str | None:
+    for container in [*containers, *actions]:
+        for key in (
+            "resource",
+            "path",
+            "file_path",
+            "target_path",
+            "team_id",
+            "project_id",
+            "node_id",
+            "url",
+            "command",
+            "query",
+        ):
+            value = container.get(key)
+            if isinstance(value, str) and value.strip():
+                return value.strip()
+        tool_input = container.get("tool_input")
+        if isinstance(tool_input, dict):
+            for key in (
+                "resource",
+                "path",
+                "file_path",
+                "target_path",
+                "team_id",
+                "project_id",
+                "node_id",
+                "url",
+                "command",
+                "query",
+            ):
+                value = tool_input.get(key)
+                if isinstance(value, str) and value.strip():
+                    return value.strip()
+        elif isinstance(tool_input, str) and tool_input.strip():
+            return tool_input.strip()
+    return None
+
+
+def _parse_tool_result(value: Any) -> dict[str, Any] | None:
+    if isinstance(value, dict):
+        return value
+    if not isinstance(value, str) or not value.strip():
+        return None
+    try:
+        parsed = json.loads(value)
+    except json.JSONDecodeError:
+        return None
+    return parsed if isinstance(parsed, dict) else None
+
+
+def load_approval_policy(path: str) -> ApprovalPolicy:
+    if not path:
+        return ApprovalPolicy.disabled("approval policy file is not configured")
+    policy_path = Path(path)
+    try:
+        raw = policy_path.read_text(encoding="utf-8")
+        document = yaml.safe_load(raw)
+    except (OSError, UnicodeError, yaml.YAMLError) as exc:
+        return ApprovalPolicy.disabled(f"approval policy file is unreadable: {exc}")
+    if not isinstance(document, dict):
+        return ApprovalPolicy.disabled("approval policy document is not an object")
+    rules_value = document.get("rules")
+    if not isinstance(rules_value, list) or not rules_value:
+        return ApprovalPolicy.disabled("approval policy rules are empty")
+    try:
+        rules = tuple(ApprovalPolicyRule.from_mapping(item) for item in rules_value)
+        protocol = ApprovalProtocol.from_mapping(document.get("protocol"))
+    except (ValueError, TypeError) as exc:
+        return ApprovalPolicy.disabled(str(exc))
+    return ApprovalPolicy(
+        rules=rules,
+        protocol=protocol,
+        valid=True,
+        reason="configured",
+    )
+
+
 def _normalized_state(value: Any) -> str:
     if not isinstance(value, str):
         return ""
@@ -287,81 +735,8 @@ def _normalized_state(value: Any) -> str:
 
 def human_input_request(event: dict[str, Any]) -> dict[str, Any] | None:
     """Return sanitized evidence when an event explicitly waits for a user."""
-    containers = _nested_dicts(event)
-    for container in list(containers):
-        for key in ("approval", "human_input", "interaction", "prompt"):
-            nested = container.get(key)
-            if isinstance(nested, dict):
-                containers.append(nested)
-
-    event_types = {
-        _normalized_state(container.get(key))
-        for container in containers
-        for key in ("event", "type", "kind", "interaction_type")
-    }
-    states = {
-        _normalized_state(container.get(key))
-        for container in containers
-        for key in ("status", "state")
-    }
-    explicit_flag = any(
-        container.get(key) is True
-        for container in containers
-        for key in (
-            "approval_required",
-            "awaiting_user",
-            "awaiting_user_input",
-            "human_input_required",
-            "input_required",
-            "requires_approval",
-            "requires_confirmation",
-            "requires_user_input",
-        )
-    )
-    if not (
-        event_types.intersection(HUMAN_INPUT_EVENT_TYPES)
-        or states.intersection(HUMAN_INPUT_STATES)
-        or explicit_flag
-    ):
-        return None
-
-    actions = [
-        action
-        for container in containers
-        for action in (
-            container.get("actions")
-            if isinstance(container.get("actions"), list)
-            else []
-        )
-        if isinstance(action, dict)
-    ]
-    tool_names = sorted(
-        {
-            str(value)
-            for container in [*containers, *actions]
-            for key in ("tool_name", "name")
-            if isinstance((value := container.get(key)), str) and value
-        }
-    )
-    high_risk = sorted(set(tool_names).intersection(HIGH_RISK_TOOL_NAMES))
-    prompt = next(
-        (
-            str(value)
-            for container in containers
-            for key in ("question", "prompt", "message")
-            if isinstance((value := container.get(key)), str) and value.strip()
-        ),
-        None,
-    )
-    return sanitize_value(
-        {
-            "event_types": sorted(value for value in event_types if value),
-            "states": sorted(value for value in states if value),
-            "tool_names": tool_names,
-            "high_risk_tool_names": high_risk,
-            "prompt": prompt,
-        }
-    )
+    candidate = ApprovalCandidate.from_event(event)
+    return candidate.trace if candidate is not None else None
 
 
 def normalize_bearer_token(value: str) -> str:
@@ -523,6 +898,7 @@ class ShimConfig:
     trace_jsonl_path: str = "logs/genius_trace.jsonl"
     lifecycle_jsonl_path: str = "logs/genius_session_lifecycle.jsonl"
     trace_raw_events: bool = False
+    approval_policy_file: str = ""
 
     @classmethod
     def from_env(cls) -> "ShimConfig":
@@ -561,6 +937,9 @@ class ShimConfig:
                 "GENIUS_LIFECYCLE_JSONL", "logs/genius_session_lifecycle.jsonl"
             ).strip(),
             trace_raw_events=_env_flag("GENIUS_TRACE_RAW_EVENTS", False),
+            approval_policy_file=os.getenv(
+                "GENIUS_APPROVAL_POLICY_FILE", ""
+            ).strip(),
         )
 
 
@@ -926,6 +1305,10 @@ class GeniusResult:
     turn_settings: dict[str, Any] = field(default_factory=dict)
     reconciled_from_persisted: bool = False
     human_input_request: dict[str, Any] | None = None
+    approval_candidate: ApprovalCandidate | None = None
+    approval_decision: dict[str, Any] | None = None
+    approval_protocol_response: dict[str, Any] | None = None
+    approval_continuation: dict[str, Any] | None = None
 
     @property
     def trace(self) -> dict[str, Any]:
@@ -935,7 +1318,13 @@ class GeniusResult:
         elif self.tool_events:
             outcome = "completed_with_tool"
         risky_tools = high_risk_tool_names(self.tool_events)
-        if self.human_input_request:
+        if self.approval_continuation is not None:
+            outcome = (
+                f"upstream_{self.terminal_status}"
+                if self.terminal_status in FAILURE_STATUSES
+                else "completed_after_approval"
+            )
+        elif self.human_input_request is not None:
             risky_tools = sorted(
                 set(risky_tools).union(
                     self.human_input_request.get("high_risk_tool_names", [])
@@ -946,6 +1335,16 @@ class GeniusResult:
                 if risky_tools
                 else "deferred_for_input"
             )
+        else:
+            risky_tools = high_risk_tool_names(self.tool_events)
+        if self.approval_candidate is not None:
+            risky_tools = sorted(
+                set(risky_tools).union(
+                    [self.approval_candidate.tool]
+                    if self.approval_candidate.tool
+                    else []
+                )
+            )
         return {
             "upstream_session_id": self.upstream_session_id,
             "request_id": self.request_id,
@@ -955,13 +1354,19 @@ class GeniusResult:
             "thinking_content": self.thinking_content or None,
             "tool_events": self.tool_events,
             "high_risk_tool_names": risky_tools,
-            "campaign_pause_required": bool(risky_tools),
+            "campaign_pause_required": bool(
+                (risky_tools or self.approval_candidate is not None)
+                and self.approval_continuation is None
+            ),
             "human_input_request": self.human_input_request,
             "event_summaries": self.event_summaries,
             "outcome": outcome,
             "campaign": self.campaign,
             "turn_settings": self.turn_settings,
             "reconciled_from_persisted": self.reconciled_from_persisted,
+            "approval_decision": self.approval_decision,
+            "approval_protocol_response": self.approval_protocol_response,
+            "approval_continuation": self.approval_continuation,
         }
 
 
@@ -976,6 +1381,8 @@ class GeniusEventCollector:
         self.tool_events: list[dict[str, Any]] = []
         self.event_summaries: list[dict[str, Any]] = []
         self.human_input_request: dict[str, Any] | None = None
+        self.approval_candidate: ApprovalCandidate | None = None
+        self._last_tool_inputs: dict[str, dict[str, Any] | str] = {}
 
     def accept(self, event: dict[str, Any]) -> None:
         self.event_count += 1
@@ -1078,9 +1485,53 @@ class GeniusEventCollector:
             else:
                 self.tool_events.append(summary)
 
-        interaction = human_input_request(event)
-        if interaction is not None:
-            self.human_input_request = interaction
+        candidate = ApprovalCandidate.from_event(event)
+        tool_name = next(
+            (
+                str(value)
+                for container in containers
+                for key in ("tool", "tool_name", "name")
+                if isinstance((value := container.get(key)), str) and value
+            ),
+            None,
+        )
+        tool_input = next(
+            (
+                container.get("tool_input")
+                or container.get("input")
+                for container in containers
+                if container.get("tool_input") is not None
+                or container.get("input") is not None
+            ),
+            None,
+        )
+        if tool_name and tool_input is not None:
+            self._last_tool_inputs[tool_name] = tool_input  # type: ignore[assignment]
+        if candidate is not None:
+            self.human_input_request = candidate.trace
+            if (
+                candidate.trace.get("confirmation_id")
+                or "approval_request" in candidate.event_types
+                or any(
+                    state
+                    in {
+                        "approval_required",
+                        "awaiting_approval",
+                        "awaiting_user_confirmation",
+                        "pending_approval",
+                        "requires_approval",
+                    }
+                    for state in candidate.states
+                )
+            ):
+                if candidate.resource is None and candidate.tool:
+                    last_input = self._last_tool_inputs.get(candidate.tool)
+                    if last_input is not None:
+                        synthetic_container = {"tool_input": last_input}
+                        resource = _approval_resource([synthetic_container], [])
+                        if resource:
+                            candidate = replace(candidate, resource=resource)
+                self.approval_candidate = candidate
 
         if (
             self.content != before_content
@@ -1106,6 +1557,7 @@ class GeniusEventCollector:
             event_summaries=self.event_summaries,
             upstream_session_id=upstream_session_id,
             human_input_request=self.human_input_request,
+            approval_candidate=self.approval_candidate,
         )
 
 
@@ -1280,6 +1732,7 @@ class GeniusService:
             raw_events=config.trace_raw_events,
         )
         self.lifecycle_recorder = TraceRecorder(config.lifecycle_jsonl_path)
+        self.approval_policy = load_approval_policy(config.approval_policy_file)
 
     @property
     def api_key(self) -> str:
@@ -1347,6 +1800,336 @@ class GeniusService:
                 f"Genius {path} returned a non-object JSON response."
             )
         return payload
+
+    def _approval_context(
+        self,
+        candidate: ApprovalCandidate,
+        payload: dict[str, Any],
+        context: dict[str, str],
+    ) -> dict[str, str]:
+        return {
+            "run_id": candidate.run_id
+            or context.get("run_id")
+            or context.get("campaign_id")
+            or "",
+            "session_id": candidate.session_id
+            or str(payload.get("session_id") or ""),
+            "tool": candidate.tool or "",
+            "action_id": candidate.action_id or "",
+            "resource": candidate.resource or "",
+            "request_id": candidate.request_id or "",
+            "event_id": candidate.event_id or "",
+            "answer_message": (
+                f"[answering: questionId={candidate.event_id or ''}]\n"
+                + (f"Question: {candidate.prompt or ''}\n" if candidate.prompt else "")
+                + "Answer:\nYes, go ahead"
+            ),
+        }
+
+    def _approval_decision(
+        self,
+        candidate: ApprovalCandidate,
+        payload: dict[str, Any],
+        context: dict[str, str],
+    ) -> tuple[ApprovalPolicyRule | None, str]:
+        if not self.approval_policy.valid:
+            return None, self.approval_policy.reason
+        approval_context = self._approval_context(candidate, payload, context)
+        missing = [
+            key
+            for key in APPROVAL_POLICY_REQUIRED_FIELDS
+            if not approval_context.get(key)
+        ]
+        if missing:
+            return None, "missing fields: " + ", ".join(sorted(missing))
+        assert self.approval_policy.protocol is not None
+        for rule in self.approval_policy.rules:
+            if rule.matches(
+                run_id=approval_context["run_id"],
+                session_id=approval_context["session_id"],
+                tool=approval_context["tool"],
+                action_id=approval_context["action_id"],
+                resource=approval_context["resource"],
+            ):
+                return rule, "approved"
+        return None, "no exact approval policy rule match"
+
+    def _render_protocol_value(
+        self,
+        value: Any,
+        approval_context: dict[str, str],
+    ) -> Any:
+        if isinstance(value, dict):
+            return {
+                key: self._render_protocol_value(item, approval_context)
+                for key, item in value.items()
+            }
+        if isinstance(value, list):
+            return [
+                self._render_protocol_value(item, approval_context)
+                for item in value
+            ]
+        if not isinstance(value, str):
+            return value
+        rendered = value
+        for key, item in approval_context.items():
+            rendered = rendered.replace("{{" + key + "}}", item)
+            rendered = rendered.replace("{" + key + "}", item)
+        leftovers = re.findall(r"\{\{[^{}]+\}\}|\{[^{}]+\}", rendered)
+        if leftovers:
+            raise GeniusApprovalProtocolError(
+                "approval protocol payload contains unknown placeholders: "
+                + ", ".join(sorted(set(leftovers)))
+            )
+        return rendered
+
+    def _submit_approval(
+        self,
+        protocol: ApprovalProtocol,
+        approval_context: dict[str, str],
+    ) -> GeniusResult | dict[str, Any]:
+        endpoint = self._render_protocol_value(
+            protocol.endpoint, approval_context
+        )
+        if not isinstance(endpoint, str) or not endpoint.startswith("/"):
+            raise GeniusApprovalProtocolError(
+                "approval protocol endpoint did not render to an absolute path."
+            )
+        if endpoint == "/chat/stream":
+            answer_payload: dict[str, Any] = {
+                "message": approval_context["answer_message"],
+                "session_id": approval_context["session_id"],
+                "session_type": "general",
+                "client_message_id": f"client-{uuid4().hex}",
+                "assistant_client_message_id": f"assistant-{uuid4().hex}",
+            }
+            return self._stream_chat_once(
+                answer_payload,
+                context={
+                    key: value
+                    for key, value in approval_context.items()
+                    if key != "answer_message"
+                },
+            )
+        payload = self._render_protocol_value(
+            protocol.payload, approval_context
+        )
+        if not isinstance(payload, dict):
+            raise GeniusApprovalProtocolError(
+                "approval protocol payload did not render to an object."
+            )
+        stale_token = self.credentials.raw_token
+        for auth_attempt in range(2):
+            response = self._client.request(
+                protocol.method,
+                f"{self.config.upstream_base_url}{endpoint}",
+                headers=self._headers(),
+                json=payload,
+            )
+            if response.status_code != 401:
+                break
+            if auth_attempt == 1:
+                raise GeniusAuthenticationError(
+                    "Genius rejected the refreshed approval credential."
+                )
+            self.credentials.refresh_after_401(stale_token)
+            stale_token = self.credentials.raw_token
+        if response.status_code not in protocol.success_statuses:
+            raise GeniusRejectedError(
+                "Genius approval submission returned status "
+                f"{response.status_code}."
+            )
+        try:
+            document = response.json()
+        except ValueError as exc:
+            raise GeniusApprovalProtocolError(
+                "Genius approval submission returned invalid JSON."
+            ) from exc
+        if not isinstance(document, dict):
+            raise GeniusApprovalProtocolError(
+                "Genius approval submission returned a non-object JSON response."
+            )
+        for key, expected in protocol.response.items():
+            if document.get(key) != expected:
+                raise GeniusApprovalProtocolError(
+                    f"Genius approval response field {key!r} did not match the "
+                    "verified protocol."
+                )
+        return document
+
+    def _continue_after_approval(
+        self,
+        result: GeniusResult,
+        assistant_client_message_id: str,
+        *,
+        protocol: ApprovalProtocol,
+    ) -> GeniusResult:
+        continuation = protocol.continuation
+        timeout_s = float(continuation["timeout_s"])
+        interval_s = float(continuation["poll_interval_s"])
+        started = time.monotonic()
+        attempts = 0
+        last_error: GeniusError | None = None
+        while time.monotonic() - started < timeout_s:
+            attempts += 1
+            result.human_input_request = None
+            try:
+                continued = self._reconcile_result(
+                    result,
+                    assistant_client_message_id,
+                    force_persisted=True,
+                    ignore_human_input=True,
+                )
+                if continued.content or continued.terminal_status:
+                    continued.approval_continuation = {
+                        "mode": continuation["mode"],
+                        "attempts": attempts,
+                        "elapsed_s": round(time.monotonic() - started, 3),
+                    }
+                    return continued
+            except GeniusError as exc:
+                last_error = exc
+            time.sleep(interval_s)
+        raise GeniusTimeoutError(
+            "Genius approval continuation timed out.",
+            trace_summary=trace_summary(
+                result,
+                outcome="approval_continuation_timeout",
+            ),
+        ) from last_error
+
+    def _process_approval(
+        self,
+        result: GeniusResult,
+        payload: dict[str, Any],
+        context: dict[str, str],
+        assistant_client_message_id: str,
+    ) -> GeniusResult:
+        candidate = result.approval_candidate
+        if candidate is None:
+            raise GeniusHighRiskApprovalError(
+                "Genius requested approval without readable approval evidence.",
+                trace_summary=result.trace,
+            )
+        self.approval_policy = load_approval_policy(
+            self.config.approval_policy_file
+        )
+        base_context = {
+            **context,
+            "upstream_session_id": str(payload.get("session_id") or ""),
+            "approval": candidate.trace,
+        }
+        self.lifecycle_recorder.write(
+            "approval_observed",
+            base_context,
+            durable=True,
+        )
+        rule, decision_reason = self._approval_decision(
+            candidate, payload, context
+        )
+        approval_context = self._approval_context(candidate, payload, context)
+        result.approval_decision = {
+            "decision": "approved" if rule is not None else "denied",
+            "reason": decision_reason,
+            **approval_context,
+        }
+        self.lifecycle_recorder.write(
+            "approval_policy_decision",
+            {**base_context, "decision": result.approval_decision["decision"]},
+            durable=True,
+        )
+        if rule is None:
+            raise GeniusHighRiskApprovalError(
+                "Genius approval was denied by the local approval policy.",
+                trace_summary=result.trace,
+            )
+        protocol = self.approval_policy.protocol
+        if protocol is None or not protocol.verified:
+            result.approval_decision["reason"] = "protocol_unverified"
+            raise GeniusApprovalProtocolError(
+                "Genius approval protocol is not verified.",
+                trace_summary=result.trace,
+            )
+        self.lifecycle_recorder.write(
+            "approval_protocol_submit",
+            {
+                **base_context,
+                "endpoint": protocol.endpoint,
+                "method": protocol.method,
+                "evidence_id": protocol.evidence_id,
+            },
+            durable=True,
+        )
+        try:
+            response = self._submit_approval(protocol, approval_context)
+            if isinstance(response, GeniusResult):
+                response.approval_decision = result.approval_decision
+                response.approval_protocol_response = {
+                    "mode": "chat_stream",
+                    "outcome": response.trace["outcome"],
+                }
+                response.approval_continuation = {
+                    "mode": "chat_stream",
+                    "attempts": 1,
+                    "elapsed_s": 0,
+                }
+                self.lifecycle_recorder.write(
+                    "approval_protocol_response",
+                    {**base_context, "response": response.approval_protocol_response},
+                    durable=True,
+                )
+                self.lifecycle_recorder.write(
+                    "approval_terminal_result",
+                    {
+                        **base_context,
+                        "outcome": response.trace["outcome"],
+                        "terminal_status": response.terminal_status,
+                    },
+                    durable=True,
+                )
+                return response
+            result.approval_protocol_response = response
+            self.lifecycle_recorder.write(
+                "approval_protocol_response",
+                {**base_context, "response": response},
+                durable=True,
+            )
+            self.lifecycle_recorder.write(
+                "approval_continuation_started",
+                {
+                    **base_context,
+                    "mode": protocol.continuation["mode"],
+                },
+                durable=True,
+            )
+            continued = self._continue_after_approval(
+                result,
+                assistant_client_message_id,
+                protocol=protocol,
+            )
+            continued.approval_decision = result.approval_decision
+            continued.approval_protocol_response = result.approval_protocol_response
+            self.lifecycle_recorder.write(
+                "approval_terminal_result",
+                {
+                    **base_context,
+                    "outcome": continued.trace["outcome"],
+                    "terminal_status": continued.terminal_status,
+                },
+                durable=True,
+            )
+            return continued
+        except GeniusError as exc:
+            self.lifecycle_recorder.write(
+                "approval_failed",
+                {
+                    **base_context,
+                    "error_type": exc.error_type,
+                    "code": exc.code,
+                },
+                durable=True,
+            )
+            raise
 
     def create_session(
         self,
@@ -1680,19 +2463,21 @@ class GeniusService:
         assistant_client_message_id: str,
         *,
         force_persisted: bool = False,
+        ignore_human_input: bool = False,
     ) -> GeniusResult:
-        if result.human_input_request is not None:
+        if result.human_input_request is not None and not ignore_human_input:
             return result
         if result.content and not force_persisted:
             return result
         persisted = self._persisted_session_messages(
             result.upstream_session_id or ""
         )
-        for item in persisted:
-            interaction = human_input_request(item)
-            if interaction is not None:
-                result.human_input_request = interaction
-                return result
+        if not ignore_human_input:
+            for item in persisted:
+                interaction = human_input_request(item)
+                if interaction is not None:
+                    result.human_input_request = interaction
+                    return result
         candidates = [
             item for item in persisted if item.get("role") == "assistant"
         ]
@@ -1761,6 +2546,21 @@ class GeniusService:
             client_message_id=client_message_id,
             assistant_client_message_id=assistant_client_message_id,
         )
+        context = {
+            **context,
+            "local_turn_id": client_message_id,
+            "upstream_session_id": prepared.upstream_session_id,
+        }
+        self.recorder.write(
+            "user_message",
+            {
+                **context,
+                "local_session_id": local_session_id,
+                "role": "user",
+                "text": _latest_user_text(messages),
+                "origin": "local_shim",
+            },
+        )
         self.recorder.write(
             "request_started",
             {
@@ -1784,7 +2584,19 @@ class GeniusService:
                     "history_enabled": True,
                     "reasoning_effort": payload.get("reasoning_effort"),
                 }
-                if result.human_input_request is not None:
+                approval_processed = False
+                if (
+                    result.approval_candidate is not None
+                    and result.trace["campaign_pause_required"]
+                ):
+                    result = self._process_approval(
+                        result,
+                        payload,
+                        context,
+                        assistant_client_message_id,
+                    )
+                    approval_processed = True
+                if not approval_processed and result.human_input_request is not None:
                     error_type = (
                         GeniusHighRiskApprovalError
                         if result.trace["campaign_pause_required"]
@@ -1794,19 +2606,20 @@ class GeniusService:
                         "Genius requires human input before it can continue.",
                         trace_summary=result.trace,
                     )
-                result = self._reconcile_result(
-                    result, assistant_client_message_id
-                )
-                if result.human_input_request is not None:
-                    error_type = (
-                        GeniusHighRiskApprovalError
-                        if result.trace["campaign_pause_required"]
-                        else GeniusHumanInputRequiredError
+                if not approval_processed:
+                    result = self._reconcile_result(
+                        result, assistant_client_message_id
                     )
-                    raise error_type(
-                        "Genius requires human input before it can continue.",
-                        trace_summary=result.trace,
-                    )
+                    if result.human_input_request is not None:
+                        error_type = (
+                            GeniusHighRiskApprovalError
+                            if result.trace["campaign_pause_required"]
+                            else GeniusHumanInputRequiredError
+                        )
+                        raise error_type(
+                            "Genius requires human input before it can continue.",
+                            trace_summary=result.trace,
+                        )
             except _RetryableUpstreamError as exc:
                 last_error = exc
                 if attempt >= max_attempts:
@@ -1899,6 +2712,7 @@ class GeniusRequestHandler(BaseHTTPRequestHandler):
                 {
                     "ok": True,
                     "service": "genius-openai-shim",
+                    "pid": os.getpid(),
                     "credential_configured": self.server.service.credentials.configured,
                     "credential_expires_at": (
                         int(expiry) if expiry is not None else None
@@ -2074,6 +2888,7 @@ def main(argv: list[str] | None = None) -> int:
         trace_jsonl_path=base.trace_jsonl_path,
         lifecycle_jsonl_path=base.lifecycle_jsonl_path,
         trace_raw_events=base.trace_raw_events,
+        approval_policy_file=base.approval_policy_file,
     )
     logging.basicConfig(
         level=os.getenv("GENIUS_SHIM_LOG_LEVEL", "INFO").upper(),

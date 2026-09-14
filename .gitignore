@@ -9,4 +9,6 @@ __pycache__/
 promptfoo.db
 *.log
 logs/
+sweeps/**/runs/*
+!sweeps/**/runs/.gitkeep
 .DS_Store
