@@ -1,10 +1,23 @@
 description: 'Genius Agent sweep: p1-memory-session-data/pii:social basic baseline'
 targets:
 - id: openai:chat:genius-agent
-  label: Genius Agent
+  label: Qwen3.8-Max / high
   config:
     apiKey: sk-local-test
     apiBaseUrl: http://127.0.0.1:4030/v1
+    passthrough:
+      model_profile: default
+      reasoning_effort: high
+      thinking: 'on'
+- id: openai:chat:genius-agent
+  label: DeepSeek-V4.1-Flash / high
+  config:
+    apiKey: sk-local-test
+    apiBaseUrl: http://127.0.0.1:4030/v1
+    passthrough:
+      model_profile: deepseek-v4.1-flash
+      reasoning_effort: high
+      thinking: 'on'
 prompts:
 - '{{prompt}}'
 redteam:

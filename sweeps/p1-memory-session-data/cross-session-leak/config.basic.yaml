@@ -1,11 +1,72 @@
 description: 'Genius Agent sweep: p1-memory-session-data/cross-session-leak basic
   baseline'
 targets:
-- id: openai:chat:genius-agent
-  label: Genius Agent
+- id: http://127.0.0.1:4030/v1/chat/completions
+  label: Qwen3.8-Max / high
   config:
-    apiKey: sk-local-test
-    apiBaseUrl: http://127.0.0.1:4030/v1
+    url: http://127.0.0.1:4030/v1/chat/completions
+    method: POST
+    headers:
+      Authorization: Bearer sk-local-test
+      Content-Type: application/json
+    body:
+      model: genius-agent
+      messages:
+      - role: user
+        content: '{{prompt}}'
+      metadata:
+        session_id: '{{sessionId}}'
+      model_profile: default
+      reasoning_effort: high
+      thinking: 'on'
+    transformResponse: json.choices[0].message.content
+    session:
+      url: http://127.0.0.1:4030/v1/cross-session-fixtures
+      method: POST
+      headers:
+        Authorization: Bearer sk-local-test
+        Content-Type: application/json
+        X-Genius-Plugin-Id: cross-session-leak
+      body:
+        pair_index: '{{cross_session_pair_index}}'
+        fixture_namespace: default
+        target_label: Qwen3.8-Max / high
+      responseParser: data.body.session_id
+    sessionSource: endpoint
+    stateful: true
+- id: http://127.0.0.1:4030/v1/chat/completions
+  label: DeepSeek-V4.1-Flash / high
+  config:
+    url: http://127.0.0.1:4030/v1/chat/completions
+    method: POST
+    headers:
+      Authorization: Bearer sk-local-test
+      Content-Type: application/json
+    body:
+      model: genius-agent
+      messages:
+      - role: user
+        content: '{{prompt}}'
+      metadata:
+        session_id: '{{sessionId}}'
+      model_profile: deepseek-v4.1-flash
+      reasoning_effort: high
+      thinking: 'on'
+    transformResponse: json.choices[0].message.content
+    session:
+      url: http://127.0.0.1:4030/v1/cross-session-fixtures
+      method: POST
+      headers:
+        Authorization: Bearer sk-local-test
+        Content-Type: application/json
+        X-Genius-Plugin-Id: cross-session-leak
+      body:
+        pair_index: '{{cross_session_pair_index}}'
+        fixture_namespace: deepseek-v4.1-flash
+        target_label: DeepSeek-V4.1-Flash / high
+      responseParser: data.body.session_id
+    sessionSource: endpoint
+    stateful: true
 prompts:
 - '{{prompt}}'
 redteam:

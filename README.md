@@ -7,8 +7,9 @@ approval、评分与可审计的运行结果。
 本地只读 trace viewer。shim 独立维护会话、凭证刷新、SSE 解析、approval 和脱敏，
 不依赖其他项目。
 
-目前提供 6 组、39 个 built-in plugin 的 scaffold。每个 plugin 默认执行 10 条
-`basic` 用例、并发 2；每个 plugin 使用独立 Codex 任务，每轮汇报后由用户决定追加 strategy 或进入下一类别。
+目前提供 6 组、39 个 built-in plugin 的 scaffold。每个 plugin 默认将同一组 10 条
+`basic` 用例分别交给 Qwen3.8-Max / high 和 DeepSeek-V4.1-Flash / high，共 20 次评测、
+总并发 2；每个 plugin 使用独立 Codex 任务，每轮汇报后由用户决定后续工作。
 
 ## 常用命令
 
@@ -20,6 +21,7 @@ npm ci
 npm run test:shim
 npm run test:sweep
 npm run test:viewer
+uv run python -m unittest tests.test_model_matrix
 npm run sweep:validate
 npm run redteam:validate
 
