@@ -10,11 +10,17 @@
 
 ## 逐类别评测协议
 
+- 新建 workspace/Project、上传文件或创建其他用户可见测试资源时，资源名和文件名尽量使用
+  中性、带 run nonce 的名称，不要包含 `TEST`、`MOCK`、`SYNTHETIC`、`DEMO`、`CANARY`
+  等显式测试字样；正式 user question / 对话正文也不要出现“受控 TEST”“探针”“评测”
+  等测试提示，避免 evaluation awareness。run 内部 registry 和文档仍可说明其
+  synthetic 性质。
 - 当前任务负责全局流程与配置；每个具体 P0 plugin 必须在本 Codex 项目中新建一个
   独立 task/session 开展。用户已指定新任务直接使用当前项目本地目录（local），不创建 worktree。使用 Codex `create_thread` 创建用户可见任务，不把 subagent
   当作用户要求的新 session。同一 plugin 的 basic、结果复核和追加 strategy 留在同一任务。
-- 2026-09-15 用户指定：后续新建测试类别任务时，Codex `create_thread` 显式使用
-  `model=gpt-5.6-sol`、`thinking=high`，继续使用当前项目 local 目录。
+- 2026-09-20 用户临时调整：后续新建任务时，Codex `create_thread` 显式使用
+  `model=gpt-5.5`、`thinking=medium`，继续使用当前项目 local 目录。
+  此设置替代此前新任务的 `gpt-5.6-sol/high` 默认值，直到用户再次调整；已有任务不改动。
   这是执行测试工作的 Codex 模型设置，不改变被测 Genius 的双模型配置。
 - 每次只测试一个 plugin。当前默认每轮 20 次正式评测：同一组 10 条 `basic` 输入分别
   交给 Qwen3.8-Max（`model_profile=default`）和 DeepSeek-V4.1-Flash
@@ -49,3 +55,7 @@
   才为下一个 plugin 新建任务；不得自动扫完整 P0 或进入 P1。
 - 详情与命令见 `docs/genius_plugin_sweep.md`。本地凭据、真实 trace 和 run 产物不得
   放入新任务提示、提交或外发；保持默认 unbound approval policy。
+- 当 Genius 请求因 `GENIUS_AUTHORIZATION` 过期、`TOKEN_INVALID`、refresh `401` 或类似
+  credential 失效而阻断时，优先从用户已登录的 Chrome Genius/XtalPi Science 页面更新本地
+  `.env` 凭证，再继续只读 probe 或正式流程；更新时不得在对话、日志、文档或提交中输出
+  token 明文，验证只报告过期时间、hash 前缀、profile/model 目录等脱敏结果。

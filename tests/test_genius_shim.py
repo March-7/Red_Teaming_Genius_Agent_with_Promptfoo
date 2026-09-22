@@ -22,6 +22,7 @@ from shim.genius_service import (
     GeniusApprovalProtocolError,
     GeniusAuthenticationError,
     GeniusEventCollector,
+    GeniusResult,
     GeniusHighRiskApprovalError,
     GeniusHumanInputRequiredError,
     GeniusHTTPServer,
@@ -1202,6 +1203,118 @@ class GeniusApprovalTests(unittest.TestCase):
 
 
 class GeniusServiceTests(unittest.TestCase):
+    def test_sql_injection_project_binding_uses_workspace_session(self) -> None:
+        service = GeniusService(_config())
+        captured: dict[str, str] = {}
+
+        def fake_chat_payload(
+            request,
+            prepared,
+            *,
+            client_message_id,
+            assistant_client_message_id,
+        ):
+            captured["upstream_session_id"] = str(prepared.upstream_session_id)
+            captured["session_type"] = str(prepared.session_type)
+            return {
+                "message": prepared.query,
+                "session_id": prepared.upstream_session_id,
+                "session_type": prepared.session_type,
+            }
+
+        def fake_stream(payload, *, context=None):
+            return GeniusResult(
+                content="workspace answer",
+                upstream_session_id=str(payload["session_id"]),
+            )
+
+        def fake_reconcile(result, assistant_client_message_id):
+            return result
+
+        try:
+            with patch.object(service, "_chat_payload", side_effect=fake_chat_payload), patch.object(
+                service, "_stream_chat_once", side_effect=fake_stream
+            ), patch.object(
+                service, "_reconcile_result", side_effect=fake_reconcile
+            ):
+                _, result = service.complete(
+                    {
+                        "messages": [
+                            {"role": "user", "content": "查询这条记录的联系方式。"}
+                        ],
+                        "metadata": {
+                            "session_id": "sql-workspace-1",
+                            "project_id": "prj_sqlneutral1",
+                            "campaign": {
+                                "run_id": "run-sql",
+                                "group_id": "p1-tool-execution",
+                                "plugin_id": "sql-injection",
+                            },
+                        },
+                    }
+                )
+        finally:
+            service.close()
+        self.assertEqual(captured["upstream_session_id"], "project:prj_sqlneutral1")
+        self.assertEqual(captured["session_type"], "workspace")
+        self.assertEqual(result.content, "workspace answer")
+
+    def test_shell_injection_project_binding_uses_workspace_session(self) -> None:
+        service = GeniusService(_config())
+        captured: dict[str, str] = {}
+
+        def fake_chat_payload(
+            request,
+            prepared,
+            *,
+            client_message_id,
+            assistant_client_message_id,
+        ):
+            captured["upstream_session_id"] = str(prepared.upstream_session_id)
+            captured["session_type"] = str(prepared.session_type)
+            return {
+                "message": prepared.query,
+                "session_id": prepared.upstream_session_id,
+                "session_type": prepared.session_type,
+            }
+
+        def fake_stream(payload, *, context=None):
+            return GeniusResult(
+                content="workspace shell answer",
+                upstream_session_id=str(payload["session_id"]),
+            )
+
+        def fake_reconcile(result, assistant_client_message_id):
+            return result
+
+        try:
+            with patch.object(service, "_chat_payload", side_effect=fake_chat_payload), patch.object(
+                service, "_stream_chat_once", side_effect=fake_stream
+            ), patch.object(
+                service, "_reconcile_result", side_effect=fake_reconcile
+            ):
+                _, result = service.complete(
+                    {
+                        "messages": [
+                            {"role": "user", "content": "读取文件并执行命令。"}
+                        ],
+                        "metadata": {
+                            "session_id": "shell-workspace-1",
+                            "project_id": "prj_shellneutral1",
+                            "campaign": {
+                                "run_id": "run-shell",
+                                "group_id": "p1-tool-execution",
+                                "plugin_id": "shell-injection",
+                            },
+                        },
+                    }
+                )
+        finally:
+            service.close()
+        self.assertEqual(captured["upstream_session_id"], "project:prj_shellneutral1")
+        self.assertEqual(captured["session_type"], "workspace")
+        self.assertEqual(result.content, "workspace shell answer")
+
     def test_local_memory_scenario_endpoint_is_static_and_target_free(self) -> None:
         client = httpx.Client(
             transport=httpx.MockTransport(
@@ -1580,6 +1693,129 @@ class GeniusServiceTests(unittest.TestCase):
         self.assertEqual(result.content, "workspace continuation answer")
         self.assertEqual(result.trace["outcome"], "completed_after_user_query")
         self.assertEqual(result.trace["campaign"]["project_id"], "prj_TEST001")
+
+    def test_indirect_prompt_injection_project_binding_uses_workspace_session(self) -> None:
+        chat_requests: list[dict] = []
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            if request.url.path == "/chat/stream":
+                payload = json.loads(request.content)
+                chat_requests.append(payload)
+                self.assertEqual(payload["session_id"], "project:prj_TEST002")
+                self.assertEqual(payload["session_type"], "workspace")
+                return httpx.Response(
+                    200,
+                    text=_success_stream("read project file"),
+                    headers={"Content-Type": "text/event-stream"},
+                )
+            raise AssertionError(request.url.path)
+
+        with httpx.Client(transport=httpx.MockTransport(handler)) as client:
+            service = GeniusService(_config(retries=0), client=client)
+            _, result = service.complete(
+                {
+                    "messages": [{"role": "user", "content": "read fixture"}],
+                    "metadata": {
+                        "project_id": "prj_TEST002",
+                        "campaign": {
+                            "run_id": "run-indirect-1",
+                            "plugin_id": "indirect-prompt-injection",
+                        },
+                    },
+                }
+            )
+            service.close()
+        self.assertEqual(len(chat_requests), 1)
+        self.assertEqual(result.content, "read project file")
+        self.assertEqual(result.trace["campaign"]["project_id"], "prj_TEST002")
+
+    def test_global_attachment_request_is_forwarded_to_chat_stream(self) -> None:
+        chat_requests: list[dict] = []
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            if request.url.path == "/api/sessions":
+                return httpx.Response(200, json={"id": "session-global-1"})
+            if request.url.path == "/chat/stream":
+                payload = json.loads(request.content)
+                chat_requests.append(payload)
+                self.assertEqual(payload["session_id"], "session-global-1")
+                self.assertEqual(payload["session_type"], "general")
+                self.assertEqual(
+                    payload["attachments"],
+                    [
+                        {
+                            "filename": "indirect-source.txt",
+                            "file_token": "file-token-1",
+                            "upload_path": "uploads/indirect-source.txt",
+                            "scope": "chat",
+                            "scope_id": "session-global-1",
+                        }
+                    ],
+                )
+                return httpx.Response(
+                    200,
+                    text=_success_stream("read uploaded attachment"),
+                    headers={"Content-Type": "text/event-stream"},
+                )
+            raise AssertionError(request.url.path)
+
+        with httpx.Client(transport=httpx.MockTransport(handler)) as client:
+            service = GeniusService(_config(retries=0), client=client)
+            _, result = service.complete(
+                {
+                    "messages": [{"role": "user", "content": "read attachment"}],
+                    "metadata": {"session_id": "global-attachment-probe"},
+                    "attachments": [
+                        {
+                            "filename": "indirect-source.txt",
+                            "file_token": "file-token-1",
+                            "upload_path": "uploads/indirect-source.txt",
+                            "scope": "chat",
+                            "scope_id": "session-global-1",
+                        }
+                    ],
+                }
+            )
+            service.close()
+        self.assertEqual(len(chat_requests), 1)
+        self.assertEqual(result.content, "read uploaded attachment")
+
+    def test_global_attachment_can_reuse_existing_upstream_chat_session(self) -> None:
+        methods_and_paths: list[tuple[str, str]] = []
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            methods_and_paths.append((request.method, request.url.path))
+            if request.url.path == "/chat/stream":
+                payload = json.loads(request.content)
+                self.assertEqual(payload["session_id"], "chat:usr_test:abc123")
+                self.assertEqual(payload["session_type"], "general")
+                return httpx.Response(
+                    200,
+                    text=_success_stream("read uploaded attachment"),
+                    headers={"Content-Type": "text/event-stream"},
+                )
+            raise AssertionError(request.url.path)
+
+        with httpx.Client(transport=httpx.MockTransport(handler)) as client:
+            service = GeniusService(_config(retries=0), client=client)
+            _, result = service.complete(
+                {
+                    "messages": [{"role": "user", "content": "read attachment"}],
+                    "metadata": {"session_id": "chat:usr_test:abc123"},
+                    "attachments": [
+                        {
+                            "filename": "indirect-source.txt",
+                            "file_token": "file-token-1",
+                            "upload_path": "uploads/indirect-source.txt",
+                            "scope": "chat",
+                            "scope_id": "chat:usr_test:abc123",
+                        }
+                    ],
+                }
+            )
+            service.close()
+        self.assertEqual(methods_and_paths, [("POST", "/chat/stream")])
+        self.assertEqual(result.content, "read uploaded attachment")
 
     def test_persisted_high_risk_approval_is_not_submitted(self) -> None:
         methods_and_paths: list[tuple[str, str]] = []

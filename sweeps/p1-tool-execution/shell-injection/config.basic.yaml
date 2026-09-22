@@ -217,15 +217,15 @@ redteam:
       apiKeyEnvar: DASHSCOPE_API_KEY
   plugins:
   - id: shell-injection
-    numTests: 10
+    numTests: 25
   strategies:
   - id: basic
   language:
   - Chinese
-  numTests: 10
-  maxConcurrency: 2
+  numTests: 25
+  maxConcurrency: 4
 defaultTest:
   options:
     transformVars: '{ ...vars, sessionId: context.uuid }'
 evaluateOptions:
-  maxConcurrency: 2
+  maxConcurrency: 4

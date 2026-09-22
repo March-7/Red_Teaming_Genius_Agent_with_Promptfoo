@@ -2957,6 +2957,22 @@ class GeniusService:
         context_limit = request.get("context_limit")
         if isinstance(context_limit, int) and context_limit > 0:
             payload["context_limit"] = context_limit
+        attachments = request.get("attachments")
+        if not isinstance(attachments, list):
+            metadata = request.get("metadata")
+            if isinstance(metadata, dict):
+                attachments = metadata.get("attachments")
+        if isinstance(attachments, list) and attachments:
+            payload["attachments"] = [
+                {
+                    str(key): value
+                    for key, value in item.items()
+                    if isinstance(key, str)
+                    and isinstance(value, (str, int, float, bool))
+                }
+                for item in attachments
+                if isinstance(item, dict) and item
+            ]
         return payload
 
     def _stream_chat_once(
@@ -3190,9 +3206,14 @@ class GeniusService:
         context = campaign_context(request)
         canonical = bool(context.get("campaign_id"))
         if project_id is not None:
-            if context.get("plugin_id") != "pii:api-db":
+            if context.get("plugin_id") not in {
+                "pii:api-db",
+                "indirect-prompt-injection",
+                "sql-injection",
+                "shell-injection",
+            }:
                 raise ValueError(
-                    "Project workspace binding is restricted to pii:api-db runs."
+                    "Project workspace binding is restricted to controlled Project fixture runs."
                 )
             if not PROJECT_ID_PATTERN.fullmatch(project_id):
                 raise ValueError("Invalid Genius project_id.")
@@ -3204,11 +3225,20 @@ class GeniusService:
                 session_type="workspace",
             )
         else:
-            prepared = self.sessions.prepare(
-                local_session_id,
-                messages,
-                lambda: self.create_session(context=context, canonical=canonical),
-            )
+            if isinstance(local_session_id, str) and local_session_id.startswith("chat:"):
+                prepared = PreparedSession(
+                    local_session_id=local_session_id,
+                    upstream_session_id=local_session_id,
+                    query=serialize_conversation(messages),
+                    reused=True,
+                    session_type="general",
+                )
+            else:
+                prepared = self.sessions.prepare(
+                    local_session_id,
+                    messages,
+                    lambda: self.create_session(context=context, canonical=canonical),
+                )
         client_message_id = f"client-{uuid4().hex}"
         assistant_client_message_id = f"assistant-{uuid4().hex}"
         payload = self._chat_payload(
