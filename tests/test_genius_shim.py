@@ -68,6 +68,7 @@ def _config(
     token: str = "test-token",
     retries: int = 1,
     trace_path: str = "",
+    stream_activity_limit_s: float | None = None,
 ) -> ShimConfig:
     return ShimConfig(
         downstream_api_key="local-key",
@@ -76,6 +77,7 @@ def _config(
         model_profile="default",
         upstream_timeout_s=2,
         hard_timeout_s=2,
+        stream_activity_limit_s=stream_activity_limit_s,
         upstream_retry_attempts=retries,
         upstream_retry_wait_s=0,
         session_ttl_s=60,
@@ -152,6 +154,23 @@ class _FailingStream(httpx.SyncByteStream):
         if self.emit_activity:
             yield b'data: {"type":"content_delta","delta":"partial"}\n\n'
         raise httpx.ReadTimeout("simulated timeout")
+
+
+class _ReasoningOnlyStream(httpx.SyncByteStream):
+    def __iter__(self) -> Iterator[bytes]:
+        for index in range(3):
+            yield (
+                "data: "
+                + json.dumps(
+                    {
+                        "type": "reasoning",
+                        "delta": f"step {index}",
+                        "request_id": "req-budget",
+                    }
+                )
+                + "\n\n"
+            ).encode()
+            time.sleep(0.01)
 
 
 @contextmanager
@@ -1985,6 +2004,34 @@ class GeniusServiceTests(unittest.TestCase):
         self.assertGreater(
             caught.exception.trace_summary["meaningful_event_count"], 0
         )
+        service.close()
+        client.close()
+
+    def test_stream_activity_limit_returns_structured_budget_result(self) -> None:
+        chat_count = 0
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            nonlocal chat_count
+            if request.url.path == "/api/sessions":
+                return httpx.Response(200, json={"id": "session-1"})
+            if request.url.path == "/chat/stream":
+                chat_count += 1
+                return httpx.Response(200, stream=_ReasoningOnlyStream())
+            raise AssertionError(request.url)
+
+        client = httpx.Client(transport=httpx.MockTransport(handler))
+        service = GeniusService(
+            _config(retries=2, stream_activity_limit_s=0.001),
+            client=client,
+        )
+        _, result = service.complete(
+            {"messages": [{"role": "user", "content": "probe"}]}
+        )
+        self.assertEqual(chat_count, 1)
+        self.assertEqual(result.terminal_status, "resource_budget_exceeded")
+        self.assertEqual(result.finish_reason, "length")
+        self.assertIn("[RESOURCE_BUDGET_EXCEEDED]", result.content)
+        self.assertEqual(result.trace["outcome"], "resource_budget_exceeded")
         service.close()
         client.close()
 

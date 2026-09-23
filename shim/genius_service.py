@@ -120,6 +120,12 @@ class GeniusTimeoutError(GeniusError):
     error_type = "timeout_error"
 
 
+class GeniusResourceBudgetExceeded(GeniusError):
+    status = HTTPStatus.OK
+    code = "genius_resource_budget_exceeded"
+    error_type = "resource_budget_exceeded"
+
+
 class GeniusRejectedError(GeniusError):
     code = "genius_upstream_rejected"
     error_type = "provider_rejection"
@@ -959,6 +965,7 @@ class ShimConfig:
     organization_id: str = ""
     upstream_timeout_s: float = 180.0
     hard_timeout_s: float | None = 180.0
+    stream_activity_limit_s: float | None = None
     upstream_retry_attempts: int = 1
     upstream_retry_wait_s: float = 1.0
     session_ttl_s: float = 1800.0
@@ -978,6 +985,7 @@ class ShimConfig:
     @classmethod
     def from_env(cls) -> "ShimConfig":
         hard_timeout = os.getenv("GENIUS_HARD_TIMEOUT_S", "180").strip()
+        stream_activity_limit = os.getenv("GENIUS_STREAM_ACTIVITY_LIMIT_S", "").strip()
         return cls(
             host=os.getenv("GENIUS_SHIM_HOST", "127.0.0.1"),
             port=int(os.getenv("GENIUS_SHIM_PORT", "4030")),
@@ -993,6 +1001,9 @@ class ShimConfig:
                 os.getenv("GENIUS_UPSTREAM_TIMEOUT_S", "180")
             ),
             hard_timeout_s=float(hard_timeout) if hard_timeout else None,
+            stream_activity_limit_s=(
+                float(stream_activity_limit) if stream_activity_limit else None
+            ),
             upstream_retry_attempts=max(
                 0, int(os.getenv("GENIUS_UPSTREAM_RETRY_ATTEMPTS", "1"))
             ),
@@ -1529,7 +1540,9 @@ class GeniusResult:
     @property
     def trace(self) -> dict[str, Any]:
         outcome = "completed"
-        if self.terminal_status in FAILURE_STATUSES:
+        if self.terminal_status == "resource_budget_exceeded":
+            outcome = "resource_budget_exceeded"
+        elif self.terminal_status in FAILURE_STATUSES:
             outcome = f"upstream_{self.terminal_status}"
         elif self.tool_events:
             outcome = "completed_with_tool"
@@ -2987,6 +3000,7 @@ class GeniusService:
             on_event=lambda event: self.recorder.event(event, context=context),
         )
         stale_token = self.credentials.raw_token
+        started_at = time.monotonic()
         try:
             with self._client.stream(
                 "POST",
@@ -3010,6 +3024,41 @@ class GeniusService:
                     )
                 for chunk in response.iter_text():
                     parser.feed(chunk)
+                    if (
+                        self.config.stream_activity_limit_s
+                        and self.config.stream_activity_limit_s > 0
+                        and time.monotonic() - started_at
+                        >= self.config.stream_activity_limit_s
+                    ):
+                        result = collector.result(
+                            upstream_session_id=str(payload["session_id"])
+                        )
+                        result.finish_reason = "length"
+                        result.terminal_status = "resource_budget_exceeded"
+                        result.content = (
+                            "[RESOURCE_BUDGET_EXCEEDED] The upstream response "
+                            "continued producing reasoning activity until the "
+                            "local per-sample budget was reached; no final "
+                            "assistant answer was observed."
+                        )
+                        self.recorder.write(
+                            "resource_budget_exceeded",
+                            {
+                                **(context or {}),
+                                "upstream_session_id": payload.get("session_id"),
+                                "elapsed_s": round(
+                                    time.monotonic() - started_at, 3
+                                ),
+                                "stream_activity_limit_s": (
+                                    self.config.stream_activity_limit_s
+                                ),
+                                "trace_summary": trace_summary(
+                                    result,
+                                    outcome="resource_budget_exceeded",
+                                ),
+                            },
+                        )
+                        return result
                     if collector.human_input_request is not None:
                         break
                 parser.finish()
@@ -3342,7 +3391,10 @@ class GeniusService:
                         "Genius requires human input before it can continue.",
                         trace_summary=result.trace,
                     )
-                if not approval_processed:
+                if (
+                    not approval_processed
+                    and result.terminal_status != "resource_budget_exceeded"
+                ):
                     result = self._reconcile_result(
                         result, assistant_client_message_id
                     )
@@ -3719,6 +3771,7 @@ def main(argv: list[str] | None = None) -> int:
         organization_id=base.organization_id,
         upstream_timeout_s=base.upstream_timeout_s,
         hard_timeout_s=base.hard_timeout_s,
+        stream_activity_limit_s=base.stream_activity_limit_s,
         upstream_retry_attempts=base.upstream_retry_attempts,
         upstream_retry_wait_s=base.upstream_retry_wait_s,
         session_ttl_s=base.session_ttl_s,
