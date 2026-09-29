@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Genius Trace Viewer</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">G<span>✦</span></span
+        ><strong>Genius <span class="brand-light">Trace</span></strong
+        ><span class="local-badge">本地回放</span>
+      </div>
+      <div class="toolbar">
+        <label class="search"
+          ><span aria-hidden="true">⌕</span
+          ><input
+            type="search"
+            data-filter="q"
+            aria-label="搜索轨迹"
+            placeholder="搜索对话、工具或事件…"
+          /><kbd>/</kbd></label
+        >
+        <button
+          id="toggle-filters"
+          aria-expanded="false"
+          aria-controls="filter-panel"
+        >
+          筛选 <span id="filter-count"></span>
+        </button>
+        <button id="theme-toggle" aria-label="切换深浅主题">◐</button>
+      </div>
+    </header>
+    <div id="filter-panel" class="filters" hidden>
+      <label>Run<select data-filter="run_id"></select></label>
+      <label>Group<select data-filter="group_id"></select></label>
+      <label>Plugin<select data-filter="plugin_id"></select></label>
+      <label>Session<select data-filter="session_id"></select></label>
+      <label>Request<select data-filter="request_id"></select></label>
+      <label>Outcome<select data-filter="outcome"></select></label>
+      <label>Tool<select data-filter="tool_name"></select></label>
+      <label>Approval<select data-filter="confirmation_id"></select></label>
+      <button id="clear-filters">清除筛选</button>
+    </div>
+    <main class="workspace">
+      <aside class="navigator" aria-label="轨迹导航">
+        <div class="nav-heading">
+          <span>工作区</span><span class="muted">LOCAL</span>
+        </div>
+        <section class="nav-section">
+          <h2>运行记录 <span id="run-count"></span></h2>
+          <div id="run-list" class="list"></div>
+        </section>
+        <section class="nav-section">
+          <h2>对话 <span id="session-count"></span></h2>
+          <div id="session-list" class="list"></div>
+        </section>
+        <section class="nav-section">
+          <h2>请求 <span id="request-count"></span></h2>
+          <div id="request-list" class="list"></div>
+        </section>
+        <div class="nav-footer">
+          <span class="status-dot"></span>只读 · 离线日志<span
+            >↑ ↓ 浏览事件</span
+          >
+        </div>
+      </aside>
+      <section class="timeline-panel">
+        <div class="timeline-header">
+          <div class="heading-copy">
+            <div class="eyebrow">CONVERSATION REPLAY</div>
+            <h1 id="timeline-title">对话轨迹</h1>
+            <p id="timeline-subtitle">从本地日志还原每一步</p>
+          </div>
+          <button
+            id="toggle-details"
+            aria-expanded="true"
+            aria-controls="inspector"
+          >
+            详情侧栏
+          </button>
+        </div>
+        <div class="transcript-toolbar">
+          <div class="view-tabs" aria-label="视图">
+            <button id="view-conversation" class="active" aria-pressed="true">
+              对话</button
+            ><button id="view-events" aria-pressed="false">全部事件</button>
+          </div>
+          <span id="timeline-count"></span
+          ><button id="copy-link">复制链接</button>
+        </div>
+        <div
+          id="timeline"
+          class="timeline"
+          tabindex="0"
+          aria-label="对话时间线"
+          aria-busy="true"
+        >
+          <div class="state-card">
+            <span class="state-symbol">◌</span>
+            <h2>正在整理对话</h2>
+            <p>读取本地 trace 与审批记录…</p>
+          </div>
+        </div>
+        <div class="timeline-footer">
+          <span>日志回放</span
+          ><span id="reading-hint">选择事件查看原始证据</span
+          ><button id="to-bottom">跳至末尾 ↓</button>
+        </div>
+      </section>
+      <aside id="inspector" class="details" aria-label="事件详情">
+        <div class="inspector-heading">
+          <div>
+            <div class="eyebrow">INSPECTOR</div>
+            <h2>事件详情</h2>
+          </div>
+          <span class="inspector-icon">⌘</span>
+        </div>
+        <section class="detail-section">
+          <div id="details-body">
+            <div class="inspector-empty">
+              <span>⌖</span>
+              <h3>每一步，都有迹可循</h3>
+              <p>选择一条消息或工具调用，<br />在这里查看来源与执行细节。</p>
+            </div>
+          </div>
+        </section>
+        <section class="detail-section raw-section">
+          <h2>原始记录 <button id="copy-json" disabled>复制 JSON</button></h2>
+          <div id="raw-json"><p class="empty">尚未选择事件</p></div>
+        </section>
+      </aside>
+    </main>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>

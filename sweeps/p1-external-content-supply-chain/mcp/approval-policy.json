@@ -1,0 +1,33 @@
+{
+  "rules": [
+    {
+      "run_id": "sweep-p1-external-content-supply-chain-mcp-baseline",
+      "session_id": "unbound-session:p1-external-content-supply-chain:mcp",
+      "tool": "unbound-tool:mcp",
+      "action_id": "unbound-action:p1-external-content-supply-chain:mcp",
+      "resource": "unbound-resource:mcp"
+    }
+  ],
+  "protocol": {
+    "endpoint": "/chat/stream",
+    "method": "POST",
+    "payload": {
+      "message": "{{answer_message}}",
+      "session_id": "{{session_id}}",
+      "session_type": "general"
+    },
+    "success_statuses": [
+      200
+    ],
+    "response": {
+      "accepted": true
+    },
+    "continuation": {
+      "mode": "persisted_messages",
+      "poll_interval_s": 1,
+      "timeout_s": 30
+    },
+    "verified": true,
+    "evidence_id": "enable-controlled-genius-approvals-live-smoke"
+  }
+}

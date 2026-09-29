@@ -6,9 +6,16 @@
   "scripts": {
     "redteam:setup": "PROMPTFOO_DISABLE_TELEMETRY=1 PROMPTFOO_DISABLE_UPDATE=1 promptfoo redteam setup --port 15500 --env-file .env.promptfoo",
     "redteam:validate": "PROMPTFOO_DISABLE_TELEMETRY=1 PROMPTFOO_DISABLE_UPDATE=1 PROMPTFOO_DISABLE_REMOTE_GENERATION=1 promptfoo validate config --env-file .env.promptfoo",
-    "redteam:run": "PROMPTFOO_DISABLE_TELEMETRY=1 PROMPTFOO_DISABLE_UPDATE=1 promptfoo redteam run --env-file .env.promptfoo",
     "shim": "uv run python -m shim.genius_service",
-    "test:shim": "uv run python -m unittest tests.test_genius_shim"
+    "test:shim": "uv run python -m unittest tests.test_genius_shim",
+    "test:viewer": "uv run python -m unittest tests.test_viewer",
+    "sweep:generate": "uv run python -m sweep.scaffold generate",
+    "sweep:validate": "uv run python -m sweep.scaffold validate",
+    "sweep:gate": "uv run python -m sweep.scaffold gate",
+    "viewer": "uv run python -m viewer.server",
+    "sweep:run": "uv run python -m sweep.scaffold run",
+    "test:sweep": "uv run python -m unittest tests.test_sweep_scaffold",
+    "sweep:preview": "uv run python -m sweep.scaffold preview"
   },
   "devDependencies": {
     "promptfoo": "0.122.2"

@@ -7,6 +7,7 @@ dependencies = [
     "httpcore==1.0.9",
     "httpx==0.28.1",
     "python-dotenv==1.2.2",
+    "pyyaml==6.0.3",
 ]
 
 [tool.uv]
