@@ -3,8 +3,6 @@
 from __future__ import annotations
 
 import argparse
-from contextlib import contextmanager
-import fcntl
 import copy
 import datetime as dt
 import hashlib
@@ -22,8 +20,8 @@ from typing import Any
 
 import yaml
 import httpx
-from dotenv import dotenv_values
 from shim.genius_service import load_approval_policy
+from sweep import runtime
 from sweep.briefs import plugin_brief
 from sweep.cross_session import (
     AUDIT_NAME as CROSS_SESSION_AUDIT_NAME,
@@ -94,18 +92,7 @@ POLICY_REQUIRED_FIELDS = (
 WILDCARD_CHARACTERS = ("*", "?")
 
 
-def sensitive_value_hashes(root: Path) -> str:
-    """Pass only hashes of configured secrets to the local output guard."""
-    values: set[str] = set()
-    for name in (".env", ".env.promptfoo"):
-        for key, value in dotenv_values(root / name).items():
-            if not value or len(value) < 8:
-                continue
-            if any(marker in key.lower() for marker in ("key", "secret", "token", "password", "authorization")):
-                values.add(value)
-                if value.startswith("Bearer "):
-                    values.add(value.removeprefix("Bearer "))
-    return ",".join(sorted(hashlib.sha256(value.encode()).hexdigest() for value in values))
+sensitive_value_hashes = runtime.sensitive_value_hashes
 DEFAULT_NUM_TESTS = 10
 DEFAULT_MAX_CONCURRENCY = 2
 SUPPORTED_STRATEGIES = ("basic", "jailbreak:meta")
@@ -147,8 +134,7 @@ def indirect_transport_from_conditions(
     return "project-file"
 
 
-def utc_now() -> str:
-    return dt.datetime.now(dt.timezone.utc).isoformat()
+utc_now = runtime.utc_now
 
 
 def timestamp_name(moment: dt.datetime | None = None) -> str:
@@ -156,12 +142,7 @@ def timestamp_name(moment: dt.datetime | None = None) -> str:
     return value.strftime("%Y-%m-%dT%H-%M-%S")
 
 
-def sha256_file(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
+sha256_file = runtime.sha256_file
 
 
 def wait_for_public_urls(
@@ -241,12 +222,7 @@ def publish_url_fixtures(
     return observations
 
 
-def write_json(path: Path, value: dict[str, Any] | list[dict[str, Any]]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        json.dumps(value, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
+write_json = runtime.write_json
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -782,29 +758,7 @@ def generate_scaffold(
     return sweeps_root
 
 
-def validate_policy_document(document: Any, label: str) -> list[str]:
-    errors: list[str] = []
-    if not isinstance(document, dict):
-        return [f"{label}: policy must be a JSON object"]
-    rules = document.get("rules")
-    if not isinstance(rules, list) or len(rules) != 1:
-        return [f"{label}: policy must contain exactly one rule"]
-    rule = rules[0]
-    if not isinstance(rule, dict):
-        return [f"{label}: policy rule must be an object"]
-    for field in POLICY_REQUIRED_FIELDS:
-        value = rule.get(field)
-        if not isinstance(value, str) or not value.strip():
-            errors.append(f"{label}: missing or empty policy field {field}")
-            continue
-        if any(char in value for char in WILDCARD_CHARACTERS):
-            errors.append(f"{label}: policy field {field} contains a wildcard")
-        if "{{" in value or "}}" in value:
-            errors.append(f"{label}: policy field {field} is not exact")
-    protocol = document.get("protocol")
-    if not isinstance(protocol, dict):
-        errors.append(f"{label}: policy protocol must be an object")
-    return errors
+validate_policy_document = runtime.validate_policy_document
 
 
 def validate_config_document(
@@ -982,7 +936,7 @@ def create_run_directory(
         config_document = yaml.safe_load(source_config)
     else:
         (run_dir / config_file).write_text(yaml.safe_dump(config_document, sort_keys=False, allow_unicode=True), encoding="utf-8")
-    (run_dir / "approval-policy.json").write_bytes(policy_bytes)
+    runtime.snapshot_policy(policy_bytes, run_dir / "approval-policy.json")
     config_hash = sha256_file(run_dir / config_file)
     policy_hash = sha256_file(run_dir / "approval-policy.json")
     manifest = {
@@ -2593,56 +2547,14 @@ def run_command(
     ).returncode
 
 
-def require_free_shim_port() -> None:
-    """Do not reuse or terminate a service owned by another run."""
-    try:
-        connection = socket.create_connection(("127.0.0.1", 4030), timeout=0.5)
-    except ConnectionRefusedError:
-        return
-    with connection:
-        raise RuntimeError("127.0.0.1:4030 is occupied; stop the existing shim before running a sweep")
+require_free_shim_port = runtime.require_free_shim_port
 
 
 def start_shim(root: Path, env: dict[str, str]) -> subprocess.Popen[bytes]:
-    """Start a run-local shim so trace and lifecycle paths are run-specific."""
-    require_free_shim_port()
-    process = subprocess.Popen(
-        [sys.executable, "-m", "shim.genius_service", "--host", "127.0.0.1", "--port", "4030"],
-        cwd=root,
-        env=env,
-    )
-    health_url = "http://127.0.0.1:4030/health"
-    try:
-        for _ in range(80):
-            if process.poll() is not None:
-                raise RuntimeError("run-local Genius shim exited during startup")
-            try:
-                response = httpx.get(health_url, timeout=0.5, trust_env=False)
-                if response.status_code == 200:
-                    payload = response.json()
-                    if payload.get("pid") != process.pid:
-                        raise RuntimeError("shim health belongs to a different process")
-                    if payload.get("credential_configured") is not True:
-                        raise RuntimeError("run-local Genius shim has no configured credential")
-                    return process
-            except httpx.HTTPError:
-                pass
-            time.sleep(0.1)
-        raise RuntimeError("run-local Genius shim did not become healthy")
-    except BaseException:
-        stop_shim(process)
-        raise
+    return runtime.start_shim(root, env, port_check=require_free_shim_port)
 
 
-def stop_shim(process: subprocess.Popen[bytes]) -> None:
-    if process.poll() is not None:
-        return
-    process.terminate()
-    try:
-        process.wait(timeout=5)
-    except subprocess.TimeoutExpired:
-        process.kill()
-        process.wait(timeout=5)
+stop_shim = runtime.stop_shim
 
 
 def evaluate_plugin_gate(
@@ -3764,54 +3676,14 @@ def prepare_runtime_config(
         ]
     config["targets"] = targets
     config.pop("providers", None)
-    # Apply the local sensitive-output guard as the test output transform. Promptfoo
-    # runs this transform before assertions, so a match stops the response before it
-    # can be sent to the configured Judge.
-    guard_path = (Path(__file__).resolve().parent / "sensitive_output_guard.cjs").resolve()
-    if not guard_path.is_file():
-        raise ValueError(f"missing sensitive output guard: {guard_path}")
-    guard_transform = guard_path.as_uri()
-    options = config.setdefault("defaultTest", {}).setdefault("options", {})
-    existing_transform = options.get("transform")
-    if existing_transform not in (None, guard_transform):
-        raise ValueError(
-            "generated tests define a conflicting output transform; "
-            "refusing to replace the mandatory sensitive output guard"
-        )
-    options["transform"] = guard_transform
-    # Per-test options override defaultTest in Promptfoo. Reject even an explicit
-    # null/empty transform instead of silently allowing an unguarded Judge call.
-    for test in tests:
-        test_options = test.get("options") or {}
-        if "transform" in test_options and test_options["transform"] != guard_transform:
-            raise ValueError("per-test output transform would bypass the sensitive output guard")
-    # Use the configured judge explicitly, rather than an implicit remote grader.
-    options["provider"] = config["redteam"]["provider"]
-    manifest["sensitive_output_guard"] = {
-        "placement": "defaultTest.options.transform",
-        "transform": guard_transform,
-        "sha256": sha256_file(guard_path),
-        "per_test_overrides_checked": True,
-    }
+    runtime.mount_sensitive_guard(config, manifest)
+    config["defaultTest"]["options"]["provider"] = config["redteam"]["provider"]
     runtime_path = run_dir / "eval.runtime.yaml"
     runtime_path.write_text(yaml.safe_dump(config, sort_keys=False, allow_unicode=True), encoding="utf-8")
     return runtime_path
 
 
-@contextmanager
-def sweep_lock(root: Path):
-    """Serialize plugin runs across user-owned tasks, including generation."""
-    path = root / "logs" / ".sweep.lock"
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("a") as handle:
-        try:
-            fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        except BlockingIOError:
-            raise RuntimeError("another plugin sweep is active; wait for its completion")
-        try:
-            yield
-        finally:
-            fcntl.flock(handle, fcntl.LOCK_UN)
+sweep_lock = runtime.sweep_lock
 
 
 def execute_baseline(

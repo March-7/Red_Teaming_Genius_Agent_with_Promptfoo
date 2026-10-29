@@ -16,6 +16,10 @@ from urllib.parse import parse_qs, unquote, urlparse
 
 
 STATIC_ROOT = Path(__file__).resolve().parent / "static"
+SKILL_FIELDS = ("suite_id", "risk_id", "case_id", "variant", "skill_id", "skill_version",
+                "skill_hash", "target_context", "session_type", "source_id", "upstream_repo",
+                "upstream_asset_id", "risk_family", "reuse_tier", "license_disposition",
+                "applicability", "evaluation_stage", "original_hash", "adapted_hash")
 
 
 @dataclass(frozen=True)
@@ -25,6 +29,11 @@ class Source:
     run_id: str
     group_id: str
     plugin_id: str
+    suite_id: str | None = None
+    risk_id: str | None = None
+    target_context: str | None = None
+    session_type: str | None = None
+    evaluation_stage: str | None = None
 
 
 def _read_json(path: Path) -> Any:
@@ -198,7 +207,7 @@ def _normalize_event(
     if not isinstance(timestamp, (int, float)):
         timestamp = 0.0
     event_id = f"{source.kind}:{source.run_id}:{file_kind}:{line_number}"
-    return {
+    normalized = {
         "event_id": event_id,
         "source_kind": source.kind,
         "source_path": str(source.path),
@@ -222,6 +231,50 @@ def _normalize_event(
         "search_text": _search_text(raw),
         "raw": raw,
     }
+    campaign = raw.get("campaign") or trace.get("campaign") or nested.get("campaign") or {}
+    if not isinstance(campaign, dict):
+        campaign = {}
+    for field in SKILL_FIELDS:
+        normalized[field] = _string(raw.get(field)) or _string(campaign.get(field)) or getattr(source, field, None)
+    if source.kind in {"skill-suite", "skill-pilot"}:
+        normalized["target_context"] = normalized["target_context"] or "historical-unspecified"
+        if session_id and session_id.startswith(("chat:", "project:")):
+            normalized["session_type"] = "general" if session_id.startswith("chat:") else "workspace"
+        else:
+            normalized["session_type"] = normalized["session_type"] or "historical-unspecified"
+        normalized["association"] = "explicit" if request_id or session_id else "unlinked"
+    return normalized
+
+
+def _pilot_case_metadata(root: Path, case_id: str | None) -> dict[str, str | None]:
+    if not case_id:
+        return {}
+    base = root / "skill-suites/benchmark-multi-risk"
+    card_path = base / "risk-cards" / (case_id + ".json")
+    case_path = base / "pilot-cases" / case_id / "case.json"
+    registry_path = base / "source-registry.json"
+    if not card_path.is_file() or not case_path.is_file() or not registry_path.is_file():
+        return {}
+    try:
+        card, case, registry = _read_json(card_path), _read_json(case_path), _read_json(registry_path)
+        sources = {row["source_id"]: row for row in registry["sources"]}
+        source_ids = [row["source_id"] for row in card["sources"]]
+        upstream_repos = [sources[source_id]["repository_url"] for source_id in source_ids]
+        reuse = [row["reuse_tier"] for row in card["sources"]]
+        licenses = [sources[source_id]["license_disposition"] for source_id in source_ids]
+        original, adapted, asset_ids = [], [], []
+        for ref in case["source_adaptations"]:
+            manifest = _read_json(case_path.parent / ref["file"])
+            original.extend(row["content_hash"] for row in manifest["source_assets"])
+            adapted.extend(row["sha256"] for row in manifest["adapted_files"])
+            asset_ids.extend(row["path"] for row in manifest["source_assets"])
+        return {"source_id": ",".join(source_ids), "upstream_repo": ",".join(upstream_repos),
+            "upstream_asset_id": ",".join(asset_ids), "risk_family": card["risk_family"],
+            "reuse_tier": ",".join(reuse), "license_disposition": ",".join(licenses),
+            "applicability": card["disposition"], "evaluation_stage": "pilot",
+            "original_hash": ",".join(original), "adapted_hash": ",".join(adapted)}
+    except (OSError, KeyError, TypeError, json.JSONDecodeError):
+        return {}
 
 
 def _manifest_ids(run_dir: Path) -> tuple[str | None, str | None, str | None]:
@@ -389,6 +442,27 @@ def discover_sources(root: Path) -> list[Source]:
             sources.append(
                 Source(run_dir, "sweep", run_id, group_id, plugin_id)
             )
+    suites_dir = root / "skill-suites"
+    if suites_dir.exists():
+        for run_dir in sorted(suites_dir.glob("*/runs/*")):
+            if not run_dir.is_dir() or not (run_dir / "run-manifest.json").is_file():
+                continue
+            try:
+                manifest = _read_json(run_dir / "run-manifest.json")
+            except (OSError, json.JSONDecodeError):
+                continue
+            if manifest.get("kind") != "skill-suite":
+                if manifest.get("kind") != "skill-multi-risk-pilot-run":
+                    continue
+                sources.append(Source(run_dir, "skill-pilot", manifest.get("run_id", run_dir.name),
+                    "", "", "benchmark-multi-risk", None,
+                    _string(manifest.get("target_context")) or "global-general",
+                    _string(manifest.get("session_type")) or "general", "pilot"))
+            else:
+                sources.append(Source(run_dir, "skill-suite", manifest.get("run_id", run_dir.name), "", "",
+                    _string(manifest.get("suite_id")), _string(manifest.get("risk_id")),
+                    _string(manifest.get("target_context")) or "historical-unspecified",
+                    _string(manifest.get("session_type")) or "historical-unspecified"))
     return sources
 
 
@@ -416,6 +490,11 @@ class ViewerIndex:
                 "requests": [],
                 "summary": None,
                 "event_count": 0,
+                "suite_id": source.suite_id,
+                "risk_id": source.risk_id,
+                "target_context": source.target_context,
+                "session_type": source.session_type,
+                "evaluation_stage": source.evaluation_stage,
             },
         )
         if not run.get("group_id"):
@@ -516,20 +595,29 @@ class ViewerIndex:
                     run["summary"] = summary_path.read_text(encoding="utf-8")
                 except OSError:
                     pass
-            for path, file_kind in (
+            files = [
                 (trace_path, "trace"),
                 (lifecycle_path, "lifecycle"),
                 (oracle_path, "oracle"),
-            ):
+            ]
+            if source.kind in {"skill-suite", "skill-pilot"}:
+                run["judge_status"] = "recorded" if eval_path.exists() else "not-run"
+                files += [(source.path / name, name.removesuffix(".jsonl")) for name in (
+                    "case-registry.jsonl", "skill-registry.jsonl", "skill-interface-audit.jsonl",
+                    "skill-source-audit.jsonl", "state-snapshots.jsonl", "lifecycle-audit.jsonl")]
+            for path, file_kind in files:
                 if not path.exists():
                     continue
                 normalized = [
                     _normalize_event(source, file_kind, line_number, raw)
                     for line_number, raw in enumerate(_read_jsonl(path), start=1)
                 ]
-                if file_kind == "trace":
+                if file_kind == "trace" and source.kind not in {"skill-suite", "skill-pilot"}:
                     _link_trace_turns(normalized)
                 for event in normalized:
+                    if source.kind == "skill-pilot":
+                        for key, value in _pilot_case_metadata(self.root, event.get("case_id")).items():
+                            event[key] = event.get(key) or value
                     self._ensure_session(source, event.get("session_id"))
                     self._ensure_request(
                         source, event.get("session_id"), event.get("request_id")
@@ -542,6 +630,27 @@ class ViewerIndex:
                             if session and event["request_id"] not in session["requests"]:
                                 session["requests"].append(event["request_id"])
                     self._add_event(event)
+            if source.kind == "skill-suite" and not eval_path.exists():
+                event = _normalize_event(source, "judge-status", 1, {"kind": "eval", "outcome": "not-run", "content": "Judge: not-run"})
+                self._add_event(event)
+            if source.kind == "skill-pilot":
+                for result_path in sorted(source.path.glob("*/pilot-result.json")):
+                    try:
+                        pilot = _read_json(result_path)
+                    except (OSError, json.JSONDecodeError):
+                        continue
+                    metadata = _pilot_case_metadata(self.root, _string(pilot.get("case_id")))
+                    for index, row in enumerate(pilot.get("rows", []), start=1):
+                        if not isinstance(row, dict):
+                            continue
+                        raw = {"kind": "pilot-result", "outcome": row.get("status"),
+                            "case_id": pilot.get("case_id"), "risk_family": pilot.get("risk_family"),
+                            "model_profile": row.get("model_profile"), "variant": row.get("variant"),
+                            "independent_effect_observed": row.get("independent_effect_observed"),
+                            "source_verified": row.get("source_verified"),
+                            "task_valid": row.get("task_valid"), "evaluation_stage": "pilot",
+                            **metadata}
+                        self._add_event(_normalize_event(source, "pilot-result", index, raw))
             if eval_path.exists():
                 try:
                     raw_eval = _read_json(eval_path)
@@ -620,7 +729,7 @@ def _filter_events(
             "outcome",
             "tool_name",
             "confirmation_id",
-        ):
+        ) + SKILL_FIELDS:
             value = filters.get(key)
             if value and event.get(key) != value:
                 matches = False
@@ -668,6 +777,95 @@ def _filtered_index(
         "events": events,
         "errors": index.errors,
     }
+
+
+def _dual_gate_payload(root: Path) -> dict[str, Any]:
+    """Join the frozen dual-gate artifacts for the human review page."""
+    base = root / "skill-suites/benchmark-multi-risk"
+    paths = {name: base / filename for name, filename in {
+        "screening": "dual-gate-screening.json",
+        "trajectories": "dual-gate-trajectories.json",
+        "families": "risk-family-map.json",
+        "catalogue": "source-category-catalogue.json",
+        "sources": "source-registry.json",
+    }.items()}
+    if any(not path.is_file() for path in paths.values()):
+        raise FileNotFoundError("dual-gate review artifacts are unavailable")
+    screening = _read_json(paths["screening"])
+    trajectories = _read_json(paths["trajectories"])
+    family_map = _read_json(paths["families"])
+    catalogue = _read_json(paths["catalogue"])
+    registry = _read_json(paths["sources"])
+    screen_by_id = {row["family_id"]: row for row in screening["families"]}
+    trajectory_by_id = {row["family_id"]: row for row in trajectories["trajectories"]}
+    raw_by_key = {row["raw_key"]: row for source in catalogue["sources"]
+                  for row in source["entries"]}
+    source_by_id = {row["source_id"]: row for row in registry["sources"]}
+    families = []
+    for family in family_map["families"]:
+        family_id = family["family_id"]
+        screen = screen_by_id[family_id]
+        anchors = []
+        for key in family["source_raw_keys"]:
+            raw = raw_by_key[key]
+            anchors.append({"raw_key": key, "source_id": raw["source_id"],
+                "label": raw["label"], "axis": raw["axis"],
+                "description": raw["description"]})
+        sources = [{"source_id": source_id,
+                    "repository_url": source_by_id[source_id]["repository_url"],
+                    "pinned_ref": source_by_id[source_id]["pinned_ref"],
+                    "license_disposition": source_by_id[source_id]["license_disposition"],
+                    "content_reuse_ceiling": source_by_id[source_id]["content_reuse_ceiling"]}
+                   for source_id in family["source_ids"]]
+        families.append({**family, **screen,
+            "trajectory": trajectory_by_id.get(family_id),
+            "source_anchors": anchors, "source_details": sources})
+    return {"schema_version": 1, "kind": "genius-skill-dual-gate-view",
+        "status": "ready-for-user-dual-gate-review",
+        "counts": screening["counts"], "quadrants": screening["quadrants"],
+        "families": families, "source_count": catalogue["source_count"],
+        "raw_entry_count": catalogue["raw_entry_count"],
+        "taxonomy_cell_count": catalogue["taxonomy_cell_count"],
+        "new_online_calls": screening["new_online_calls"]}
+
+
+def _source_faithful_cases_payload(root: Path) -> dict[str, Any]:
+    """Return the frozen 23-case review bundle without executing any payload."""
+    base = root / "skill-suites/benchmark-multi-risk"
+    index_path = base / "source-faithful-cases-v1/index.json"
+    catalogue_path = base / "source-category-catalogue.json"
+    registry_path = base / "source-registry.json"
+    selection_path = base / "formal-category-selection.json"
+    if any(not path.is_file() for path in (index_path, catalogue_path,
+                                            registry_path, selection_path)):
+        raise FileNotFoundError("source-faithful case artifacts are unavailable")
+    index = _read_json(index_path)
+    catalogue = _read_json(catalogue_path)
+    registry = _read_json(registry_path)
+    selection = _read_json(selection_path)
+    raw_by_key = {entry["raw_key"]: entry for source in catalogue["sources"]
+                  for entry in source["entries"]}
+    source_by_id = {row["source_id"]: row for row in registry["sources"]}
+    cases = []
+    for ref in index["cases"]:
+        path = index_path.parent / ref["file"]
+        case = _read_json(path)
+        anchor = case["source_anchor"]
+        raw = raw_by_key[anchor["raw_key"]]
+        source = source_by_id[anchor["source_id"]]
+        cases.append({**case,
+            "source_detail": {"repository_url": source["repository_url"],
+                "pinned_ref": source["pinned_ref"],
+                "license_disposition": source["license_disposition"],
+                "content_reuse_ceiling": source["content_reuse_ceiling"]},
+            "raw_description": raw["description"]})
+    return {"schema_version": 1, "kind": "genius-source-faithful-case-view",
+        "status": index["status"], "case_count": index["case_count"],
+        "family_count": index["family_count"], "carrier_counts": index["carrier_counts"],
+        "language": index["language"], "user_review_status": index["user_review_status"],
+        "cases": cases, "selected_track": selection["selected_track"],
+        "target_calls": index["target_calls"], "generation_calls": index["generation_calls"],
+        "judge_calls": index["judge_calls"]}
 
 
 class ViewerHTTPHandler(BaseHTTPRequestHandler):
@@ -732,6 +930,22 @@ class ViewerHTTPHandler(BaseHTTPRequestHandler):
         index = self.server.index
         if path == "/api/index":
             self._send_json(HTTPStatus.OK, _filtered_index(index, query))
+            return
+        if path == "/api/dual-gate":
+            try:
+                payload = _dual_gate_payload(index.root)
+            except (FileNotFoundError, OSError, KeyError, TypeError, json.JSONDecodeError):
+                self._send_json(HTTPStatus.NOT_FOUND, {"error": "dual_gate_not_found"})
+                return
+            self._send_json(HTTPStatus.OK, payload)
+            return
+        if path == "/api/source-faithful-cases":
+            try:
+                payload = _source_faithful_cases_payload(index.root)
+            except (FileNotFoundError, OSError, KeyError, TypeError, json.JSONDecodeError):
+                self._send_json(HTTPStatus.NOT_FOUND, {"error": "source_faithful_cases_not_found"})
+                return
+            self._send_json(HTTPStatus.OK, payload)
             return
         if path == "/api/runs":
             payload = [
