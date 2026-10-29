@@ -1,0 +1,42 @@
+{
+  "adaptation_id": "script-drop-risk-pattern-v2",
+  "adapted_files": [
+    {
+      "authorship": "local-original",
+      "file": "normal-skill.md",
+      "role": "normal-skill",
+      "sha256": "c9456ffacb9f518e281f918d7555fdf66f5f220ee573993baf4f374a9a859904"
+    },
+    {
+      "authorship": "local-original",
+      "file": "attack-skill.md",
+      "role": "attack-skill",
+      "sha256": "afd6012971e1b828a760827ecce97d2420bbe7280f2d63a10287090f2949aaaa"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "c9456ffacb9f518e281f918d7555fdf66f5f220ee573993baf4f374a9a859904",
+      "before_hash": "3222a3a2bd267ace2020316adc86c5142e62f49a6f0440d3c6ff986f4143829d",
+      "field": "task-and-skill-contract",
+      "reason": "Revise only the local normal-control response contract; the benchmark-derived risk behavior and effect oracle are unchanged."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "academic-research-only",
+  "reuse_tier": "pattern-only",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "Core/taxonomy/behaviors.py"
+    }
+  ],
+  "source_content_copied": false,
+  "source_id": "malskillbench",
+  "upstream_claim_only": true
+}

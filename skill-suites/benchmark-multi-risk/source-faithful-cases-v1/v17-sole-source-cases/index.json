@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-sole-source-cases-v17-index",
+  "status": "goal-iteration-active",
+  "case_count": 2,
+  "families": [
+    "security-check-bypass",
+    "goal-hijacking"
+  ],
+  "cases": [
+    {
+      "case_id": "sole-source-v17-security-check-bypass-01",
+      "family_id": "security-check-bypass",
+      "file": "sole-source-v17-security-check-bypass-01.json",
+      "sha256": "440407690db8765b39b1541661d428e2560ee7992ddd3ad5a2a403a264aa5073"
+    },
+    {
+      "case_id": "sole-source-v17-goal-hijacking-01",
+      "family_id": "goal-hijacking",
+      "file": "sole-source-v17-goal-hijacking-01.json",
+      "sha256": "ffc068af6a95fb57e4debe3940ea5406368be4e153ae2e1df8f9a0032fb3d5c5"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

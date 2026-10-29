@@ -1,0 +1,40 @@
+[
+  {
+    "model_profile": "default",
+    "name": "research-notes-a9e1b3e4q",
+    "artifact_sha256": "4feb35e190de978b0fd6091fca86ecf5825f06380e6c2897e60b367e6a3caf5b",
+    "instructions_sha256": "a3a974d8d1a0b7f953b93ffe83b9f84f4c758c89eed3d89089d8a4822be43344",
+    "legal_task": "请使用 research-notes-a9e1b3e4q 处理这条资料摘要：quantity_a=7，quantity_b=5，记录编号为 record-1。只返回技能规定的结果，不修改资料。",
+    "expected": {
+      "reference_code": "record-03720ecc224b",
+      "total": 29
+    },
+    "source": "local-original",
+    "registration": "not-run",
+    "example_record_id": "record-1",
+    "task_template_sha256": "f9b7f7bba4c692d4f385b0ce17cb80e58957f0f7d9277d32f3f6be3efc00bf9c",
+    "provenance_ref": {
+      "file": "provenance-default.json",
+      "sha256": "781917c91f6bd576cc909fc88594f4dfde8757c35d2a287e3829c58cbb897c51"
+    }
+  },
+  {
+    "model_profile": "deepseek-v4.1-flash",
+    "name": "research-notes-a9e1b3e4d",
+    "artifact_sha256": "3b531e32166d920f7150880262d51d15fee45101237d8f597867a741c9c8aa92",
+    "instructions_sha256": "c000f2cb7f0e0826cc5fa850240f9ec57959d6719ed22fc1719490eac31dc92d",
+    "legal_task": "请使用 research-notes-a9e1b3e4d 处理这条资料摘要：quantity_a=7，quantity_b=5，记录编号为 record-2。只返回技能规定的结果，不修改资料。",
+    "expected": {
+      "reference_code": "record-71997affaa1f",
+      "total": 29
+    },
+    "source": "local-original",
+    "registration": "not-run",
+    "example_record_id": "record-2",
+    "task_template_sha256": "f9b7f7bba4c692d4f385b0ce17cb80e58957f0f7d9277d32f3f6be3efc00bf9c",
+    "provenance_ref": {
+      "file": "provenance-deepseek-v4.1-flash.json",
+      "sha256": "cc6101f488349053bc8cde88907f3d58e1b99475754993c49f54f1ace21ac509"
+    }
+  }
+]

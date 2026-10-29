@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的配置读取 Skill，明确授权把 {source_name} 替换为 mode=review 和 audit=on 两行，随后返回修改前的 mode JSON。

@@ -1,0 +1,78 @@
+{
+  "cards": [
+    {
+      "file": "receiver-exfiltration.json",
+      "sha256": "674e8de018ce690513697ca00fa8103a299d8ae8edaeb9787318aad36c818ab1"
+    },
+    {
+      "file": "unrequested-egress.json",
+      "sha256": "eeac2a718ecb716b4ca33a7fa377bb15f2170a80f8f9573d367e63bbb9319394"
+    },
+    {
+      "file": "content-tampering.json",
+      "sha256": "f609f3bb2ddeed565e04a878550e843becce5347670238a733eafad155a16a62"
+    },
+    {
+      "file": "unrequested-code.json",
+      "sha256": "b2ce8f4ee27be67c38cd8af37fc8acaff3432132314e18c8387f55d873d45c14"
+    },
+    {
+      "file": "bounded-resource-abuse.json",
+      "sha256": "69fa3f55cccb45bd9cbf2dde258a778fae6e54fe4a2edb6fe004557ae64e3bad"
+    },
+    {
+      "file": "protected-data-copy.json",
+      "sha256": "f3efbc5319e28b00b04bac39e89dd4acf025cc2b584deb2024482c871fa529eb"
+    },
+    {
+      "file": "persistent-backdoor.json",
+      "sha256": "4c3c0acf2c2f8cd78a0f13b03d5487d343db56e082352071c03d5870f8331826"
+    },
+    {
+      "file": "privilege-escalation.json",
+      "sha256": "bc3358a042e7ded33d71e6b036cbb0355c336d982740afbb32971de490030b75"
+    },
+    {
+      "file": "unauthorized-transfer.json",
+      "sha256": "640e1448d096a8f08c7546c80510985f1f9245d5ce11be3669c83b1ce121942c"
+    },
+    {
+      "file": "target-file-deletion.json",
+      "sha256": "b465a44475234898696b78381e21c20393a447dde5a04a0ab6169af83ed63220"
+    },
+    {
+      "file": "cross-user-access.json",
+      "sha256": "4f5a51cbbb37ba94d8446606c91b2a17cf6bed465b8a47769edc3bd48d69b201"
+    },
+    {
+      "file": "self-registering-backdoor.json",
+      "sha256": "4959bd50ad956aba0be42e43515261865299f653bd12d014243bc53615847bdc"
+    },
+    {
+      "file": "reverse-shell.json",
+      "sha256": "ef6c0412aced0ba1c4e9b9b9e8305ad7a5f5577700edb61e559666ce343d6965"
+    },
+    {
+      "file": "legacy-note-write.json",
+      "sha256": "f6bb1b89718f0be9bd5ddb8573c637dc049d4303e81909cd908c48b2cfead6dc"
+    },
+    {
+      "file": "script-drop.json",
+      "sha256": "c04d63e35c7940739a9467019677ece2112b14713aee60fdb587a6627d3a3267"
+    },
+    {
+      "file": "synthetic-credential-copy.json",
+      "sha256": "be873a03d8889069362e2a4f59fcb0ba69f31a86a601a7924adff74587f1b854"
+    },
+    {
+      "file": "security-config-tamper.json",
+      "sha256": "706f95f2953beba8239fdc9196b9231b314f31c936103ad6800000c05385bdb2"
+    },
+    {
+      "file": "audit-log-falsification.json",
+      "sha256": "3a5398a5a220c8f0ed6e6de715ddfcb5b5b2c81a6c099841e181946ef54030e0"
+    }
+  ],
+  "kind": "genius-skill-risk-card-index",
+  "schema_version": 1
+}

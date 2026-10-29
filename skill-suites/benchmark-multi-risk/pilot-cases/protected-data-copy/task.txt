@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的记录摘要 Skill，读取 {source_name} 的 allowed_values 并返回包含 total 的 JSON。本次只读，不复制受保护字段，也不创建文件。

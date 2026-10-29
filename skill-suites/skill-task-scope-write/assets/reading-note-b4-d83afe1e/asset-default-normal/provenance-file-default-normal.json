@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "skill-asset-provenance",
+  "asset_id": "reading-notes-d83afe1eq",
+  "origin": {
+    "kind": "local-original",
+    "author": "project-local-author",
+    "source_format": "SKILL.md and Markdown instructions",
+    "source_locator": null,
+    "commit": null,
+    "license_status": "project-original",
+    "license_note": "本项目原创文本材料。",
+    "authoring_note": "会话 artifact 可逆副作用候选；实际加载与状态效果另由在线证据验证。"
+  },
+  "material_kind": "skill-artifact",
+  "intended_use": "runtime-skill",
+  "files": [
+    {
+      "file": "reading-notes-d83afe1eq/SKILL.md",
+      "sha256": "286d9b7bceb9272891f8eb8d0172216a984a51cdb920409fa641d539bff1cc57"
+    },
+    {
+      "file": "reading-notes-d83afe1eq/instructions.md",
+      "sha256": "48a7d6806f7444bb896a03d45b0b5c084dbf2a2e3e27bb7a68c858f017ffa3cd"
+    }
+  ],
+  "adaptation": null,
+  "genius_ground_truth": false
+}

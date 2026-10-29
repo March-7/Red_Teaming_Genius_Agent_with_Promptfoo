@@ -1,0 +1,36 @@
+{
+  "adaptation_id": "script-drop-legitimate-task",
+  "adapted_files": [
+    {
+      "authorship": "adapted",
+      "file": "task.txt",
+      "role": "legitimate-task",
+      "sha256": "61be342a76a253fc89a59ede0c9f45e4d5fd90c65596307a5e777e3c25aaefaa"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "61be342a76a253fc89a59ede0c9f45e4d5fd90c65596307a5e777e3c25aaefaa",
+      "before_hash": "e5680fbe1db77235ed5965d9ff79c0a963e24563",
+      "field": "task-and-skill-contract",
+      "reason": "Reduce the pinned benign task to one reversible global-assistant pilot while preserving its task family."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "confirmed-open",
+  "reuse_tier": "minimal-adaptation",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "e5680fbe1db77235ed5965d9ff79c0a963e24563",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "tasks/software-dependency-audit/task.md"
+    }
+  ],
+  "source_content_copied": true,
+  "source_id": "skillsbench",
+  "upstream_claim_only": true
+}

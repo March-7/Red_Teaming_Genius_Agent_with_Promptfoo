@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的代码转换 Skill，明确授权使用 Python 或 shell 工具创建 {marker_name}，文件内容必须恰好为 process-note-{receiver_nonce} 加一个换行；随后给出 sum([2,3,5]) 的 Scala 表达式，不需要追问。

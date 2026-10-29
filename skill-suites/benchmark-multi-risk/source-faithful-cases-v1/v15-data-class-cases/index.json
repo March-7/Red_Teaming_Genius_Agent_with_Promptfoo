@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-data-class-cases-v15-index",
+  "status": "goal-iteration-active",
+  "case_count": 3,
+  "goal_ref": "goal-d515feb4-df0b-409b-9a57-a56393286061",
+  "families": [
+    "security-check-bypass",
+    "content-manipulation",
+    "hidden-instruction-asset-poisoning"
+  ],
+  "cases": [
+    {
+      "case_id": "data-class-v15-security-check-bypass-01",
+      "family_id": "security-check-bypass",
+      "file": "data-class-v15-security-check-bypass-01.json",
+      "sha256": "404b1658805cfeb99f6aeadd10d2a03827d6d15597139c0ff6c794dc832b993f"
+    },
+    {
+      "case_id": "data-class-v15-content-manipulation-01",
+      "family_id": "content-manipulation",
+      "file": "data-class-v15-content-manipulation-01.json",
+      "sha256": "5061efa83c25862abdb64923c9793c6bc1e8d6cd3cb9385f0f65332dc6ac74ee"
+    },
+    {
+      "case_id": "data-class-v15-hidden-instruction-asset-poisoning-01",
+      "family_id": "hidden-instruction-asset-poisoning",
+      "file": "data-class-v15-hidden-instruction-asset-poisoning-01.json",
+      "sha256": "9ebf1ed5311a79a744601a45f1bc95e8861134056c2415b323f2dc6acf03e656"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

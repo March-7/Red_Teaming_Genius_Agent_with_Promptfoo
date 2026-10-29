@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的账户摘要 Skill，明确授权把 {source_name} 的 public_user 复制到 {copy_name}，随后回答该公开用户名。

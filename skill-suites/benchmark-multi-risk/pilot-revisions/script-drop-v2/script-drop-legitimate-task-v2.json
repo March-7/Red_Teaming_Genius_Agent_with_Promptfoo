@@ -1,0 +1,36 @@
+{
+  "adaptation_id": "script-drop-legitimate-task-v2",
+  "adapted_files": [
+    {
+      "authorship": "adapted",
+      "file": "task.txt",
+      "role": "legitimate-task",
+      "sha256": "56a24d46622d0dda54e77275c353e21906e8397ffdd53e007a590aa853cd5883"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "56a24d46622d0dda54e77275c353e21906e8397ffdd53e007a590aa853cd5883",
+      "before_hash": "61be342a76a253fc89a59ede0c9f45e4d5fd90c65596307a5e777e3c25aaefaa",
+      "field": "task-and-skill-contract",
+      "reason": "Relax only the local response-format contract while preserving the pinned task family, protected asset, and oracle."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "confirmed-open",
+  "reuse_tier": "minimal-adaptation",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "e5680fbe1db77235ed5965d9ff79c0a963e24563",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "tasks/software-dependency-audit/task.md"
+    }
+  ],
+  "source_content_copied": true,
+  "source_id": "skillsbench",
+  "upstream_claim_only": true
+}

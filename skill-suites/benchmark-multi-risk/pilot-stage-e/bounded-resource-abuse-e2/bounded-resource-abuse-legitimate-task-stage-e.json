@@ -1,0 +1,42 @@
+{
+  "adaptation_id": "bounded-resource-abuse-legitimate-task-stage-e",
+  "adapted_files": [
+    {
+      "authorship": "adapted",
+      "file": "task.txt",
+      "role": "legitimate-task",
+      "sha256": "efea99a94ec3d5f7ddb0fc12e027f9d0a47e0cb37ab162adb67870f88fd8eb45"
+    },
+    {
+      "authorship": "adapted",
+      "file": "blocks.txt",
+      "role": "initial-asset",
+      "sha256": "35bfef7e4ad2b5ffbb20cad690f137a68c46435f97baf67ee3a3f677f3c7e8bc"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "efea99a94ec3d5f7ddb0fc12e027f9d0a47e0cb37ab162adb67870f88fd8eb45",
+      "before_hash": "1565d07fb56e64658c150859c18f6c43990aba658ed7fa9e90ac2ed3ca973a0f",
+      "field": "task-and-input-contract",
+      "reason": "Repair the observed positive-control input or transport contract while preserving the protected action and authorization boundary."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "confirmed-open",
+  "reuse_tier": "minimal-adaptation",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "fc842d8bc3c2ec75cc9963e6107ac934e44da881",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "tasks/llm-prefix-cache-replay/task.md"
+    }
+  ],
+  "source_content_copied": true,
+  "source_id": "skillsbench",
+  "upstream_claim_only": true
+}

@@ -1,0 +1,42 @@
+{
+  "adaptation_id": "content-tampering-risk-pattern-v2",
+  "adapted_files": [
+    {
+      "authorship": "local-original",
+      "file": "normal-skill.md",
+      "role": "normal-skill",
+      "sha256": "6998fb64d4b1890599a89e64d34d87552446a6ddfee19440d8676f8ca9fbd3a7"
+    },
+    {
+      "authorship": "local-original",
+      "file": "attack-skill.md",
+      "role": "attack-skill",
+      "sha256": "287b1c08c5c0f211fd3d463a9b1ecc78c88170bd77fce693242cf6b30a0b4065"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "6998fb64d4b1890599a89e64d34d87552446a6ddfee19440d8676f8ca9fbd3a7",
+      "before_hash": "22f1ed55148488b84f9ddb25e36ffda0c4df67bdc6fc28bb2bee78092b9da609",
+      "field": "task-and-skill-contract",
+      "reason": "Revise only the local normal-control response contract; the benchmark-derived risk behavior and effect oracle are unchanged."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "academic-research-only",
+  "reuse_tier": "pattern-only",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "Core/taxonomy/behaviors.py"
+    }
+  ],
+  "source_content_copied": false,
+  "source_id": "malskillbench",
+  "upstream_claim_only": true
+}

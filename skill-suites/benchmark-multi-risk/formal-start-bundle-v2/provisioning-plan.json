@@ -1,0 +1,561 @@
+{
+  "kind": "skill-multi-risk-provisioning-plan",
+  "status": "offline-only",
+  "source_plan_sha256": "3e848fa931fd0ffa29693b1fe900afb10189ac4e745242990496a35cfee48b18",
+  "worker_count": 20,
+  "target_rows": 80,
+  "workers": [
+    {
+      "case_id": "audit-log-falsification-01",
+      "risk_family": "audit-log-falsification",
+      "source_id": "skillsbench",
+      "row_keys": [
+        "audit-log-falsification-01:default:normal",
+        "audit-log-falsification-01:default:attack",
+        "audit-log-falsification-01:deepseek-v4.1-flash:normal",
+        "audit-log-falsification-01:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:audit-log-falsification-01:default:normal",
+        "resource:audit-log-falsification-01:default:attack",
+        "resource:audit-log-falsification-01:deepseek-v4.1-flash:normal",
+        "resource:audit-log-falsification-01:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:audit-log-falsification-01:default:normal",
+        "session:audit-log-falsification-01:default:attack",
+        "session:audit-log-falsification-01:deepseek-v4.1-flash:normal",
+        "session:audit-log-falsification-01:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "audit-log-falsification-02",
+      "risk_family": "audit-log-falsification",
+      "source_id": "skillsbench",
+      "row_keys": [
+        "audit-log-falsification-02:default:normal",
+        "audit-log-falsification-02:default:attack",
+        "audit-log-falsification-02:deepseek-v4.1-flash:normal",
+        "audit-log-falsification-02:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:audit-log-falsification-02:default:normal",
+        "resource:audit-log-falsification-02:default:attack",
+        "resource:audit-log-falsification-02:deepseek-v4.1-flash:normal",
+        "resource:audit-log-falsification-02:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:audit-log-falsification-02:default:normal",
+        "session:audit-log-falsification-02:default:attack",
+        "session:audit-log-falsification-02:deepseek-v4.1-flash:normal",
+        "session:audit-log-falsification-02:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "audit-log-falsification-03",
+      "risk_family": "audit-log-falsification",
+      "source_id": "skillsbench",
+      "row_keys": [
+        "audit-log-falsification-03:default:normal",
+        "audit-log-falsification-03:default:attack",
+        "audit-log-falsification-03:deepseek-v4.1-flash:normal",
+        "audit-log-falsification-03:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:audit-log-falsification-03:default:normal",
+        "resource:audit-log-falsification-03:default:attack",
+        "resource:audit-log-falsification-03:deepseek-v4.1-flash:normal",
+        "resource:audit-log-falsification-03:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:audit-log-falsification-03:default:normal",
+        "session:audit-log-falsification-03:default:attack",
+        "session:audit-log-falsification-03:deepseek-v4.1-flash:normal",
+        "session:audit-log-falsification-03:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "audit-log-falsification-04",
+      "risk_family": "audit-log-falsification",
+      "source_id": "skillsbench",
+      "row_keys": [
+        "audit-log-falsification-04:default:normal",
+        "audit-log-falsification-04:default:attack",
+        "audit-log-falsification-04:deepseek-v4.1-flash:normal",
+        "audit-log-falsification-04:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:audit-log-falsification-04:default:normal",
+        "resource:audit-log-falsification-04:default:attack",
+        "resource:audit-log-falsification-04:deepseek-v4.1-flash:normal",
+        "resource:audit-log-falsification-04:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:audit-log-falsification-04:default:normal",
+        "session:audit-log-falsification-04:default:attack",
+        "session:audit-log-falsification-04:deepseek-v4.1-flash:normal",
+        "session:audit-log-falsification-04:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "audit-log-falsification-05",
+      "risk_family": "audit-log-falsification",
+      "source_id": "skillsbench",
+      "row_keys": [
+        "audit-log-falsification-05:default:normal",
+        "audit-log-falsification-05:default:attack",
+        "audit-log-falsification-05:deepseek-v4.1-flash:normal",
+        "audit-log-falsification-05:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:audit-log-falsification-05:default:normal",
+        "resource:audit-log-falsification-05:default:attack",
+        "resource:audit-log-falsification-05:deepseek-v4.1-flash:normal",
+        "resource:audit-log-falsification-05:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:audit-log-falsification-05:default:normal",
+        "session:audit-log-falsification-05:default:attack",
+        "session:audit-log-falsification-05:deepseek-v4.1-flash:normal",
+        "session:audit-log-falsification-05:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "malicious-script-drop-01",
+      "risk_family": "malicious-script-drop",
+      "source_id": "malskillbench",
+      "row_keys": [
+        "malicious-script-drop-01:default:normal",
+        "malicious-script-drop-01:default:attack",
+        "malicious-script-drop-01:deepseek-v4.1-flash:normal",
+        "malicious-script-drop-01:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:malicious-script-drop-01:default:normal",
+        "resource:malicious-script-drop-01:default:attack",
+        "resource:malicious-script-drop-01:deepseek-v4.1-flash:normal",
+        "resource:malicious-script-drop-01:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:malicious-script-drop-01:default:normal",
+        "session:malicious-script-drop-01:default:attack",
+        "session:malicious-script-drop-01:deepseek-v4.1-flash:normal",
+        "session:malicious-script-drop-01:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "malicious-script-drop-02",
+      "risk_family": "malicious-script-drop",
+      "source_id": "malskillbench",
+      "row_keys": [
+        "malicious-script-drop-02:default:normal",
+        "malicious-script-drop-02:default:attack",
+        "malicious-script-drop-02:deepseek-v4.1-flash:normal",
+        "malicious-script-drop-02:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:malicious-script-drop-02:default:normal",
+        "resource:malicious-script-drop-02:default:attack",
+        "resource:malicious-script-drop-02:deepseek-v4.1-flash:normal",
+        "resource:malicious-script-drop-02:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:malicious-script-drop-02:default:normal",
+        "session:malicious-script-drop-02:default:attack",
+        "session:malicious-script-drop-02:deepseek-v4.1-flash:normal",
+        "session:malicious-script-drop-02:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "malicious-script-drop-03",
+      "risk_family": "malicious-script-drop",
+      "source_id": "malskillbench",
+      "row_keys": [
+        "malicious-script-drop-03:default:normal",
+        "malicious-script-drop-03:default:attack",
+        "malicious-script-drop-03:deepseek-v4.1-flash:normal",
+        "malicious-script-drop-03:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:malicious-script-drop-03:default:normal",
+        "resource:malicious-script-drop-03:default:attack",
+        "resource:malicious-script-drop-03:deepseek-v4.1-flash:normal",
+        "resource:malicious-script-drop-03:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:malicious-script-drop-03:default:normal",
+        "session:malicious-script-drop-03:default:attack",
+        "session:malicious-script-drop-03:deepseek-v4.1-flash:normal",
+        "session:malicious-script-drop-03:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "malicious-script-drop-04",
+      "risk_family": "malicious-script-drop",
+      "source_id": "malskillbench",
+      "row_keys": [
+        "malicious-script-drop-04:default:normal",
+        "malicious-script-drop-04:default:attack",
+        "malicious-script-drop-04:deepseek-v4.1-flash:normal",
+        "malicious-script-drop-04:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:malicious-script-drop-04:default:normal",
+        "resource:malicious-script-drop-04:default:attack",
+        "resource:malicious-script-drop-04:deepseek-v4.1-flash:normal",
+        "resource:malicious-script-drop-04:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:malicious-script-drop-04:default:normal",
+        "session:malicious-script-drop-04:default:attack",
+        "session:malicious-script-drop-04:deepseek-v4.1-flash:normal",
+        "session:malicious-script-drop-04:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "malicious-script-drop-05",
+      "risk_family": "malicious-script-drop",
+      "source_id": "malskillbench",
+      "row_keys": [
+        "malicious-script-drop-05:default:normal",
+        "malicious-script-drop-05:default:attack",
+        "malicious-script-drop-05:deepseek-v4.1-flash:normal",
+        "malicious-script-drop-05:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:malicious-script-drop-05:default:normal",
+        "resource:malicious-script-drop-05:default:attack",
+        "resource:malicious-script-drop-05:deepseek-v4.1-flash:normal",
+        "resource:malicious-script-drop-05:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:malicious-script-drop-05:default:normal",
+        "session:malicious-script-drop-05:default:attack",
+        "session:malicious-script-drop-05:deepseek-v4.1-flash:normal",
+        "session:malicious-script-drop-05:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "synthetic-credential-theft-01",
+      "risk_family": "synthetic-credential-theft",
+      "source_id": "aig-skilljack",
+      "row_keys": [
+        "synthetic-credential-theft-01:default:normal",
+        "synthetic-credential-theft-01:default:attack",
+        "synthetic-credential-theft-01:deepseek-v4.1-flash:normal",
+        "synthetic-credential-theft-01:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:synthetic-credential-theft-01:default:normal",
+        "resource:synthetic-credential-theft-01:default:attack",
+        "resource:synthetic-credential-theft-01:deepseek-v4.1-flash:normal",
+        "resource:synthetic-credential-theft-01:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:synthetic-credential-theft-01:default:normal",
+        "session:synthetic-credential-theft-01:default:attack",
+        "session:synthetic-credential-theft-01:deepseek-v4.1-flash:normal",
+        "session:synthetic-credential-theft-01:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "synthetic-credential-theft-02",
+      "risk_family": "synthetic-credential-theft",
+      "source_id": "aig-skilljack",
+      "row_keys": [
+        "synthetic-credential-theft-02:default:normal",
+        "synthetic-credential-theft-02:default:attack",
+        "synthetic-credential-theft-02:deepseek-v4.1-flash:normal",
+        "synthetic-credential-theft-02:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:synthetic-credential-theft-02:default:normal",
+        "resource:synthetic-credential-theft-02:default:attack",
+        "resource:synthetic-credential-theft-02:deepseek-v4.1-flash:normal",
+        "resource:synthetic-credential-theft-02:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:synthetic-credential-theft-02:default:normal",
+        "session:synthetic-credential-theft-02:default:attack",
+        "session:synthetic-credential-theft-02:deepseek-v4.1-flash:normal",
+        "session:synthetic-credential-theft-02:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "synthetic-credential-theft-03",
+      "risk_family": "synthetic-credential-theft",
+      "source_id": "aig-skilljack",
+      "row_keys": [
+        "synthetic-credential-theft-03:default:normal",
+        "synthetic-credential-theft-03:default:attack",
+        "synthetic-credential-theft-03:deepseek-v4.1-flash:normal",
+        "synthetic-credential-theft-03:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:synthetic-credential-theft-03:default:normal",
+        "resource:synthetic-credential-theft-03:default:attack",
+        "resource:synthetic-credential-theft-03:deepseek-v4.1-flash:normal",
+        "resource:synthetic-credential-theft-03:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:synthetic-credential-theft-03:default:normal",
+        "session:synthetic-credential-theft-03:default:attack",
+        "session:synthetic-credential-theft-03:deepseek-v4.1-flash:normal",
+        "session:synthetic-credential-theft-03:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "synthetic-credential-theft-04",
+      "risk_family": "synthetic-credential-theft",
+      "source_id": "aig-skilljack",
+      "row_keys": [
+        "synthetic-credential-theft-04:default:normal",
+        "synthetic-credential-theft-04:default:attack",
+        "synthetic-credential-theft-04:deepseek-v4.1-flash:normal",
+        "synthetic-credential-theft-04:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:synthetic-credential-theft-04:default:normal",
+        "resource:synthetic-credential-theft-04:default:attack",
+        "resource:synthetic-credential-theft-04:deepseek-v4.1-flash:normal",
+        "resource:synthetic-credential-theft-04:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:synthetic-credential-theft-04:default:normal",
+        "session:synthetic-credential-theft-04:default:attack",
+        "session:synthetic-credential-theft-04:deepseek-v4.1-flash:normal",
+        "session:synthetic-credential-theft-04:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "synthetic-credential-theft-05",
+      "risk_family": "synthetic-credential-theft",
+      "source_id": "aig-skilljack",
+      "row_keys": [
+        "synthetic-credential-theft-05:default:normal",
+        "synthetic-credential-theft-05:default:attack",
+        "synthetic-credential-theft-05:deepseek-v4.1-flash:normal",
+        "synthetic-credential-theft-05:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:synthetic-credential-theft-05:default:normal",
+        "resource:synthetic-credential-theft-05:default:attack",
+        "resource:synthetic-credential-theft-05:deepseek-v4.1-flash:normal",
+        "resource:synthetic-credential-theft-05:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:synthetic-credential-theft-05:default:normal",
+        "session:synthetic-credential-theft-05:default:attack",
+        "session:synthetic-credential-theft-05:deepseek-v4.1-flash:normal",
+        "session:synthetic-credential-theft-05:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-contract"
+    },
+    {
+      "case_id": "unrelated-file-content-tampering-01",
+      "risk_family": "unrelated-file-content-tampering",
+      "source_id": "skillsbench",
+      "row_keys": [
+        "unrelated-file-content-tampering-01:default:normal",
+        "unrelated-file-content-tampering-01:default:attack",
+        "unrelated-file-content-tampering-01:deepseek-v4.1-flash:normal",
+        "unrelated-file-content-tampering-01:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:unrelated-file-content-tampering-01:default:normal",
+        "resource:unrelated-file-content-tampering-01:default:attack",
+        "resource:unrelated-file-content-tampering-01:deepseek-v4.1-flash:normal",
+        "resource:unrelated-file-content-tampering-01:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:unrelated-file-content-tampering-01:default:normal",
+        "session:unrelated-file-content-tampering-01:default:attack",
+        "session:unrelated-file-content-tampering-01:deepseek-v4.1-flash:normal",
+        "session:unrelated-file-content-tampering-01:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-delta"
+    },
+    {
+      "case_id": "unrelated-file-content-tampering-02",
+      "risk_family": "unrelated-file-content-tampering",
+      "source_id": "skillsbench",
+      "row_keys": [
+        "unrelated-file-content-tampering-02:default:normal",
+        "unrelated-file-content-tampering-02:default:attack",
+        "unrelated-file-content-tampering-02:deepseek-v4.1-flash:normal",
+        "unrelated-file-content-tampering-02:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:unrelated-file-content-tampering-02:default:normal",
+        "resource:unrelated-file-content-tampering-02:default:attack",
+        "resource:unrelated-file-content-tampering-02:deepseek-v4.1-flash:normal",
+        "resource:unrelated-file-content-tampering-02:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:unrelated-file-content-tampering-02:default:normal",
+        "session:unrelated-file-content-tampering-02:default:attack",
+        "session:unrelated-file-content-tampering-02:deepseek-v4.1-flash:normal",
+        "session:unrelated-file-content-tampering-02:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-delta"
+    },
+    {
+      "case_id": "unrelated-file-content-tampering-03",
+      "risk_family": "unrelated-file-content-tampering",
+      "source_id": "skillsbench",
+      "row_keys": [
+        "unrelated-file-content-tampering-03:default:normal",
+        "unrelated-file-content-tampering-03:default:attack",
+        "unrelated-file-content-tampering-03:deepseek-v4.1-flash:normal",
+        "unrelated-file-content-tampering-03:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:unrelated-file-content-tampering-03:default:normal",
+        "resource:unrelated-file-content-tampering-03:default:attack",
+        "resource:unrelated-file-content-tampering-03:deepseek-v4.1-flash:normal",
+        "resource:unrelated-file-content-tampering-03:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:unrelated-file-content-tampering-03:default:normal",
+        "session:unrelated-file-content-tampering-03:default:attack",
+        "session:unrelated-file-content-tampering-03:deepseek-v4.1-flash:normal",
+        "session:unrelated-file-content-tampering-03:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-delta"
+    },
+    {
+      "case_id": "unrelated-file-content-tampering-04",
+      "risk_family": "unrelated-file-content-tampering",
+      "source_id": "skillsbench",
+      "row_keys": [
+        "unrelated-file-content-tampering-04:default:normal",
+        "unrelated-file-content-tampering-04:default:attack",
+        "unrelated-file-content-tampering-04:deepseek-v4.1-flash:normal",
+        "unrelated-file-content-tampering-04:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:unrelated-file-content-tampering-04:default:normal",
+        "resource:unrelated-file-content-tampering-04:default:attack",
+        "resource:unrelated-file-content-tampering-04:deepseek-v4.1-flash:normal",
+        "resource:unrelated-file-content-tampering-04:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:unrelated-file-content-tampering-04:default:normal",
+        "session:unrelated-file-content-tampering-04:default:attack",
+        "session:unrelated-file-content-tampering-04:deepseek-v4.1-flash:normal",
+        "session:unrelated-file-content-tampering-04:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-delta"
+    },
+    {
+      "case_id": "unrelated-file-content-tampering-05",
+      "risk_family": "unrelated-file-content-tampering",
+      "source_id": "skillsbench",
+      "row_keys": [
+        "unrelated-file-content-tampering-05:default:normal",
+        "unrelated-file-content-tampering-05:default:attack",
+        "unrelated-file-content-tampering-05:deepseek-v4.1-flash:normal",
+        "unrelated-file-content-tampering-05:deepseek-v4.1-flash:attack"
+      ],
+      "private_skill_instances": 4,
+      "general_sessions": 4,
+      "projects": 0,
+      "resource_keys": [
+        "resource:unrelated-file-content-tampering-05:default:normal",
+        "resource:unrelated-file-content-tampering-05:default:attack",
+        "resource:unrelated-file-content-tampering-05:deepseek-v4.1-flash:normal",
+        "resource:unrelated-file-content-tampering-05:deepseek-v4.1-flash:attack"
+      ],
+      "session_keys": [
+        "session:unrelated-file-content-tampering-05:default:normal",
+        "session:unrelated-file-content-tampering-05:default:attack",
+        "session:unrelated-file-content-tampering-05:deepseek-v4.1-flash:normal",
+        "session:unrelated-file-content-tampering-05:deepseek-v4.1-flash:attack"
+      ],
+      "oracle_kind": "artifact-byte-delta"
+    }
+  ],
+  "private_skill_instances": 80,
+  "general_sessions": 80,
+  "projects": 0,
+  "actual_calls": {
+    "target": 0,
+    "management": 0,
+    "recovery": 0,
+    "cleanup": 0,
+    "generation": 0,
+    "judge": 0
+  },
+  "formal_target_authorized": false
+}

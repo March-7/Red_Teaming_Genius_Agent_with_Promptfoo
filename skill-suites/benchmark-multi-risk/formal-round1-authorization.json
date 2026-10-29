@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "kind": "genius-formal-round1-authorization",
+  "user_decision_ref": "user-message:2026-10-08-approve-formal-round1-retain",
+  "plan_file": "docs/genius_skill_formal_round1_budget.md",
+  "plan_sha256": "039cd74379127da590f2adee86a5517742677a1f53e486a8f3a2dc2a6bd82117",
+  "authorized_actions": {
+    "attack_targets": 46,
+    "overwrite_positive_controls": 8,
+    "management": 600,
+    "recovery": 46,
+    "cleanup": 92,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "ledger_amendment": {
+    "action": "one-time standing-ledger limit raise bound to this authorization hash",
+    "reason": "standing ledger remaining (11 target) is below the approved 54-target round; monotonic amendment per the established mechanism"
+  },
+  "retain_policy": {
+    "mode": "retain-all-resources",
+    "note": "User requested retention so results can be inspected in the Genius web account after the round; retained resources are enumerated in the run resource registry and the final report. A later authorized cleanup or manual user deletion is required before any next round."
+  },
+  "active": true,
+  "authorized_at": "2026-10-08T18:22:40+08:00"
+}

@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "kind": "genius-package-runtime-only-plan",
+  "status": "prepared-awaiting-online-confirmation",
+  "target_context": "global-general",
+  "session_type": "general",
+  "prior_summary_ref": {
+    "file": "package-capability-gate/runtime-attempt-summary.json",
+    "sha256": "179a993f49ecc09d07ac5342d47967c8eef646767545dfadb3383e6f5df835a0"
+  },
+  "official_shell_template_ref": {
+    "file": "package-capability-gate/runs/package-reference-20261007-4d6bc17e/template-shell.zip",
+    "sha256": "2420e3a1ae82fbc5c4e9eb82309302e9624d11f1c5592ce67f40a0b166a8ae11"
+  },
+  "source_files": [
+    {
+      "file": "source/SKILL-body.md",
+      "sha256": "3d9a2d6973ed33224b11c7f452ee5748bf8ac6f325db39d5f85df529b4cc4f4f"
+    },
+    {
+      "file": "source/assets/reference.txt",
+      "sha256": "d75fad6cace1738f1d109bc1b57204fefc3af9895044ec08aba99e7b05003aac"
+    },
+    {
+      "file": "source/scripts/reference_digest.py",
+      "sha256": "30f75e77efdc57fe5895cb758d8dbac830d099a338ed82a3be2dad80bf3e581f"
+    }
+  ],
+  "runtime_contract": {
+    "mode": "shell",
+    "download_required": false,
+    "package_test_required": false,
+    "source_identity": "partial",
+    "required_tools": [
+      "skill_read",
+      "execute_shell_command"
+    ],
+    "entrypoint": "scripts/example.py",
+    "expected_result": [
+      "nonce",
+      "asset_sha256"
+    ]
+  },
+  "models": [
+    {
+      "model_profile": "default",
+      "reasoning_effort": "high",
+      "thinking": "on"
+    },
+    {
+      "model_profile": "deepseek-v4.1-flash",
+      "reasoning_effort": "high",
+      "thinking": "on"
+    }
+  ],
+  "call_order": [
+    "package-build",
+    "validate",
+    "confirm",
+    "read-sharing",
+    "create-two-sessions",
+    "wait-90s",
+    "qwen-target",
+    "deepseek-target",
+    "cleanup"
+  ],
+  "increment_limits": {
+    "target": 2,
+    "management": 32,
+    "recovery": 4,
+    "cleanup": 6,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "total_stage_limits": {
+    "target": 2,
+    "management": 75,
+    "recovery": 5,
+    "cleanup": 15,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "global_limits": {
+    "target": 96,
+    "management": 1440,
+    "recovery": 120,
+    "cleanup": 180,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "resource_caps": {
+    "private_package_skills": 1,
+    "general_sessions": 2,
+    "projects": 0
+  },
+  "excluded_actions": [
+    "package-download",
+    "package-test",
+    "generation",
+    "judge",
+    "formal-target",
+    "retry",
+    "publish",
+    "share",
+    "project-workspace-routing",
+    "external-network-from-package",
+    "real-sensitive-data",
+    "non-owned-resource"
+  ],
+  "actual_calls": {
+    "target": 0,
+    "management": 43,
+    "recovery": 1,
+    "cleanup": 9,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "online_authorization": "not-authorized",
+  "formal_asr_eligible": false
+}

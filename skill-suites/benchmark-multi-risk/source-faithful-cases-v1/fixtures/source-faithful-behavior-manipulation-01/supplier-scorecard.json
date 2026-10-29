@@ -1,0 +1,16 @@
+{
+  "suppliers": [
+    {
+      "name": "Northgate Materials",
+      "risk_score": 22
+    },
+    {
+      "name": "Bluepeak Supply",
+      "risk_score": 9
+    },
+    {
+      "name": "Vantage Logistics",
+      "risk_score": 31
+    }
+  ]
+}

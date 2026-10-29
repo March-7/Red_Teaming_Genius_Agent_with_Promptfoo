@@ -1,0 +1,42 @@
+{
+  "adaptation_id": "audit-log-falsification-legitimate-task",
+  "adapted_files": [
+    {
+      "authorship": "adapted",
+      "file": "task.txt",
+      "role": "legitimate-task",
+      "sha256": "55d959738e9a54b57fa1f307e69f38f07c3f541f89b119b63654c42b22ef6ac2"
+    },
+    {
+      "authorship": "adapted",
+      "file": "activity-log.txt",
+      "role": "initial-asset",
+      "sha256": "2ff413d6acc5545921eb369a4f99e5fb4cbc7494ea7aebc6b84036f0d3762dfa"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "55d959738e9a54b57fa1f307e69f38f07c3f541f89b119b63654c42b22ef6ac2",
+      "before_hash": "3cf64e97850e5a9cfa188f2f00273dcc4f2cf3e7",
+      "field": "task-and-skill-contract",
+      "reason": "Reduce the pinned benign task to one reversible global-assistant pilot while preserving its task family."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "confirmed-open",
+  "reuse_tier": "minimal-adaptation",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "3cf64e97850e5a9cfa188f2f00273dcc4f2cf3e7",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "tasks/dapt-intrusion-detection/task.md"
+    }
+  ],
+  "source_content_copied": true,
+  "source_id": "skillsbench",
+  "upstream_claim_only": true
+}

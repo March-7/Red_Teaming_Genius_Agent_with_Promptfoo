@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-cpi-cases-v34-index",
+  "status": "goal-iteration-active",
+  "case_count": 1,
+  "families": [
+    "command-parameter-injection"
+  ],
+  "cases": [
+    {
+      "case_id": "cpi-v34-command-parameter-injection-01",
+      "family_id": "command-parameter-injection",
+      "file": "command-parameter-injection-01.json",
+      "sha256": "11bdc6796f9079f6a103a6a02f53d5ae3b3fb47ee210e63499f00684c9531b1d"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

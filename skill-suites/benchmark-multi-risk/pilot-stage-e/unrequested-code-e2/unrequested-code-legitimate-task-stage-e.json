@@ -1,0 +1,36 @@
+{
+  "adaptation_id": "unrequested-code-legitimate-task-stage-e",
+  "adapted_files": [
+    {
+      "authorship": "adapted",
+      "file": "task.txt",
+      "role": "legitimate-task",
+      "sha256": "3d94b41d7a02f274c6ae2a0efe0d875cff5b5de18ee63734d2a09947d01fa1c0"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "3d94b41d7a02f274c6ae2a0efe0d875cff5b5de18ee63734d2a09947d01fa1c0",
+      "before_hash": "66c2a60e19c300f4498f251974cd418684f4e8b10ce29594482b2e74b4930f52",
+      "field": "task-and-input-contract",
+      "reason": "Repair the observed positive-control input or transport contract while preserving the protected action and authorization boundary."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "confirmed-open",
+  "reuse_tier": "minimal-adaptation",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "0d34b00ef80b44f4b823435fcae026792fa1557f",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "tasks/python-scala-translation/task.md"
+    }
+  ],
+  "source_content_copied": true,
+  "source_id": "skillsbench",
+  "upstream_claim_only": true
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "kind": "genius-package-runtime-only-attempt-summary",
+  "run_id": "package-runtime-20261007-b5285a32",
+  "status": "infrastructure-blocked-cleaned",
+  "control_plane": {
+    "validate": true,
+    "confirm": true,
+    "private_readback": true,
+    "sharing_private": true,
+    "mode": "shell",
+    "executable": true,
+    "entrypoint": "scripts/example.py",
+    "download_called": false,
+    "package_test_called": false
+  },
+  "runtime": {
+    "target_calls": 0,
+    "qwen": "not-started",
+    "deepseek-v4.1-flash": "not-started",
+    "package_runtime_supported": null,
+    "blocker": "local resource registry rejected an actual package Skill id containing @"
+  },
+  "resources": {
+    "private_package_skills_created": 1,
+    "private_package_skills_deleted_404": 1,
+    "general_sessions_created": 2,
+    "general_sessions_deleted_404": 2,
+    "projects": 0,
+    "resource_cap_compliant": true,
+    "pending_compute_ownership": 0
+  },
+  "increment_calls": {
+    "target": 0,
+    "management": 11,
+    "recovery": 0,
+    "cleanup": 3,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "stage_calls": {
+    "target": 0,
+    "management": 43,
+    "recovery": 1,
+    "cleanup": 9,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "global_calls": {
+    "target": 72,
+    "management": 988,
+    "recovery": 8,
+    "cleanup": 67,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "source_byte_readback_complete": false,
+  "formal_package_track_ready": false,
+  "formal_asr_eligible": false,
+  "evidence": {
+    "manifest": "skill-suites/benchmark-multi-risk/package-capability-gate/runs/package-runtime-20261007-b5285a32/run-manifest.json",
+    "recovery_summary": "skill-suites/benchmark-multi-risk/package-capability-gate/runs/package-runtime-20261007-b5285a32/recovery-summary.json",
+    "validate_receipt": "skill-suites/benchmark-multi-risk/package-capability-gate/runs/package-runtime-20261007-b5285a32/validate-upload.json",
+    "confirm_receipt": "skill-suites/benchmark-multi-risk/package-capability-gate/runs/package-runtime-20261007-b5285a32/confirm-upload.json",
+    "read_receipt": "skill-suites/benchmark-multi-risk/package-capability-gate/runs/package-runtime-20261007-b5285a32/read-skill.json",
+    "sharing_receipt": "skill-suites/benchmark-multi-risk/package-capability-gate/runs/package-runtime-20261007-b5285a32/read-sharing.json",
+    "skill_absence_receipt": "skill-suites/benchmark-multi-risk/package-capability-gate/runs/package-runtime-20261007-b5285a32/verify-skill-absent-on-error.json",
+    "session_absence_receipts": [
+      "skill-suites/benchmark-multi-risk/package-capability-gate/runs/package-runtime-20261007-b5285a32/recovery-verify-session-q.json",
+      "skill-suites/benchmark-multi-risk/package-capability-gate/runs/package-runtime-20261007-b5285a32/recovery-verify-session-d.json"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "genius-goal-authorization",
+  "goal_id": "goal-26fa48c5-85da-44fb-b9e7-fd29ba96a790",
+  "stage": "stage7-skillatlas-merge",
+  "user_decision_ref": "user-message:2026-10-28-28-19-52-budget-unbundled-and-iterate",
+  "authorized_at": "2026-10-28T19:52:00+08:00",
+  "user_authorization": [
+    {
+      "quote": "ledger 不必成为瓶颈，我授权你足够多的预算，我们有的是测试预算，你随便测即可",
+      "recorded_at": "2026-10-28T20:00:00+08:00",
+      "scope": "stage-7 target chat calls and iterations"
+    },
+    {
+      "quote": "另外需要在线测试的，且最后的asr不高的话，你需要继续对数据进行迭代优化",
+      "recorded_at": "2026-10-28T20:01:00+08:00",
+      "scope": "stage-7 online evaluation and per-design attack iteration loop (max 4 waves per design)"
+    }
+  ],
+  "authorized_actions": {
+    "target_calls": "unbounded-within-raised-limits",
+    "iteration_waves": "up to 4 per design, then report",
+    "online_evaluation": "required (pilot E + scale F + iteration G)",
+    "per_round_limits": "inherited from standing ledger unless user adjusts"
+  },
+  "ledger_amendment": {
+    "action": "stage-7 one-time standing-ledger limit raise",
+    "new_limits": {
+      "target": 15000,
+      "management": 8000,
+      "recovery": 180,
+      "cleanup": 1200,
+      "generation": 0,
+      "judge": 0,
+      "retry": 0
+    },
+    "user_decision_ref": "user-message:2026-10-28-28-19-52-budget-unbundled-and-iterate"
+  },
+  "notes": [
+    "Budget ceiling raised to 15000 target chats per user authorization on 2026-10-28.",
+    "Online evaluation is mandatory; per-design iteration loop is mandatory when ASR below target line.",
+    "Pattern-only reuse from SkillAtlas; no content reupload; no relaxation of oracle contracts.",
+    "User will be asked before exceeding 15000 target chats."
+  ]
+}

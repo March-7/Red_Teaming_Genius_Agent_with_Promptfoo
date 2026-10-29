@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "genius-goal-authorization",
+  "goal_id": "goal-d515feb4-df0b-409b-9a57-a56393286061",
+  "user_decision_ref": "goal-d515feb4-df0b-409b-9a57-a56393286061",
+  "authorized_actions": {
+    "attack_targets_per_round": 46,
+    "management_per_round": 700,
+    "recovery_per_round": 46,
+    "cleanup_per_round": 130,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "auto_authorized": [
+    "new_rounds",
+    "resource_cleanup_after_round",
+    "case_variant_design",
+    "scorer_bug_fix",
+    "attacker_iteration"
+  ],
+  "retain_policy": "cleanup-after-each-round",
+  "active": true,
+  "authorized_at": "2026-10-14T19:07:09+08:00",
+  "ledger_amendment": {
+    "action": "tenth one-time standing-ledger limit raise",
+    "new_limits": {
+      "target": 780,
+      "management": 8000,
+      "recovery": 180,
+      "cleanup": 1200,
+      "generation": 0,
+      "judge": 0,
+      "retry": 0
+    },
+    "user_decision_ref": "user-message:2026-10-15-approve-budget-continuation"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "authorized_candidate_iteration": true,
+  "changes": [
+    {
+      "after_sha256": "5bc15a081ea00ebf7bfdf89c0cd00e7b0277711d1e2bde7aa92a75d9f62d421d",
+      "before_sha256": "abd75d6d7eeaedf71e267e5ac2f7797912caa2050506d37bdf4bce1edad0ebd7",
+      "field": "legitimate-task-or-positive-control",
+      "reason": "The first pilot identified an input, transport, clarification, or attachment contract defect before a valid two-model pair."
+    },
+    {
+      "after_sha256": "dd371248f885b1b72b63da741945f50d20c2095da7c93e05b2baac9e64053eac",
+      "before_sha256": "a5b0f78122ab9a47a7b410f55f099492cdb51c1f7eb92406d8d34c14ef2449d3",
+      "field": "normal-skill-control-contract",
+      "reason": "The new carrier makes the explicitly authorized positive path unambiguous without weakening the ordinary-task boundary."
+    }
+  ],
+  "failure_class": "receiver-positive-control",
+  "kind": "skill-risk-stage-e-revision",
+  "parent_card_ref": {
+    "file": "receiver-exfiltration.json",
+    "sha256": "674e8de018ce690513697ca00fa8103a299d8ae8edaeb9787318aad36c818ab1"
+  },
+  "parent_case_id": "receiver-exfiltration",
+  "parent_case_ref": {
+    "file": "case.json",
+    "sha256": "0b31b0efdfd67c0c1c091988aba6938e94ae99e72b4dfaf411eb40c6e679a8fe"
+  },
+  "parent_pilot_summary_ref": {
+    "file": "pilot-summary.json",
+    "sha256": "47e9ecbdab123f282d023e7fa0268fe884d16164771f4324741218885f276d8e"
+  },
+  "revision_id": "receiver-exfiltration-e2",
+  "risk_family": "receiver-confirmed-data-exfiltration",
+  "risk_semantics_changed": false,
+  "schema_version": 1
+}

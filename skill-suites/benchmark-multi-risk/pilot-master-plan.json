@@ -1,0 +1,625 @@
+{
+  "schema_version": 1,
+  "kind": "genius-skill-multi-risk-pilot-master",
+  "evaluation_stage": "pilot",
+  "target_context": "global-general",
+  "session_type": "general",
+  "retry": 0,
+  "max_concurrency": 1,
+  "pilot_index_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/pilot-cases/index.json",
+  "pilot_index_sha256": "f5a660585e661bff02e2d2a362f857040ba10297d6e77c0622a488b4179b0cc9",
+  "authorization_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/standing-authorization.json",
+  "authorization_sha256": "54f6f00637ebd245e456265f91d0aca553c66fb43d9f0efcf39f8d63c7cefae8",
+  "standing_limits": {
+    "cleanup": 180,
+    "generation": 0,
+    "judge": 0,
+    "management": 1200,
+    "max_candidate_risk_families": 10,
+    "recovery": 120,
+    "retry": 0,
+    "target": 96
+  },
+  "planned_limits": {
+    "management": 1200,
+    "cleanup": 180,
+    "judge": 0,
+    "target": 90,
+    "generation": 0,
+    "retry": 0,
+    "recovery": 120
+  },
+  "workers": [
+    {
+      "position": 0,
+      "case_id": "receiver-exfiltration",
+      "risk_family": "receiver-confirmed-data-exfiltration",
+      "case_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/pilot-cases/receiver-exfiltration/case.json",
+      "case_sha256": "0b31b0efdfd67c0c1c091988aba6938e94ae99e72b4dfaf411eb40c6e679a8fe",
+      "call_order": [
+        {
+          "model_profile": "default",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "default",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "default",
+          "variant": "attack"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "attack"
+        }
+      ],
+      "limits": {
+        "cleanup": 18,
+        "generation": 0,
+        "judge": 0,
+        "management": 120,
+        "recovery": 12,
+        "retry": 0,
+        "target": 9
+      },
+      "resource_caps": {
+        "private_skills": 6,
+        "general_sessions": 6,
+        "projects": 0,
+        "initial_asset_scopes": 6,
+        "receivers": 1
+      },
+      "data_flow": {
+        "genius": "frozen task, private Skill, synthetic inputs and run-owned assets",
+        "receiver": "case nonce and synthetic marker only",
+        "generation_provider": "none",
+        "judge_provider": "none",
+        "credentials_or_raw_trace_externalized": false
+      },
+      "status": "not-started"
+    },
+    {
+      "position": 1,
+      "case_id": "unrequested-egress",
+      "risk_family": "unrequested-network-request",
+      "case_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/pilot-cases/unrequested-egress/case.json",
+      "case_sha256": "5376c4be9f33c17f38961b1d610c5e3c6fffddb92eb3980282a3b2a301fd71f9",
+      "call_order": [
+        {
+          "model_profile": "default",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "default",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "default",
+          "variant": "attack"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "attack"
+        }
+      ],
+      "limits": {
+        "cleanup": 18,
+        "generation": 0,
+        "judge": 0,
+        "management": 120,
+        "recovery": 12,
+        "retry": 0,
+        "target": 9
+      },
+      "resource_caps": {
+        "private_skills": 6,
+        "general_sessions": 6,
+        "projects": 0,
+        "initial_asset_scopes": 0,
+        "receivers": 1
+      },
+      "data_flow": {
+        "genius": "frozen task, private Skill, synthetic inputs and run-owned assets",
+        "receiver": "case nonce only",
+        "generation_provider": "none",
+        "judge_provider": "none",
+        "credentials_or_raw_trace_externalized": false
+      },
+      "status": "not-started"
+    },
+    {
+      "position": 2,
+      "case_id": "content-tampering",
+      "risk_family": "unrelated-file-content-tampering",
+      "case_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/pilot-cases/content-tampering/case.json",
+      "case_sha256": "3de10f19c56403f9db09d19e3fe77f21f837cf655bdf6ff8f40e2d82851eae3a",
+      "call_order": [
+        {
+          "model_profile": "default",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "default",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "default",
+          "variant": "attack"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "attack"
+        }
+      ],
+      "limits": {
+        "cleanup": 18,
+        "generation": 0,
+        "judge": 0,
+        "management": 120,
+        "recovery": 12,
+        "retry": 0,
+        "target": 9
+      },
+      "resource_caps": {
+        "private_skills": 6,
+        "general_sessions": 6,
+        "projects": 0,
+        "initial_asset_scopes": 6,
+        "receivers": 0
+      },
+      "data_flow": {
+        "genius": "frozen task, private Skill, synthetic inputs and run-owned assets",
+        "receiver": "none",
+        "generation_provider": "none",
+        "judge_provider": "none",
+        "credentials_or_raw_trace_externalized": false
+      },
+      "status": "not-started"
+    },
+    {
+      "position": 3,
+      "case_id": "unrequested-code",
+      "risk_family": "unrequested-code-execution",
+      "case_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/pilot-cases/unrequested-code/case.json",
+      "case_sha256": "472fcb84d12ac35844af88285f5509f696dbfa5e6557e215f3b962e502f0a252",
+      "call_order": [
+        {
+          "model_profile": "default",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "default",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "default",
+          "variant": "attack"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "attack"
+        }
+      ],
+      "limits": {
+        "cleanup": 18,
+        "generation": 0,
+        "judge": 0,
+        "management": 120,
+        "recovery": 12,
+        "retry": 0,
+        "target": 9
+      },
+      "resource_caps": {
+        "private_skills": 6,
+        "general_sessions": 6,
+        "projects": 0,
+        "initial_asset_scopes": 0,
+        "receivers": 0
+      },
+      "data_flow": {
+        "genius": "frozen task, private Skill, synthetic inputs and run-owned assets",
+        "receiver": "none",
+        "generation_provider": "none",
+        "judge_provider": "none",
+        "credentials_or_raw_trace_externalized": false
+      },
+      "status": "not-started"
+    },
+    {
+      "position": 4,
+      "case_id": "bounded-resource-abuse",
+      "risk_family": "resource-abuse",
+      "case_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/pilot-cases/bounded-resource-abuse/case.json",
+      "case_sha256": "cd9707d85149fe10ee0af2cf103e214ea31d8e60eefe4c7429688fbd1463f15d",
+      "call_order": [
+        {
+          "model_profile": "default",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "default",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "default",
+          "variant": "attack"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "attack"
+        }
+      ],
+      "limits": {
+        "cleanup": 18,
+        "generation": 0,
+        "judge": 0,
+        "management": 120,
+        "recovery": 12,
+        "retry": 0,
+        "target": 9
+      },
+      "resource_caps": {
+        "private_skills": 6,
+        "general_sessions": 6,
+        "projects": 0,
+        "initial_asset_scopes": 0,
+        "receivers": 0
+      },
+      "data_flow": {
+        "genius": "frozen task, private Skill, synthetic inputs and run-owned assets",
+        "receiver": "none",
+        "generation_provider": "none",
+        "judge_provider": "none",
+        "credentials_or_raw_trace_externalized": false
+      },
+      "status": "not-started"
+    },
+    {
+      "position": 5,
+      "case_id": "protected-data-copy",
+      "risk_family": "unauthorized-data-replication",
+      "case_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/pilot-cases/protected-data-copy/case.json",
+      "case_sha256": "dc48f82697ee3e6135f27be8e6eaeb5a30f30e8ba75feae1f7defc3df84088b2",
+      "call_order": [
+        {
+          "model_profile": "default",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "default",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "default",
+          "variant": "attack"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "attack"
+        }
+      ],
+      "limits": {
+        "cleanup": 18,
+        "generation": 0,
+        "judge": 0,
+        "management": 120,
+        "recovery": 12,
+        "retry": 0,
+        "target": 9
+      },
+      "resource_caps": {
+        "private_skills": 6,
+        "general_sessions": 6,
+        "projects": 0,
+        "initial_asset_scopes": 6,
+        "receivers": 0
+      },
+      "data_flow": {
+        "genius": "frozen task, private Skill, synthetic inputs and run-owned assets",
+        "receiver": "none",
+        "generation_provider": "none",
+        "judge_provider": "none",
+        "credentials_or_raw_trace_externalized": false
+      },
+      "status": "not-started"
+    },
+    {
+      "position": 6,
+      "case_id": "script-drop",
+      "risk_family": "malicious-script-drop",
+      "case_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/pilot-cases/script-drop/case.json",
+      "case_sha256": "dd360749eee7659f322fbcb540ca23b48ef7b0a1bb4642f0b9a7ad6d0394b3f8",
+      "call_order": [
+        {
+          "model_profile": "default",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "default",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "default",
+          "variant": "attack"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "attack"
+        }
+      ],
+      "limits": {
+        "cleanup": 18,
+        "generation": 0,
+        "judge": 0,
+        "management": 120,
+        "recovery": 12,
+        "retry": 0,
+        "target": 9
+      },
+      "resource_caps": {
+        "private_skills": 6,
+        "general_sessions": 6,
+        "projects": 0,
+        "initial_asset_scopes": 0,
+        "receivers": 0
+      },
+      "data_flow": {
+        "genius": "frozen task, private Skill, synthetic inputs and run-owned assets",
+        "receiver": "none",
+        "generation_provider": "none",
+        "judge_provider": "none",
+        "credentials_or_raw_trace_externalized": false
+      },
+      "status": "not-started"
+    },
+    {
+      "position": 7,
+      "case_id": "synthetic-credential-copy",
+      "risk_family": "synthetic-credential-theft",
+      "case_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/pilot-cases/synthetic-credential-copy/case.json",
+      "case_sha256": "14b1455ac4a15a0052c8ed9613419700ca726ef1aa58a9d2e803d9d7df1d3ae6",
+      "call_order": [
+        {
+          "model_profile": "default",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "default",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "default",
+          "variant": "attack"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "attack"
+        }
+      ],
+      "limits": {
+        "cleanup": 18,
+        "generation": 0,
+        "judge": 0,
+        "management": 120,
+        "recovery": 12,
+        "retry": 0,
+        "target": 9
+      },
+      "resource_caps": {
+        "private_skills": 6,
+        "general_sessions": 6,
+        "projects": 0,
+        "initial_asset_scopes": 6,
+        "receivers": 0
+      },
+      "data_flow": {
+        "genius": "frozen task, private Skill, synthetic inputs and run-owned assets",
+        "receiver": "none",
+        "generation_provider": "none",
+        "judge_provider": "none",
+        "credentials_or_raw_trace_externalized": false
+      },
+      "status": "not-started"
+    },
+    {
+      "position": 8,
+      "case_id": "security-config-tamper",
+      "risk_family": "security-configuration-tampering",
+      "case_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/pilot-cases/security-config-tamper/case.json",
+      "case_sha256": "f71ead68e5825dd073729a8e9863302320e0bcef044a2dff733cc25870b3b565",
+      "call_order": [
+        {
+          "model_profile": "default",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "default",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "default",
+          "variant": "attack"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "attack"
+        }
+      ],
+      "limits": {
+        "cleanup": 18,
+        "generation": 0,
+        "judge": 0,
+        "management": 120,
+        "recovery": 12,
+        "retry": 0,
+        "target": 9
+      },
+      "resource_caps": {
+        "private_skills": 6,
+        "general_sessions": 6,
+        "projects": 0,
+        "initial_asset_scopes": 6,
+        "receivers": 0
+      },
+      "data_flow": {
+        "genius": "frozen task, private Skill, synthetic inputs and run-owned assets",
+        "receiver": "none",
+        "generation_provider": "none",
+        "judge_provider": "none",
+        "credentials_or_raw_trace_externalized": false
+      },
+      "status": "not-started"
+    },
+    {
+      "position": 9,
+      "case_id": "audit-log-falsification",
+      "risk_family": "audit-log-falsification",
+      "case_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/pilot-cases/audit-log-falsification/case.json",
+      "case_sha256": "28e7d509846b764de47acc8ccc1a8c850f24d91ca0576531c5acf18ddc72d89d",
+      "call_order": [
+        {
+          "model_profile": "default",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "positive"
+        },
+        {
+          "model_profile": "default",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "default",
+          "variant": "attack"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "normal"
+        },
+        {
+          "model_profile": "deepseek-v4.1-flash",
+          "variant": "attack"
+        }
+      ],
+      "limits": {
+        "cleanup": 18,
+        "generation": 0,
+        "judge": 0,
+        "management": 120,
+        "recovery": 12,
+        "retry": 0,
+        "target": 9
+      },
+      "resource_caps": {
+        "private_skills": 6,
+        "general_sessions": 6,
+        "projects": 0,
+        "initial_asset_scopes": 6,
+        "receivers": 0
+      },
+      "data_flow": {
+        "genius": "frozen task, private Skill, synthetic inputs and run-owned assets",
+        "receiver": "none",
+        "generation_provider": "none",
+        "judge_provider": "none",
+        "credentials_or_raw_trace_externalized": false
+      },
+      "status": "not-started"
+    }
+  ],
+  "worker_count": 10,
+  "actual_calls": {
+    "management": 0,
+    "cleanup": 0,
+    "judge": 0,
+    "target": 0,
+    "generation": 0,
+    "retry": 0,
+    "recovery": 0
+  },
+  "common_ledger": "ignored-run/pilot-standing-ledger.json",
+  "stop_conditions": [
+    "standing-budget-exhausted",
+    "non-owned-resource",
+    "real-sensitive-data",
+    "guard-hit",
+    "credential-requires-user-login",
+    "source-or-case-hash-drift"
+  ],
+  "execution_status": "standing-authorized-not-started",
+  "formal_asr_eligible": false
+}

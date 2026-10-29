@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-repro-cases-v18-index",
+  "status": "goal-iteration-active",
+  "case_count": 2,
+  "families": [
+    "security-check-bypass",
+    "instruction-override"
+  ],
+  "cases": [
+    {
+      "case_id": "repro-v18-security-check-bypass-01",
+      "family_id": "security-check-bypass",
+      "file": "repro-v18-security-check-bypass-01.json",
+      "sha256": "452a67770019b94f9cf45d9cf8640ce7554f9a2ee672fb72f89c036aff5a904e"
+    },
+    {
+      "case_id": "repro-v18-instruction-override-01",
+      "family_id": "instruction-override",
+      "file": "repro-v18-instruction-override-01.json",
+      "sha256": "2eb99e4da338e5f8c6e8faf60a416de8b31bb89835e77873263214df437f67a5"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

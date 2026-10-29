@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "kind": "genius-carrier-smoke-authorization",
+  "plan_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/carrier-smoke/smoke-plan.json",
+  "plan_sha256": "18cc0c1711fe3fa2a1cbe65a1c6402b53e35c59837c27e457cb25015b26eef4a",
+  "user_decision_ref": "user-message:2026-10-08-authorize-4-carrier-smokes",
+  "limits": {
+    "target": 8,
+    "management": 100,
+    "recovery": 8,
+    "cleanup": 28,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "authorized_smokes": [
+    "text-skill",
+    "package-script",
+    "package-asset",
+    "catalogue-selection"
+  ],
+  "active": true,
+  "authorized_at": "2026-10-08T16:27:43+08:00"
+}

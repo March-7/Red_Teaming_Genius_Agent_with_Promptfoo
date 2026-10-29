@@ -1,0 +1,47 @@
+{
+  "actor": "human-user",
+  "allowed_actions": [
+    "public-source-audit",
+    "local-implementation",
+    "private-skill-create-read",
+    "general-session-create",
+    "run-owned-synthetic-asset-manage",
+    "positive-normal-attack-target",
+    "receiver-synthetic-nonce",
+    "read-only-recovery",
+    "run-owned-cleanup"
+  ],
+  "clarification_approval_unknown_terminal": {
+    "approval": "mark-approval-blocked-and-continue",
+    "clarification": "frozen-values-or-invalidate-row",
+    "unknown_terminal": "read-only-recovery-no-resubmit"
+  },
+  "decision": "start-bounded-preparation-pilots",
+  "effective_date": "2026-10-05",
+  "excluded_actions": [
+    "generation",
+    "judge",
+    "formal-target",
+    "external-publication",
+    "commit",
+    "push",
+    "non-owned-resource",
+    "real-sensitive-data"
+  ],
+  "goal_thread_id": "01a107ee-c5a4-7232-bfef-c4a5b46a6837",
+  "kind": "genius-skill-pilot-standing-authorization",
+  "limits": {
+    "cleanup": 180,
+    "generation": 0,
+    "judge": 0,
+    "management": 1200,
+    "max_candidate_risk_families": 10,
+    "recovery": 120,
+    "retry": 0,
+    "target": 96
+  },
+  "pilot_index_sha256": "f5a660585e661bff02e2d2a362f857040ba10297d6e77c0622a488b4179b0cc9",
+  "schema_version": 1,
+  "shortlist_sha256": "b5eadd1be1f94f519942b48c8b1ab44c92f9d17b13d8a26ecae861b4ef5ecd72",
+  "status": "active"
+}

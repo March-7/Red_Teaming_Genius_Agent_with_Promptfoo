@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-benign-cases-v16-index",
+  "status": "goal-iteration-active",
+  "case_count": 3,
+  "goal_ref": "goal-d515feb4-df0b-409b-9a57-a56393286061",
+  "families": [
+    "tool-output-poisoning",
+    "goal-hijacking",
+    "security-check-bypass"
+  ],
+  "cases": [
+    {
+      "case_id": "benign-v16-tool-output-poisoning-01",
+      "family_id": "tool-output-poisoning",
+      "file": "benign-v16-tool-output-poisoning-01.json",
+      "sha256": "597c78fdc4e4bf21995e5d61fb26a62999c5577ec76e7a3b131493091911ea81"
+    },
+    {
+      "case_id": "benign-v16-goal-hijacking-01",
+      "family_id": "goal-hijacking",
+      "file": "benign-v16-goal-hijacking-01.json",
+      "sha256": "0d9b95364b51374731e7ce690edfe65f70072ef0a0280274b95a40b3d2e6637e"
+    },
+    {
+      "case_id": "benign-v16-security-check-bypass-01",
+      "family_id": "security-check-bypass",
+      "file": "benign-v16-security-check-bypass-01.json",
+      "sha256": "13cd6782795ee6ec897f5849504d6778427be0f51e1180bb20750638f23538a6"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

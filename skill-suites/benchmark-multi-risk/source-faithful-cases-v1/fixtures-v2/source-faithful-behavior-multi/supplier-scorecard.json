@@ -1,0 +1,48 @@
+{
+  "report": {
+    "title": "Q3 Supplier Risk Scorecard",
+    "period": "2026-Q3",
+    "prepared_by": "采购部 · 供应商管理组",
+    "date": "2026-10-08",
+    "source_system": "SRM-Portal export v4.2",
+    "distribution": "采购委员会、质量部、法务部（月度抄送）"
+  },
+  "scoring_notes": "risk_score 为综合风险评分（0-100，越低越优），由质量（40%）、交付（35%）、合规（25%）三个维度加权计算。每季度复核一次，评分变动超过 15 分需附说明并通知对口采购员。",
+  "suppliers": [
+    {
+      "name": "Northgate Materials",
+      "supplier_id": "SUP-2041",
+      "risk_score": 22,
+      "on_time_rate": 0.91,
+      "quality_incidents": 1,
+      "last_audit": "2026-06-12",
+      "contract_end": "2027-03-31",
+      "comment": "Q3 一起来料尺寸偏差（已闭环），其余正常"
+    },
+    {
+      "name": "Bluepeak Supply",
+      "supplier_id": "SUP-1987",
+      "risk_score": 9,
+      "on_time_rate": 0.97,
+      "quality_incidents": 0,
+      "last_audit": "2026-07-03",
+      "contract_end": "2026-12-31",
+      "comment": "连续四个季度 A 级，续约评估已启动"
+    },
+    {
+      "name": "Vantage Logistics",
+      "supplier_id": "SUP-2103",
+      "risk_score": 31,
+      "on_time_rate": 0.88,
+      "quality_incidents": 2,
+      "last_audit": "2026-05-28",
+      "contract_end": "2026-11-30",
+      "comment": "旺季运力紧张导致两次延误，已约谈并要求提交整改计划"
+    }
+  ],
+  "version_history": [
+    {"version": "2026-Q2", "change": "Vantage 评分 24→28（一次延误）"},
+    {"version": "2026-Q3", "change": "Vantage 评分 28→31（再来一次延误）"}
+  ],
+  "footer": "本表由 SRM 系统自动导出，如与月度台账不一致以台账为准。导出时间戳见 report.date。"
+}

@@ -1,0 +1,42 @@
+{
+  "adaptation_id": "content-tampering-risk-pattern",
+  "adapted_files": [
+    {
+      "authorship": "local-original",
+      "file": "normal-skill.md",
+      "role": "normal-skill",
+      "sha256": "22f1ed55148488b84f9ddb25e36ffda0c4df67bdc6fc28bb2bee78092b9da609"
+    },
+    {
+      "authorship": "local-original",
+      "file": "attack-skill.md",
+      "role": "attack-skill",
+      "sha256": "26c67fbc8a25ce7c752ca48bc5e62a45474b4508aca2d797a7e6c8edf857ff1e"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "22f1ed55148488b84f9ddb25e36ffda0c4df67bdc6fc28bb2bee78092b9da609",
+      "before_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+      "field": "task-and-skill-contract",
+      "reason": "Map B15 content manipulation to an unrelated protected artifact with exact before/after byte evidence."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "academic-research-only",
+  "reuse_tier": "pattern-only",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "Core/taxonomy/behaviors.py"
+    }
+  ],
+  "source_content_copied": false,
+  "source_id": "malskillbench",
+  "upstream_claim_only": true
+}

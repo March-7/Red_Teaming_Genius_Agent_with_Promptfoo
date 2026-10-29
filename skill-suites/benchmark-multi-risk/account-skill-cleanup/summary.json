@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "kind": "genius-project-owned-skill-cleanup-summary",
+  "status": "verified-project-skill-set-empty",
+  "run_id": "skill-reset-20261008-f917f29a",
+  "authorization_ref": {
+    "file": "skill-suites/benchmark-multi-risk/account-skill-cleanup/runs/skill-reset-20261008-f917f29a/authorization.json",
+    "sha256": "455a02d6d038cfb0b7566a9a93bb3df12850db307e624aca5f44f8aaf93855e7"
+  },
+  "plan_ref": {
+    "file": "skill-suites/benchmark-multi-risk/account-skill-cleanup/runs/skill-reset-20261008-f917f29a/cleanup-plan.json",
+    "sha256": "728c7dd75020e3f6469dd8da9e74ea53c7caa10ed26a58b5371f5089111b858f"
+  },
+  "result_ref": {
+    "file": "skill-suites/benchmark-multi-risk/account-skill-cleanup/runs/skill-reset-20261008-f917f29a/cleanup-result.json",
+    "sha256": "3deebb5f87041c71b39d13ae3718bc56feacb01ecd52d0770b0ec1a7c74d1273"
+  },
+  "final_audit_ref": {
+    "file": "skill-suites/benchmark-multi-risk/account-skill-cleanup/runs/skill-reset-20261008-f917f29a/final-audit.json",
+    "sha256": "b460eaab2ee5f7239bac463ba2ac0dbd49d5e94dc5260a9ef4ccb7308a6fcbab"
+  },
+  "catalogue_before": 275,
+  "catalogue_after": 142,
+  "project_owned_planned": 133,
+  "project_owned_deleted": 133,
+  "verified_404": 133,
+  "project_owned_remaining": 0,
+  "unowned_private_skills_preserved": 21,
+  "calls": {
+    "management": 142,
+    "recovery": 1,
+    "cleanup": 133,
+    "target": 0,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "sessions_deleted": 0,
+  "projects_deleted": 0,
+  "artifacts_deleted": 0,
+  "pending_compute_ownership": 0
+}

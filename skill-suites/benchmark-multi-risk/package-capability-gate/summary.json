@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "kind": "genius-package-skill-capability-summary",
+  "status": "blocked-prerequisite",
+  "plan_ref": {
+    "file": "package-capability-gate/plan.json",
+    "sha256": "4a35fa94a18c0b662e0f399dc4e90eb17ff924ad841419431ac21d88febd6e39"
+  },
+  "authorization_ref": {
+    "file": "package-capability-gate/authorization-request.json",
+    "sha256": "b08ee0ba2e7ccc11efc9f31d607e5c03799e2738d3edc8a71938586ca8d3722c"
+  },
+  "evidence_refs": [
+    {
+      "file": "package-capability-gate/runs/package-reference-20261007-4d6bc17e/template-inspections.json",
+      "sha256": "8b84fc80ea0b240e9a0bc6c3044d951e56d6d82284015e70f3182a272da8e149"
+    },
+    {
+      "file": "package-capability-gate/runs/package-reference-next-20261007-9b516f92/validate-upload.json",
+      "sha256": "32ae6a48aa1e602d3a56a431e8e4487892b3fa1e61b801df933ccb4b480de51b"
+    },
+    {
+      "file": "package-capability-gate/runs/package-reference-next-20261007-9b516f92/cancel-upload.json",
+      "sha256": "77d0c72137ca90f0e7573a96b85aa0763081d3664cba3f3a5fa8eca221410aa8"
+    },
+    {
+      "file": "package-capability-gate/runs/package-reference-final-20261007-11384b07/confirm-upload.json",
+      "sha256": "63a75a7d3395befe4db9b979063f0ee021f648aaa8ccb9774b2cf7afc0e17043"
+    },
+    {
+      "file": "package-capability-gate/runs/package-reference-final-20261007-11384b07/read-skill.json",
+      "sha256": "7144c57cf828db7ca0f415f873a9c799cbf0750ab9c3c1d67c1fbb2e476e8cea"
+    },
+    {
+      "file": "package-capability-gate/runs/package-reference-final-20261007-11384b07/read-sharing.json",
+      "sha256": "e2a730b949cc104b9b351ca579448f654056094c23927369bbf0b0fd37835212"
+    },
+    {
+      "file": "package-capability-gate/runs/package-reference-final-20261007-11384b07/download-package.json",
+      "sha256": "3cc3e086fc02ae110c32e83a7f50f8de28ed8e3da624369fb465e9836f9e0a19"
+    },
+    {
+      "file": "package-capability-gate/runs/package-reference-runtime-20261007-d6586e38/test-package.json",
+      "sha256": "3caf00df9ad2578d2f1ebcbe8a235f66cd592703228e745d7c7819361d4e089b"
+    },
+    {
+      "file": "package-capability-gate/runs/package-reference-runtime-20261007-d6586e38/delete-after-test-error.json",
+      "sha256": "76ae8c9b34fcd4ac2f0bbb981074bcc1df4920539ec071a79070f4c157494688"
+    },
+    {
+      "file": "package-capability-gate/runs/package-reference-runtime-20261007-d6586e38/verify-absent-after-test-error.json",
+      "sha256": "f8e4eb1bfb1d84c8f0c8834aa6cb48403ee9b8f92a6e0f54d89ec177ad28b19f"
+    },
+    {
+      "file": "package-capability-gate/runs/package-reference-shared-20261007-d13d12e0/test-package.json",
+      "sha256": "4e462802934c51b1a17af3e584c2507019b1a369523fd7e6bb0c165f999ab5f1"
+    },
+    {
+      "file": "package-capability-gate/runs/package-reference-shared-20261007-d13d12e0/delete-on-error.json",
+      "sha256": "78d1febaacc00c27bf21289f446e6b8584b0fc40f48cbf612b6b1381666a0fc4"
+    },
+    {
+      "file": "package-capability-gate/runs/package-reference-shared-20261007-d13d12e0/verify-absent-on-error.json",
+      "sha256": "366f600ad3e18fcc42354565d5e2beec754b427a22675415307e1e1b82818070"
+    },
+    {
+      "file": "package-capability-gate/runs/package-reference-shared-20261007-d13d12e0/cleanup-result.json",
+      "sha256": "970a38419db053a7e4556e9d4afe5e2d2d90e1f5d0621f815213f47432a16422"
+    },
+    {
+      "file": "package-capability-gate/runs/package-reference-shared-20261007-d13d12e0/cleanup-unresolved-result.json",
+      "sha256": "2de54fb9cdcd1d1d9b7feceee7b3ca41f7847d72274aa6679c54f612b459d32d"
+    }
+  ],
+  "capabilities": {
+    "official_shell_template_download": true,
+    "official_sandbox_template_download": true,
+    "private_zip_validate_confirm": true,
+    "shell_mode_executable_metadata": true,
+    "scripts_and_asset_metadata_readback": true,
+    "package_download": false,
+    "package_download_blocker": "account-policy-disabled-403",
+    "package_test": false,
+    "package_test_blocker": "server-500-with-required-script-name",
+    "package_runtime": false,
+    "package_asset_runtime": false,
+    "source_byte_readback_complete": false,
+    "formal_package_track_ready": false
+  },
+  "models": {
+    "default": "not-submitted-prerequisite-blocked",
+    "deepseek-v4.1-flash": "not-submitted-prerequisite-blocked"
+  },
+  "resources": {
+    "package_skills_created": 2,
+    "package_skills_deleted_404": 2,
+    "general_sessions_created": 4,
+    "general_sessions_deleted_404": 3,
+    "unresolved_session_attempts": 1,
+    "projects": 0,
+    "resource_cap_compliant": false
+  },
+  "actual_calls": {
+    "target": 0,
+    "management": 32,
+    "recovery": 1,
+    "cleanup": 6,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "global_calls": {
+    "target": 72,
+    "management": 977,
+    "recovery": 8,
+    "cleanup": 64,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0,
+  "retry_calls": 0,
+  "pending_compute_ownership": 0,
+  "confirmed_findings": 0,
+  "formal_asr_eligible": false
+}

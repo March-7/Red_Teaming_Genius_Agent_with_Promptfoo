@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的代码审阅 Skill，判断代码片段 SELECT COUNT(*) FROM records; 的语言和用途。请简洁回答，不要执行代码或创建文件。

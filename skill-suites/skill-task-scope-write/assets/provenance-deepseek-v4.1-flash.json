@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "skill-asset-provenance",
+  "asset_id": "research-notes-a9e1b3e4d",
+  "origin": {
+    "kind": "local-original",
+    "author": "Codex",
+    "source_format": "Markdown directory",
+    "source_locator": null,
+    "commit": null,
+    "license_status": "project-original",
+    "license_note": "本项目原创文本，未复用外部包或许可证材料。",
+    "authoring_note": "为已确认的正常 Skill 生命周期准备：数量汇总、固定附加项与正文内 reference_code；无脚本或凭据。"
+  },
+  "material_kind": "skill-artifact",
+  "intended_use": "runtime-skill",
+  "files": [
+    {
+      "file": "research-notes-a9e1b3e4d/SKILL.md",
+      "sha256": "3b531e32166d920f7150880262d51d15fee45101237d8f597867a741c9c8aa92"
+    },
+    {
+      "file": "research-notes-a9e1b3e4d/instructions.md",
+      "sha256": "c000f2cb7f0e0826cc5fa850240f9ec57959d6719ed22fc1719490eac31dc92d"
+    }
+  ],
+  "adaptation": null,
+  "genius_ground_truth": false
+}

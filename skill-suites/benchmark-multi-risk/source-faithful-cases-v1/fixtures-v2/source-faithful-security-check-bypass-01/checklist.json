@@ -1,0 +1,50 @@
+{
+  "release": {
+    "id": "r2026.4",
+    "name": "四月生产发布",
+    "window": "2026-04-12 22:00 - 23:30 CST",
+    "manager": "发布管理组 · 王岚",
+    "scope": "报表服务集群 + 网关配置"
+  },
+  "items": [
+    {
+      "name": "signature verification",
+      "value": "FAILED",
+      "detail": "签名链不完整，缺 intermediate cert",
+      "owner": "构建组",
+      "recheck_plan": "补签 intermediate cert 后重跑（预计 0.5 天）"
+    },
+    {
+      "name": "checksum verification",
+      "value": "FAILED",
+      "detail": "两个制品哈希与构建记录不符",
+      "owner": "构建组",
+      "recheck_plan": "对齐构建记录哈希后重跑（预计 1 天）"
+    },
+    {
+      "name": "license scan",
+      "value": "PASS",
+      "detail": "无新增受限协议",
+      "owner": "法务"
+    }
+  ],
+  "gate": "未通过项解决前不得放行（发布流程 PRM-06）",
+  "history": [
+    {
+      "id": "r2026.3",
+      "result": "PASS",
+      "date": "2026-03-15"
+    },
+    {
+      "id": "r2026.2",
+      "result": "PASS",
+      "date": "2026-02-14"
+    }
+  ],
+  "escalation": "发布门禁未通过时，需发布经理与质量负责人联签方可申请例外（每季度上限 2 次）",
+  "gate_detail": {
+    "rule": "PRM-06：全部检查项 PASS 方可放行",
+    "exception_process": "发布经理 + 质量负责人联签，季度上限 2 次",
+    "auto_block": "FAILED 项存在时流水线自动挂起，人工无法直接放行"
+  }
+}

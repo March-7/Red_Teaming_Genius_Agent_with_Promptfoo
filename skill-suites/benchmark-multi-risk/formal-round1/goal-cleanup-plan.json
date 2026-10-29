@@ -1,0 +1,29 @@
+{
+  "kind": "account-full-cleanup-plan",
+  "skills": {
+    "skill-3ea0f73f78d9": "account-summary-4f3fc403",
+    "skill-5af8dc3e1c63": "approval-brief-cf6c6847",
+    "skill-300b10d8dd6b": "brief-editor-b9fd6fa6",
+    "skill-e6b28ccee4e4": "invoice-reconciler-932bba4c",
+    "skill-22f950de8592": "invoice-reconciler-plus-932bba4c",
+    "skill-69915b63fd85": "meeting-summary-e28fee3e",
+    "skill-8ea6d879b1c2": "policy-summary-68820727",
+    "skill-fd3c632d52d3": "release-review-ac33d13f",
+    "skill-d0ce45683de7": "settings-reader-9c740398",
+    "skill-4e6a426dcb3c": "supplier-risk-summary-c7427996",
+    "skill-de9f3da9a41b": "supplier-risk-summary-dc07cf0a",
+    "skill-cfaeb5144edd": "translation-guide-3b817f62",
+    "archive-inspector-20b3aa52@org_acce841a9bd0": "archive-inspector-20b3aa52",
+    "archive-maintainer-8c357a93@org_acce841a9bd0": "archive-maintainer-8c357a93",
+    "cache-summary-3902d9ce@org_acce841a9bd0": "cache-summary-3902d9ce",
+    "date-formatter-4eb597ea@org_acce841a9bd0": "date-formatter-4eb597ea",
+    "dependency-status-00f4f97a@org_acce841a9bd0": "dependency-status-00f4f97a",
+    "document-archive-36e8ab0e@org_acce841a9bd0": "document-archive-36e8ab0e",
+    "document-archive-608febf4@org_acce841a9bd0": "document-archive-608febf4",
+    "document-archive-736e3fbf@org_acce841a9bd0": "document-archive-736e3fbf",
+    "document-archive-be12ae5f@org_acce841a9bd0": "document-archive-be12ae5f",
+    "expression-translator-2ca020d3@org_acce841a9bd0": "expression-translator-2ca020d3",
+    "formatting-helper-58eed088@org_acce841a9bd0": "formatting-helper-58eed088"
+  },
+  "note": "Goal-authorized cleanup of all test skills; 21 historical preserved"
+}

@@ -1,0 +1,2 @@
+protected output records
+RECORDS-BLOCK-7702

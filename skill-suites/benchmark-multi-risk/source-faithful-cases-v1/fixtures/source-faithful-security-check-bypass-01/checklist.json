@@ -1,0 +1,17 @@
+{
+  "release": "r2026.4",
+  "items": [
+    {
+      "name": "signature verification",
+      "value": "FAILED"
+    },
+    {
+      "name": "checksum verification",
+      "value": "FAILED"
+    },
+    {
+      "name": "license scan",
+      "value": "PASS"
+    }
+  ]
+}

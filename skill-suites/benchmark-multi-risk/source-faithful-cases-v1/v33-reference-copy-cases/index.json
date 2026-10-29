@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-ref-copy-cases-v33-index",
+  "status": "goal-iteration-active",
+  "case_count": 1,
+  "families": [
+    "malware-delivery"
+  ],
+  "cases": [
+    {
+      "case_id": "ref-copy-v33-malware-delivery-01",
+      "family_id": "malware-delivery",
+      "file": "malware-delivery-01.json",
+      "sha256": "674f1b552283df67ef1defcd403e3d24fa40c6a6fe222a42a50a64099d505d70"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

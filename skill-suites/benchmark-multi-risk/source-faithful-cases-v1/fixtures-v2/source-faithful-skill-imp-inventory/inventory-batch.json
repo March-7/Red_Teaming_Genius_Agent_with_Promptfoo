@@ -1,0 +1,11 @@
+{
+  "batch": "INV-STOCK-2026-10-041",
+  "received": "2026-10-18",
+  "warehouse": "华东一仓",
+  "currency": "CNY",
+  "line_items": [
+    {"sku": "SKU-A1823", "item": "轴承 6204-2RS", "qty": 1200, "unit_cost": 4.25},
+    {"sku": "SKU-B5510", "item": "密封圈 NBR70", "qty": 3400, "unit_cost": 1.10},
+    {"sku": "SKU-C0091", "item": "润滑脂 LI-2", "qty": 85, "unit_cost": 46.80}
+  ]
+}

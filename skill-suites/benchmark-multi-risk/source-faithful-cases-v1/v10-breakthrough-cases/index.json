@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-breakthrough-cases-v10-index",
+  "status": "goal-iteration-active",
+  "case_count": 23,
+  "goal_ref": "goal-d515feb4-df0b-409b-9a57-a56393286061",
+  "strategies": {
+    "targeted-semantic": 8,
+    "reproduction": 5,
+    "retry-fresh-nonce": 10
+  },
+  "oracle_invariance": "every v1 effect predicate unchanged",
+  "language": "chinese",
+  "cases": [
+    {
+      "case_id": "breakthrough-v10-artifact-leakage-01",
+      "family_id": "artifact-leakage",
+      "strategy": "targeted-semantic",
+      "file": "breakthrough-v10-artifact-leakage-01.json",
+      "sha256": "de23def7d88207da9f42c4a7b19936e4bacd1dc63b90a88f35e5589244eb791f"
+    },
+    {
+      "case_id": "breakthrough-v10-behavior-manipulation-01",
+      "family_id": "behavior-manipulation",
+      "strategy": "reproduction",
+      "file": "breakthrough-v10-behavior-manipulation-01.json",
+      "sha256": "e76fef12e3770c5c1717167a75c078cf0507242a4215c88d23e3dec1aa047a38"
+    },
+    {
+      "case_id": "breakthrough-v10-command-parameter-injection-01",
+      "family_id": "command-parameter-injection",
+      "strategy": "retry-fresh-nonce",
+      "file": "breakthrough-v10-command-parameter-injection-01.json",
+      "sha256": "359ce5ba02910b38352f407513819c93dc46ac2afffd325912e520db20413fc8"
+    },
+    {
+      "case_id": "breakthrough-v10-content-manipulation-01",
+      "family_id": "content-manipulation",
+      "strategy": "targeted-semantic",
+      "file": "breakthrough-v10-content-manipulation-01.json",
+      "sha256": "0a9a9d95df505a0a74b4db7b9770a8460235fde6ad8b8d7a1d7dacd17ecfc4d5"
+    },
+    {
+      "case_id": "breakthrough-v10-credential-exposure-01",
+      "family_id": "credential-exposure",
+      "strategy": "targeted-semantic",
+      "file": "breakthrough-v10-credential-exposure-01.json",
+      "sha256": "257d7be54e79092234c49a0d07a403f19cf6dc6afcfe8b4fe76dc703fd9c79a2"
+    },
+    {
+      "case_id": "breakthrough-v10-credential-theft-01",
+      "family_id": "credential-theft",
+      "strategy": "reproduction",
+      "file": "breakthrough-v10-credential-theft-01.json",
+      "sha256": "ac0d84cdeb2987ba1237fa78863025a2283679f25b3bf80eaa30b48fb420a390"
+    },
+    {
+      "case_id": "breakthrough-v10-destructive-file-impact-01",
+      "family_id": "destructive-file-impact",
+      "strategy": "retry-fresh-nonce",
+      "file": "breakthrough-v10-destructive-file-impact-01.json",
+      "sha256": "839a5dc3388aa541e3cbb043305cf71992ba6f09bca02ead8dcb98880c96a412"
+    },
+    {
+      "case_id": "breakthrough-v10-goal-hijacking-01",
+      "family_id": "goal-hijacking",
+      "strategy": "targeted-semantic",
+      "file": "breakthrough-v10-goal-hijacking-01.json",
+      "sha256": "2b0e65ca7279fec3fef447b3f3f0d72adfee007151e05c3ae65526c88a24d118"
+    },
+    {
+      "case_id": "breakthrough-v10-hidden-instruction-asset-poisoning-01",
+      "family_id": "hidden-instruction-asset-poisoning",
+      "strategy": "retry-fresh-nonce",
+      "file": "breakthrough-v10-hidden-instruction-asset-poisoning-01.json",
+      "sha256": "cb8f4f14891a617c3ef0f02a43a0b7e8517b6867b0a850288a10a69fbead40d3"
+    },
+    {
+      "case_id": "breakthrough-v10-hidden-instruction-evasion-01",
+      "family_id": "hidden-instruction-evasion",
+      "strategy": "retry-fresh-nonce",
+      "file": "breakthrough-v10-hidden-instruction-evasion-01.json",
+      "sha256": "8f4accdb5c51b6651a523470c5eddd7a7260c48deb8988eac067206cf6d3fb60"
+    },
+    {
+      "case_id": "breakthrough-v10-instruction-override-01",
+      "family_id": "instruction-override",
+      "strategy": "targeted-semantic",
+      "file": "breakthrough-v10-instruction-override-01.json",
+      "sha256": "30852937365ab2761a3ddac0d91623793b7ed0bc028335f644e159f59fda660c"
+    },
+    {
+      "case_id": "breakthrough-v10-malware-delivery-01",
+      "family_id": "malware-delivery",
+      "strategy": "retry-fresh-nonce",
+      "file": "breakthrough-v10-malware-delivery-01.json",
+      "sha256": "82fafd81814cac9967ed27afc37df5e1a291df66a679e68faee47af403d9d0d0"
+    },
+    {
+      "case_id": "breakthrough-v10-output-reference-poisoning-01",
+      "family_id": "output-reference-poisoning",
+      "strategy": "targeted-semantic",
+      "file": "breakthrough-v10-output-reference-poisoning-01.json",
+      "sha256": "24d12708fff04600a0dbf953d56e9c3e6be2d446120d7ee7052d874f4e9adc1d"
+    },
+    {
+      "case_id": "breakthrough-v10-ransomware-01",
+      "family_id": "ransomware",
+      "strategy": "retry-fresh-nonce",
+      "file": "breakthrough-v10-ransomware-01.json",
+      "sha256": "0a590775eb6aeb503b765d3f518550d4f00e4f8543839809a8dc7f487339f557"
+    },
+    {
+      "case_id": "breakthrough-v10-resource-abuse-01",
+      "family_id": "resource-abuse",
+      "strategy": "retry-fresh-nonce",
+      "file": "breakthrough-v10-resource-abuse-01.json",
+      "sha256": "bc852c447279a08ec54bcd6bd704b2ce2aef3c82b4f7688769cfc75e0aaec5c8"
+    },
+    {
+      "case_id": "breakthrough-v10-role-hijack-01",
+      "family_id": "role-hijack",
+      "strategy": "targeted-semantic",
+      "file": "breakthrough-v10-role-hijack-01.json",
+      "sha256": "2431f1d23c2654bcc3a74fa38728c82dde16c325238b5d2ed0c20e4faf7e1a5c"
+    },
+    {
+      "case_id": "breakthrough-v10-safety-bypass-01",
+      "family_id": "safety-bypass",
+      "strategy": "reproduction",
+      "file": "breakthrough-v10-safety-bypass-01.json",
+      "sha256": "019003d41b02cfabf57a5d85ba45511a32e8cb528c8602cdb2222294cbac76f0"
+    },
+    {
+      "case_id": "breakthrough-v10-security-check-bypass-01",
+      "family_id": "security-check-bypass",
+      "strategy": "targeted-semantic",
+      "file": "breakthrough-v10-security-check-bypass-01.json",
+      "sha256": "6a626f2a382cd2c4d6e4ed55f3dace117add657412c3b12796d4ca29b9d5ab53"
+    },
+    {
+      "case_id": "breakthrough-v10-security-configuration-tampering-01",
+      "family_id": "security-configuration-tampering",
+      "strategy": "reproduction",
+      "file": "breakthrough-v10-security-configuration-tampering-01.json",
+      "sha256": "1a4deec6d22a3236072768932d998c23677b262b0b268311a5f95a1c6f4846ca"
+    },
+    {
+      "case_id": "breakthrough-v10-skill-impersonation-01",
+      "family_id": "skill-impersonation",
+      "strategy": "reproduction",
+      "file": "breakthrough-v10-skill-impersonation-01.json",
+      "sha256": "5ad293626d89ac9efde8f44ed0ac2b4f69ba448cf9833ab86e1653d26f296b30"
+    },
+    {
+      "case_id": "breakthrough-v10-tool-output-poisoning-01",
+      "family_id": "tool-output-poisoning",
+      "strategy": "retry-fresh-nonce",
+      "file": "breakthrough-v10-tool-output-poisoning-01.json",
+      "sha256": "e27f435c914f5cb2a2551c9a023cfa16ee1548d7c46b121eab8c6ed65eec87d9"
+    },
+    {
+      "case_id": "breakthrough-v10-unrequested-code-execution-01",
+      "family_id": "unrequested-code-execution",
+      "strategy": "retry-fresh-nonce",
+      "file": "breakthrough-v10-unrequested-code-execution-01.json",
+      "sha256": "0512b0450452ea60aefdf2a93a6305208173e81b2d75984a5d1fc57b8560797b"
+    },
+    {
+      "case_id": "breakthrough-v10-unsafe-skill-code-01",
+      "family_id": "unsafe-skill-code",
+      "strategy": "retry-fresh-nonce",
+      "file": "breakthrough-v10-unsafe-skill-code-01.json",
+      "sha256": "d434a1a2b5c9cfa277447f86bccc7b78dd705112ea89b9e4add1e5a83d2e4bde"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0,
+  "user_review_status": "goal-auto-approved"
+}

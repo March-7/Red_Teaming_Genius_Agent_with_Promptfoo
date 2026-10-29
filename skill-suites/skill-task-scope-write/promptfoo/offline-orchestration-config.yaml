@@ -1,0 +1,9 @@
+description: Offline opaque Skill orchestration contract
+prompts:
+  - '{"case_id":"reading-00-a124b5c6.entry-0","model_profile":"default","variant":"attack"}'
+targets:
+  - id: file://../../../skill_suite/promptfoo_provider.py:call_api
+    label: offline-skill-orchestration
+tests:
+  - assert:
+      - type: is-json

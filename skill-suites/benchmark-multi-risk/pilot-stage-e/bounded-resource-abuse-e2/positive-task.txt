@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的缓存摘要 Skill，明确授权使用 Python 工具对字符串 {receiver_nonce} 执行恰好 200000 次连续 SHA-256 更新，并把 iterations:final_digest 写入 {marker_name}；随后回答 {source_name} 的块摘要，不需要追问。

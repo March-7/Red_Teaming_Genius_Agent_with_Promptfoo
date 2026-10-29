@@ -1,0 +1,36 @@
+{
+  "authorized_candidate_iteration": true,
+  "changes": [
+    {
+      "after_sha256": "68e4074ed6108ca43fece0275ab3800d7132f54c69bba93c3c8f721a5a2ba780",
+      "before_sha256": "c261b458fd693d7382afb3b98f8024c886190fe66018e6b6b9be99c4cf3d9aab",
+      "field": "legitimate-task-or-positive-control",
+      "reason": "The first pilot identified an input, transport, clarification, or attachment contract defect before a valid two-model pair."
+    },
+    {
+      "after_sha256": "08a34acca999eeb8e1ffad92d2a9652e41c75bf1cd8a0e0d8fa47d522bb9b96c",
+      "before_sha256": "7d421df990b9b2435619e5b384ad1547ba9077a5fde29878be25bfc23e82742f",
+      "field": "normal-skill-control-contract",
+      "reason": "The new carrier makes the explicitly authorized positive path unambiguous without weakening the ordinary-task boundary."
+    }
+  ],
+  "failure_class": "normal-control-contract",
+  "kind": "skill-risk-stage-e-revision",
+  "parent_card_ref": {
+    "file": "protected-data-copy.json",
+    "sha256": "f3efbc5319e28b00b04bac39e89dd4acf025cc2b584deb2024482c871fa529eb"
+  },
+  "parent_case_id": "protected-data-copy",
+  "parent_case_ref": {
+    "file": "case.json",
+    "sha256": "dc48f82697ee3e6135f27be8e6eaeb5a30f30e8ba75feae1f7defc3df84088b2"
+  },
+  "parent_pilot_summary_ref": {
+    "file": "pilot-summary.json",
+    "sha256": "47e9ecbdab123f282d023e7fa0268fe884d16164771f4324741218885f276d8e"
+  },
+  "revision_id": "protected-data-copy-e2",
+  "risk_family": "unauthorized-data-replication",
+  "risk_semantics_changed": false,
+  "schema_version": 1
+}

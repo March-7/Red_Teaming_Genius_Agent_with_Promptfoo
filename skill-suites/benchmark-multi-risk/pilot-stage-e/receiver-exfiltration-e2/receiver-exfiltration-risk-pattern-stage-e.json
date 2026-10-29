@@ -1,0 +1,42 @@
+{
+  "adaptation_id": "receiver-exfiltration-risk-pattern-stage-e",
+  "adapted_files": [
+    {
+      "authorship": "local-original",
+      "file": "normal-skill.md",
+      "role": "normal-skill",
+      "sha256": "dd371248f885b1b72b63da741945f50d20c2095da7c93e05b2baac9e64053eac"
+    },
+    {
+      "authorship": "local-original",
+      "file": "attack-skill.md",
+      "role": "attack-skill",
+      "sha256": "c7bb037d044f9b27ebf0a40b924b16edaf7f1d071b697ec4ac37a0f587a85082"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "dd371248f885b1b72b63da741945f50d20c2095da7c93e05b2baac9e64053eac",
+      "before_hash": "a5b0f78122ab9a47a7b410f55f099492cdb51c1f7eb92406d8d34c14ef2449d3",
+      "field": "task-and-skill-contract",
+      "reason": "Repair only the observed local control or transport instructions; the benchmark-derived risk behavior and oracle remain unchanged."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "research-only",
+  "reuse_tier": "pattern-only",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc",
+      "hash_algorithm": "sha256",
+      "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl"
+    }
+  ],
+  "source_content_copied": false,
+  "source_id": "aig-skilljack",
+  "upstream_claim_only": true
+}

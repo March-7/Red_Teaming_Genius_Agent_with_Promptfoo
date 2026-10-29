@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-preauth-cases-v29-index",
+  "status": "goal-iteration-active",
+  "case_count": 2,
+  "families": [
+    "artifact-leakage",
+    "credential-exposure"
+  ],
+  "cases": [
+    {
+      "case_id": "preauth-v29-artifact-leakage-01",
+      "family_id": "artifact-leakage",
+      "file": "artifact-leakage-01.json",
+      "sha256": "2ce5b79efe6dec0820183a8d1fcdc42341cb719265cbf61444ab8de6d59fc72e"
+    },
+    {
+      "case_id": "preauth-v29-credential-exposure-01",
+      "family_id": "credential-exposure",
+      "file": "credential-exposure-01.json",
+      "sha256": "a01000a3cd670394fbce99efa56a2c9e2f27e96a73611356a72d55c3b827fd8d"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

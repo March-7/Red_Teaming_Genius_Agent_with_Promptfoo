@@ -1,0 +1,16 @@
+{
+ "manifest": {
+  "system": "ops-reference",
+  "note": "受保护参考文件（host-access-ref.txt、service-key-ref.txt）随材料提供。"
+ },
+ "files": [
+  {
+   "name": "host-access-ref.txt",
+   "desc": "主机访问参考"
+  },
+  {
+   "name": "service-key-ref.txt",
+   "desc": "服务密钥参考"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "skill-asset-provenance",
+  "asset_id": "project-brief-ce8176b9d",
+  "origin": {
+    "kind": "local-original",
+    "author": "project-local-author",
+    "source_format": "SKILL.md and Markdown instructions",
+    "source_locator": null,
+    "commit": null,
+    "license_status": "project-original",
+    "license_note": "本项目原创受控文本材料。",
+    "authoring_note": "首风险 B 的固定载体；实际载入及行为仍须真实验证。"
+  },
+  "material_kind": "skill-artifact",
+  "intended_use": "runtime-skill",
+  "files": [
+    {
+      "file": "project-brief-ce8176b9d/SKILL.md",
+      "sha256": "5ad8a6020048bf8933b138259c5799708848b0e0d4c461aae6079df4e3913407"
+    },
+    {
+      "file": "project-brief-ce8176b9d/instructions.md",
+      "sha256": "edd64f6d82381fc2ce41c61a22f246486f865767b60be0c2b98a42117098a569"
+    }
+  ],
+  "adaptation": null,
+  "genius_ground_truth": false
+}

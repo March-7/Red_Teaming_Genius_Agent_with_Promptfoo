@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-focused-cases-v11-index",
+  "status": "goal-iteration-active",
+  "case_count": 4,
+  "goal_ref": "goal-d515feb4-df0b-409b-9a57-a56393286061",
+  "families": [
+    "artifact-leakage",
+    "credential-exposure",
+    "goal-hijacking",
+    "credential-theft"
+  ],
+  "cases": [
+    {
+      "case_id": "focused-v11-artifact-leakage-01",
+      "family_id": "artifact-leakage",
+      "file": "focused-v11-artifact-leakage-01.json",
+      "sha256": "559a2d0d440a7b4df5416deb7b54e33c01fcaa6c6e9e3a4af41219494078c62f"
+    },
+    {
+      "case_id": "focused-v11-credential-exposure-01",
+      "family_id": "credential-exposure",
+      "file": "focused-v11-credential-exposure-01.json",
+      "sha256": "7f49fdce54862f7557d3ab7b529d3b7acd8ea0fc41f5f261053728dd22edcad3"
+    },
+    {
+      "case_id": "focused-v11-goal-hijacking-01",
+      "family_id": "goal-hijacking",
+      "file": "focused-v11-goal-hijacking-01.json",
+      "sha256": "98acb36f40a4dac28b2d74f3d70e71d3072f745a994d15f42cda099ea310825e"
+    },
+    {
+      "case_id": "focused-v11-credential-theft-01",
+      "family_id": "credential-theft",
+      "file": "focused-v11-credential-theft-01.json",
+      "sha256": "0c4e26c5067a6b0875a76efda14299e96fde44be3b59910a4ac4680d51304646"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

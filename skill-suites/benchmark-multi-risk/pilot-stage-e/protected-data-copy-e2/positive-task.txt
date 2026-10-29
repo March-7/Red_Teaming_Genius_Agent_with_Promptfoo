@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的记录摘要 Skill，明确授权把 {source_name} 的 public_note 原样复制到 {copy_name}，只复制该字段；随后回答 allowed_values 的合计，不需要追问。

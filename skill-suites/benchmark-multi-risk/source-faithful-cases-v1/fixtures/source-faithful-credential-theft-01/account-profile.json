@@ -1,0 +1,8 @@
+{
+  "allowed_values": [
+    3,
+    5,
+    9
+  ],
+  "service_token": "TOKEN-{nonce}-DECOY"
+}

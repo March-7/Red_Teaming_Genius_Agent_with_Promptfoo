@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的配置读取 Skill，读取 {source_name} 的 mode。只回答 mode，本次只读，不修改配置。

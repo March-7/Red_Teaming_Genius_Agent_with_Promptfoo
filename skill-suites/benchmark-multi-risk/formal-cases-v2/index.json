@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "kind": "skill-multi-risk-formal-case-index",
+  "status": "reviewed-frozen",
+  "case_count": 20,
+  "risk_family_count": 4,
+  "source_count": 3,
+  "cases": [
+    {
+      "case_id": "malicious-script-drop-01",
+      "risk_family": "malicious-script-drop",
+      "source_id": "malskillbench",
+      "file": "malicious-script-drop-01/case.json",
+      "sha256": "771264341b86ab0e265057222428df70de0024907ada82baa66b9b3fecfb9432"
+    },
+    {
+      "case_id": "malicious-script-drop-02",
+      "risk_family": "malicious-script-drop",
+      "source_id": "malskillbench",
+      "file": "malicious-script-drop-02/case.json",
+      "sha256": "9b87564af9ee04373bc435646d89394cfc4519822b6b998d221acbdc3cebbafc"
+    },
+    {
+      "case_id": "malicious-script-drop-03",
+      "risk_family": "malicious-script-drop",
+      "source_id": "malskillbench",
+      "file": "malicious-script-drop-03/case.json",
+      "sha256": "a646f7bf8dc8f98dbc92ab564b0df5719bbb7c2d9e9d04455b7a21b64af218ac"
+    },
+    {
+      "case_id": "malicious-script-drop-04",
+      "risk_family": "malicious-script-drop",
+      "source_id": "malskillbench",
+      "file": "malicious-script-drop-04/case.json",
+      "sha256": "b12de0c2a5ab6e2d0333daaafcb4b53c1889757315addeb857068f14c838950d"
+    },
+    {
+      "case_id": "malicious-script-drop-05",
+      "risk_family": "malicious-script-drop",
+      "source_id": "malskillbench",
+      "file": "malicious-script-drop-05/case.json",
+      "sha256": "1a75253ed40faac9df277f6f232b2c925609ee48da3c014bddc86069d4754ded"
+    },
+    {
+      "case_id": "synthetic-credential-theft-01",
+      "risk_family": "synthetic-credential-theft",
+      "source_id": "aig-skilljack",
+      "file": "synthetic-credential-theft-01/case.json",
+      "sha256": "0f9e8c15dafee0af4b725108655a185cf00b63aae4cb675158c8b4c1113d8fbd"
+    },
+    {
+      "case_id": "synthetic-credential-theft-02",
+      "risk_family": "synthetic-credential-theft",
+      "source_id": "aig-skilljack",
+      "file": "synthetic-credential-theft-02/case.json",
+      "sha256": "0d32bb06cfc2b2d32b4a8dc5cf1ecc4d0c3a9fd5803b70af5e39fe1f8d99e078"
+    },
+    {
+      "case_id": "synthetic-credential-theft-03",
+      "risk_family": "synthetic-credential-theft",
+      "source_id": "aig-skilljack",
+      "file": "synthetic-credential-theft-03/case.json",
+      "sha256": "647a8c87844530a78f6cb232416fe9d84a4e87e2eb2b74837c0ddda1dbf22c88"
+    },
+    {
+      "case_id": "synthetic-credential-theft-04",
+      "risk_family": "synthetic-credential-theft",
+      "source_id": "aig-skilljack",
+      "file": "synthetic-credential-theft-04/case.json",
+      "sha256": "2710c864aa04a4a0ba6b0bdf4cabb46b15b1f336b476a914bc794a13338826f4"
+    },
+    {
+      "case_id": "synthetic-credential-theft-05",
+      "risk_family": "synthetic-credential-theft",
+      "source_id": "aig-skilljack",
+      "file": "synthetic-credential-theft-05/case.json",
+      "sha256": "b4275cea5f45055b1cdcee5b7c885b444c3e75630930a5970290df6276c0af22"
+    },
+    {
+      "case_id": "unrelated-file-content-tampering-01",
+      "risk_family": "unrelated-file-content-tampering",
+      "source_id": "skillsbench",
+      "file": "unrelated-file-content-tampering-01/case.json",
+      "sha256": "ea7e293c1d47c147eee38b05b1d830eb8f0c844ec6483c2500c6bbb015ac4767"
+    },
+    {
+      "case_id": "unrelated-file-content-tampering-02",
+      "risk_family": "unrelated-file-content-tampering",
+      "source_id": "skillsbench",
+      "file": "unrelated-file-content-tampering-02/case.json",
+      "sha256": "ce31eecaa04feb2b30031343ce5048f87cfc842e9858aab090c8f0726f90108f"
+    },
+    {
+      "case_id": "unrelated-file-content-tampering-03",
+      "risk_family": "unrelated-file-content-tampering",
+      "source_id": "skillsbench",
+      "file": "unrelated-file-content-tampering-03/case.json",
+      "sha256": "e071d070f43a89af2964462781ca31713b681ccd587977e37a28f9efeee7d5c4"
+    },
+    {
+      "case_id": "unrelated-file-content-tampering-04",
+      "risk_family": "unrelated-file-content-tampering",
+      "source_id": "skillsbench",
+      "file": "unrelated-file-content-tampering-04/case.json",
+      "sha256": "7c071ca2e8b9fd94f2c9c927b5244617e296e624caed8f85c2eb398e30bffe8a"
+    },
+    {
+      "case_id": "unrelated-file-content-tampering-05",
+      "risk_family": "unrelated-file-content-tampering",
+      "source_id": "skillsbench",
+      "file": "unrelated-file-content-tampering-05/case.json",
+      "sha256": "dd7569cd156981b47bccc55dc9c91963827891d16ad8b3e6a58ffa4b9333c3f3"
+    },
+    {
+      "case_id": "audit-log-falsification-01",
+      "risk_family": "audit-log-falsification",
+      "source_id": "skillsbench",
+      "file": "audit-log-falsification-01/case.json",
+      "sha256": "40bf27eaed3f6005d6db60f521158ed7d573b67d355eea2f48f81349fc5beeb9"
+    },
+    {
+      "case_id": "audit-log-falsification-02",
+      "risk_family": "audit-log-falsification",
+      "source_id": "skillsbench",
+      "file": "audit-log-falsification-02/case.json",
+      "sha256": "525617c12e3a25e905588f304483bbb0afee1903e4f33c1f4b8f8d6aed90fd4d"
+    },
+    {
+      "case_id": "audit-log-falsification-03",
+      "risk_family": "audit-log-falsification",
+      "source_id": "skillsbench",
+      "file": "audit-log-falsification-03/case.json",
+      "sha256": "aeb29c29bc962684c0213bacb1e16187625e094f703512f13e22344b93e01faf"
+    },
+    {
+      "case_id": "audit-log-falsification-04",
+      "risk_family": "audit-log-falsification",
+      "source_id": "skillsbench",
+      "file": "audit-log-falsification-04/case.json",
+      "sha256": "b1c9923e299560bf1f9fcdab231514f49a5e44f3c0aff872797c01c49185a7bd"
+    },
+    {
+      "case_id": "audit-log-falsification-05",
+      "risk_family": "audit-log-falsification",
+      "source_id": "skillsbench",
+      "file": "audit-log-falsification-05/case.json",
+      "sha256": "5070237beea4c178ccc1fe8a89df723d258299a71f46826cf360373354814730"
+    }
+  ],
+  "formal_target_authorized": false
+}
