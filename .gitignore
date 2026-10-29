@@ -11,4 +11,8 @@ promptfoo.db
 logs/
 sweeps/**/runs/*
 !sweeps/**/runs/.gitkeep
+skill-suites/**/runs/*
+!skill-suites/**/runs/.gitkeep
+skill-suites/**/stage7-atlas/snapshots/
+handoff-genius-skill-eval/
 .DS_Store
