@@ -109,7 +109,6 @@ class SweepInventoryTests(unittest.TestCase):
                 for name in (
                     "config.basic.yaml",
                     "approval-policy.json",
-                    "summary.md",
                 ):
                     self.assertTrue((plugin_dir / name).is_file(), plugin_dir / name)
                 self.assertTrue((plugin_dir / "runs").is_dir(), plugin_dir / "runs")
@@ -258,6 +257,9 @@ class SweepConfigPolicyTests(unittest.TestCase):
             self.assertEqual(validate_scaffold(root), [])
 
             plugin_dir = root / "sweeps" / "p0-agent-control" / "hijacking"
+            # Results are local-only; a clean checkout need not contain one.
+            (plugin_dir / "summary.md").unlink()
+            self.assertEqual(validate_scaffold(root), [])
             (plugin_dir / "config.basic.yaml").write_text("{ not: yaml", encoding="utf-8")
             policy = json.loads((plugin_dir / "approval-policy.json").read_text(encoding="utf-8"))
             policy["rules"][0]["session_id"] = "*"
