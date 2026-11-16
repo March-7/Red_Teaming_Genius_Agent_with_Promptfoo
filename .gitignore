@@ -29,3 +29,49 @@ skill-suites/benchmark-multi-risk/stage7-atlas/a-details.json
 skill-suites/benchmark-multi-risk/stage7-atlas/a-detail-selection.json
 skill-suites/benchmark-multi-risk/stage7-atlas/b-shortlist.json
 skill-suites/benchmark-multi-risk/stage7-atlas/skillatlas-candidates-raw.json
+
+# Local evaluation results and classification reports.
+/docs/*报告*/
+/docs/*分类*测试结果*.md
+/docs/genius_skill_stage*_report.*
+/docs/genius_skill_stage*_asr*.md
+/sweeps/**/summary.md
+/docs/Genius Skill攻击测试数据报告-2026-11-09/Genius Skill攻击测试数据报告-2026-11-09.docx
+/docs/Genius Skill攻击测试数据报告-2026-11-09/Genius Skill攻击测试数据报告-2026-11-09.md
+/docs/Genius Skill红队阶段报告-2026-10-29/Genius Skill红队阶段报告-2026-10-29.docx
+/docs/Genius Skill红队阶段报告-2026-10-29/Genius Skill红队阶段报告-2026-10-29.md
+/docs/Genius Skill评测分类与测试结果-2026-10-20.md
+/docs/Genius Skill评测前风险探索分类与测试结果-2026-10-20.md
+/docs/genius_scope_assessment.md
+/docs/genius_skill_23_case_review.md
+/docs/genius_skill_benchmark_pilots.md
+/docs/genius_skill_breadth_cases.md
+/docs/genius_skill_confirmed_cases_review.md
+/docs/genius_skill_dual_gate_review.md
+/docs/genius_skill_final_report.md
+/docs/genius_skill_goal_final_report.md
+/docs/genius_skill_offline_evidence_audit.md
+/docs/genius_skill_representative_cases.md
+/docs/genius_skill_risk_shortlist.md
+/docs/genius_skill_source_complete_categories.md
+/docs/genius_skill_stage0_report.json
+/docs/genius_skill_stage1_behavior_asr.md
+/docs/genius_skill_stage2_three_family_asr.md
+/docs/genius_skill_stage3_full_families_asr.md
+/docs/genius_skill_stage4_asr_iteration.md
+/docs/genius_skill_stage5_attack_logic_pilot.md
+/docs/genius_skill_stage5_wave2_authority_delegation.md
+/docs/genius_skill_stage6.md
+/docs/genius_skill_stage7_pilot.md
+/docs/genius_skill_stage7_report.md
+/docs/genius_skill_stage_summary.md
+/docs/genius_skill_v2_strategy_cases.md
+/docs/genius_skill_v3_strategy_cases.md
+/docs/genius_skill_v4_bottleneck_analysis.md
+/docs/genius_skill_v4_orthogonal_cases.md
+/docs/stage0_user_review_sampling.json
+/docs/stage0_user_review_sampling.md
+/docs/stage4_b_track_review.json
+/skill-suites/benchmark-multi-risk/hierarchical-taxonomy.json
+/sweeps/p1-external-content-supply-chain/data-exfil/stage-a-cloud-tracking.md
+/sweeps/p1-external-content-supply-chain/data-exfil/stage-a-review.md

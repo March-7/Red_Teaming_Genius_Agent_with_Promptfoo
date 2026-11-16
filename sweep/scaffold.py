@@ -850,7 +850,8 @@ def validate_scaffold(root: Path) -> list[str]:
             plugin_id = str(plugin.get("id"))
             plugin_dir = group_dir / plugin_id
             label = f"{group['id']}/{plugin_id}"
-            for required in ("config.basic.yaml", "approval-policy.json", "summary.md"):
+            # A summary is a local evaluation result, not part of the scaffold.
+            for required in ("config.basic.yaml", "approval-policy.json"):
                 if not (plugin_dir / required).is_file():
                     errors.append(f"{label}: missing {required}")
             if not (plugin_dir / "runs").is_dir():
