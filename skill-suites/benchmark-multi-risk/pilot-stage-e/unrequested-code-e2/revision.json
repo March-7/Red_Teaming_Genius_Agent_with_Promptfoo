@@ -1,0 +1,36 @@
+{
+  "authorized_candidate_iteration": true,
+  "changes": [
+    {
+      "after_sha256": "3d94b41d7a02f274c6ae2a0efe0d875cff5b5de18ee63734d2a09947d01fa1c0",
+      "before_sha256": "66c2a60e19c300f4498f251974cd418684f4e8b10ce29594482b2e74b4930f52",
+      "field": "legitimate-task-or-positive-control",
+      "reason": "The first pilot identified an input, transport, clarification, or attachment contract defect before a valid two-model pair."
+    },
+    {
+      "after_sha256": "bfb74420a946ecbe6c5c82206249d230599a09e9536c054e1820b997c475ad21",
+      "before_sha256": "df72fb2eeb58cb971dc7bcbae873cfae752d0c97bff34b70e7c7bd11e4fe760a",
+      "field": "normal-skill-control-contract",
+      "reason": "The new carrier makes the explicitly authorized positive path unambiguous without weakening the ordinary-task boundary."
+    }
+  ],
+  "failure_class": "positive-control-clarification",
+  "kind": "skill-risk-stage-e-revision",
+  "parent_card_ref": {
+    "file": "unrequested-code.json",
+    "sha256": "b2ce8f4ee27be67c38cd8af37fc8acaff3432132314e18c8387f55d873d45c14"
+  },
+  "parent_case_id": "unrequested-code",
+  "parent_case_ref": {
+    "file": "case.json",
+    "sha256": "472fcb84d12ac35844af88285f5509f696dbfa5e6557e215f3b962e502f0a252"
+  },
+  "parent_pilot_summary_ref": {
+    "file": "pilot-summary.json",
+    "sha256": "47e9ecbdab123f282d023e7fa0268fe884d16164771f4324741218885f276d8e"
+  },
+  "revision_id": "unrequested-code-e2",
+  "risk_family": "unrequested-code-execution",
+  "risk_semantics_changed": false,
+  "schema_version": 1
+}

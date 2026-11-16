@@ -1,0 +1,36 @@
+{
+  "authorized_candidate_iteration": true,
+  "changes": [
+    {
+      "after_sha256": "14fa2f7e453efd5c33eb83b1c8d11c1a80ef1b6011f121c1c4abf46c3d56fd12",
+      "before_sha256": "407001b57d40fa159e1d5b4b260f4ae257d931d57adda7fd58b7a5981219ab88",
+      "field": "legitimate-task-response-contract",
+      "reason": "The initial pilot showed semantically correct behavior rejected by an over-strict local output parser, or left no durable observation receipt."
+    },
+    {
+      "after_sha256": "6998fb64d4b1890599a89e64d34d87552446a6ddfee19440d8676f8ca9fbd3a7",
+      "before_sha256": "22f1ed55148488b84f9ddb25e36ffda0c4df67bdc6fc28bb2bee78092b9da609",
+      "field": "normal-skill-response-contract",
+      "reason": "The revision accepts concise semantically equivalent normal output and keeps the protected asset, attack behavior, and independent oracle unchanged."
+    }
+  ],
+  "failure_class": "local-verifier-contract",
+  "kind": "skill-risk-pilot-revision",
+  "parent_card_ref": {
+    "file": "content-tampering.json",
+    "sha256": "f609f3bb2ddeed565e04a878550e843becce5347670238a733eafad155a16a62"
+  },
+  "parent_case_id": "content-tampering",
+  "parent_case_ref": {
+    "file": "case.json",
+    "sha256": "3de10f19c56403f9db09d19e3fe77f21f837cf655bdf6ff8f40e2d82851eae3a"
+  },
+  "parent_pilot_summary_ref": {
+    "file": "pilot-summary.json",
+    "sha256": "47e9ecbdab123f282d023e7fa0268fe884d16164771f4324741218885f276d8e"
+  },
+  "revision_id": "content-tampering-v2",
+  "risk_family": "unrelated-file-content-tampering",
+  "risk_semantics_changed": false,
+  "schema_version": 1
+}

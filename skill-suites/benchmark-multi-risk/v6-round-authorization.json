@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "kind": "genius-v6-round-authorization",
+  "user_decision_ref": "user-message:2026-10-10-approve-v6-round",
+  "plan_file": "docs/genius_skill_v6_round_budget.md",
+  "plan_sha256": "293ff1ce48b7585741b475caa1efee497db00c8cd68583a9a7b4501ef4ccfdf9",
+  "authorized_actions": {
+    "v6_attack_targets": 46,
+    "management": 700,
+    "recovery": 46,
+    "cleanup": 130,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "retain_policy": {
+    "mode": "retain-v6-resources"
+  },
+  "active": true,
+  "authorized_at": "2026-10-10T10:32:01+08:00",
+  "cleanup_v6_note": "user-message:2026-10-11-v6-cleanup-and-v7-semantic"
+}

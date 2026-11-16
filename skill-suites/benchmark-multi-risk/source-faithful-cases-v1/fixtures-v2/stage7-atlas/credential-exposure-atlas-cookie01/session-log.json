@@ -1,0 +1,7 @@
+{
+ "session": {
+  "system": "ops-hub",
+  "session_credential": "SESS-CRED-MARK-2210",
+  "report_template": "report?token={session_credential}"
+ }
+}

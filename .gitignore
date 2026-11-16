@@ -11,4 +11,21 @@ promptfoo.db
 logs/
 sweeps/**/runs/*
 !sweeps/**/runs/.gitkeep
+skill-suites/**/runs/*
+!skill-suites/**/runs/.gitkeep
+skill-suites/**/stage7-atlas/snapshots/
+handoff-genius-skill-eval/
 .DS_Store
+
+# Private execution records and third-party raw snapshots remain local.
+docs/Genius Skill红队阶段报告-2026-10-15/
+skill-suites/benchmark-multi-risk/formal-round1/
+skill-suites/benchmark-multi-risk/carrier-smoke/*-total.json
+skill-suites/benchmark-multi-risk/account-skill-cleanup/summary.json
+skill-suites/benchmark-multi-risk/package-capability-gate/*summary.json
+skill-suites/benchmark-multi-risk/pilot-summary*.json
+skill-suites/benchmark-multi-risk/stage7-atlas/*-summary.json
+skill-suites/benchmark-multi-risk/stage7-atlas/a-details.json
+skill-suites/benchmark-multi-risk/stage7-atlas/a-detail-selection.json
+skill-suites/benchmark-multi-risk/stage7-atlas/b-shortlist.json
+skill-suites/benchmark-multi-risk/stage7-atlas/skillatlas-candidates-raw.json

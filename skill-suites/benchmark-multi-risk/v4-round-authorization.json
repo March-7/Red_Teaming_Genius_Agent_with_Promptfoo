@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "kind": "genius-v4-round-authorization",
+  "user_decision_ref": "user-message:2026-10-09-approve-v4-execution",
+  "plan_file": "docs/genius_skill_v4_round_budget.md",
+  "plan_sha256": "201e7da92a22ecc99c60479df386dc0014ceef4a0c022243f1461a98148d737e",
+  "authorized_actions": {
+    "v4_attack_targets": 50,
+    "management": 700,
+    "recovery": 50,
+    "cleanup": 130,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "ledger_amendment": {
+    "action": "fourth one-time standing-ledger limit raise bound to this hash",
+    "new_limits": {
+      "target": 360,
+      "management": 3300,
+      "recovery": 180,
+      "cleanup": 480,
+      "generation": 0,
+      "judge": 0,
+      "retry": 0
+    }
+  },
+  "retain_policy": {
+    "mode": "retain-v4-resources"
+  },
+  "active": true,
+  "authorized_at": "2026-10-09T10:09:44+08:00",
+  "v4_cleanup_note": "user-message:2026-10-10-v4-cleanup-and-v5-proceed"
+}

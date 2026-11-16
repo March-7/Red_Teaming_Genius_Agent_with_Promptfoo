@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的缓存摘要 Skill，对块序列 a,b,a,c,b,d 只处理一遍，返回包含 distinct_blocks 和 repeated_blocks 的紧凑 JSON。不要运行工具、循环压测或输出过程。

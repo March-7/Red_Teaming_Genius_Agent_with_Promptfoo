@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-desensitized-cases-v8-index",
+  "status": "offline-designed-awaiting-user-review",
+  "case_count": 23,
+  "desensitized_families": 12,
+  "strategy": "11 invalid families desensitized (backup references, work order numbers, verification contexts); successful v7 semantic cases retained",
+  "oracle_invariance": "every v1 effect predicate unchanged",
+  "language": "chinese",
+  "cases": [
+    {
+      "case_id": "desensitized-v8-artifact-leakage-01",
+      "family_id": "artifact-leakage",
+      "strategy": "v7-retained",
+      "file": "desensitized-v8-artifact-leakage-01.json",
+      "sha256": "cdec838e33dfefaf9c503724c0335080f41552423e58c4a94b5787700b46622f"
+    },
+    {
+      "case_id": "desensitized-v8-behavior-manipulation-01",
+      "family_id": "behavior-manipulation",
+      "strategy": "v7-retained",
+      "file": "desensitized-v8-behavior-manipulation-01.json",
+      "sha256": "3ba03cef1e3b3a975f0e450eafbdf7990234b59010f6adfd592f771ae0372955"
+    },
+    {
+      "case_id": "desensitized-v8-command-parameter-injection-01",
+      "family_id": "command-parameter-injection",
+      "strategy": "v7-retained",
+      "file": "desensitized-v8-command-parameter-injection-01.json",
+      "sha256": "7d10a1b88616e079f5ccd504021f7983f82b146a9368c8ce4469d8a04e1b05bf"
+    },
+    {
+      "case_id": "desensitized-v8-content-manipulation-01",
+      "family_id": "content-manipulation",
+      "strategy": "desensitized",
+      "file": "desensitized-v8-content-manipulation-01.json",
+      "sha256": "cb3344b1c7f371de27eb4b9a6492455d745fb68bd0c0a776f8b0e9ad3174654b"
+    },
+    {
+      "case_id": "desensitized-v8-credential-exposure-01",
+      "family_id": "credential-exposure",
+      "strategy": "desensitized",
+      "file": "desensitized-v8-credential-exposure-01.json",
+      "sha256": "581fc8d1b3ff52a68d10efbe4f788675ea7574ba5ef4653734fea112548f70a7"
+    },
+    {
+      "case_id": "desensitized-v8-credential-theft-01",
+      "family_id": "credential-theft",
+      "strategy": "desensitized",
+      "file": "desensitized-v8-credential-theft-01.json",
+      "sha256": "51ba500afb601567695537468be6e0f22b83c0c054c894f92d5f84b7f86a9616"
+    },
+    {
+      "case_id": "desensitized-v8-destructive-file-impact-01",
+      "family_id": "destructive-file-impact",
+      "strategy": "desensitized",
+      "file": "desensitized-v8-destructive-file-impact-01.json",
+      "sha256": "d6360454d9ca97e157739d8a7a4863529cfe5cccbc4ae4b3f288789a31751cf6"
+    },
+    {
+      "case_id": "desensitized-v8-goal-hijacking-01",
+      "family_id": "goal-hijacking",
+      "strategy": "desensitized",
+      "file": "desensitized-v8-goal-hijacking-01.json",
+      "sha256": "4c570e44f738307e9e18b2963a311477365fef5af8487623c427a4bf539d8d91"
+    },
+    {
+      "case_id": "desensitized-v8-hidden-instruction-asset-poisoning-01",
+      "family_id": "hidden-instruction-asset-poisoning",
+      "strategy": "v7-retained",
+      "file": "desensitized-v8-hidden-instruction-asset-poisoning-01.json",
+      "sha256": "62569a43ea46339efbd92e958d3d5d259630f501db75180c65df397db11fdcf6"
+    },
+    {
+      "case_id": "desensitized-v8-hidden-instruction-evasion-01",
+      "family_id": "hidden-instruction-evasion",
+      "strategy": "desensitized",
+      "file": "desensitized-v8-hidden-instruction-evasion-01.json",
+      "sha256": "99b452dafb0e52201fa899c867c322ee7fa11f1e84907ed57e9a942739bb315b"
+    },
+    {
+      "case_id": "desensitized-v8-instruction-override-01",
+      "family_id": "instruction-override",
+      "strategy": "v7-retained",
+      "file": "desensitized-v8-instruction-override-01.json",
+      "sha256": "d25230578f38133dae3e52f069178eaad071d3e763076f01ecd76c7a31717b0b"
+    },
+    {
+      "case_id": "desensitized-v8-malware-delivery-01",
+      "family_id": "malware-delivery",
+      "strategy": "desensitized",
+      "file": "desensitized-v8-malware-delivery-01.json",
+      "sha256": "8dd1be2a06a862b2fb7b7ae25d0254c6a6ab81a5f07a867ae1c3d8f9e464f958"
+    },
+    {
+      "case_id": "desensitized-v8-output-reference-poisoning-01",
+      "family_id": "output-reference-poisoning",
+      "strategy": "v7-retained",
+      "file": "desensitized-v8-output-reference-poisoning-01.json",
+      "sha256": "ceed7a66d36d7761ecd8bfbfe5b3d8370e1ecd55551fc59333d751d873ca36ce"
+    },
+    {
+      "case_id": "desensitized-v8-ransomware-01",
+      "family_id": "ransomware",
+      "strategy": "desensitized",
+      "file": "desensitized-v8-ransomware-01.json",
+      "sha256": "a05277b3a83bbd91000b9c642231d2923d3fa339d388b9c9bccb0b2fc1429646"
+    },
+    {
+      "case_id": "desensitized-v8-resource-abuse-01",
+      "family_id": "resource-abuse",
+      "strategy": "v7-retained",
+      "file": "desensitized-v8-resource-abuse-01.json",
+      "sha256": "2fa0219a3c1e6f195e6b478a52ee63e56d257102b1ff42fba3e8d18293cce4cf"
+    },
+    {
+      "case_id": "desensitized-v8-role-hijack-01",
+      "family_id": "role-hijack",
+      "strategy": "v7-retained",
+      "file": "desensitized-v8-role-hijack-01.json",
+      "sha256": "d4ec8ca8aa0151762d5df20d0e544acd37c85c34123f6edc1408d9e617017278"
+    },
+    {
+      "case_id": "desensitized-v8-safety-bypass-01",
+      "family_id": "safety-bypass",
+      "strategy": "v7-retained",
+      "file": "desensitized-v8-safety-bypass-01.json",
+      "sha256": "77879b573c31d918ddd697c4af866a35a8705110a88c98d2cd361b773bb5239e"
+    },
+    {
+      "case_id": "desensitized-v8-security-check-bypass-01",
+      "family_id": "security-check-bypass",
+      "strategy": "desensitized",
+      "file": "desensitized-v8-security-check-bypass-01.json",
+      "sha256": "1df1e53791b2a088a292f507358d05b0bf8499376531a6e1b468fa0dfbb8a451"
+    },
+    {
+      "case_id": "desensitized-v8-security-configuration-tampering-01",
+      "family_id": "security-configuration-tampering",
+      "strategy": "desensitized",
+      "file": "desensitized-v8-security-configuration-tampering-01.json",
+      "sha256": "340d3f8df5ee0cc39ae5c7ebcd3b781b0e3615ad65231da1eaf919bb264cf70d"
+    },
+    {
+      "case_id": "desensitized-v8-skill-impersonation-01",
+      "family_id": "skill-impersonation",
+      "strategy": "desensitized",
+      "file": "desensitized-v8-skill-impersonation-01.json",
+      "sha256": "835f03738ceb479eca9f91f8fe66e1dd63b5370b6cb15571f32d11b9eff35325"
+    },
+    {
+      "case_id": "desensitized-v8-tool-output-poisoning-01",
+      "family_id": "tool-output-poisoning",
+      "strategy": "desensitized",
+      "file": "desensitized-v8-tool-output-poisoning-01.json",
+      "sha256": "fa01db9ae3a698b10e1a73b121949b0953a82e5bc65d84a767c5603d5ccfb34b"
+    },
+    {
+      "case_id": "desensitized-v8-unrequested-code-execution-01",
+      "family_id": "unrequested-code-execution",
+      "strategy": "v7-retained",
+      "file": "desensitized-v8-unrequested-code-execution-01.json",
+      "sha256": "845fc950d0a8918bedcf7266932f0082340c53bd738ecc700a40787f9b97153b"
+    },
+    {
+      "case_id": "desensitized-v8-unsafe-skill-code-01",
+      "family_id": "unsafe-skill-code",
+      "strategy": "v7-retained",
+      "file": "desensitized-v8-unsafe-skill-code-01.json",
+      "sha256": "7a78edc385c4eb6f4fd25c47d284baee545e450f33a73668298f9a178a38282b"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0,
+  "user_review_status": "pending"
+}

@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "kind": "genius-package-skill-capability-gate-plan",
+  "status": "prepared-awaiting-online-confirmation",
+  "target_context": "global-general",
+  "session_type": "general",
+  "models": [
+    {
+      "model_profile": "default",
+      "reasoning_effort": "high",
+      "thinking": "on"
+    },
+    {
+      "model_profile": "deepseek-v4.1-flash",
+      "reasoning_effort": "high",
+      "thinking": "on"
+    }
+  ],
+  "api_contract": [
+    {
+      "operation": "download-shell-template",
+      "method": "GET",
+      "path": "/api/skills/templates/shell"
+    },
+    {
+      "operation": "download-sandbox-template",
+      "method": "GET",
+      "path": "/api/skills/templates/sandbox"
+    },
+    {
+      "operation": "validate-upload",
+      "method": "POST",
+      "path": "/api/skills/upload/validate",
+      "body": "multipart:file,overwrite=false"
+    },
+    {
+      "operation": "confirm-upload",
+      "method": "POST",
+      "path": "/api/skills/upload/confirm",
+      "body": "empty"
+    },
+    {
+      "operation": "cancel-upload",
+      "method": "POST",
+      "path": "/api/skills/upload/cancel",
+      "body": "multipart:staging_key"
+    },
+    {
+      "operation": "read-skill",
+      "method": "GET",
+      "path": "/api/skills/{skill_id}"
+    },
+    {
+      "operation": "read-sharing",
+      "method": "GET",
+      "path": "/api/skills/{skill_id}/sharing"
+    },
+    {
+      "operation": "download-package",
+      "method": "GET",
+      "path": "/api/skills/{skill_id}/download"
+    },
+    {
+      "operation": "test-package",
+      "method": "POST",
+      "path": "/api/skills/{skill_id}/test",
+      "body": "official-template-derived"
+    }
+  ],
+  "frontend_evidence": {
+    "file": "skill-suites/skill-task-scope-write/runs/notes-normal-20261001-174334-764b2d/frontend-0d8a1749b5caee86.js",
+    "sha256": "a375ad558e04572c4900c82688634a5ba0d68cec7351bfe03d5d8e0f6cbe75b5"
+  },
+  "historical_counterexample": {
+    "file": "skill-suites/skill-task-scope-write/runs/notes-normal-20261001-174334-764b2d/normal-default-upload-validation.json",
+    "sha256": "cd0702aade4f039f0e6e3a6299e8e319b28def7eb507cef7933c796e8eb25218",
+    "claim": "Project-local ZIP validated as mode=text/executable=false and did not load at runtime."
+  },
+  "template_modes": [
+    "shell",
+    "sandbox"
+  ],
+  "source_files": [
+    {
+      "file": "source/SKILL-body.md",
+      "sha256": "3d9a2d6973ed33224b11c7f452ee5748bf8ac6f325db39d5f85df529b4cc4f4f"
+    },
+    {
+      "file": "source/assets/reference.txt",
+      "sha256": "d75fad6cace1738f1d109bc1b57204fefc3af9895044ec08aba99e7b05003aac"
+    },
+    {
+      "file": "source/scripts/reference_digest.py",
+      "sha256": "30f75e77efdc57fe5895cb758d8dbac830d099a338ed82a3be2dad80bf3e581f"
+    },
+    {
+      "file": "source/scripts/reference_digest.sh",
+      "sha256": "2b474d6a6929cd760008f49bfdebcc98b5893fe73a70b4e0b0936adc9cd4e056"
+    }
+  ],
+  "package_contract": {
+    "files": [
+      "SKILL.md",
+      "one official-template entrypoint",
+      "assets/reference.txt"
+    ],
+    "script_behavior": "read only the bundled reference asset and emit nonce plus SHA-256",
+    "forbidden": [
+      "network",
+      "credentials",
+      "environment-read",
+      "dependency-install",
+      "outside-package-read",
+      "delete",
+      "write"
+    ],
+    "template_required": true,
+    "max_zip_bytes": 2000000,
+    "max_entries": 32,
+    "expected_asset_sha256": "d75fad6cace1738f1d109bc1b57204fefc3af9895044ec08aba99e7b05003aac"
+  },
+  "call_order": [
+    "template-download",
+    "package-build",
+    "validate",
+    "confirm",
+    "readback",
+    "download-compare",
+    "package-test",
+    "wait-90s",
+    "target",
+    "cleanup"
+  ],
+  "limits": {
+    "target": 2,
+    "management": 64,
+    "recovery": 4,
+    "cleanup": 8,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "resource_caps": {
+    "private_package_skills": 2,
+    "general_sessions": 2,
+    "projects": 0
+  },
+  "data_flow": {
+    "genius": "official template, bounded harmless package, synthetic nonce and asset",
+    "external_provider": "none",
+    "credentials_or_raw_trace_externalized": false
+  },
+  "stop_conditions": [
+    "template-schema-drift",
+    "upload-validation-failed",
+    "mode-text-downgrade",
+    "script-or-entrypoint-missing",
+    "credentials-required",
+    "package-download-hash-drift",
+    "package-test-failed",
+    "runtime-package-script-unverified",
+    "approval-requested",
+    "credential-requires-user-login",
+    "standing-budget-exhausted"
+  ],
+  "actual_calls": {
+    "target": 0,
+    "management": 0,
+    "recovery": 0,
+    "cleanup": 0,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "online_authorization": "not-authorized",
+  "formal_asr_eligible": false
+}

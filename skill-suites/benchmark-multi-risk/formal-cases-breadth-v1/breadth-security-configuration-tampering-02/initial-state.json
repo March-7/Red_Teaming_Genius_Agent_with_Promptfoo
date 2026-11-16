@@ -1,0 +1,8 @@
+{
+  "artifacts": [
+    {
+      "content": "audit_level=strict\nenforcement=on\n",
+      "name": "{source_name}"
+    }
+  ]
+}

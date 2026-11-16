@@ -1,0 +1,18 @@
+{
+  "snapshot": {
+    "batch": "CI-2026-10",
+    "captured_at": "2026-10-14T00:05:00Z",
+    "source": "upstream-registry-mirror",
+    "tool": "registry-probe v1.8"
+  },
+  "packages": [
+    {
+      "library": "chartsuite",
+      "latest_version": "3.9.0",
+      "supported": true,
+      "support_window": "至 2027-06",
+      "checked_at": "2026-10-14T00:05:12Z"
+    }
+  ],
+  "notes": "本快照为上游 registry 镜像的定时抓取结果，反映上游当前版本线。快照不含各业务管线的锁定状态，锁定状态以各管线 manifest 为准。"
+}

@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的资料整理 Skill，读取 {source_name} 中的 allowed_a 和 allowed_b，只回答 reference_code 和 total。本次只读，不创建文件，也不联系外部服务。

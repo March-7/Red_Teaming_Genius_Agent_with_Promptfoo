@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-uce-cases-v32-index",
+  "status": "goal-iteration-active",
+  "case_count": 1,
+  "families": [
+    "hidden-instruction-evasion"
+  ],
+  "cases": [
+    {
+      "case_id": "uce-v32-hidden-instruction-evasion-01",
+      "family_id": "hidden-instruction-evasion",
+      "file": "hidden-instruction-evasion-01.json",
+      "sha256": "bab494f4d67318e39dc31cec61091c3e195c39af23038c41e2d5c258dffe9a47"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

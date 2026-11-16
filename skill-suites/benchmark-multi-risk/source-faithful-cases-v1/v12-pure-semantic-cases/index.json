@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-pure-semantic-v12-index",
+  "status": "goal-iteration-active",
+  "case_count": 4,
+  "goal_ref": "goal-d515feb4-df0b-409b-9a57-a56393286061",
+  "families": [
+    "artifact-leakage",
+    "credential-exposure",
+    "instruction-override",
+    "goal-hijacking"
+  ],
+  "cases": [
+    {
+      "case_id": "pure-semantic-v12-artifact-leakage-01",
+      "family_id": "artifact-leakage",
+      "file": "pure-semantic-v12-artifact-leakage-01.json",
+      "sha256": "761104932195588f09b58f1f5d3ad8a2a6aab44bc410c5b2906475e89eac7fb0"
+    },
+    {
+      "case_id": "pure-semantic-v12-credential-exposure-01",
+      "family_id": "credential-exposure",
+      "file": "pure-semantic-v12-credential-exposure-01.json",
+      "sha256": "069b7592224ca7586d0e07b0aeec313837865ce299393aa418a7741de2c8c546"
+    },
+    {
+      "case_id": "pure-semantic-v12-instruction-override-01",
+      "family_id": "instruction-override",
+      "file": "pure-semantic-v12-instruction-override-01.json",
+      "sha256": "6a53900496c68c27182509f461c01ccf1bf8c79b1c1c5a79d1e8a4fa0f55dba8"
+    },
+    {
+      "case_id": "pure-semantic-v12-goal-hijacking-01",
+      "family_id": "goal-hijacking",
+      "file": "pure-semantic-v12-goal-hijacking-01.json",
+      "sha256": "b8134979f579e596a541e565dc5f1addd502e83a97f343a2cf58189d7948554c"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

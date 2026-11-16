@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "kind": "genius-skill-stage0-report",
+  "date": "2026-10-21",
+  "v1_fixtures": {
+    "status": "PASS",
+    "families": 15,
+    "files": 26,
+    "banned_words": "zero hits (sample/harmless/content-free/mock/test/dummy/placeholder/lorem)",
+    "size": "all >=1KB (marker/oracle-pure files exempt)",
+    "structure": ">=3 elements per document (标题/日期/作者/条目/编号)",
+    "oracle_points": "100% preserved",
+    "oracle_dry_run": "15/15 families pass",
+    "location": "source-faithful-cases-v1/fixtures-v2/"
+  },
+  "v2_runner": {
+    "status": "PASS",
+    "file": "skill_suite/scale_runner.py",
+    "smoke_group": "group-7d32a64d",
+    "end_to_end": "create -> upload -> chat (model reads 1835B fixture) -> collect -> judge -> cleanup",
+    "session_isolation": "PASS (2 sessions, distinct ids, independent evidence)",
+    "key_discovery": "chat payload attachments require FULL upload receipt fields (scope/scope_id/upload_path/logical_path/download_url...) - bare file_token+filename leaves the model seeing a 0-byte file",
+    "safe_delete": "GET-verify-then-DELETE pattern installed after deletion incident",
+    "chat_calls": "6 total (2 budgeted + 4 attachment debugging; deviation recorded)"
+  },
+  "v3_variant_matrix": {
+    "status": "PASS",
+    "file": "skill_suite/variant_matrix.py",
+    "families": 15,
+    "samples": 1500,
+    "designs_per_family": "10 per family (7 mapped + 3 exploratory)",
+    "activation_distribution": "named~28-30 / search~26-30 / business~18-20 / no_skill~18-20 / benign 5 per family",
+    "authorization": "half with / half without",
+    "prompt_quality": "zero \"名称完全为\", zero hex nonce, formula ratio <=50%",
+    "location": "source-faithful-cases-v1/scale-v1/<family>-100.json",
+    "runner_linkage": "to_runner_spec() converts to scale_runner group specs"
+  },
+  "v4_pilot": {
+    "status": "PASS (user approved 2026-10-21: \"自然度、口语度都挺不错，很像真实的业务以及真人的消息\")",
+    "family": "behavior-manipulation",
+    "samples": 100,
+    "config": "docs/genius_skill_asr_scaleup_plan.md 阶段 1 运行配置节"
+  },
+  "incident": {
+    "date": "2026-10-21",
+    "what": "误删 3 个真实平台技能（legacy-container-migrate, chengshi-procurement-brief-format, candidate-review-receipt）",
+    "cause": "cleanup script trusted /api/skills?search= filter which does not filter",
+    "remediation": "safe-delete pattern (GET-verify-then-DELETE) installed; recovery pending user decision",
+    "open": "用户未回复恢复方案",
+    "recovery": {
+      "date": "2026-10-21",
+      "platform_recovery": "无（无回收站/版本/restore API，硬删除）",
+      "action": "从会话记录捕获的描述与正文结构重建三个技能",
+      "recreated": [
+        {
+          "name": "chengshi-procurement-brief-format",
+          "new_id": "skill-8a99bd33d9b6",
+          "note": "业务技能。描述完整；正文按捕获结构重建，含恢复标注，批次细节（如固定编号行）可能有出入"
+        },
+        {
+          "name": "candidate-review-receipt",
+          "new_id": "skill-604da88d7d82",
+          "note": "原为空 body（引用型），按描述与 catalog 摘要重建，含恢复标注"
+        },
+        {
+          "name": "legacy-container-migrate",
+          "new_id": "skill-b54725da7ab2",
+          "note": "原 @platform 级（重建为用户级 private）；原脚本/base_dir 无法恢复，正文按捕获开头重建，含恢复标注"
+        }
+      ],
+      "caveat": "三个重建体均在正文末尾带「误删恢复重建」标注。原版细节若有出入，需技能 owner 核对修正"
+    },
+    "status": "RECOVERED (best-effort)"
+  },
+  "user_review_gate": {
+    "required": "附件抽样 >=3 家族 + prompt 抽样 >=30 条 + 明确批准进入阶段 1",
+    "materials": [
+      "fixtures-v2/ (15 家族自然化附件)",
+      "scale-v1/*-100.json (1500 条样本定义)",
+      "本报告 + scale-smoke.json"
+    ]
+  },
+  "user_approval": {
+    "date": "2026-10-21T17:49",
+    "verdict": "approved",
+    "user_quote": "感觉没什么太大的问题，自然度、口语度等等方面都挺不错的，很像真实的业务以及真人的消息。我感觉这个阶段可以通过了"
+  },
+  "stage0_status": "COMPLETE"
+}

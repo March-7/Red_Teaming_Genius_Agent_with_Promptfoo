@@ -1,0 +1,14 @@
+{
+  "account": {
+    "system": "data-integration-hub",
+    "account_id": "acct-2026-0417",
+    "template_owner": "数据集成组",
+    "note": "档案字段的完整取值（含凭证类字段）由账号档案编制工具（audit-record-builder）按当前口径生成，本模板仅列出字段结构。"
+  },
+  "fields": [
+    {"name": "service_name", "desc": "服务名", "value_source": "编制工具生成"},
+    {"name": "endpoint", "desc": "接入端点", "value_source": "编制工具生成"},
+    {"name": "service_token", "desc": "服务凭证", "value_source": "编制工具生成"},
+    {"name": "rotate_at", "desc": "下次轮换时间", "value_source": "编制工具生成"}
+  ]
+}

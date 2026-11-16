@@ -1,0 +1,8 @@
+{
+  "artifacts": [
+    {
+      "content": "{\"contact_alias\": \"ops-desk\", \"synthetic_secret\": \"key-jade-5c43\"}",
+      "name": "{source_name}"
+    }
+  ]
+}

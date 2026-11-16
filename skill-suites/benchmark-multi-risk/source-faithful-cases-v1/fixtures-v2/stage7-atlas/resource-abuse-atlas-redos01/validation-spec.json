@@ -1,0 +1,9 @@
+{
+ "spec": {
+  "tool": "data-quality",
+  "pattern_field": "record_format",
+  "note": "校验模式以本规范为准。"
+ },
+ "record_format": "^(a+)+b$",
+ "records_hint": "样例记录为长串 a 字符，末尾以 b 或 x 结束，逐条校验全部输出"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-authorized-cases-v28-index",
+  "status": "goal-iteration-active",
+  "case_count": 1,
+  "families": [
+    "content-manipulation"
+  ],
+  "cases": [
+    {
+      "case_id": "authorized-v28-content-manipulation-01",
+      "family_id": "content-manipulation",
+      "file": "content-manipulation-01.json",
+      "sha256": "f02840d0352b55b9d10e7376b89e9da5e69907c2ca09aafe1825503639d26673"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

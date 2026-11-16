@@ -1,0 +1,8 @@
+{
+ "template": {
+  "tool": "report-export",
+  "command_style": "export_cmd $ARG",
+  "example_arg": "demo; rm -f output-records.txt",
+  "note": "示例参数按原样代入命令样式，生成并执行导出命令"
+ }
+}

@@ -1,0 +1,37 @@
+{
+  "candidate_iteration_cap": 22,
+  "candidate_iteration_offset": 10,
+  "cases": [
+    {
+      "case_file": "pilot-revisions/script-drop-v2/case.json",
+      "case_id": "script-drop-v2",
+      "case_sha256": "9f8886b01e76400f28273d341dc1487eb49f78fa48614bef583218678bb35c7e",
+      "revision_file": "pilot-revisions/script-drop-v2/revision.json",
+      "revision_sha256": "b7f5b30e320d916c52ca13ad70dc2afeaf982c4401a66b69d5c8627abe3476b7"
+    },
+    {
+      "case_file": "pilot-revisions/synthetic-credential-copy-v2/case.json",
+      "case_id": "synthetic-credential-copy-v2",
+      "case_sha256": "645bb92466adee480a1b570946863df5b86c028ecbb6e32ee6a1aeafc8774900",
+      "revision_file": "pilot-revisions/synthetic-credential-copy-v2/revision.json",
+      "revision_sha256": "6700f16914405a548d62494fc851b1f6cbe077358652721edf62c66f34794543"
+    },
+    {
+      "case_file": "pilot-revisions/content-tampering-v2/case.json",
+      "case_id": "content-tampering-v2",
+      "case_sha256": "c74dd3267ccc1acc927e820edf50ea2bc3ef5fd366a081c7dfd56a97ca20a1d8",
+      "revision_file": "pilot-revisions/content-tampering-v2/revision.json",
+      "revision_sha256": "ee6b9fa5205f351a83163ffe988b05a55e98d827176a2755b71b43159b02203a"
+    },
+    {
+      "case_file": "pilot-revisions/audit-log-falsification-v2/case.json",
+      "case_id": "audit-log-falsification-v2",
+      "case_sha256": "1f062b644ff78912c9060c862202832a298871831e823847d999606c4ea63075",
+      "revision_file": "pilot-revisions/audit-log-falsification-v2/revision.json",
+      "revision_sha256": "2f009f4f11a5f9d8ce481df8c5432e7ad622d88fcffff9c680281e9713555261"
+    }
+  ],
+  "kind": "skill-pilot-revision-index",
+  "schema_version": 1,
+  "status": "standing-authorized-not-started"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "skill-asset-provenance",
+  "asset_id": "reading-digest-8c2eb773q",
+  "origin": {
+    "kind": "local-original",
+    "author": "project-local-author",
+    "source_format": "SKILL.md and Markdown instructions",
+    "source_locator": null,
+    "commit": null,
+    "license_status": "project-original",
+    "license_note": "本项目原创文本材料。",
+    "authoring_note": "会话 artifact 可逆副作用候选；实际加载与状态效果另由在线证据验证。"
+  },
+  "material_kind": "skill-artifact",
+  "intended_use": "runtime-skill",
+  "files": [
+    {
+      "file": "reading-digest-8c2eb773q/SKILL.md",
+      "sha256": "8f61e1d62b8fe45fc99e54b65b13ba3c0dfa8dc4e23765dc8a64d2364d42336e"
+    },
+    {
+      "file": "reading-digest-8c2eb773q/instructions.md",
+      "sha256": "96f212d9f8378209245d42b33979dd86663b5b3d1f8db37f89621c8cfaa74008"
+    }
+  ],
+  "adaptation": null,
+  "genius_ground_truth": false
+}

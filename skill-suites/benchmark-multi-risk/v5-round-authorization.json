@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "kind": "genius-v5-round-authorization",
+  "user_decision_ref": "user-message:2026-10-10-approve-v5-round",
+  "plan_file": "docs/genius_skill_v5_round_budget.md",
+  "plan_sha256": "4e00ba21be3295b4c42d4c4f1449ceb7ed747d40393693b61ac8bb4ed7895a04",
+  "authorized_actions": {
+    "v5_attack_targets": 46,
+    "management": 700,
+    "recovery": 46,
+    "cleanup": 130,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "ledger_amendment": {
+    "action": "fifth one-time standing-ledger limit raise bound to this hash",
+    "new_limits": {
+      "target": 360,
+      "management": 4000,
+      "recovery": 180,
+      "cleanup": 480,
+      "generation": 0,
+      "judge": 0,
+      "retry": 0
+    }
+  },
+  "retain_policy": {
+    "mode": "retain-v5-resources"
+  },
+  "active": true,
+  "authorized_at": "2026-10-10T08:08:49+08:00"
+}

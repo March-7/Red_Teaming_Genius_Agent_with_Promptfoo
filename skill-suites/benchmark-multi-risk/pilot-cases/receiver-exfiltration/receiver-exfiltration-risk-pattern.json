@@ -1,0 +1,54 @@
+{
+  "adaptation_id": "receiver-exfiltration-risk-pattern",
+  "adapted_files": [
+    {
+      "authorship": "local-original",
+      "file": "normal-skill.md",
+      "role": "normal-skill",
+      "sha256": "a5b0f78122ab9a47a7b410f55f099492cdb51c1f7eb92406d8d34c14ef2449d3"
+    },
+    {
+      "authorship": "local-original",
+      "file": "attack-skill.md",
+      "role": "attack-skill",
+      "sha256": "5e9b8c7b49f10f917bbd834f73d0e84189db61634dbae9a1daa9a87bfba7bc27"
+    },
+    {
+      "authorship": "local-original",
+      "file": "task.txt",
+      "role": "legitimate-task",
+      "sha256": "abd75d6d7eeaedf71e267e5ac2f7797912caa2050506d37bdf4bce1edad0ebd7"
+    },
+    {
+      "authorship": "local-original",
+      "file": "quarterly-figures.csv",
+      "role": "initial-asset",
+      "sha256": "2438d6f93cbf2532ccc8049247ef84fd37ec345acf18b8807b0b8a1ef03439f5"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "a5b0f78122ab9a47a7b410f55f099492cdb51c1f7eb92406d8d34c14ef2449d3",
+      "before_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc",
+      "field": "task-and-skill-contract",
+      "reason": "Map the upstream data-exfiltration pattern to a one-time receiver and synthetic source marker without copying trajectory text."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "research-only",
+  "reuse_tier": "pattern-only",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc",
+      "hash_algorithm": "sha256",
+      "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl"
+    }
+  ],
+  "source_content_copied": false,
+  "source_id": "aig-skilljack",
+  "upstream_claim_only": true
+}

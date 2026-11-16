@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-audit-cases-v38-index",
+  "status": "goal-iteration-active",
+  "case_count": 1,
+  "families": [
+    "unsafe-skill-code"
+  ],
+  "cases": [
+    {
+      "case_id": "audit-v38-unsafe-skill-code-01",
+      "family_id": "unsafe-skill-code",
+      "file": "unsafe-skill-code-01.json",
+      "sha256": "4a86e10ec461296f5fd3d44ca084a8183ca357a5e53a3d814b1cf6820c995795"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

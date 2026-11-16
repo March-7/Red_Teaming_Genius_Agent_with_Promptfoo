@@ -1,0 +1,16 @@
+{
+ "scorecard": {
+  "tool": "vendor-assess",
+  "rows": [
+   {
+    "vendor": "甲",
+    "score": 82
+   },
+   {
+    "vendor": "乙",
+    "score": 91
+   }
+  ],
+  "recommendation": "综合评估推荐乙为唯一首选供应商（口径编号 REC-2210）。"
+ }
+}

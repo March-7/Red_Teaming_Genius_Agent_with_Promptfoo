@@ -1,0 +1,83 @@
+{
+  "blocked_operations": [
+    "formal-authorization",
+    "prestart-cleanup",
+    "target-collection",
+    "judge"
+  ],
+  "disposition": "superseded-for-formal",
+  "effective_date": "2026-10-05",
+  "evaluation_stage": "calibration",
+  "execution_enabled": false,
+  "historical_bundles": [
+    {
+      "authorization_sha256": "a39e618ab993638b1066dd532abbbad7836e8bc574db8b012fa21226a7630c96",
+      "bundle_sha256": "ca8850c0bfd64ae409bdd8f9842ecd42fef25f18e9b4edb74d750d34e10a3d59",
+      "disposition": "superseded-for-formal",
+      "observed_legacy_status": "ready-to-request-formal-start",
+      "run_id": "formal-start-bundle-20261003-0bf53f21"
+    },
+    {
+      "authorization_sha256": "b9c8ca28ff17c59d49d506fdaa5e19aa32c271b8cec116e1862f2d162cb8de50",
+      "bundle_sha256": "4a34e31abdece55dd43e4d4f5d33752b5474d73c84cd8856f65ce1d7254f169c",
+      "disposition": "superseded-for-formal",
+      "observed_legacy_status": "ready-to-request-formal-start",
+      "run_id": "formal-start-bundle-20261003-216df033"
+    },
+    {
+      "authorization_sha256": "0057d76cf9d9179b8afd3509a9680b19bceed730fd5227de5158ca09c4b7ce51",
+      "bundle_sha256": "cb9f4ca00bf4b0f1842b089ff01e1b9bf76b51a986f115151efc71e8031a921a",
+      "disposition": "superseded-for-formal",
+      "observed_legacy_status": "ready-to-request-formal-start",
+      "run_id": "formal-start-bundle-20261003-30fe4263"
+    },
+    {
+      "authorization_sha256": "f6a5f8125cb4c7a44bfff2b15ae7578eeb7028b42aa5a4032687a2e76553074d",
+      "bundle_sha256": "31bf95dd89e18795f63cddcc8d05436a024531a295ebc764d06f3de4ed21ae90",
+      "disposition": "superseded-for-formal",
+      "observed_legacy_status": "ready-to-request-formal-start",
+      "run_id": "formal-start-bundle-20261003-3aeda844"
+    },
+    {
+      "authorization_sha256": "1de6ef599c9a6f191285f3ffe255ae0864b153916089ac7ed0ed4a78ce737e32",
+      "bundle_sha256": "5fe051a5b26b1753124d2c637638336a9f8a5159f086c347d11d04ddd9359243",
+      "disposition": "superseded-for-formal",
+      "observed_legacy_status": "ready-to-request-formal-start",
+      "run_id": "formal-start-bundle-20261003-696b3f30"
+    },
+    {
+      "authorization_sha256": "b9c8ca28ff17c59d49d506fdaa5e19aa32c271b8cec116e1862f2d162cb8de50",
+      "bundle_sha256": "4a34e31abdece55dd43e4d4f5d33752b5474d73c84cd8856f65ce1d7254f169c",
+      "disposition": "superseded-for-formal",
+      "observed_legacy_status": "ready-to-request-formal-start",
+      "run_id": "formal-start-bundle-20261003-85ecef3a"
+    },
+    {
+      "authorization_sha256": "bbacadcb68e81593982bb117452120d489dbae407e38f0bfa162f3137944cab1",
+      "bundle_sha256": "10c65b6cdc482419867aacef0c86ca88b5efc587909daa648903a611b09dc186",
+      "disposition": "superseded-for-formal",
+      "observed_legacy_status": "ready-to-request-formal-start",
+      "run_id": "formal-start-bundle-20261003-a323fc2e"
+    },
+    {
+      "authorization_sha256": "5f6f31772eabfc0a12880b3953334cf737a9e9720a12567e268949891cc8bb8c",
+      "bundle_sha256": "af6e63b8e8e44f68313aea101e857796d2282049ae2a745844302ed4419e09a8",
+      "disposition": "superseded-for-formal",
+      "observed_legacy_status": "ready-to-request-formal-start",
+      "run_id": "formal-start-bundle-20261003-a927b666"
+    },
+    {
+      "authorization_sha256": "7997d8aaba7a882ebba35d46628e899ae84c5df74f085d429a215a358486473d",
+      "bundle_sha256": "de7f219e30621135ba22978ad45b7206a8cb85e42678413b3b1be6a580dae4e0",
+      "disposition": "superseded-for-formal",
+      "observed_legacy_status": "ready-to-request-formal-start",
+      "run_id": "formal-start-bundle-20261003-e8ea484b"
+    }
+  ],
+  "kind": "skill-formal-supersession-manifest",
+  "preservation": "Historical ignored runs, bytes, hashes, and authorization records remain unchanged.",
+  "risk_id": "skill-task-scope-write",
+  "schema_version": 1,
+  "suite_id": "genius-skill-security",
+  "superseded_by": "benchmark-multi-risk-portfolio"
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "kind": "genius-v3-round-authorization",
+  "user_decision_ref": "user-message:2026-10-09-approve-v3-round-budget",
+  "plan_file": "docs/genius_skill_v3_round_budget.md",
+  "plan_sha256": "104015eaac852e8d4e058d4383281bf8e263573151671043fd9880039ab7324f",
+  "authorized_actions": {
+    "v2_cleanup_first": "A",
+    "v3_attack_targets": 46,
+    "management": 700,
+    "recovery": 46,
+    "cleanup": 130,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "ledger_amendment": {
+    "action": "third one-time standing-ledger limit raise bound to this hash",
+    "new_limits": {
+      "target": 290,
+      "management": 2900,
+      "recovery": 180,
+      "cleanup": 340,
+      "generation": 0,
+      "judge": 0,
+      "retry": 0
+    }
+  },
+  "retain_policy": {
+    "mode": "retain-v3-resources",
+    "note": "v2 resources cleaned before the round; v3 retained for user inspection"
+  },
+  "active": true,
+  "authorized_at": "2026-10-09T07:08:06+08:00",
+  "cleanup_v3_note": "user-message:2026-10-09-v3-cleanup-and-continue-iteration"
+}

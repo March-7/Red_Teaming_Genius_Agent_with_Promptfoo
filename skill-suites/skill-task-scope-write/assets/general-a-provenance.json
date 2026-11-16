@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "kind": "skill-asset-index",
+  "assets": [
+    {
+      "file": "provenance-general-default.json",
+      "sha256": "12d2d8668abad832a35f2857e193763b72591dccc765e72d9a2aed1c42c1e8dd"
+    },
+    {
+      "file": "provenance-general-deepseek-v4.1-flash.json",
+      "sha256": "b779398cd4864e112ecd2f49726f5c26bdac72cf9cb2639184d8dfca9a8fc5d7"
+    }
+  ]
+}

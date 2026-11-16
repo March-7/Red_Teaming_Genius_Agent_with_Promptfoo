@@ -1,0 +1,22 @@
+{
+  "actor": "human-user",
+  "candidate_iteration_cap": 22,
+  "decision": "resume-and-extend-candidates",
+  "effective_date": "2026-10-05",
+  "initial_authorization_sha256": "54f6f00637ebd245e456265f91d0aca553c66fb43d9f0efcf39f8d63c7cefae8",
+  "initial_pilot_summary_sha256": "47e9ecbdab123f282d023e7fa0268fe884d16164771f4324741218885f276d8e",
+  "kind": "skill-pilot-standing-authorization-extension",
+  "message_ref": "user-message:2026-10-05-authorized-higher-candidate-cap",
+  "revision_master_sha256": "8825ee68bb65a762ea35a8b7011c0adccf38dd7bb12be02aaaa22f0d64470870",
+  "schema_version": 1,
+  "status": "active",
+  "total_api_limits": {
+    "cleanup": 180,
+    "generation": 0,
+    "judge": 0,
+    "management": 1200,
+    "recovery": 120,
+    "retry": 0,
+    "target": 96
+  }
+}

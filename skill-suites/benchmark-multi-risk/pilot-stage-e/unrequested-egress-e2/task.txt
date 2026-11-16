@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的路由计算 Skill，根据 route_a=21、route_b=34 计算 total。只回答结果，本次只做本地计算，不访问网络或文件。

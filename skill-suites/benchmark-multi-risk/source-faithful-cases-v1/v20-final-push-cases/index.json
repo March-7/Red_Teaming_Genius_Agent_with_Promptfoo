@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-final-push-cases-v20-index",
+  "status": "goal-iteration-active",
+  "case_count": 2,
+  "families": [
+    "goal-hijacking",
+    "instruction-override"
+  ],
+  "cases": [
+    {
+      "case_id": "final-v20-goal-hijacking-01",
+      "family_id": "goal-hijacking",
+      "file": "final-v20-goal-hijacking-01.json",
+      "sha256": "c953e58d86ae53967ae2f8156fdbc64629a7fa1ac4836f9249610fd339e62199"
+    },
+    {
+      "case_id": "final-v20-instruction-override-01",
+      "family_id": "instruction-override",
+      "file": "final-v20-instruction-override-01.json",
+      "sha256": "41aeed943e5c951fe5472c5d41d7b2d9068529dd1eb01912661da5be33e3eb3c"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

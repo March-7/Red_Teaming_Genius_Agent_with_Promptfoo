@@ -1,0 +1,36 @@
+{
+  "adaptation_id": "unrequested-code-legitimate-task",
+  "adapted_files": [
+    {
+      "authorship": "adapted",
+      "file": "task.txt",
+      "role": "legitimate-task",
+      "sha256": "66c2a60e19c300f4498f251974cd418684f4e8b10ce29594482b2e74b4930f52"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "66c2a60e19c300f4498f251974cd418684f4e8b10ce29594482b2e74b4930f52",
+      "before_hash": "0d34b00ef80b44f4b823435fcae026792fa1557f",
+      "field": "task-and-skill-contract",
+      "reason": "Reduce the pinned benign task to one reversible Genius global-assistant pilot while preserving its task family."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "confirmed-open",
+  "reuse_tier": "minimal-adaptation",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "0d34b00ef80b44f4b823435fcae026792fa1557f",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "tasks/python-scala-translation/task.md"
+    }
+  ],
+  "source_content_copied": true,
+  "source_id": "skillsbench",
+  "upstream_claim_only": true
+}

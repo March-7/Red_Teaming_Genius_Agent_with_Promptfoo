@@ -1,0 +1,4503 @@
+{
+  "schema_version": 1,
+  "kind": "skillsbench-task-relationships",
+  "source_id": "skillsbench",
+  "tasks": [
+    {
+      "task_id": "3d-scan-calc",
+      "inventory_prefix": "tasks/3d-scan-calc/",
+      "package_sha256": "c4a0ad55fa206298e691be69d634be85fb964b6c12125e1c49fb1a9ceb88fe68",
+      "task_ref": {
+        "path": "tasks/3d-scan-calc/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "0027938a794403b063e1cd42e2e9a7169f005507"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/3d-scan-calc/environment/skills/mesh-analysis/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "46eb75773c961172a9561dc138dc2762199b1373"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/3d-scan-calc/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c031fca963f6a90ab38f6498287a8edf341918b8"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/3d-scan-calc/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d21d35974f1748e2f04b3156f9352950a3cf94fb"
+        },
+        {
+          "path": "tasks/3d-scan-calc/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d12da4c2e810900a96cba6de931d71bab15034a8"
+        }
+      ],
+      "file_count": 9,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "ada-bathroom-plan-repair",
+      "inventory_prefix": "tasks/ada-bathroom-plan-repair/",
+      "package_sha256": "50a131589de078b04e6245232ab58b4c13791a8e58d7dcb82c2504aa36d3a267",
+      "task_ref": {
+        "path": "tasks/ada-bathroom-plan-repair/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "ec06f9567caa88299de379c8a22f7cf677344350"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/ada-bathroom-plan-repair/environment/skills/ada-plan-view-accessibility/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "691d3bb1596d6604f5bd23abbd1c6fd8d4611f09"
+        },
+        {
+          "path": "tasks/ada-bathroom-plan-repair/environment/skills/architectural-dxf-extraction/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f3de24188cc7d966d1757fe045aca831bf5f36af"
+        },
+        {
+          "path": "tasks/ada-bathroom-plan-repair/environment/skills/geometric-layout-repair/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a92d1edefb85ff54b6f59b362aea1c5d1573d379"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/ada-bathroom-plan-repair/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6d6d0786a7ed45194ee4ef830224d866dc76aaa6"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/ada-bathroom-plan-repair/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9fd8c724ff0287a4343ff1702eb043c40624b263"
+        },
+        {
+          "path": "tasks/ada-bathroom-plan-repair/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c49784ab0d426f747af8009c5948a90d8ff2f583"
+        }
+      ],
+      "file_count": 17,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "adaptive-cruise-control",
+      "inventory_prefix": "tasks/adaptive-cruise-control/",
+      "package_sha256": "56c2d02d4581c3c680c2bf9c58e150c4ae14875da0109083c6a1aa93e525b82b",
+      "task_ref": {
+        "path": "tasks/adaptive-cruise-control/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "0d7ac6cf5a5fb22bf93928f48c5d978dd4337702"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/adaptive-cruise-control/environment/skills/csv-processing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "8751d8b523b244492cc81743f4788ac504bcd7a2"
+        },
+        {
+          "path": "tasks/adaptive-cruise-control/environment/skills/pid-controller/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "cc82c5883d00992ceadc10fd337ac0adbdf57218"
+        },
+        {
+          "path": "tasks/adaptive-cruise-control/environment/skills/simulation-metrics/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b7034fed562e45846659377e3fbbbb4ae8889836"
+        },
+        {
+          "path": "tasks/adaptive-cruise-control/environment/skills/vehicle-dynamics/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ebc4b0a9f1860969178c4ceec4eed8b31fce9e28"
+        },
+        {
+          "path": "tasks/adaptive-cruise-control/environment/skills/yaml-config/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a5e311c010e3e60f10952822df42310c0aca2ff3"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/adaptive-cruise-control/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "26bb987bde415b62719f05ae27c8ce879bd017b0"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/adaptive-cruise-control/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2924ae12f887bf2f9588915ebb6ece235d5cfffa"
+        },
+        {
+          "path": "tasks/adaptive-cruise-control/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "789ac4cc59d0d125456652fa0048927dc0008626"
+        }
+      ],
+      "file_count": 12,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "azure-bgp-oscillation-route-leak",
+      "inventory_prefix": "tasks/azure-bgp-oscillation-route-leak/",
+      "package_sha256": "d767442549fb90b6c5cfc85845d6221960d9f8e0854109eb5ce7e0bbc5fd4761",
+      "task_ref": {
+        "path": "tasks/azure-bgp-oscillation-route-leak/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "869c4330660bd054e0c1bfa945131a382d786468"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/azure-bgp-oscillation-route-leak/environment/skills/azure-bgp/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ed860d1f3c211820fa5bcb499b435375e787d672"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/azure-bgp-oscillation-route-leak/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d741ae9a729faa398e4e8f02c76168f8d5b425bf"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/azure-bgp-oscillation-route-leak/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "215b16382e05b18bb83897cb0fdf8ccc7ced5410"
+        },
+        {
+          "path": "tasks/azure-bgp-oscillation-route-leak/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "215f19f511264f7c6ade6dc756b73379e754ad8b"
+        }
+      ],
+      "file_count": 11,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "bike-rebalance",
+      "inventory_prefix": "tasks/bike-rebalance/",
+      "package_sha256": "c60f3b2f8ac9b0c0f92f56cc323f46c60c067e2510acc1dc444991d351f108da",
+      "task_ref": {
+        "path": "tasks/bike-rebalance/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "2e8f6d13216578bd787b3c6aa890ddeff8fbc351"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/bike-rebalance/environment/skills/geospatial-routing-data/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b8794a069b6b8f922b1bee0d79be794e6b730ae4"
+        },
+        {
+          "path": "tasks/bike-rebalance/environment/skills/logistics-rules-to-optimization/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "626b7fe1adc5e76393ed5be54745f5bf1502f679"
+        },
+        {
+          "path": "tasks/bike-rebalance/environment/skills/routing-subtour-elimination/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f1257204618fee320064b96616d930f1f12927e2"
+        },
+        {
+          "path": "tasks/bike-rebalance/environment/skills/scip-opt/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "8124e681a17b4ab42fd4bcbb7f0499ec406c8bce"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/bike-rebalance/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7f61d2353bc38953aafb4d08c6227f8901259888"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/bike-rebalance/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9a12cc89bc2bf168c6a6d4fe2a3077f04c9ace59"
+        },
+        {
+          "path": "tasks/bike-rebalance/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e9c99a5590071cbc571e716270ce778c2cf3f59b"
+        }
+      ],
+      "file_count": 10,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "citation-check",
+      "inventory_prefix": "tasks/citation-check/",
+      "package_sha256": "666c455d217679aa8b1051fcf558f721799a7519ea46edde8cd64f4e78ea7e62",
+      "task_ref": {
+        "path": "tasks/citation-check/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "1075814961e36f853539e249636ab8b96deee32a"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/citation-check/environment/skills/citation-management/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "316af123c2ca94644a4f0f7ca427ced0963cae1a"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/citation-check/oracle/crossref_snapshot.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b0da9b0a55d28c5a283a81e6261a88231b24d886"
+        },
+        {
+          "path": "tasks/citation-check/oracle/detect_fakes.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ea1e23db8dea4edc8a232545a78cb926bb0b5149"
+        },
+        {
+          "path": "tasks/citation-check/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1e190b750c6eb5bc785578625c37df39b63e2e30"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/citation-check/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "27a3c6daa1419c032414a0060edf31fc15e5ca5e"
+        },
+        {
+          "path": "tasks/citation-check/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "fea644be97f3dac34828a899de005296987b3f5a"
+        }
+      ],
+      "file_count": 22,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "civ6-adjacency-optimizer",
+      "inventory_prefix": "tasks/civ6-adjacency-optimizer/",
+      "package_sha256": "b37d91494b56ea3039a5e5d37d97baf73edca6986087e27e71e1ef16f7cae840",
+      "task_ref": {
+        "path": "tasks/civ6-adjacency-optimizer/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "97ad56f2762b1bd20ebb7e4771c72e6203eac098"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/civ6-adjacency-optimizer/environment/skills/civ6lib/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d9f8ffb5304d07964c2f35324028b1fef7f8008a"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/environment/skills/hex-grid-spatial/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a1dc3182ef72bceb32b2276a67494221941b26fa"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/environment/skills/map-optimization-strategy/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0a01d98c8b5e1de4adb465ac7b434ef283373c5f"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/environment/skills/sqlite-map-parser/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "cbc4dac4cf594d7ac3d8807f9aee43fa72245422"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/civ6-adjacency-optimizer/oracle/ground_truths/scenario_1/ground_truth.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e23c7e26ee044160c971d8403fd7047d85afa70b"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/oracle/ground_truths/scenario_2/ground_truth.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "48fe59c854f5f1a5978c2f43f4af9c4003609d78"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/oracle/ground_truths/scenario_3/ground_truth.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e17ffed6e6b7e063a4024b2d7910fe5d71c9ceda"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "484a4ab038cc3ba412a99b9c1afd82e6cad23327"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/civ6-adjacency-optimizer/verifier/evaluate.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2c8da1a75052e7923baa496f457bbadf2a42e6b5"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/verifier/ground_truths/scenario_1/ground_truth.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e23c7e26ee044160c971d8403fd7047d85afa70b"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/verifier/ground_truths/scenario_2/ground_truth.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "48fe59c854f5f1a5978c2f43f4af9c4003609d78"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/verifier/ground_truths/scenario_3/ground_truth.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e17ffed6e6b7e063a4024b2d7910fe5d71c9ceda"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/verifier/src/__init__.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2ff081b3a5f18d0c563afe41ba8da0eb1d7f96e2"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/verifier/src/adjacency_rules.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d039cfeb00c76699d66974d7a50c8e49ccc90c1a"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/verifier/src/hex_utils.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "fb55bf92e43bc9856b536915bd23d9c999069648"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/verifier/src/placement_rules.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a2f9682346fa654e8c71f2717679ca5185ba9963"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "14a4fe0dfd532bab304f29d3e02854bfd33c26c1"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "27e6398dd1a75e0c5125c594ee216fb33eac89eb"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/verifier/test_unit.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0707b53eb045cae0cc7b23ca3bb1ab2ee76b07f4"
+        },
+        {
+          "path": "tasks/civ6-adjacency-optimizer/verifier/tools/civ6map_to_scenario.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6fc69f8efff4226537898ccfd8146138ed305a5a"
+        }
+      ],
+      "file_count": 30,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "court-form-filling",
+      "inventory_prefix": "tasks/court-form-filling/",
+      "package_sha256": "d2628a1704b9cb6e824b8d171901eb1b6ee1110d6dca49b256cc756ca4c0ab4d",
+      "task_ref": {
+        "path": "tasks/court-form-filling/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "a8cc3cdc3947849df044c1a10d0a45ae7cc3b253"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/court-form-filling/environment/skills/pdf/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f6a22ddf88fdc7e7b7603f4c9064cc51bd930ad9"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/court-form-filling/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2f9099c8c660ae95efe17a1a557b69ff7249fd6e"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/court-form-filling/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e934539712c6d26a05a18208f3fa5c571b64261e"
+        },
+        {
+          "path": "tasks/court-form-filling/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e5c5b52818eee57e61720647cccebe5191778791"
+        }
+      ],
+      "file_count": 18,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "crystallographic-wyckoff-position-analysis",
+      "inventory_prefix": "tasks/crystallographic-wyckoff-position-analysis/",
+      "package_sha256": "9dcb53467bfd2b4f73efdf8cb9e7d4709727f78e20379debf938731415885870",
+      "task_ref": {
+        "path": "tasks/crystallographic-wyckoff-position-analysis/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "d3cfd34f0965c964c8f2d9de2a8e1a9900c561b2"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/crystallographic-wyckoff-position-analysis/environment/skills/pymatgen/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "288c867cd761ddb4a02eca0dc54c37264d225aea"
+        },
+        {
+          "path": "tasks/crystallographic-wyckoff-position-analysis/environment/skills/sympy/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "bf3ab6923b55dfd78e9a3da6b19bff9e15582b5e"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/crystallographic-wyckoff-position-analysis/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "10644297eea5bbb501dc05efc459e4e18d2badb0"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/crystallographic-wyckoff-position-analysis/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4b8317055eb5c7b56c94350d47e5431757e5ff5b"
+        },
+        {
+          "path": "tasks/crystallographic-wyckoff-position-analysis/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "885f257706c145adb5ebd02a040eb41ee5139839"
+        }
+      ],
+      "file_count": 32,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "dapt-intrusion-detection",
+      "inventory_prefix": "tasks/dapt-intrusion-detection/",
+      "package_sha256": "377d54c43f6cce1109c1125b0afb8643a102dd4d441b639870d5b49a8b700e7e",
+      "task_ref": {
+        "path": "tasks/dapt-intrusion-detection/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "3cf64e97850e5a9cfa188f2f00273dcc4f2cf3e7"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/dapt-intrusion-detection/environment/skills/pcap-analysis/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6c70650dad14241ef54d67f14e479a3aed31e679"
+        },
+        {
+          "path": "tasks/dapt-intrusion-detection/environment/skills/threat-detection/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "dd3bc517d6eefcbf4fb64ac952e64b634054440d"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/dapt-intrusion-detection/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "82e70018f581d4471dcee2e705e2c607b977bdf9"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/dapt-intrusion-detection/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "613524609fc5a8e9ba462a6df5d4ad9662d46159"
+        },
+        {
+          "path": "tasks/dapt-intrusion-detection/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "88970e92d11aa6ea3dee7684c1adaaf0a05e39d6"
+        }
+      ],
+      "file_count": 13,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "data-to-d3",
+      "inventory_prefix": "tasks/data-to-d3/",
+      "package_sha256": "ff28094ff8692aa1dc4347ec702c80581d97d6513d3e984ceae127cbcb021bc5",
+      "task_ref": {
+        "path": "tasks/data-to-d3/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "e872f2ced075516aa2a1b1eb3d1c0c6294004013"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/data-to-d3/environment/skills/d3-visualization/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "af888dbaff85491cb33c4ac6b3eb20daa7ed425f"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/data-to-d3/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e6ff0407cfa7a6ce5cc478bc2c81039bf66e9dad"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/data-to-d3/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "bb78107f7d457aecfe2871ae460a906fa4fb1f88"
+        },
+        {
+          "path": "tasks/data-to-d3/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1be8d698d61da4f37fedeeab33857598022521a6"
+        }
+      ],
+      "file_count": 61,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "debug-trl-grpo",
+      "inventory_prefix": "tasks/debug-trl-grpo/",
+      "package_sha256": "1c6bf0ac3c231fbc735eaa5357997d617edfae00cb32f4923c76aeda6871a7eb",
+      "task_ref": {
+        "path": "tasks/debug-trl-grpo/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "e16730f013923daff6dcc1c130126ecc8c86beab"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/debug-trl-grpo/environment/skills/grpo/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "54f8afac57d9ecda3a7eb4d9891860933e70b6a5"
+        },
+        {
+          "path": "tasks/debug-trl-grpo/environment/skills/rl-post-training/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1c367604915518b49f46397457651c9f25af83f2"
+        },
+        {
+          "path": "tasks/debug-trl-grpo/environment/skills/trl/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "41158ca8356a78b8e575a3ea69da7029d1fc877e"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/debug-trl-grpo/oracle/solve.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9a1266997a0415cc574b8d7249511d4c8445bc9e"
+        },
+        {
+          "path": "tasks/debug-trl-grpo/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0b7aee4b444cfdb443b75abba699b8159d1d2602"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/debug-trl-grpo/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d3c9b7f7972d18fa7a2adbeab5703be5d55965ee"
+        },
+        {
+          "path": "tasks/debug-trl-grpo/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c0aec83939cdbdf245efa6ed49855d06d4e6ee56"
+        }
+      ],
+      "file_count": 20,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "dialogue-parser",
+      "inventory_prefix": "tasks/dialogue-parser/",
+      "package_sha256": "cfd14b8473f106f39c37b7643a8b2ff5be04652a93554f28b3dc590f3aca05af",
+      "task_ref": {
+        "path": "tasks/dialogue-parser/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "dfd26f6123905d5e489ffccd508fbc8332d828f6"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/dialogue-parser/environment/skills/dialogue-graph/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7d4b6066567b2e2f69f31c41247f11b0f6b22a93"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/dialogue-parser/oracle/dialogue.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "cb6e68fa6eb4d9d352df3aa1aa72e45e1241a031"
+        },
+        {
+          "path": "tasks/dialogue-parser/oracle/script.txt",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "68c901006879b5d3c9078ab37dda429c36478c68"
+        },
+        {
+          "path": "tasks/dialogue-parser/oracle/solution.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0efb8c4fd7f700a6a46078a68fc07032dd80299f"
+        },
+        {
+          "path": "tasks/dialogue-parser/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0b6e5a676f62a5d54f9642816ce17a51c6709e61"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/dialogue-parser/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7eece02e946716c595c1253530671d1d9140ac4a"
+        },
+        {
+          "path": "tasks/dialogue-parser/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "5e7c38966446c3572483c2e03951f3b47e8e5035"
+        }
+      ],
+      "file_count": 11,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "drone-planning-control",
+      "inventory_prefix": "tasks/drone-planning-control/",
+      "package_sha256": "b3a17552a455864e250d16e3bd8f17c3724aa4d49482d2932f88857291fb6892",
+      "task_ref": {
+        "path": "tasks/drone-planning-control/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "908de840f801a35866ffe937e540ace85e87e1f4"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/drone-planning-control/environment/skills/attitude-controller-planner/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b48209f93432202ffb7a5ef2046def48f550eb3a"
+        },
+        {
+          "path": "tasks/drone-planning-control/environment/skills/flight-plan-parser/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "14805d4457717f6141e18440b020412f22acc9b6"
+        },
+        {
+          "path": "tasks/drone-planning-control/environment/skills/motor-model-dynamics/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "fb182b1fa35866d754831e1f80135e61fa834355"
+        },
+        {
+          "path": "tasks/drone-planning-control/environment/skills/plot-quadrotor/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9811e4011f01b353e339f9d4516f661a9f2355cf"
+        },
+        {
+          "path": "tasks/drone-planning-control/environment/skills/position-controller-trajectory-planner/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4f38c1b05e68d70109fc9538c193c89fc16349d7"
+        },
+        {
+          "path": "tasks/drone-planning-control/environment/skills/stepinfo-3d/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b97a086c83071e768c193a9f3f008b9a4a54ea7d"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/drone-planning-control/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "69364ff1762015ee183052404e603eddb1698221"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/drone-planning-control/verifier/_oracle_sim.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c6e7a5fb957e9c7a6a7ea9f122ecc84148597122"
+        },
+        {
+          "path": "tasks/drone-planning-control/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "81964047ef065bc15ee00664a39a8fb12fc3b49e"
+        },
+        {
+          "path": "tasks/drone-planning-control/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4e9b4adbb37a9543a43b2c21cb3dbf852c08ce4d"
+        }
+      ],
+      "file_count": 44,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "dynamic-object-aware-egomotion",
+      "inventory_prefix": "tasks/dynamic-object-aware-egomotion/",
+      "package_sha256": "9a2bc645ed3ee9ba1fde1ed29b0ec049fd5d700d18bfd335a6100c0039495058",
+      "task_ref": {
+        "path": "tasks/dynamic-object-aware-egomotion/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "ce287dabdc3a0d217643127a01e16dcfa5bfad5b"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/dynamic-object-aware-egomotion/environment/skills/dyn-object-masks/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d40cdf166f742c0c3e7b0a9ac5f6b82b44babfe2"
+        },
+        {
+          "path": "tasks/dynamic-object-aware-egomotion/environment/skills/egomotion-estimation/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "50d671966af9cee33595257b907d102e566ac597"
+        },
+        {
+          "path": "tasks/dynamic-object-aware-egomotion/environment/skills/output-validation/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0754b6baa5aef7f17ee7c9ee7b60d91e5d13eb92"
+        },
+        {
+          "path": "tasks/dynamic-object-aware-egomotion/environment/skills/sampling-and-indexing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4ff088da049cd2b401412c873c439fae8bc90301"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/dynamic-object-aware-egomotion/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f1f6ed7a50f0a9855b691fb90a30b5a3045f1a5a"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/dynamic-object-aware-egomotion/verifier/dyn_masks.npz",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7311b8dd718bfd8782c16e39d758e627bc7db2e2"
+        },
+        {
+          "path": "tasks/dynamic-object-aware-egomotion/verifier/instructions.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d4e94ea3f1f4d19400b805f274c5d6fbd94aae0c"
+        },
+        {
+          "path": "tasks/dynamic-object-aware-egomotion/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "78567e04eb7deaf5d6bcf2793d2ef3070bcaf0e9"
+        },
+        {
+          "path": "tasks/dynamic-object-aware-egomotion/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "95e448cb7dcf2f304b0f3560b1e2399f1dcf78dd"
+        }
+      ],
+      "file_count": 12,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "earthquake-phase-association",
+      "inventory_prefix": "tasks/earthquake-phase-association/",
+      "package_sha256": "0d9666da2b8b461f253424f99cba83b918d71ef64847b126789e3ad6e3b25f72",
+      "task_ref": {
+        "path": "tasks/earthquake-phase-association/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "9ba196a3e4ca95fd9e418e0998878badaaf85e76"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/earthquake-phase-association/environment/skills/gamma-phase-associator/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3ddf640260401a58a96d72ea7b46d86afd6db0bd"
+        },
+        {
+          "path": "tasks/earthquake-phase-association/environment/skills/obspy-data-api/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "11f05ee39fafd856955d1e9ac7bc7da82727ef4f"
+        },
+        {
+          "path": "tasks/earthquake-phase-association/environment/skills/seisbench-model-api/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a8ce4765a6f292c31fc5df00593646d919acb781"
+        },
+        {
+          "path": "tasks/earthquake-phase-association/environment/skills/seismic-picker-selection/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d5e0c6e9b1d9d75645e9457b185e6701998aa4fd"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/earthquake-phase-association/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "315706547fd1086185d5bc2759e7ef65eeb14a1c"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/earthquake-phase-association/verifier/catalog.csv",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6770334133e2326361555ae246c137f12eaa3d25"
+        },
+        {
+          "path": "tasks/earthquake-phase-association/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "63c21471238cc9fe40138db969ae32cc64c28fbb"
+        },
+        {
+          "path": "tasks/earthquake-phase-association/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4713cccd8f902579eac582c20a3b1145819bbf29"
+        },
+        {
+          "path": "tasks/earthquake-phase-association/verifier/test_utils.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "317003f1156009db6b0722eaa12ef20e3304a9d7"
+        }
+      ],
+      "file_count": 15,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "earthquake-plate-calculation",
+      "inventory_prefix": "tasks/earthquake-plate-calculation/",
+      "package_sha256": "2411a366f83c01f645cebe5a3000f9aa0616bbbc665c3b86e2e97deea5cfb7d4",
+      "task_ref": {
+        "path": "tasks/earthquake-plate-calculation/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "f906c4f49a9789cd0faa61c59507e095d1497403"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/earthquake-plate-calculation/environment/skills/geospatial-analysis/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "8a2cf46efaa73986ce998b1d7b0dbee4983d5b5b"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/earthquake-plate-calculation/oracle/solution.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2867adbb323b197a3e3df901d321a6996be590a5"
+        },
+        {
+          "path": "tasks/earthquake-plate-calculation/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4e171a8be2e30c88f72f674b81b7f846af25a2fb"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/earthquake-plate-calculation/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "215b16382e05b18bb83897cb0fdf8ccc7ced5410"
+        },
+        {
+          "path": "tasks/earthquake-plate-calculation/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "90486f6ee932ba23c0a03b0c89602faf6893b6a8"
+        }
+      ],
+      "file_count": 10,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "econ-detrending-correlation",
+      "inventory_prefix": "tasks/econ-detrending-correlation/",
+      "package_sha256": "5981d69b45380a96e778279a36563c45f22f80234201adc111c134acb4449d3c",
+      "task_ref": {
+        "path": "tasks/econ-detrending-correlation/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "9e58616d24456d275c1b336eec59961ded4f9796"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/econ-detrending-correlation/environment/skills/timeseries-detrending/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e88134203467a6598b90a3e65d26babf5a149813"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/econ-detrending-correlation/oracle/solution.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "bcd529205074476e3cc4cac523e895544fcb99f4"
+        },
+        {
+          "path": "tasks/econ-detrending-correlation/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4c000a2117cb6f994393475085dc2bcd629cde56"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/econ-detrending-correlation/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b90bba3f5d22b147f156a058275bca8d319d6cc7"
+        },
+        {
+          "path": "tasks/econ-detrending-correlation/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "05e36d28f2fc20165353a6b9e50546c62cb328b7"
+        }
+      ],
+      "file_count": 10,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "edit-pdf",
+      "inventory_prefix": "tasks/edit-pdf/",
+      "package_sha256": "4bf0568dd6d5e8a3f3087fd28d3a3cfd775a6d5b120380d91106b288db0cfd8a",
+      "task_ref": {
+        "path": "tasks/edit-pdf/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "0f99d6d31d09c103e44892065303dd1162907c61"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/edit-pdf/environment/skills/pdf-editing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2960523310ee1213bdfcfdf1fa5316c471ed1ff9"
+        },
+        {
+          "path": "tasks/edit-pdf/environment/skills/text-parser/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "481ef17b6c50687ccacb16277f8b88caea1ba311"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/edit-pdf/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6e378191836769c4cd818d8ddd162a87d6c022bc"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/edit-pdf/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a5214b87d4463a6605972acbe0074e7aed1abe8d"
+        },
+        {
+          "path": "tasks/edit-pdf/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c20103a792ebada979c93b10e5ed24a99530ca72"
+        }
+      ],
+      "file_count": 9,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "energy-ac-optimal-power-flow",
+      "inventory_prefix": "tasks/energy-ac-optimal-power-flow/",
+      "package_sha256": "2094eab183473c555f198a3dd151a524310935fa2e6539c5ee0bec518f2eea01",
+      "task_ref": {
+        "path": "tasks/energy-ac-optimal-power-flow/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "f1e89a2b5a7976dd6c78c83ba49917628720e81c"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/energy-ac-optimal-power-flow/environment/skills/ac-branch-pi-model/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0bc8f4ae7de79099727fd8f4d1b3821c4a2bbc41"
+        },
+        {
+          "path": "tasks/energy-ac-optimal-power-flow/environment/skills/casadi-ipopt-nlp/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4018f90409d819ae811a2a2c0ec3f3b043015e76"
+        },
+        {
+          "path": "tasks/energy-ac-optimal-power-flow/environment/skills/power-flow-data/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ca73bfeb1f1fc235f6ad0ea1e30877b6635b159f"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/energy-ac-optimal-power-flow/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d5ad7c55b751879bdfff5d7960d319e729e43211"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/energy-ac-optimal-power-flow/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4d41786bba7adbd6f568d8beca4c053240f483a6"
+        },
+        {
+          "path": "tasks/energy-ac-optimal-power-flow/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e00556156648bfad25a0a019c0e5845e0d4915be"
+        }
+      ],
+      "file_count": 11,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "energy-market-pricing",
+      "inventory_prefix": "tasks/energy-market-pricing/",
+      "package_sha256": "ad29d37106e206a4e1d84be3f6e19967f9178bd3a87de7088e3b1630c5e8fffa",
+      "task_ref": {
+        "path": "tasks/energy-market-pricing/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "cc6312eb05f393f51da737c02e09e76a38173480"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/energy-market-pricing/environment/skills/dc-power-flow/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ad8f19a4f8f8b4f177ea11dfb6491eeb2975c126"
+        },
+        {
+          "path": "tasks/energy-market-pricing/environment/skills/economic-dispatch/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7efb197614ecbbd9e50591e68c0f457db654be57"
+        },
+        {
+          "path": "tasks/energy-market-pricing/environment/skills/locational-marginal-prices/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e1bc9ba1701919e6e13a90d0ba8b24fb3bc3a401"
+        },
+        {
+          "path": "tasks/energy-market-pricing/environment/skills/power-flow-data/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ca73bfeb1f1fc235f6ad0ea1e30877b6635b159f"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/energy-market-pricing/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c31a05a8a9c5a02edd07a721a787361d46704adc"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/energy-market-pricing/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3ca55055c9919930a8433f745f3c867db8c2d696"
+        },
+        {
+          "path": "tasks/energy-market-pricing/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "95390e8b039074e2918b87c3dd15739007c32622"
+        }
+      ],
+      "file_count": 12,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "energy-unit-commitment",
+      "inventory_prefix": "tasks/energy-unit-commitment/",
+      "package_sha256": "f12a4fc776c4351b7397934ff73205a9ed33dbee7e234f96b942c9837e05e77c",
+      "task_ref": {
+        "path": "tasks/energy-unit-commitment/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "f58e8fd76d9db13e3275855a09b0819a2a091b0d"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/energy-unit-commitment/environment/skills/milp-solver-workflow/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "284eed807dd652c53de6dadad8fb43759b765523"
+        },
+        {
+          "path": "tasks/energy-unit-commitment/environment/skills/unit-commitment-data-modeling/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "76e4102af9b4a5f23e792abea262502483a57850"
+        },
+        {
+          "path": "tasks/energy-unit-commitment/environment/skills/unit-commitment-operating-rules/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7d6e4eb6a91fd919b44a69ba340421010063e883"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/energy-unit-commitment/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a7a5cabb8ef0fad8aa3d97dcd15206068c4316f6"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/energy-unit-commitment/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "fa1b1af793fde7715728303d9bf83d75fe35cf11"
+        },
+        {
+          "path": "tasks/energy-unit-commitment/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "52db1ed62067b1d01c31124c80d93ac9c85673db"
+        }
+      ],
+      "file_count": 9,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "enterprise-information-search",
+      "inventory_prefix": "tasks/enterprise-information-search/",
+      "package_sha256": "b9c0aa3c0556e6d7eb920b447048a743ce6993056fad8c5d23041cae0279dad7",
+      "task_ref": {
+        "path": "tasks/enterprise-information-search/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "8cf69b4767a0863f734931cb08da1914f2e78f34"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/enterprise-information-search/environment/skills/enterprise-artifact-search/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "eab425d2497ee5fe7334e8c6ed0224a2b58558f1"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/enterprise-information-search/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c060fc957a018479d13f156ccf825693a8e1f2a5"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/enterprise-information-search/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "215b16382e05b18bb83897cb0fdf8ccc7ced5410"
+        },
+        {
+          "path": "tasks/enterprise-information-search/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b847b98b66454b487de05d4b1ab1dfa6d6a4b64c"
+        }
+      ],
+      "file_count": 40,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "exam-block-sequencing",
+      "inventory_prefix": "tasks/exam-block-sequencing/",
+      "package_sha256": "162645b8b112397532bcf242f12e0a5f5001dd27015f94c70731904874040f69",
+      "task_ref": {
+        "path": "tasks/exam-block-sequencing/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "1822ad5bc981487fc816ba1858fe76739b88afc1"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/exam-block-sequencing/environment/skills/mip-solver-and-solution-audit/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7e15a581d8aa0f4af3d5a034fa88fd7ea40246c7"
+        },
+        {
+          "path": "tasks/exam-block-sequencing/environment/skills/ordered-window-sequencing-mip/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2ced9d53987c7b2f1380efb4856558cd2aa5882d"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/exam-block-sequencing/oracle/oracle_solver.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2a9b725a7d91e4467f867b0c2fc9d50ca8725b6e"
+        },
+        {
+          "path": "tasks/exam-block-sequencing/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ca3b3f33abacd898bfb5992da407e2074ba6564c"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/exam-block-sequencing/verifier/oracle_metrics.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2cf128a24df7d820f063dc115ac0e7f2a59313c3"
+        },
+        {
+          "path": "tasks/exam-block-sequencing/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0b9169944c6a1e30ddaa425e573b9a722c3d6de0"
+        },
+        {
+          "path": "tasks/exam-block-sequencing/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1d0b342adbb2f50764d6f2d45a6a271bde50486f"
+        }
+      ],
+      "file_count": 16,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "exceltable-in-ppt",
+      "inventory_prefix": "tasks/exceltable-in-ppt/",
+      "package_sha256": "807d15e8dd9216c550bf6a29b8fb9bc904ac3eff82705c61ba67e3ee3faa6a1a",
+      "task_ref": {
+        "path": "tasks/exceltable-in-ppt/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "6067da26e18c5874b4eb0f5ea57e50d45d153dfe"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/exceltable-in-ppt/environment/skills/pptx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1ceaf64a12604e3e594acd84bbf8c2532d29fc1e"
+        },
+        {
+          "path": "tasks/exceltable-in-ppt/environment/skills/xlsx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "75ccc9efe04c50ea0920db8d215839c4aa213a85"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/exceltable-in-ppt/oracle/inventory.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "71b7a72289d341a03e9842d11b97df6e7e2c6480"
+        },
+        {
+          "path": "tasks/exceltable-in-ppt/oracle/pack.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a75c2e7b402e7ebd4a2ea6be8cc6c86fee1f94ba"
+        },
+        {
+          "path": "tasks/exceltable-in-ppt/oracle/recalc.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "51221144da98cd52a06c50728a28aad527af373a"
+        },
+        {
+          "path": "tasks/exceltable-in-ppt/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e09e1989b02f2b24ccc9da34847e90a31c42146f"
+        },
+        {
+          "path": "tasks/exceltable-in-ppt/oracle/unpack.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2ac3909a7ec9b1f3f8d8d206aefa526b243b513d"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/exceltable-in-ppt/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "5b4b4c853bdefde947905f6ac475aa31b652a499"
+        },
+        {
+          "path": "tasks/exceltable-in-ppt/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "fec05bd217bf3b07ff7ee1b2158dc3bc437985bb"
+        }
+      ],
+      "file_count": 69,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "exoplanet-detection-period",
+      "inventory_prefix": "tasks/exoplanet-detection-period/",
+      "package_sha256": "df09007254162dc1d87c45cd2d1e27693776c55fd0b32d9e2eb6320c301fc742",
+      "task_ref": {
+        "path": "tasks/exoplanet-detection-period/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "11679c6c52ec535584ae7f6a3c43923ff50e81cb"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/exoplanet-detection-period/environment/skills/box-least-squares/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c7024f00dcd4510fc16bce0a80222a730c3f3796"
+        },
+        {
+          "path": "tasks/exoplanet-detection-period/environment/skills/exoplanet-workflows/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ea9b25572fadb115753b246c7fe6e8b4b2d3f1c2"
+        },
+        {
+          "path": "tasks/exoplanet-detection-period/environment/skills/light-curve-preprocessing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "88625996a1291dbcd41c2f8740868f4cf195c753"
+        },
+        {
+          "path": "tasks/exoplanet-detection-period/environment/skills/lomb-scargle-periodogram/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "da8de20f8854feebb6ab84d0bd53d7f55a21058f"
+        },
+        {
+          "path": "tasks/exoplanet-detection-period/environment/skills/transit-least-squares/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9d1763661fbe9384b2419db6215f6df8aa457244"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/exoplanet-detection-period/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6260cd0ad4c18f1fd43345570ab0c038d327795b"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/exoplanet-detection-period/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "215b16382e05b18bb83897cb0fdf8ccc7ced5410"
+        },
+        {
+          "path": "tasks/exoplanet-detection-period/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0d5bb7d81cd6b5f4074c7e0d6567008e5245c38e"
+        }
+      ],
+      "file_count": 11,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "financial-modeling-qa",
+      "inventory_prefix": "tasks/financial-modeling-qa/",
+      "package_sha256": "2b6ad82c81b0bbf8786280bbece0d27932ed72883970609274b59833f8ad9d0c",
+      "task_ref": {
+        "path": "tasks/financial-modeling-qa/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "b0be7b7a2ec70c3790f7bfe8a83e31214729b364"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/financial-modeling-qa/environment/skills/pdf/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f6a22ddf88fdc7e7b7603f4c9064cc51bd930ad9"
+        },
+        {
+          "path": "tasks/financial-modeling-qa/environment/skills/xlsx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "22db189c8b17d48f94f11fa0c45343441239ff40"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/financial-modeling-qa/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "936aef0fa32fc14060515870cf8626bc4965da45"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/financial-modeling-qa/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "215b16382e05b18bb83897cb0fdf8ccc7ced5410"
+        },
+        {
+          "path": "tasks/financial-modeling-qa/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "df4f941b485877fb3fa9e4c48bc5f7a5063ef533"
+        }
+      ],
+      "file_count": 22,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "fix-build-agentops",
+      "inventory_prefix": "tasks/fix-build-agentops/",
+      "package_sha256": "e8c7cdac926892f3af6468b5180b0bdc32bad0f577b28404b1479bef92ff906f",
+      "task_ref": {
+        "path": "tasks/fix-build-agentops/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "bf36946a0e2411ee4aeecd74e94539f010a457e8"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/fix-build-agentops/environment/skills/analyze-ci/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "baea58b14a0bcb125e92b294d572a8204667e6d9"
+        },
+        {
+          "path": "tasks/fix-build-agentops/environment/skills/temporal-python-testing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "369cffe87e5735ab7d9e2fba18956493ed0166da"
+        },
+        {
+          "path": "tasks/fix-build-agentops/environment/skills/testing-python/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4193f6144922e22665e9e4b03defdb0f44ee5fe8"
+        },
+        {
+          "path": "tasks/fix-build-agentops/environment/skills/uv-package-manager/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "30d17b018c6753a341859d6dc6c9c13b07439b04"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/fix-build-agentops/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "261ba75df3b445ca8ef689c54067e8db342b084b"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/fix-build-agentops/verifier/run_passed.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "fd76383c01a09aaeb7deaafe2a67e0393cd4cfad"
+        },
+        {
+          "path": "tasks/fix-build-agentops/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "5117f7e92aec9532c35eda5f04e509630089cff8"
+        },
+        {
+          "path": "tasks/fix-build-agentops/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "eb6309ee7f93c330e04d16da459f5e6786b9f0ff"
+        }
+      ],
+      "file_count": 14,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "fix-build-google-auto",
+      "inventory_prefix": "tasks/fix-build-google-auto/",
+      "package_sha256": "ad1257b4b9d27dc6fe009e9d06dcf7381e5c32b1f32f222eda5f24c8a4e0eec1",
+      "task_ref": {
+        "path": "tasks/fix-build-google-auto/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "3ab45a957c82a388b3ccb40fd9434d62a5f8acf6"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/fix-build-google-auto/environment/skills/maven-build-lifecycle/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "8c5f6715f443c9979cf107b292ac063ec18b1454"
+        },
+        {
+          "path": "tasks/fix-build-google-auto/environment/skills/maven-dependency-management/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ca879e0407b8ec828a4097910ba3fd86047c7359"
+        },
+        {
+          "path": "tasks/fix-build-google-auto/environment/skills/maven-plugin-configuration/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "76abd71dff09827a724bd900320d6ae43287658a"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/fix-build-google-auto/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1a48ba030fdcf35d45cd49931de1fb60070348dd"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/fix-build-google-auto/verifier/run_passed.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0258e78df40743c4967cb8f74509102b4598014e"
+        },
+        {
+          "path": "tasks/fix-build-google-auto/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "af751b890f760edcc1ba68624de9a0ed46bc9073"
+        },
+        {
+          "path": "tasks/fix-build-google-auto/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "dfea5130809e1ad6923b59ae82ac2b578f71720c"
+        }
+      ],
+      "file_count": 10,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "fix-druid-loophole-cve",
+      "inventory_prefix": "tasks/fix-druid-loophole-cve/",
+      "package_sha256": "c62928554b3d9e51161d6b5fe2683974bd5780fa1be6d687f5a7cf598470a13d",
+      "task_ref": {
+        "path": "tasks/fix-druid-loophole-cve/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "f3e8354be8f1060d8456eeaf70276445aa636e8f"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/fix-druid-loophole-cve/environment/skills/jackson-security/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "202d2eea47949fcfff2134be2c9678b3271bd082"
+        },
+        {
+          "path": "tasks/fix-druid-loophole-cve/environment/skills/senior-java/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2df19d18514bdffac5cdaeac31a21e7014ac2c73"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/fix-druid-loophole-cve/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a377a0058948274962581375f8c4eb1f07d0cda1"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/fix-druid-loophole-cve/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2cf0229faec7a7b1cab0417db7d8e91a8f739a93"
+        },
+        {
+          "path": "tasks/fix-druid-loophole-cve/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "14b8dcb6cd8632b6ed6d370387b66900f0f42d8f"
+        }
+      ],
+      "file_count": 31,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "fix-erlang-ssh-cve",
+      "inventory_prefix": "tasks/fix-erlang-ssh-cve/",
+      "package_sha256": "42ca58e7af20f0e65bef9cc518f97b4da80100d2655c1cc47663051dff38ffee",
+      "task_ref": {
+        "path": "tasks/fix-erlang-ssh-cve/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "cb73a075b3d036c1ddc122905c71e9dcd341ab0c"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/fix-erlang-ssh-cve/environment/skills/erlang-concurrency/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2b58f2ea63ac58c1c08dc98f03a9e3ac42d93e9a"
+        },
+        {
+          "path": "tasks/fix-erlang-ssh-cve/environment/skills/erlang-distribution/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0701d7f7d115bb3a4cd679fad6c69eab26ba58ef"
+        },
+        {
+          "path": "tasks/fix-erlang-ssh-cve/environment/skills/erlang-otp-behaviors/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0cca3b8f83d37e4debcaf359b22d345a9365234a"
+        },
+        {
+          "path": "tasks/fix-erlang-ssh-cve/environment/skills/find-bugs/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "02eff33d4cfdd079989a4a2e91642b62b5f58a4d"
+        },
+        {
+          "path": "tasks/fix-erlang-ssh-cve/environment/skills/senior-security/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2365f333c06ded06bc71320222f4c119375292a9"
+        },
+        {
+          "path": "tasks/fix-erlang-ssh-cve/environment/skills/ssh-penetration-testing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "11cb3c41bd7b27aaa7c79869239acb20c36a73f5"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/fix-erlang-ssh-cve/oracle/fix.patch",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3df9a1ee82696e0da4ed61384ab6c2a462bd962a"
+        },
+        {
+          "path": "tasks/fix-erlang-ssh-cve/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "dc00a3d746e97b7bba803118cb0fe39235b1a2a3"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/fix-erlang-ssh-cve/verifier/build.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "56e48292eba7d8928f15761eb5315459c96adbec"
+        },
+        {
+          "path": "tasks/fix-erlang-ssh-cve/verifier/exploit.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "eacb0bb921f0f6ae9548ef21c4ae2b9ffe31bbd7"
+        },
+        {
+          "path": "tasks/fix-erlang-ssh-cve/verifier/start_ssh.escript",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "cd213b74ec5c103aed80137a806cdb926d0bf513"
+        },
+        {
+          "path": "tasks/fix-erlang-ssh-cve/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3e9f2768f4a5f9c2138b58ae8a80e0c71e437644"
+        },
+        {
+          "path": "tasks/fix-erlang-ssh-cve/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9607c5d1d5eff45fbf705bf98b6056cf8b634abd"
+        }
+      ],
+      "file_count": 22,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "fix-visual-stability",
+      "inventory_prefix": "tasks/fix-visual-stability/",
+      "package_sha256": "76bcdc3d376a4fbe8c8291ed190bce4e11a06f78e09f3531b8f7eee1f3067b2b",
+      "task_ref": {
+        "path": "tasks/fix-visual-stability/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "624a9ff5d642c5fe2a17e25809720e2a14b4db51"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/fix-visual-stability/environment/skills/browser-testing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b9a8082d75fc4a2e7d638421ed48cbcb5e58ded1"
+        },
+        {
+          "path": "tasks/fix-visual-stability/environment/skills/react-best-practices/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "317508f20c2791099deaf085e1874d9c66536a31"
+        },
+        {
+          "path": "tasks/fix-visual-stability/environment/skills/web-interface-guidelines/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "63284ed522a1aea3571fbd67ec0bd981e622d58f"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/fix-visual-stability/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a4f39387ddcae9523dc3f7e05e16e06e5e1ae1bc"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/fix-visual-stability/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "684708598559d1c76bc506177987c9e9617121bd"
+        },
+        {
+          "path": "tasks/fix-visual-stability/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2062b24bc651c6ad35eb525482716a747dc3956e"
+        }
+      ],
+      "file_count": 84,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "flink-query",
+      "inventory_prefix": "tasks/flink-query/",
+      "package_sha256": "9cd4a888e133acbc5d5854737f11269c7a3bd7f07b44cdf7ca3dd73116786d7b",
+      "task_ref": {
+        "path": "tasks/flink-query/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "d52e891439602519ea3580b15f161b3cdaddd0ee"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/flink-query/environment/skills/pdf/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f6a22ddf88fdc7e7b7603f4c9064cc51bd930ad9"
+        },
+        {
+          "path": "tasks/flink-query/environment/skills/senior-data-engineer/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f99223a7727bb3b58bbbf72ba1a25991fef6892e"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/flink-query/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2dd2a3d96cd7169c712d9ef98a3745267f8a0e34"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/flink-query/verifier/out_lsj_001a.txt",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "02f9cab7bba77f8f2efd0aaf95928392f84d67c9"
+        },
+        {
+          "path": "tasks/flink-query/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "215b16382e05b18bb83897cb0fdf8ccc7ced5410"
+        },
+        {
+          "path": "tasks/flink-query/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1e9ee75383fd90c0af3c360b98115f8fa7144cff"
+        }
+      ],
+      "file_count": 40,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "flood-risk-analysis",
+      "inventory_prefix": "tasks/flood-risk-analysis/",
+      "package_sha256": "2275448daa6bccb541e3debe06b97358939e1a828c7654892d0ff498e38a27dc",
+      "task_ref": {
+        "path": "tasks/flood-risk-analysis/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "e6e2eabf51252089e9959207e659e56bce9d5cb4"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/flood-risk-analysis/environment/skills/flood-detection/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "661eb8c33aeff01647364ba78007a3271a69677a"
+        },
+        {
+          "path": "tasks/flood-risk-analysis/environment/skills/nws-flood-thresholds/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2f6acdee3b7170af592da400f78ea10d8d959f5b"
+        },
+        {
+          "path": "tasks/flood-risk-analysis/environment/skills/usgs-data-download/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c67beebe31dc05d393b9b00058935c2b2df9ae31"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/flood-risk-analysis/oracle/flood_thresholds.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2da5c92f96397ecc5f015c1d8295385ae6ce989f"
+        },
+        {
+          "path": "tasks/flood-risk-analysis/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "09fcbcf6ad7134d122b1b59a97675b1309012047"
+        },
+        {
+          "path": "tasks/flood-risk-analysis/oracle/usgs_gage_daily_max.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f953fef41eb2055cf77a831b35506b8920bc1ce1"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/flood-risk-analysis/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "407b450fd931cb754a49d1409b33915735837e3e"
+        },
+        {
+          "path": "tasks/flood-risk-analysis/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "adb53ce5a4b0840450af19b9e3d1e1fd87b8cede"
+        }
+      ],
+      "file_count": 11,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "glm-lake-mendota",
+      "inventory_prefix": "tasks/glm-lake-mendota/",
+      "package_sha256": "573942ed6220f8f67301784cf30cdf2898c8601580c5dc75eea7d89ac7cc65f0",
+      "task_ref": {
+        "path": "tasks/glm-lake-mendota/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "221ab223666860f64a8879ff71d4584976e08f66"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/glm-lake-mendota/environment/skills/glm-basics/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "95d2ab875f15d0bdc7daa23766e6a8915e4e4686"
+        },
+        {
+          "path": "tasks/glm-lake-mendota/environment/skills/glm-calibration/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "983e44df95df9ed267b6fcd6ceef5fd652d0b58f"
+        },
+        {
+          "path": "tasks/glm-lake-mendota/environment/skills/glm-output/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b5ddcbadb03fcfab75567536301d382eb3b23f92"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/glm-lake-mendota/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "08da80f18a5c79640912bf2c8f93708285684441"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/glm-lake-mendota/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "fd6a24daf8be1ea07faba3e1ed9e5aed181102c7"
+        },
+        {
+          "path": "tasks/glm-lake-mendota/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "59e85c96534905a03eb593c97bf9e9312674b147"
+        }
+      ],
+      "file_count": 15,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "gravitational-wave-detection",
+      "inventory_prefix": "tasks/gravitational-wave-detection/",
+      "package_sha256": "b4ea0d1034520a0d81e3e6d33bf89d2bd1a2348393b2b1c41ab1c44990709131",
+      "task_ref": {
+        "path": "tasks/gravitational-wave-detection/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "6d7f0af356dc1e76ea284a73160ece210f0b3231"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/gravitational-wave-detection/environment/skills/conditioning/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "15d8c580347f63b56ed9314b908aa37c523ab359"
+        },
+        {
+          "path": "tasks/gravitational-wave-detection/environment/skills/matched-filtering/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0fa7080682a54a15c12c18b73b45074bec42ba24"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/gravitational-wave-detection/oracle/solve.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4e9cc9ff675c22d56aed8cc814fd7e3ce1e7cbf3"
+        },
+        {
+          "path": "tasks/gravitational-wave-detection/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d79ad4d2d0c22e6f7a1b78b82c73121dab1f90bb"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/gravitational-wave-detection/verifier/expected_results.csv",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7916f805f3681e0c0ab318ed0ecf552906905619"
+        },
+        {
+          "path": "tasks/gravitational-wave-detection/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d64541ad361c1ea5bd565564280e5f20540f78db"
+        },
+        {
+          "path": "tasks/gravitational-wave-detection/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c0f81f2d36498931a14d27c5c1f16efef3ff7fa4"
+        }
+      ],
+      "file_count": 10,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "grid-dispatch-operator",
+      "inventory_prefix": "tasks/grid-dispatch-operator/",
+      "package_sha256": "2f70f193e2a92aec76e9d7eff10d785a8f94cfeb353fe3cf3934abbc01a5ef34",
+      "task_ref": {
+        "path": "tasks/grid-dispatch-operator/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "4b344de2494d51cdf61b6302d4ab7c8a0c246b6e"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/grid-dispatch-operator/environment/skills/dc-power-flow/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ad8f19a4f8f8b4f177ea11dfb6491eeb2975c126"
+        },
+        {
+          "path": "tasks/grid-dispatch-operator/environment/skills/economic-dispatch/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7efb197614ecbbd9e50591e68c0f457db654be57"
+        },
+        {
+          "path": "tasks/grid-dispatch-operator/environment/skills/power-flow-data/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ca73bfeb1f1fc235f6ad0ea1e30877b6635b159f"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/grid-dispatch-operator/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "68faf2bf2089b10b37c4a35fe026c3dc58cef653"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/grid-dispatch-operator/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "20e383f7c501b6d59cde22772756cd6d908e0d61"
+        },
+        {
+          "path": "tasks/grid-dispatch-operator/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9aa88cc0d9ebc0006e281c96ce23883a095a6bab"
+        }
+      ],
+      "file_count": 11,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "hvac-control",
+      "inventory_prefix": "tasks/hvac-control/",
+      "package_sha256": "166d1bc49b7e085a43c6d606461dd8d30f4bc20b8c798652add258095cdc8466",
+      "task_ref": {
+        "path": "tasks/hvac-control/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "4ebf05774def596b243eae93f12cebd6dcf7bffc"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/hvac-control/environment/skills/excitation-signal-design/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "edbaf40d7e2a1f297627d4c9f02f0b29717e6fad"
+        },
+        {
+          "path": "tasks/hvac-control/environment/skills/first-order-model-fitting/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "5e9d7926c3b2a10538731ea9dd71b280961eb696"
+        },
+        {
+          "path": "tasks/hvac-control/environment/skills/imc-tuning-rules/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "682fb3d43ce1f3b73ce6864bd28f0432335da72f"
+        },
+        {
+          "path": "tasks/hvac-control/environment/skills/safety-interlocks/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "bf217412316fcd32a40aec202299e3cfc9faa2ac"
+        },
+        {
+          "path": "tasks/hvac-control/environment/skills/scipy-curve-fit/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e46a3667c924ee5f6e6a17fee45d72bc64c9cd1e"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/hvac-control/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "bf9cbe8fdada7e94d15ba71aec54a0a974fd38d3"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/hvac-control/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ba2e00ca7b8f70d0beaddf7b836c0def25352f47"
+        },
+        {
+          "path": "tasks/hvac-control/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "150be7a0158a14e10d1459b6e7ffce7a099c8717"
+        },
+        {
+          "path": "tasks/hvac-control/verifier/verification_params.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9f100931336cea823938f6edec16968d2955aa82"
+        }
+      ],
+      "file_count": 14,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "invoice-fraud-detection",
+      "inventory_prefix": "tasks/invoice-fraud-detection/",
+      "package_sha256": "3d363fdff151102e7b39c951c488fe06de5c873ab5899a80eb306a8698631de0",
+      "task_ref": {
+        "path": "tasks/invoice-fraud-detection/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "aa088d810455cb749c958d04d9bded9ed7d4d6b3"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/invoice-fraud-detection/environment/skills/fuzzy-match/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "378e137067a54aac77f053b43f8c74c3a367a804"
+        },
+        {
+          "path": "tasks/invoice-fraud-detection/environment/skills/pdf/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f6a22ddf88fdc7e7b7603f4c9064cc51bd930ad9"
+        },
+        {
+          "path": "tasks/invoice-fraud-detection/environment/skills/xlsx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "75ccc9efe04c50ea0920db8d215839c4aa213a85"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/invoice-fraud-detection/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a53d8b9aa3830d1fd77750db3522ace0a3814579"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/invoice-fraud-detection/verifier/ground_truth.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c1784cc7626a4e26f8561b955ec717979597500f"
+        },
+        {
+          "path": "tasks/invoice-fraud-detection/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d21d35974f1748e2f04b3156f9352950a3cf94fb"
+        },
+        {
+          "path": "tasks/invoice-fraud-detection/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "bedc44a564b5a94932a7ddf93c631c428caeca4a"
+        }
+      ],
+      "file_count": 25,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "jax-computing-basics",
+      "inventory_prefix": "tasks/jax-computing-basics/",
+      "package_sha256": "f102d81cc3f317d56d72fdb2afb1f4d79b01b9a7d2554c3a9a3851738be9063b",
+      "task_ref": {
+        "path": "tasks/jax-computing-basics/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "ad78255030755ecd2e687b6dbc44f46b9aa2eaf4"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/jax-computing-basics/environment/skills/jax-skills/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b3eedd678f5041b6cd5b4b73ba365cbd268cebed"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/jax-computing-basics/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3f05650b008941d24f5ddd2cb2d8b839bc1eaad9"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/jax-computing-basics/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0c6367ee9f061b647355dd3e09d1272ef255c7fa"
+        },
+        {
+          "path": "tasks/jax-computing-basics/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "cf87598567e9546a4152e545ff333ad055735037"
+        }
+      ],
+      "file_count": 25,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "jpg-ocr-stat",
+      "inventory_prefix": "tasks/jpg-ocr-stat/",
+      "package_sha256": "f1ca8d4bc753ec57f733c38a400be490f277031da9924fdb1b4b71e17c698162",
+      "task_ref": {
+        "path": "tasks/jpg-ocr-stat/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "fdd75ca425d59646908c607444fac9b7cc32eeb7"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/jpg-ocr-stat/environment/skills/image-ocr/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "355caf34aa7e9301ef46e3ca1eb7dd0b7ed17d92"
+        },
+        {
+          "path": "tasks/jpg-ocr-stat/environment/skills/openai-vision/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1fbe26c011eaf2ddeab1fd47b2eafec5d66a818b"
+        },
+        {
+          "path": "tasks/jpg-ocr-stat/environment/skills/pdf/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f6a22ddf88fdc7e7b7603f4c9064cc51bd930ad9"
+        },
+        {
+          "path": "tasks/jpg-ocr-stat/environment/skills/video-frame-extraction/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d8eb36336e4d59973199a42edd2eea8b438b4ad2"
+        },
+        {
+          "path": "tasks/jpg-ocr-stat/environment/skills/xlsx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "75ccc9efe04c50ea0920db8d215839c4aa213a85"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/jpg-ocr-stat/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "46c09983ef56d4c56199cec2bbd94f2e2d8014f4"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/jpg-ocr-stat/verifier/stat_oracle.xlsx",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6dd62a9293f584e80540a2014124ea57e3089947"
+        },
+        {
+          "path": "tasks/jpg-ocr-stat/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7c81b707a758e31cf98c18d0da570c9990b1835d"
+        },
+        {
+          "path": "tasks/jpg-ocr-stat/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "cb3dbc1621e915a1eef7e9244dd2ec5ae39a55a9"
+        }
+      ],
+      "file_count": 46,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "lab-unit-harmonization",
+      "inventory_prefix": "tasks/lab-unit-harmonization/",
+      "package_sha256": "b1c08896d2ad6b3a23286455a59eda95f2d7b09811233c7a4ee93bbcecb3679d",
+      "task_ref": {
+        "path": "tasks/lab-unit-harmonization/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "eaf73cf9f38826af5eff13dc60b17567aeb17100"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/lab-unit-harmonization/environment/skills/lab-unit-harmonization/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "755f98556133b6c39bb1abc34e7c4f4556466c4d"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/lab-unit-harmonization/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4eed27ee9d4f3315c8760a136d5d4adf332f03e8"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/lab-unit-harmonization/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "acefcd7dab8f119b5adfe38fc57939a80d1df3a7"
+        },
+        {
+          "path": "tasks/lab-unit-harmonization/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "059b4da4574dcf968f6f1bda441ee7e9987623db"
+        }
+      ],
+      "file_count": 9,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "lake-warming-attribution",
+      "inventory_prefix": "tasks/lake-warming-attribution/",
+      "package_sha256": "97377ca443dac833b46042cf1222f0bbc50539b9ce0a85fb8ceed8b7fb5d5294",
+      "task_ref": {
+        "path": "tasks/lake-warming-attribution/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "3353de3817591bc820234a9cbe233f52539678a3"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/lake-warming-attribution/environment/skills/contribution-analysis/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "570cda5dacab6102311b20fbb0336d26a6e9267c"
+        },
+        {
+          "path": "tasks/lake-warming-attribution/environment/skills/meteorology-driver-classification/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "84910eb67e04775ac9bd8543e986f68621b7280e"
+        },
+        {
+          "path": "tasks/lake-warming-attribution/environment/skills/pca-decomposition/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "be4bed6175feb3da0e698efaeb0a3810839c574b"
+        },
+        {
+          "path": "tasks/lake-warming-attribution/environment/skills/trend-analysis/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "5920984caeab93c36bfa9dad723ea231af3849e7"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/lake-warming-attribution/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1961d6e03a30ede7fe400048f6c79f33f82c5a3a"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/lake-warming-attribution/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "407b450fd931cb754a49d1409b33915735837e3e"
+        },
+        {
+          "path": "tasks/lake-warming-attribution/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4ddeb17ed0dca952e0c0d14f69c57a7fdeac19b2"
+        }
+      ],
+      "file_count": 13,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "latex-formula-extraction",
+      "inventory_prefix": "tasks/latex-formula-extraction/",
+      "package_sha256": "3cd292909087cf3f619e7410b713d87503236193b8808d5356d2329ee9023556",
+      "task_ref": {
+        "path": "tasks/latex-formula-extraction/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "fbce8e6d45806f51d4c3442dd8b547b0bcbb4bec"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/latex-formula-extraction/environment/skills/marker/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "785173cea1036a657d3ace85802eb059ce1c7453"
+        },
+        {
+          "path": "tasks/latex-formula-extraction/environment/skills/pdf/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f6a22ddf88fdc7e7b7603f4c9064cc51bd930ad9"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/latex-formula-extraction/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "57647074470ecc2b3a79e33b411a4c2ed48e6534"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/latex-formula-extraction/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "058ce30dcc429dc2f8350c38c195a87172718685"
+        },
+        {
+          "path": "tasks/latex-formula-extraction/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "eb05bfc77f835ff129b8d15e94ff9c8631ea196b"
+        }
+      ],
+      "file_count": 20,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "lean4-proof",
+      "inventory_prefix": "tasks/lean4-proof/",
+      "package_sha256": "eeab35c151cbe7d35fbe4ace00aa9ea4996f02f0ab32031ca3fd1c53e4dac25a",
+      "task_ref": {
+        "path": "tasks/lean4-proof/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "7dc8b40511c45153a82fce60b336693cec08b998"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/lean4-proof/environment/skills/lean4-memories/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4e3f92497aa75d7da489fe9ed4f23f6139ca5a63"
+        },
+        {
+          "path": "tasks/lean4-proof/environment/skills/lean4-theorem-proving/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f0498c0b77bf4b307a4386dfd03d37d81c5247bb"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/lean4-proof/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9714c7bdd8f4935bc31575862cded82b9758b788"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/lean4-proof/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "215b16382e05b18bb83897cb0fdf8ccc7ced5410"
+        },
+        {
+          "path": "tasks/lean4-proof/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3f9ec2da64165074d1b6504f6220983d9fd8dbbb"
+        }
+      ],
+      "file_count": 64,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "llm-prefix-cache-replay",
+      "inventory_prefix": "tasks/llm-prefix-cache-replay/",
+      "package_sha256": "4774a34977a289d341814f79066063a81579df901365ff5f1cc1d7f650afd4e1",
+      "task_ref": {
+        "path": "tasks/llm-prefix-cache-replay/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "fc842d8bc3c2ec75cc9963e6107ac934e44da881"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/llm-prefix-cache-replay/environment/skills/cache-policy-comparison/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1c741eed56c84017acb1aa187451416acf0bac1e"
+        },
+        {
+          "path": "tasks/llm-prefix-cache-replay/environment/skills/prefix-cache-replay/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0bf5f3d114e7a268f663157fa777385b7907286a"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/llm-prefix-cache-replay/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e0d16c469aad0a02a232e720aff3d97af75e9336"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/llm-prefix-cache-replay/verifier/oracle_helpers.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "8f9a64575a3d346c3b1938ff48335dd68ab9ef77"
+        },
+        {
+          "path": "tasks/llm-prefix-cache-replay/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a22cdb4da8f617fcf0f5f63d30542ef9178eda82"
+        },
+        {
+          "path": "tasks/llm-prefix-cache-replay/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "064fea061e41628ae0a4307c41fc17ff1f48f7b0"
+        }
+      ],
+      "file_count": 10,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "manufacturing-codebook-normalization",
+      "inventory_prefix": "tasks/manufacturing-codebook-normalization/",
+      "package_sha256": "1b1e68c2fe05e29ff0c13b56f92567931372905ea611fd74ad2e2f8aed742678",
+      "task_ref": {
+        "path": "tasks/manufacturing-codebook-normalization/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "f2b6493ad9f7a11da5d136692d0bc6cc23cdc94e"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/manufacturing-codebook-normalization/environment/skills/manufacturing-failure-reason-codebook-normalization/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d040bd6e46739b6fc208c0f774d3c6201b20d891"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/manufacturing-codebook-normalization/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "77f16ab471cd925ef9d64b94efad975146765bfc"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/manufacturing-codebook-normalization/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a0cc5084eb3cd2af562fa552b47bc7e0a9092b7a"
+        },
+        {
+          "path": "tasks/manufacturing-codebook-normalization/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3645883ad95f8f684867ebf1da48aa0847008559"
+        }
+      ],
+      "file_count": 11,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "manufacturing-equipment-maintenance",
+      "inventory_prefix": "tasks/manufacturing-equipment-maintenance/",
+      "package_sha256": "313bbc75119c7d9fc36508f2a244de9b1e6c4aaba98cd1528446b08b5545dc1c",
+      "task_ref": {
+        "path": "tasks/manufacturing-equipment-maintenance/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "1a75e6e1afa7b5ccf4d2395fcd1cc4b20fdb6b10"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/manufacturing-equipment-maintenance/environment/skills/reflow-machine-maintenance-guidance/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9563477f2d46d75ab85cb0f852f0639ea3a044de"
+        },
+        {
+          "path": "tasks/manufacturing-equipment-maintenance/environment/skills/reflow-profile-compliance-toolkit/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ca1a164b2831728972e8f8db81f66bcc3f52ec6d"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/manufacturing-equipment-maintenance/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4deed9888d863f3b51c3c542ce49fce148028926"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/manufacturing-equipment-maintenance/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4f6a0556833775bc8e96cbdb5f9224f9986574fd"
+        },
+        {
+          "path": "tasks/manufacturing-equipment-maintenance/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ac03710559281997e57863fd78f6077b680c6f93"
+        }
+      ],
+      "file_count": 12,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "manufacturing-fjsp-optimization",
+      "inventory_prefix": "tasks/manufacturing-fjsp-optimization/",
+      "package_sha256": "2c2de0b2979a8ec8d8024bf890958ffc80792d3dfc4f55ab3b0f1b7cad17be9c",
+      "task_ref": {
+        "path": "tasks/manufacturing-fjsp-optimization/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "f9c3fd62760327af8e64e773c810581fc4bd851e"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/manufacturing-fjsp-optimization/environment/skills/fjsp-baseline-repair-with-downtime-and-policy/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6ea794c61e6e273b108e2a429709668962592711"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/manufacturing-fjsp-optimization/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "66806ca7783a3d229a2124dd183c246507b295f8"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/manufacturing-fjsp-optimization/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a0cc5084eb3cd2af562fa552b47bc7e0a9092b7a"
+        },
+        {
+          "path": "tasks/manufacturing-fjsp-optimization/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f32b304ecd4e7d74065fb2088ed6ee4e8b7661d7"
+        }
+      ],
+      "file_count": 12,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "mario-coin-counting",
+      "inventory_prefix": "tasks/mario-coin-counting/",
+      "package_sha256": "6866dc41a14bb582a39c1472212a792552f4476481947eb19ceb071a59ca9b09",
+      "task_ref": {
+        "path": "tasks/mario-coin-counting/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "e3050afee43720f68b5337c4f9d5d728b48c2bc8"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/mario-coin-counting/environment/skills/ffmpeg-keyframe-extraction/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "db5bd3ba87c7f539594e0a4bfb6dc5815b60e033"
+        },
+        {
+          "path": "tasks/mario-coin-counting/environment/skills/image-editing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b41318881a878d7cbeda2ee4748d846cc5d08424"
+        },
+        {
+          "path": "tasks/mario-coin-counting/environment/skills/object-counter/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6ee2f138eafa027164041be4e9eab07dae10e7c6"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/mario-coin-counting/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "fad93b8445ff7fbb5a2b4153d0c86f2d39e7dc20"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/mario-coin-counting/verifier/expected_output.csv",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "547d0a98db8a3ddebb0824abc9ed94c969f37483"
+        },
+        {
+          "path": "tasks/mario-coin-counting/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ac96c6fd62af21eba9420d6442a66f577f296e6e"
+        },
+        {
+          "path": "tasks/mario-coin-counting/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "af72526347a9e88e67ea53a4aec146fd72355342"
+        }
+      ],
+      "file_count": 14,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "mars-clouds-clustering",
+      "inventory_prefix": "tasks/mars-clouds-clustering/",
+      "package_sha256": "71c1d5b4d797bf5a17430c6bba9c63e3ab5dabf516a17e3789866b0a464c86cb",
+      "task_ref": {
+        "path": "tasks/mars-clouds-clustering/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "48b92e65434c95017a9fc5955abc927b92d3de0c"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/mars-clouds-clustering/environment/skills/custom-distance-metrics/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "97a52ffad7f842afd5920982f65543291e8121c2"
+        },
+        {
+          "path": "tasks/mars-clouds-clustering/environment/skills/parallel-processing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "48a409ee38f7886b9b8a9b4b0e25757d837fce7d"
+        },
+        {
+          "path": "tasks/mars-clouds-clustering/environment/skills/pareto-optimization/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "88ede9b98fe451c6e5b6a6848aebb88dd6969058"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/mars-clouds-clustering/oracle/solve.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "692234bf0e7cd8aac11ca9d5acdff0b365600a74"
+        },
+        {
+          "path": "tasks/mars-clouds-clustering/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7ca059a48b68bf5589b678c53b18dff65b80df25"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/mars-clouds-clustering/verifier/expected_frontier.csv",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "81b48683c46609d5a6d594af4d54c85356b657b3"
+        },
+        {
+          "path": "tasks/mars-clouds-clustering/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "baedc066a11e325b8b098e355ce15dffd5ab5656"
+        },
+        {
+          "path": "tasks/mars-clouds-clustering/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e3ffaa4c5aed158b405c281d6812f2affd3e5399"
+        }
+      ],
+      "file_count": 12,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "multilingual-video-dubbing",
+      "inventory_prefix": "tasks/multilingual-video-dubbing/",
+      "package_sha256": "25f384c51a146dd8d3148f98c200136b93ca1a819f9bb25d98274d1c90b077a8",
+      "task_ref": {
+        "path": "tasks/multilingual-video-dubbing/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "6c54d921d0687bed2bda4458152ab4903e9a281c"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/multilingual-video-dubbing/environment/skills/ffmpeg-audio-processing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4d1664eaa12bc6197a47fec622a3a0818073c6df"
+        },
+        {
+          "path": "tasks/multilingual-video-dubbing/environment/skills/ffmpeg-format-conversion/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b97bd1a0a98324d1d21c1297b2016b505db6e858"
+        },
+        {
+          "path": "tasks/multilingual-video-dubbing/environment/skills/ffmpeg-media-info/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b488aed11117e3027fb06bac81dfdd57ca3c7890"
+        },
+        {
+          "path": "tasks/multilingual-video-dubbing/environment/skills/ffmpeg-video-editing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c269cb2b3857116bb1443d2faa5f949d99f55529"
+        },
+        {
+          "path": "tasks/multilingual-video-dubbing/environment/skills/ffmpeg-video-filters/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "99a8e2abf042121d3a64e66917903750eb68c63a"
+        },
+        {
+          "path": "tasks/multilingual-video-dubbing/environment/skills/text-to-speech/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3fc8a75d542531fc38c9e9c5158af945f6f2dc5e"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/multilingual-video-dubbing/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "98d81dd506056f1ad93e1fea14e7424c0dafa4ab"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/multilingual-video-dubbing/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2ae0e1fa6d74aad085cdf08c1c0472e385df5100"
+        },
+        {
+          "path": "tasks/multilingual-video-dubbing/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "dad9c2b833ece0d5e260048e049cedaa05230952"
+        }
+      ],
+      "file_count": 16,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "offer-letter-generator",
+      "inventory_prefix": "tasks/offer-letter-generator/",
+      "package_sha256": "2a29b333167508ef7a2d9ab4a5db07497dfc32edf3f602196e95e89620fcb2a0",
+      "task_ref": {
+        "path": "tasks/offer-letter-generator/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "ade85c99eaefccb0404ce15be14bcfbed315b0f4"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/offer-letter-generator/environment/skills/docx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3a7337c7264934659d20e01de25f8654cb66f333"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/offer-letter-generator/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c32c9e2fd4a854c842cc849c5a30a6f4500d3447"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/offer-letter-generator/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "25aa23efcee0ea48c08b11267f599381c75ec332"
+        },
+        {
+          "path": "tasks/offer-letter-generator/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ce6dcca8dccb67817ebeac3a9fc1d256a989da0b"
+        }
+      ],
+      "file_count": 8,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "organize-messy-files",
+      "inventory_prefix": "tasks/organize-messy-files/",
+      "package_sha256": "716699d705c8ce242cabfc2980b288f56e94edc36f51b8369e0dbf05c12a91ac",
+      "task_ref": {
+        "path": "tasks/organize-messy-files/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "5ed15f487a715281e45da152022852a0ec2303e9"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/organize-messy-files/environment/skills/docx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3d83244508c4b0f5e102522112a2bb869c47c320"
+        },
+        {
+          "path": "tasks/organize-messy-files/environment/skills/file-organizer/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "bda393c5ca8fb56dc92ddec025233de2496f5e0c"
+        },
+        {
+          "path": "tasks/organize-messy-files/environment/skills/pdf/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f6a22ddf88fdc7e7b7603f4c9064cc51bd930ad9"
+        },
+        {
+          "path": "tasks/organize-messy-files/environment/skills/planning-with-files/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "efe892ef07de8152e3af44b0c07185ff947da3df"
+        },
+        {
+          "path": "tasks/organize-messy-files/environment/skills/pptx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1ceaf64a12604e3e594acd84bbf8c2532d29fc1e"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/organize-messy-files/oracle/solution.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "92b1d45e68100031c132b466d3bb2992cea22547"
+        },
+        {
+          "path": "tasks/organize-messy-files/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f3df9cb7d7083f1f011fa5ce22d9a381954343f4"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/organize-messy-files/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "315550b6fa7b316af32118dddf487bf4a35f7797"
+        },
+        {
+          "path": "tasks/organize-messy-files/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "8251eca24dde06ec68d3694f32e25b2357174d8e"
+        }
+      ],
+      "file_count": 146,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "paper-anonymizer",
+      "inventory_prefix": "tasks/paper-anonymizer/",
+      "package_sha256": "ce520c59feea76bbe084ee08573b4c9c86c40519f015ab5c18fb2a7cfdf31986",
+      "task_ref": {
+        "path": "tasks/paper-anonymizer/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "c09c652fc44972c2c76da0e12fdf4c67acd6114f"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/paper-anonymizer/environment/skills/academic-pdf-redaction/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "25b1d4455deaf065bf03a5d70583e39d78b3f3f8"
+        },
+        {
+          "path": "tasks/paper-anonymizer/environment/skills/pdf/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f6a22ddf88fdc7e7b7603f4c9064cc51bd930ad9"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/paper-anonymizer/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b4c6c670a0cead41c1b45c6614f3a8fb24a5f98d"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/paper-anonymizer/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "034e485bcfab403469c1d47791217306519cbba0"
+        },
+        {
+          "path": "tasks/paper-anonymizer/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "655630a1dfc83bd75235a08d08015b554a19ca42"
+        }
+      ],
+      "file_count": 13,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "parallel-tfidf-search",
+      "inventory_prefix": "tasks/parallel-tfidf-search/",
+      "package_sha256": "9032fa6325ee8dac51664c2cddb799f0b17399ecdb9c4268047873ff5b30c02f",
+      "task_ref": {
+        "path": "tasks/parallel-tfidf-search/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "2ce4f95a5f0f6e81f5207252dddfd7e6930a8621"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/parallel-tfidf-search/environment/skills/memory-optimization/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "512eae7ad69ecae7dea2e3d7d58417018814adb0"
+        },
+        {
+          "path": "tasks/parallel-tfidf-search/environment/skills/python-parallelization/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "23f8a507e7ebcaf3b33dc97bca92d1fb1e5d760e"
+        },
+        {
+          "path": "tasks/parallel-tfidf-search/environment/skills/workload-balancing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "8fe24f540bb6c84f2b76168b719a5ba5ac75fe50"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/parallel-tfidf-search/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f4483a2ccd6fd2c15f191b207a43c1d72d6b5ee2"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/parallel-tfidf-search/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6972b79341d5695f3822cc322d025a7cc7639dbc"
+        },
+        {
+          "path": "tasks/parallel-tfidf-search/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "cb0d92f6a7dd2fe403d9863ec62b3a866f8fef95"
+        }
+      ],
+      "file_count": 13,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "paratransit-routing",
+      "inventory_prefix": "tasks/paratransit-routing/",
+      "package_sha256": "2be8c339ba95e2f39f4b191b5aea7d34d22a547087cb2a2020dad9dec266dc4d",
+      "task_ref": {
+        "path": "tasks/paratransit-routing/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "bf0d90c6dd0750b7a8905c59ea45859e5b641ee6"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/paratransit-routing/environment/skills/ortools-pickup-delivery-routing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0df766814bd941bf8712972e07587f57f96b056d"
+        },
+        {
+          "path": "tasks/paratransit-routing/environment/skills/ortools-routing-modeling/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "44a33adb1ea3ce43fd8e54ba25551692e2ec2249"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/paratransit-routing/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "41726a135245c169951168ae3eeef72b192928c5"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/paratransit-routing/verifier/darp_validation.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "fa2919c58f05ca00f5db1a931edab99d5733a61e"
+        },
+        {
+          "path": "tasks/paratransit-routing/verifier/reference_oracle.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3b20aa2bf80ad59c0aaa5e26219507b760509e51"
+        },
+        {
+          "path": "tasks/paratransit-routing/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e3fbba97b1e832f5ebdd13392e2ab1234969876e"
+        },
+        {
+          "path": "tasks/paratransit-routing/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "87c968b102d86f186cbc52ac8403d0ec94d70d6d"
+        }
+      ],
+      "file_count": 13,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "pddl-airport-planning",
+      "inventory_prefix": "tasks/pddl-airport-planning/",
+      "package_sha256": "5c9ed4ed305dea1474ed45e9917a1df2286de9a6e09103bd49efc597256380b2",
+      "task_ref": {
+        "path": "tasks/pddl-airport-planning/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "5ae5821a3d17d93000adebfaaefc411c76894bd3"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/pddl-airport-planning/environment/skills/pddl-skills/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0891313f04f87858d11f270680611feb477fd16f"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/pddl-airport-planning/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "511ea5ea2af12c7676eebee886b55e0da6662b2c"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/pddl-airport-planning/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "df1dffa6a5b5f93c2a401cfa27fdc38d7e1dd2f5"
+        },
+        {
+          "path": "tasks/pddl-airport-planning/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "214f29ce548c1a9d57d945dfc5df45452f798791"
+        }
+      ],
+      "file_count": 73,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "pddl-tpp-planning",
+      "inventory_prefix": "tasks/pddl-tpp-planning/",
+      "package_sha256": "3c34ac30fdb33587cc5cc2fd167d730698c3dccd91d9231800933bc6fc975d2b",
+      "task_ref": {
+        "path": "tasks/pddl-tpp-planning/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "53fe057a0078d3cd540100f384fc1aad9a2a7dff"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/pddl-tpp-planning/environment/skills/pddl-skills/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0891313f04f87858d11f270680611feb477fd16f"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/pddl-tpp-planning/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "658205d2f23a0c00f858be1c102a28e22760403d"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/pddl-tpp-planning/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "eafbd88df9cb5c8c68fd8265c060dd7e5b273283"
+        },
+        {
+          "path": "tasks/pddl-tpp-planning/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d72bcadce8a636add23d1175933491d2594fd0c3"
+        }
+      ],
+      "file_count": 44,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "pdf-excel-diff",
+      "inventory_prefix": "tasks/pdf-excel-diff/",
+      "package_sha256": "878e51e34a9682b50bff4c54ca4650be6db7aab6290dc7fad3f2ac42bd473f39",
+      "task_ref": {
+        "path": "tasks/pdf-excel-diff/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "eab9c46b2d6a0935515bdd611f46bd044dc97cd5"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/pdf-excel-diff/environment/skills/pdf/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f6a22ddf88fdc7e7b7603f4c9064cc51bd930ad9"
+        },
+        {
+          "path": "tasks/pdf-excel-diff/environment/skills/xlsx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "75ccc9efe04c50ea0920db8d215839c4aa213a85"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/pdf-excel-diff/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "33a3c5b8226fc44346eca00522b14aedf6799956"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/pdf-excel-diff/verifier/expected_output.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "12547330eb5902d2a4311d076f91ecb43d3b46cc"
+        },
+        {
+          "path": "tasks/pdf-excel-diff/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "27a3c6daa1419c032414a0060edf31fc15e5ca5e"
+        },
+        {
+          "path": "tasks/pdf-excel-diff/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "cfabee87d396715080f4bafa3795608b210b63df"
+        }
+      ],
+      "file_count": 21,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "powerlifting-coef-calc",
+      "inventory_prefix": "tasks/powerlifting-coef-calc/",
+      "package_sha256": "8d54ee2cb18552f816f3e03cdaa54a96ef561bb5618d7ef6f004512026d2bf2c",
+      "task_ref": {
+        "path": "tasks/powerlifting-coef-calc/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "2eb6ebff986b0590aa47d8fcd0ea7d7bf3e9373e"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/powerlifting-coef-calc/environment/skills/powerlifting/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c8bbd3b2a1ea4cba2f9ff224297c6d198a9a0d8c"
+        },
+        {
+          "path": "tasks/powerlifting-coef-calc/environment/skills/senior-data-scientist/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c61c186893eb0afda5d391a9d1ad70f6edad11b9"
+        },
+        {
+          "path": "tasks/powerlifting-coef-calc/environment/skills/xlsx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "75ccc9efe04c50ea0920db8d215839c4aa213a85"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/powerlifting-coef-calc/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9055adb544bf6e0dcb7037a48bc5d7317e3af93d"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/powerlifting-coef-calc/verifier/cleaned_with_coefficients.xlsx",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1d0da196e8451e7e04f19e3718eeebac829ebded"
+        },
+        {
+          "path": "tasks/powerlifting-coef-calc/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "936d6089de1afc6944cda84e8192d3f4285cd88a"
+        },
+        {
+          "path": "tasks/powerlifting-coef-calc/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a5ecea60f3bd6d64e68c4ca65eecbf280c1c8b88"
+        }
+      ],
+      "file_count": 19,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "pptx-reference-formatting",
+      "inventory_prefix": "tasks/pptx-reference-formatting/",
+      "package_sha256": "0b3388937c5c3cdf062d680aa1f931c4a6e08ff456dc0207b47da7e18054eb02",
+      "task_ref": {
+        "path": "tasks/pptx-reference-formatting/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "e96c9f8f2a6794a4130000229409b763a16fdb26"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/pptx-reference-formatting/environment/skills/pptx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1ceaf64a12604e3e594acd84bbf8c2532d29fc1e"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/pptx-reference-formatting/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "297e54c06041f127b5c472682607fdb17d1a5a4c"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/pptx-reference-formatting/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b52caf714e29e0aa162c72ce8ab7e0fe887e3948"
+        },
+        {
+          "path": "tasks/pptx-reference-formatting/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "caecdeda11849ff891c769b5e7c8e6542014e4de"
+        }
+      ],
+      "file_count": 62,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "protein-expression-analysis",
+      "inventory_prefix": "tasks/protein-expression-analysis/",
+      "package_sha256": "d036f1f04c95b481d250f9643828c93bd2d488573af1952ae8e616e6305502a5",
+      "task_ref": {
+        "path": "tasks/protein-expression-analysis/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "7bd58e78b4d01f0cc9ea81391d6d330c76ae2a9c"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/protein-expression-analysis/environment/skills/xlsx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "75ccc9efe04c50ea0920db8d215839c4aa213a85"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/protein-expression-analysis/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "47c9c827b58762e555775ab03fd1adb744f6644a"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/protein-expression-analysis/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "893fa7a27addc4e0aa912071607e3176990453f4"
+        },
+        {
+          "path": "tasks/protein-expression-analysis/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "67281e8894037db1f9db54a9872ef35f02180570"
+        }
+      ],
+      "file_count": 9,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "python-scala-translation",
+      "inventory_prefix": "tasks/python-scala-translation/",
+      "package_sha256": "54bb367124a552497185c43cf75771027b30f3bd29fd8948d6528c96bc97f513",
+      "task_ref": {
+        "path": "tasks/python-scala-translation/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "0d34b00ef80b44f4b823435fcae026792fa1557f"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/python-scala-translation/environment/skills/python-scala-collections/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7fd296ececf8b7808c431ecfd1144fcf5f0c78f1"
+        },
+        {
+          "path": "tasks/python-scala-translation/environment/skills/python-scala-functional/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3a4226c137c8b64175ff9b52be66787b7ff1c866"
+        },
+        {
+          "path": "tasks/python-scala-translation/environment/skills/python-scala-idioms/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b8d5818fdaabca17651612a0ef0aff851d102cd2"
+        },
+        {
+          "path": "tasks/python-scala-translation/environment/skills/python-scala-libraries/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "5dfaabf2df1b4936064739fab1b1c217efc386c8"
+        },
+        {
+          "path": "tasks/python-scala-translation/environment/skills/python-scala-oop/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "dda9350a27793ca1486925effe9867efeda02e28"
+        },
+        {
+          "path": "tasks/python-scala-translation/environment/skills/python-scala-syntax-mapping/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "82bee37c65731a6ce7cdb0df3c3bbebc95f9f18d"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/python-scala-translation/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "fbf68ef1877eae783e502e57389c634e3e7416df"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/python-scala-translation/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6b7575305eda42bc5b93de38dcf05bbc1f1c3e1a"
+        },
+        {
+          "path": "tasks/python-scala-translation/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "492a971685d9e9efb2cd567bfaa09ec6c5fd03cf"
+        }
+      ],
+      "file_count": 23,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "quantum-numerical-simulation",
+      "inventory_prefix": "tasks/quantum-numerical-simulation/",
+      "package_sha256": "da9e9b147f6cc288912a1eb6a5fe8f64bac2ea6ab8ea26eb4fb8fd0957d8169d",
+      "task_ref": {
+        "path": "tasks/quantum-numerical-simulation/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "058eca665613c0f2162f5fa495773c470d9ebb9b"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/quantum-numerical-simulation/environment/skills/qutip/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3fdf70e092465e5bac67e18209e61941710934bb"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/quantum-numerical-simulation/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d701a316f9d0e897cb7869e3047b641e8c309914"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/quantum-numerical-simulation/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7f608562248f32082e985e696575b8d25a60c9f1"
+        },
+        {
+          "path": "tasks/quantum-numerical-simulation/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "5ea9f93899c7427d784015e8b7be73d8c7b2091a"
+        }
+      ],
+      "file_count": 12,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "r2r-mpc-control",
+      "inventory_prefix": "tasks/r2r-mpc-control/",
+      "package_sha256": "18b02cc9fd0c2a1e31908debb6b3b8df1c7ba6ab164ba3870112c31c722832fe",
+      "task_ref": {
+        "path": "tasks/r2r-mpc-control/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "2e72126adf6341909bb7bac5dbe1bf1b6a73ad56"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/r2r-mpc-control/environment/skills/finite-horizon-lqr/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3bd3964e18446b8c0e582cf48db0d61dfc552788"
+        },
+        {
+          "path": "tasks/r2r-mpc-control/environment/skills/integral-action-design/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "5592a91c035665c0df30d42f5b14c73ffe093eeb"
+        },
+        {
+          "path": "tasks/r2r-mpc-control/environment/skills/mpc-horizon-tuning/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "5af600afb49961ec93d10a2c53a801c4ae1881ab"
+        },
+        {
+          "path": "tasks/r2r-mpc-control/environment/skills/state-space-linearization/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "11b0480845f17ec4ffde705fae500a995b64f465"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/r2r-mpc-control/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6bb54b76c6f4bd214ca292eb5afb868c2e178ff4"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/r2r-mpc-control/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "692cf018fa66d8bc494be6bf4ad2f69195f4b8be"
+        },
+        {
+          "path": "tasks/r2r-mpc-control/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "371b8fc7d1daec7e806798326f7ae1cb7338b8e9"
+        }
+      ],
+      "file_count": 11,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "radar-vital-signs",
+      "inventory_prefix": "tasks/radar-vital-signs/",
+      "package_sha256": "27c3223bf1a8b83d1897a3b917711052ccb9fadf11401c06324268edf84ae3fd",
+      "task_ref": {
+        "path": "tasks/radar-vital-signs/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "e1216b622a2a81f62893fc6d39483db750e4297b"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/radar-vital-signs/environment/skills/radar-signal-processing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6960c2d53ba9435ae4ac17405574424c78149019"
+        },
+        {
+          "path": "tasks/radar-vital-signs/environment/skills/radar-vital-signs/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "def5f6dfe544d742f82a2c456a4bfd2e25c30098"
+        },
+        {
+          "path": "tasks/radar-vital-signs/environment/skills/vital-sign-extraction/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "cfeddedd2934b23625c11e799f0c0e549b619af8"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/radar-vital-signs/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "51a02550d4ca0752987a3e169bff796c22f2294a"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/radar-vital-signs/verifier/expected_values.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0395ddb6c09cef7551a59d92091100ef04270888"
+        },
+        {
+          "path": "tasks/radar-vital-signs/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9f152050c0e8b995daf0eecf6b70eef16a1857d4"
+        },
+        {
+          "path": "tasks/radar-vital-signs/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "571d80b9bd24246a6413121bf962a00bc0809872"
+        }
+      ],
+      "file_count": 52,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "react-performance-debugging",
+      "inventory_prefix": "tasks/react-performance-debugging/",
+      "package_sha256": "efa633adbb594f928bf7dd0f53dbf354d331741e1a260b2c4924ed2a79eb6548",
+      "task_ref": {
+        "path": "tasks/react-performance-debugging/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "9ebfca36e0fea564fdf3e1567000b1026c98b303"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/react-performance-debugging/environment/skills/browser-testing/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a0fdf73736acb70bad4e7bc817220894ced6763b"
+        },
+        {
+          "path": "tasks/react-performance-debugging/environment/skills/react-best-practices/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6cc8dcea7a82fcad98036942f261f84c9f7ca73d"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/react-performance-debugging/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "04dc2fdcc8dc65eb060d2454ec6348dbb4fd43ef"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/react-performance-debugging/verifier/conftest.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d1a9284ceb4c3c8f512c1e0c38511fa46e4c4e4a"
+        },
+        {
+          "path": "tasks/react-performance-debugging/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ef92881ac6821d5fe70996b3e7b8b46afc82ef1d"
+        },
+        {
+          "path": "tasks/react-performance-debugging/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0f7ef4774f7bb406c54f0c025a1a7958a48a0155"
+        }
+      ],
+      "file_count": 81,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "reserves-at-risk-calc",
+      "inventory_prefix": "tasks/reserves-at-risk-calc/",
+      "package_sha256": "c1ad9b0102955afd1a6d4420cb5bf23437f0a0a0d53dd9550a7776db433ae1be",
+      "task_ref": {
+        "path": "tasks/reserves-at-risk-calc/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "3ffe8fa73faf8e9297de6ff19e40be6d49080c0f"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/reserves-at-risk-calc/environment/skills/xlsx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "75ccc9efe04c50ea0920db8d215839c4aa213a85"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/reserves-at-risk-calc/oracle/answer-rar.xlsx",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f0b868445ec2405eae66c352b093ffdec9c56ccc"
+        },
+        {
+          "path": "tasks/reserves-at-risk-calc/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "31f8c7f7dcf164a06124446eb3a494de2c06cbbc"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/reserves-at-risk-calc/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1203ad48fb753677c68c9aaef93dc5a391e4e0df"
+        },
+        {
+          "path": "tasks/reserves-at-risk-calc/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "64a167ac6463cbe53a4201e035ea18b40c1ebad3"
+        }
+      ],
+      "file_count": 10,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "sales-pivot-analysis",
+      "inventory_prefix": "tasks/sales-pivot-analysis/",
+      "package_sha256": "5d82f03805b2eb1cef2913601fdf1c434bf02665d882a228f41959cc800f5cd9",
+      "task_ref": {
+        "path": "tasks/sales-pivot-analysis/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "191f52fd405747df22965922821b967b92443f5c"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/sales-pivot-analysis/environment/skills/pdf/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "aa56c8309f9d2dfbcaefe2b2eeabdf975dce8afa"
+        },
+        {
+          "path": "tasks/sales-pivot-analysis/environment/skills/xlsx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "86f78b34fb199c5612cd8d3f2627d0b95dc02e9f"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/sales-pivot-analysis/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "28b9605e35e2f7ce74c8c01f3f347ed6839513f4"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/sales-pivot-analysis/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2ee22ca5d21a1a0669ec85a4d49594f2af5cd4da"
+        },
+        {
+          "path": "tasks/sales-pivot-analysis/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "afc509713e8d92c93086c229a5df028e25056dd5"
+        }
+      ],
+      "file_count": 9,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "sec-financial-report",
+      "inventory_prefix": "tasks/sec-financial-report/",
+      "package_sha256": "52834f18541503c27e728c51063bcae7dc77c63e920f3d592b444812ddb793c7",
+      "task_ref": {
+        "path": "tasks/sec-financial-report/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "efba4424a63217566882d746b22c5bb224a37b5c"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/sec-financial-report/environment/skills/13f-analyzer/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b7ae6e339996fffc9823f34a0ec48c9b7700867d"
+        },
+        {
+          "path": "tasks/sec-financial-report/environment/skills/fuzzy-name-search/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1e31cc712810a3a75a75b845b095d77f6adcd8c8"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/sec-financial-report/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a948cc1e36e799bcad272345daf03d04e97f552b"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/sec-financial-report/verifier/expected_output.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a80144aaf78ab980d95f081c5de0a87dc7114751"
+        },
+        {
+          "path": "tasks/sec-financial-report/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4c37810dcc15385d774644a33c026d19e7dfe254"
+        },
+        {
+          "path": "tasks/sec-financial-report/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d57fb0fdbb06fb6b237fe997be702952e0a33154"
+        }
+      ],
+      "file_count": 14,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "seismic-phase-picking",
+      "inventory_prefix": "tasks/seismic-phase-picking/",
+      "package_sha256": "9c4b7874901adbdde19f09032706ddd37e3f57ea10cb8041f8125fea2be48916",
+      "task_ref": {
+        "path": "tasks/seismic-phase-picking/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "7b9884857e49ac31b722397916f962589ec2900f"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/seismic-phase-picking/environment/skills/obspy-data-api/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "11f05ee39fafd856955d1e9ac7bc7da82727ef4f"
+        },
+        {
+          "path": "tasks/seismic-phase-picking/environment/skills/obspy-datacenter-client/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "57e8e4b1be15a5091c721cee8eadb3aa94af9e79"
+        },
+        {
+          "path": "tasks/seismic-phase-picking/environment/skills/seisbench-model-api/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a8ce4765a6f292c31fc5df00593646d919acb781"
+        },
+        {
+          "path": "tasks/seismic-phase-picking/environment/skills/seismic-picker-selection/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d5e0c6e9b1d9d75645e9457b185e6701998aa4fd"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/seismic-phase-picking/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0f19e8afec43b6f31a02461dabebc0019f8d2f8c"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/seismic-phase-picking/verifier/evaluate_picks.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e476e47b9157f0bbc436ee44d12ebee953641a8c"
+        },
+        {
+          "path": "tasks/seismic-phase-picking/verifier/labels.csv",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0efd8b6aad3eedd84ddb283347ff3e11775be215"
+        },
+        {
+          "path": "tasks/seismic-phase-picking/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "4c37810dcc15385d774644a33c026d19e7dfe254"
+        },
+        {
+          "path": "tasks/seismic-phase-picking/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9b24bfb35382f5a5469940415c053a483522fb26"
+        }
+      ],
+      "file_count": 114,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "setup-fuzzing-py",
+      "inventory_prefix": "tasks/setup-fuzzing-py/",
+      "package_sha256": "eb702693cf497e2a37214d6df7a8191e7e67b4cbf1fa7f22b1f7dc2f88b582f9",
+      "task_ref": {
+        "path": "tasks/setup-fuzzing-py/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "57b0312b7267906c085f2ce73e713ad8c6bcad29"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/setup-fuzzing-py/environment/skills/discover-important-function/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e944affc5e8e140c0268b04e99bda62b9a3a5a7c"
+        },
+        {
+          "path": "tasks/setup-fuzzing-py/environment/skills/fuzzing-python/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "5d5f1d661a9de4004304ef0083c810254ab6daf2"
+        },
+        {
+          "path": "tasks/setup-fuzzing-py/environment/skills/setup-env/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2ec95a364291bbbaa0a3de9bd0d9fd416f58d908"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/setup-fuzzing-py/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "32c3fe6c16a2f64decec0f1aca7726347f440c9d"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/setup-fuzzing-py/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c57240857e07be0b113280614c1fda8e7d7eeafa"
+        },
+        {
+          "path": "tasks/setup-fuzzing-py/verifier/test_lib.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "679290847bbceb67bc4336f543ea19a875f98f2b"
+        },
+        {
+          "path": "tasks/setup-fuzzing-py/verifier/test_setup.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "08495bc23dae7530862269cc82e7686794615a2a"
+        },
+        {
+          "path": "tasks/setup-fuzzing-py/verifier/testing_utils.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "cd01c7d70e678d61ac1b705cda53e0e81c60c4e0"
+        }
+      ],
+      "file_count": 11,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "shock-analysis-demand",
+      "inventory_prefix": "tasks/shock-analysis-demand/",
+      "package_sha256": "25d9e429f3408f10f250ad5925047311cf7f0a3f30f67a978e331903bd4b0e24",
+      "task_ref": {
+        "path": "tasks/shock-analysis-demand/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "1824b6eb5169e1cd3720a36e0e65f3bc9c616c4d"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/shock-analysis-demand/environment/skills/xlsx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "75ccc9efe04c50ea0920db8d215839c4aa213a85"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/shock-analysis-demand/oracle/answer_demand.xlsx",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "8ecb5d530e774c34502ab9bc09d0937a017cf2d8"
+        },
+        {
+          "path": "tasks/shock-analysis-demand/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c4b8f6e6eb60a9b721a7c9cd01a65583b98de637"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/shock-analysis-demand/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1cc3b5538b1ba1c65287293af1bb0a1a1113a817"
+        },
+        {
+          "path": "tasks/shock-analysis-demand/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0cf040f81b7244f6a5e25d7de81206b49cb03eae"
+        }
+      ],
+      "file_count": 10,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "shock-analysis-supply",
+      "inventory_prefix": "tasks/shock-analysis-supply/",
+      "package_sha256": "a28b2e0615fdff64a5ec73d934c470f335d13ba2ccfd70b9aaa4747a90116eba",
+      "task_ref": {
+        "path": "tasks/shock-analysis-supply/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "b160ec8a52cbd78a4fb8db49aec81379dee5e7d9"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/shock-analysis-supply/environment/skills/xlsx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "75ccc9efe04c50ea0920db8d215839c4aa213a85"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/shock-analysis-supply/oracle/answer-supply.xlsx",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "e82f2dac9a1412cdd05df1c511e9e69964d54479"
+        },
+        {
+          "path": "tasks/shock-analysis-supply/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1685ac720c0d446ad6e372301b9549156b425a6a"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/shock-analysis-supply/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1c11f32960f763bf75fbd71bdb66a798290aff1a"
+        },
+        {
+          "path": "tasks/shock-analysis-supply/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ed9e4fad19d6d70f940bb66a286eeced3e6cc21f"
+        }
+      ],
+      "file_count": 10,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "simpo-code-reproduction",
+      "inventory_prefix": "tasks/simpo-code-reproduction/",
+      "package_sha256": "55aec5887398925744dd23bf895683fa84e3de0e77d1143af41fa7673cf7d74c",
+      "task_ref": {
+        "path": "tasks/simpo-code-reproduction/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "0540d178b550dab9f57758a68e42321358efb050"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/simpo-code-reproduction/environment/skills/nlp-research-repo-package-installment/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "086d7d977c21d97f14f3e45aa6a3a8b61cb19bf3"
+        },
+        {
+          "path": "tasks/simpo-code-reproduction/environment/skills/pdf/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f6a22ddf88fdc7e7b7603f4c9064cc51bd930ad9"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/simpo-code-reproduction/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "03201f95f941011dedd22c3dff4221f50d6b1dc3"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/simpo-code-reproduction/verifier/loss.npz",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "75044184e62c088a2b914b2f940606ff0e9ef94f"
+        },
+        {
+          "path": "tasks/simpo-code-reproduction/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "68d89f8d8f520c74c11ac7bbb9f6912d60cc44ab"
+        },
+        {
+          "path": "tasks/simpo-code-reproduction/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "dd0f9885e10add04268a10f776a8dffdcfdd9a7f"
+        }
+      ],
+      "file_count": 82,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "software-dependency-audit",
+      "inventory_prefix": "tasks/software-dependency-audit/",
+      "package_sha256": "ddd6e5a6d5edba0d507c262206cd318a05dfbb05f1c10390e0d4d4ff303bca42",
+      "task_ref": {
+        "path": "tasks/software-dependency-audit/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "e5680fbe1db77235ed5965d9ff79c0a963e24563"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/software-dependency-audit/environment/skills/cvss-score-extraction/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "27d3d4db4d0106eaa35b8bcc8cd92b247298d59b"
+        },
+        {
+          "path": "tasks/software-dependency-audit/environment/skills/trivy-offline-vulnerability-scanning/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f1200a1adc9624f004330845efd486d50377b8aa"
+        },
+        {
+          "path": "tasks/software-dependency-audit/environment/skills/vulnerability-csv-reporting/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "cf0fe43280cb2b3f6615ec4b6161b8c7222782c1"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/software-dependency-audit/oracle/solution.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b5fefdd0a79ef1f7c96a8005bf0076724fa862e0"
+        },
+        {
+          "path": "tasks/software-dependency-audit/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "18d69f924c01c29a702f982119025e1e6b11cc3f"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/software-dependency-audit/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2414c677428f83b383f227acb6136a008006e13e"
+        },
+        {
+          "path": "tasks/software-dependency-audit/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6b9bc865cb931cfe71253ba59dc0320119dbe43f"
+        }
+      ],
+      "file_count": 11,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "spring-boot-jakarta-migration",
+      "inventory_prefix": "tasks/spring-boot-jakarta-migration/",
+      "package_sha256": "e893ea0b77ea6e29a5fa062a52bb2fbad67d6b84fc64a87313811f7ef1e64b2a",
+      "task_ref": {
+        "path": "tasks/spring-boot-jakarta-migration/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "c268f6a25d7ad9768da09430feed4d930537add1"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/spring-boot-jakarta-migration/environment/skills/hibernate-upgrade/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7042e3b79898120cbda605602740960c488ae9d1"
+        },
+        {
+          "path": "tasks/spring-boot-jakarta-migration/environment/skills/jakarta-namespace/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "fdaf6ddb687eec9ad63b8319a474ca202cf372e9"
+        },
+        {
+          "path": "tasks/spring-boot-jakarta-migration/environment/skills/restclient-migration/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "cef5aaea2dc3abe3e7617bca2404a7fde5da8df3"
+        },
+        {
+          "path": "tasks/spring-boot-jakarta-migration/environment/skills/spring-boot-migration/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9607bf373acef03faf73f909206c8d5e0d1ab43f"
+        },
+        {
+          "path": "tasks/spring-boot-jakarta-migration/environment/skills/spring-security-6/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b2979c4f26472a6a089a847f20b44a4e976616ad"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/spring-boot-jakarta-migration/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7e601ff978d4880dcf926eb62da84fef9e35f9a8"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/spring-boot-jakarta-migration/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a9d036125a90305e6cbf5543d2dc44db0b937035"
+        },
+        {
+          "path": "tasks/spring-boot-jakarta-migration/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f4ae75c122b5b7665f3bb19f7b38aa88d53c74f2"
+        }
+      ],
+      "file_count": 27,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "suricata-custom-exfil",
+      "inventory_prefix": "tasks/suricata-custom-exfil/",
+      "package_sha256": "921f9a357cbe9065e7cbfdb476d71f3d4ea350adb83ae72a6fb5a642e9fd679c",
+      "task_ref": {
+        "path": "tasks/suricata-custom-exfil/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "7d719a363b6ea96ed2c6238b34c13663af5c6832"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/suricata-custom-exfil/environment/skills/pcap-triage-tshark/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0457fd5cc133086a22002abbb58dee60fbf99144"
+        },
+        {
+          "path": "tasks/suricata-custom-exfil/environment/skills/suricata-offline-evejson/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c6239c60dd661c82f4cc2044002b8f449a304749"
+        },
+        {
+          "path": "tasks/suricata-custom-exfil/environment/skills/suricata-rules-basics/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7b5bccaa96b673487f0cbcbf7d091ac60049904a"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/suricata-custom-exfil/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c5c1a98aaf6b88a0bc3db715868795c4518d4bec"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/suricata-custom-exfil/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0c1c6e266ef0d5eed211d4791bcda89a5d5a5ea9"
+        },
+        {
+          "path": "tasks/suricata-custom-exfil/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a49d1ca05fe32dfc5a5d0ad03189c1b09bc701fb"
+        }
+      ],
+      "file_count": 13,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "syzkaller-ppdev-syzlang",
+      "inventory_prefix": "tasks/syzkaller-ppdev-syzlang/",
+      "package_sha256": "9c4c5b60d2608fce059bec6d298ddf20839f97427fd4a306ce6a0131cc93e351",
+      "task_ref": {
+        "path": "tasks/syzkaller-ppdev-syzlang/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "905d8a861f516f8ccd7f9fb29982ee3a6a0a0023"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/syzkaller-ppdev-syzlang/environment/skills/syz-extract-constants/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1ae09174f3fe9f039d98d1666f50a6c8a152b9f2"
+        },
+        {
+          "path": "tasks/syzkaller-ppdev-syzlang/environment/skills/syzkaller-build-loop/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "cbf777b65c74ac8576bcccb98dd89fcbf99eb2aa"
+        },
+        {
+          "path": "tasks/syzkaller-ppdev-syzlang/environment/skills/syzlang-ioctl-basics/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6d29c753f73cdec9be3fd576a774ffb538c1f658"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/syzkaller-ppdev-syzlang/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "674eb90371f22735cbaaabeb1b5385e8561c1460"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/syzkaller-ppdev-syzlang/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2efdc81f103e7350991a5b3a1e36948712cc7c9a"
+        },
+        {
+          "path": "tasks/syzkaller-ppdev-syzlang/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "bd0da4c3006464a8a292df3ba7185666d01d8027"
+        }
+      ],
+      "file_count": 8,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "threejs-structure-parser",
+      "inventory_prefix": "tasks/threejs-structure-parser/",
+      "package_sha256": "13372d60578cb22f151801b1d97150702469bc200b96ff548119ddbddfbb16d6",
+      "task_ref": {
+        "path": "tasks/threejs-structure-parser/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "b349eb5539efab613df9243730bf2a6d8021ee7c"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/threejs-structure-parser/environment/skills/obj-exporter/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f914e35b6adf6f2b1810690a9fa010cb77b28547"
+        },
+        {
+          "path": "tasks/threejs-structure-parser/environment/skills/threejs/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "fb3860d7231d4d6218cf7e5c379ab353b6bc1433"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/threejs-structure-parser/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "303226a7d5958df73725ad97a7c3a589faa96286"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/threejs-structure-parser/verifier/gen_ground_truth.mjs",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1223578234b78b44550c97acaf6cb48214fcf717"
+        },
+        {
+          "path": "tasks/threejs-structure-parser/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "03febda0dec07568ea9ff9db9805f0ab30b5d6fe"
+        },
+        {
+          "path": "tasks/threejs-structure-parser/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "a63e067c0d4a6a30474aa562408e8a6eed72afc0"
+        }
+      ],
+      "file_count": 15,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "threejs-to-obj",
+      "inventory_prefix": "tasks/threejs-to-obj/",
+      "package_sha256": "b78fa5d5cfec73c6345d7e7790e4e745f30db241a7e13a194e5e91c768d23dd0",
+      "task_ref": {
+        "path": "tasks/threejs-to-obj/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "b408d261cba43e8d52b6ce95b9e1c2dcc796ab5b"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/threejs-to-obj/environment/skills/obj-exporter/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "5be7ce6b598fbe83bfde5a3d41c7fc3f0c1c1d41"
+        },
+        {
+          "path": "tasks/threejs-to-obj/environment/skills/threejs/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "fb3860d7231d4d6218cf7e5c379ab353b6bc1433"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/threejs-to-obj/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "60d4d26b8b787f0feaf186c8ce078ef678359c0b"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/threejs-to-obj/verifier/gen_ground_truth.mjs",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b6af263f094d7d4ef19f7f5011ba55dd59798b50"
+        },
+        {
+          "path": "tasks/threejs-to-obj/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "21c534cd96eccde196e30645225b16661ec85b16"
+        },
+        {
+          "path": "tasks/threejs-to-obj/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "417ee8b13e4f332fa3ac0d0ad3a106bd36ca4342"
+        }
+      ],
+      "file_count": 15,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "tictoc-unnecessary-abort-detection",
+      "inventory_prefix": "tasks/tictoc-unnecessary-abort-detection/",
+      "package_sha256": "17da061364892d6747e6d04792fe663a5cb09263d10bec66b6fb25a5e69b582a",
+      "task_ref": {
+        "path": "tasks/tictoc-unnecessary-abort-detection/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "82621cadc326a0229253064202e2cec0f80ce9aa"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/tictoc-unnecessary-abort-detection/environment/skills/transaction-concurrency-control-foundations/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1dffc05abc383f041e41705246b574b39eb98a16"
+        },
+        {
+          "path": "tasks/tictoc-unnecessary-abort-detection/environment/skills/transaction-protocol-reasoning/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "b29a6082743b72b1f9c964762a7661186a2de56f"
+        },
+        {
+          "path": "tasks/tictoc-unnecessary-abort-detection/environment/skills/transaction-trace-analysis/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ec2780d5914c9877165ffde241ab93d78b1b92b4"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/tictoc-unnecessary-abort-detection/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2d9f36374846cb491672714425971212861a98f5"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/tictoc-unnecessary-abort-detection/verifier/expected_unnecessary_abort_txn_ids.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "153a47dbcbc95772a53d5630ecc8a34156b9b067"
+        },
+        {
+          "path": "tasks/tictoc-unnecessary-abort-detection/verifier/score_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "46574626ac16aa8a367d87d6755a74f3f233811f"
+        },
+        {
+          "path": "tasks/tictoc-unnecessary-abort-detection/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3162c6e8fac1a1bc8f21303ce6c2779eac796099"
+        },
+        {
+          "path": "tasks/tictoc-unnecessary-abort-detection/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3cf665dd832fc05e93028c9056e98f44ea508061"
+        }
+      ],
+      "file_count": 31,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "travel-planning",
+      "inventory_prefix": "tasks/travel-planning/",
+      "package_sha256": "2ab971082b5778c46d5e4221cd93530b11a27505d185f19b286062b1cf5bb3e5",
+      "task_ref": {
+        "path": "tasks/travel-planning/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "4e6f6251aba401102352c8f397fc352ec1de4f1a"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/travel-planning/environment/skills/search-accommodations/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "73c026be4977a9f872d0534b010b53fd04820f96"
+        },
+        {
+          "path": "tasks/travel-planning/environment/skills/search-attractions/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "ba25ce356ab6db5a87c2f2ea57563e7d4ade602a"
+        },
+        {
+          "path": "tasks/travel-planning/environment/skills/search-cities/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "91dfd1688ef9c053b1367db185b163f19c044a0b"
+        },
+        {
+          "path": "tasks/travel-planning/environment/skills/search-driving-distance/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "10bdcae97ee36703a09a5d4a34343cdc27e3c328"
+        },
+        {
+          "path": "tasks/travel-planning/environment/skills/search-flights/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9f9c5d44ede44951f2c9c0015308d308afb24cd6"
+        },
+        {
+          "path": "tasks/travel-planning/environment/skills/search-restaurants/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d1df4c7cbdbfb098ff4fbdf06e62bd83ca622054"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/travel-planning/oracle/skills_inline.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "c646fa82e5f61a93da332f7b8d4bfb2f8baef31b"
+        },
+        {
+          "path": "tasks/travel-planning/oracle/solve.ipynb",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1f199c8c0c2a8ad9da0b567dba507d5d8ba9a47d"
+        },
+        {
+          "path": "tasks/travel-planning/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "858a1606679ceb7fadaaea83bd5bb3e44ad1add8"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/travel-planning/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "6fe60837a05e04a4f95e8dc9fecf49455b5aac9a"
+        },
+        {
+          "path": "tasks/travel-planning/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "0223670375f83ead1d2b2a809b86a6d241c163a0"
+        }
+      ],
+      "file_count": 28,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "video-silence-remover",
+      "inventory_prefix": "tasks/video-silence-remover/",
+      "package_sha256": "7c0b6dcddcf665daec0e571b1653699d68d690b30f4361fbb54bef2b402a5187",
+      "task_ref": {
+        "path": "tasks/video-silence-remover/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "7aff024ed826fffe5d9094de9bc1317af7974347"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/video-silence-remover/environment/skills/audio-extractor/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2d118fdd96ccc18e1612f9536bec1c28c48be3a8"
+        },
+        {
+          "path": "tasks/video-silence-remover/environment/skills/energy-calculator/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "986bb678da0484743447a3edaf5a84ab46409847"
+        },
+        {
+          "path": "tasks/video-silence-remover/environment/skills/pause-detector/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "74f21911d43e3a6fde55610574e1ffcfc30a35c8"
+        },
+        {
+          "path": "tasks/video-silence-remover/environment/skills/report-generator/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "88fbeda732871d3b14f96206d97482ce531e1936"
+        },
+        {
+          "path": "tasks/video-silence-remover/environment/skills/segment-combiner/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9157b8266aca48fd7754b50f4845c14f0fd680d9"
+        },
+        {
+          "path": "tasks/video-silence-remover/environment/skills/silence-detector/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "f6a521656c8f12f517ba4670c06a3dec42643220"
+        },
+        {
+          "path": "tasks/video-silence-remover/environment/skills/video-processor/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1b4488f4443f12e016c5a0cde553507ca72d5437"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/video-silence-remover/oracle/solution.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "629c0ec92ff209568b28970a024a8702559fd20d"
+        },
+        {
+          "path": "tasks/video-silence-remover/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2e2cce44ad1c51615b91fad57307506a2986ebb4"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/video-silence-remover/verifier/ground_truth.json",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "2f4f01e1b8c1a95e2a54ef2fa2fe466b3364d426"
+        },
+        {
+          "path": "tasks/video-silence-remover/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "7103880aa78614456a0fe866281b28f2b0b37ec0"
+        },
+        {
+          "path": "tasks/video-silence-remover/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "d4f3d8dc8c05326dc550ee31821d9b62589ad757"
+        }
+      ],
+      "file_count": 22,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "weighted-gdp-calc",
+      "inventory_prefix": "tasks/weighted-gdp-calc/",
+      "package_sha256": "010aab162e790135ad088db2187c7faf0365d5b40f24975c4af1d2db029c64b0",
+      "task_ref": {
+        "path": "tasks/weighted-gdp-calc/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "3af0910c420c7dffb2557aafb81bf827b857e153"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/weighted-gdp-calc/environment/skills/xlsx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "75ccc9efe04c50ea0920db8d215839c4aa213a85"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/weighted-gdp-calc/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "070de8be89a1d816c6d84cf6773a1362760133f4"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/weighted-gdp-calc/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "1c840fe51086e75ef4e2e6fc899a5c2645d930b8"
+        },
+        {
+          "path": "tasks/weighted-gdp-calc/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "968eff5c66397ac92190545bdd68e345066736de"
+        }
+      ],
+      "file_count": 9,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "task_id": "xlsx-recover-data",
+      "inventory_prefix": "tasks/xlsx-recover-data/",
+      "package_sha256": "19471b4dcd9c972b4768710163c7948ec00c351ecd92e90150ef8a8fe0145420",
+      "task_ref": {
+        "path": "tasks/xlsx-recover-data/task.md",
+        "hash_algorithm": "git-blob-sha1",
+        "content_hash": "0edd6430d9894561fc06c9e5934687f9ec744ece"
+      },
+      "skill_refs": [
+        {
+          "path": "tasks/xlsx-recover-data/environment/skills/data-reconciliation/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "5c58d2f04bef12089462bc85f2b6103ded12d666"
+        },
+        {
+          "path": "tasks/xlsx-recover-data/environment/skills/xlsx/SKILL.md",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "75ccc9efe04c50ea0920db8d215839c4aa213a85"
+        }
+      ],
+      "oracle_refs": [
+        {
+          "path": "tasks/xlsx-recover-data/oracle/solve.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "3a8fcb43d4aeec5cb53d9732105c6ea980d7a4c5"
+        }
+      ],
+      "verifier_refs": [
+        {
+          "path": "tasks/xlsx-recover-data/verifier/test.sh",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "9269acb25aafc2d22ce2c95ab1c10e898a167043"
+        },
+        {
+          "path": "tasks/xlsx-recover-data/verifier/test_outputs.py",
+          "hash_algorithm": "git-blob-sha1",
+          "content_hash": "eec5a9cd4cea8b55573fa2537e2292b1d5d400e4"
+        }
+      ],
+      "file_count": 14,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    }
+  ],
+  "scripts_executed": 0,
+  "content_copied": false,
+  "genius_ground_truth": false
+}

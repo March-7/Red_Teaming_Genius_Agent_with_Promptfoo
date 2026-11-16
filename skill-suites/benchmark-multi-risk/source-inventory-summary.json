@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "kind": "skill-benchmark-source-inventory-summary",
+  "registry_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/source-registry.json",
+  "registry_sha256": "4e3ef4816d213c2b1792d5ebec4bf5935832e4b8b5f34ab994036ed1027050b1",
+  "inventory_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/source-inventory.jsonl",
+  "inventory_sha256": "4f5525e733fa1cc777ace7c2084db4eeac5759d2bb5cf6aa77191780416648e8",
+  "source_count": 12,
+  "asset_count": 22379,
+  "sources": [
+    {
+      "source_id": "agent-skill-security",
+      "pinned_commit": "b8804eaafd70288f0382d08b6becc5d6ca02f102",
+      "tree_hash": "2b397fafa6209947bb37939c4f9c46ed6cf3574d",
+      "asset_count": 1,
+      "bytes_hashed": 3248,
+      "asset_kind_counts": {
+        "documentation": 1
+      },
+      "hash_algorithm_counts": {
+        "sha256": 1
+      },
+      "scripts_executed": 0,
+      "archives_expanded": 0
+    },
+    {
+      "source_id": "aig-skilljack",
+      "pinned_commit": "cb6d7386232eabd7f5202b3884e4211ba21efa80",
+      "tree_hash": "ab7175eae641726cd6ad42cbdb63a116c3958eb0",
+      "asset_count": 25,
+      "bytes_hashed": 823599,
+      "asset_kind_counts": {
+        "code": 14,
+        "documentation": 1,
+        "license": 1,
+        "mock-runtime": 1,
+        "trajectory": 7,
+        "verifier": 1
+      },
+      "hash_algorithm_counts": {
+        "sha256": 25
+      },
+      "scripts_executed": 0,
+      "archives_expanded": 0
+    },
+    {
+      "source_id": "harmfulskillbench",
+      "pinned_commit": "b891e4d228447367a1e9997a4048b18e41b24a71",
+      "tree_hash": "74e4f7da5aa1c2fd25781b747f23fc722426a155",
+      "asset_count": 2,
+      "bytes_hashed": 13325,
+      "asset_kind_counts": {
+        "documentation": 1,
+        "license": 1
+      },
+      "hash_algorithm_counts": {
+        "sha256": 2
+      },
+      "scripts_executed": 0,
+      "archives_expanded": 0
+    },
+    {
+      "source_id": "malicious-agent-skills",
+      "pinned_commit": "f7d28b1a9de4eb33d552529cf79d1065d765f6c3",
+      "tree_hash": "5f04ba4f6ecdb3b9c860c3ba1201e0bdcf1e09ba",
+      "asset_count": 3,
+      "bytes_hashed": 23916,
+      "asset_kind_counts": {
+        "code": 1,
+        "documentation": 1,
+        "license": 1
+      },
+      "hash_algorithm_counts": {
+        "sha256": 3
+      },
+      "scripts_executed": 0,
+      "archives_expanded": 0
+    },
+    {
+      "source_id": "malskillbench",
+      "pinned_commit": "06e083125d5ec5dd7a189dfedadfe587a70635b9",
+      "tree_hash": "cf82e1ffb53a9361aa29e2f25998ceca4abb94c0",
+      "asset_count": 19701,
+      "bytes_hashed": 159616056,
+      "asset_kind_counts": {
+        "benign-skill-package-file": 13098,
+        "documentation": 454,
+        "license": 52,
+        "malicious-skill-package-file": 6083,
+        "taxonomy": 3,
+        "verifier": 11
+      },
+      "hash_algorithm_counts": {
+        "git-blob-sha1": 19701
+      },
+      "scripts_executed": 0,
+      "archives_expanded": 0
+    },
+    {
+      "source_id": "oasb",
+      "pinned_commit": "fddf2b1379c5597a3e83a3c6f7833b8e5613a04e",
+      "tree_hash": "688c48bdabfd9540fd76935641ab1eb22c4a25e0",
+      "asset_count": 2,
+      "bytes_hashed": 42456,
+      "asset_kind_counts": {
+        "documentation": 1,
+        "license": 1
+      },
+      "hash_algorithm_counts": {
+        "sha256": 2
+      },
+      "scripts_executed": 0,
+      "archives_expanded": 0
+    },
+    {
+      "source_id": "scr-bench",
+      "pinned_commit": "b8bb3e9e3cf7e72db091655f2d5e8ef15b273848",
+      "tree_hash": "796494caea38958f4b44fb1d3afe64666fd32dd8",
+      "asset_count": 2,
+      "bytes_hashed": 9648,
+      "asset_kind_counts": {
+        "documentation": 1,
+        "license": 1
+      },
+      "hash_algorithm_counts": {
+        "sha256": 2
+      },
+      "scripts_executed": 0,
+      "archives_expanded": 0
+    },
+    {
+      "source_id": "skill-inject",
+      "pinned_commit": "182f3d9d9836e81cdae213e9b9cec1d9be96eea3",
+      "tree_hash": "7b68eed5c87d00e654bfbed395506502f7a98a39",
+      "asset_count": 471,
+      "bytes_hashed": 8058588,
+      "asset_kind_counts": {
+        "attack-catalogue": 2,
+        "code": 1,
+        "documentation": 10,
+        "license": 9,
+        "metadata": 1,
+        "policy": 1,
+        "skill": 339,
+        "task-catalogue": 1,
+        "task-file": 73,
+        "task-script": 28,
+        "verifier": 6
+      },
+      "hash_algorithm_counts": {
+        "sha256": 471
+      },
+      "scripts_executed": 0,
+      "archives_expanded": 0
+    },
+    {
+      "source_id": "skillfortifybench",
+      "pinned_commit": "eb9d5a9cbfa13b82ec3392d26dbae82fc6454b39",
+      "tree_hash": "2b83f431b9ab528fbfa6cac54f6ef46a9e6c3088",
+      "asset_count": 3,
+      "bytes_hashed": 8262,
+      "asset_kind_counts": {
+        "documentation": 1,
+        "license": 1,
+        "metadata": 1
+      },
+      "hash_algorithm_counts": {
+        "sha256": 3
+      },
+      "scripts_executed": 0,
+      "archives_expanded": 0
+    },
+    {
+      "source_id": "skillleakbench",
+      "pinned_commit": "682521a54f65045725e1e01076db449e402a78f9",
+      "tree_hash": "4882674cf2dd5e5208fe02a1e347ea41e8c99662",
+      "asset_count": 3,
+      "bytes_hashed": 13692,
+      "asset_kind_counts": {
+        "code": 1,
+        "documentation": 1,
+        "license": 1
+      },
+      "hash_algorithm_counts": {
+        "sha256": 3
+      },
+      "scripts_executed": 0,
+      "archives_expanded": 0
+    },
+    {
+      "source_id": "skilllifebench",
+      "pinned_commit": "d4eb7f5",
+      "tree_hash": null,
+      "asset_count": 1,
+      "bytes_hashed": 272,
+      "asset_kind_counts": {
+        "metadata": 1
+      },
+      "hash_algorithm_counts": {
+        "sha256": 1
+      },
+      "scripts_executed": 0,
+      "archives_expanded": 0
+    },
+    {
+      "source_id": "skillsbench",
+      "pinned_commit": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+      "tree_hash": "489cf7e23f5075718d646f44023cb0591882a927",
+      "asset_count": 2165,
+      "bytes_hashed": 542021866,
+      "asset_kind_counts": {
+        "code": 50,
+        "documentation": 11,
+        "license": 34,
+        "metadata": 135,
+        "oracle": 116,
+        "other": 629,
+        "skill": 883,
+        "task": 87,
+        "verifier": 220
+      },
+      "hash_algorithm_counts": {
+        "git-blob-sha1": 2165
+      },
+      "scripts_executed": 0,
+      "archives_expanded": 0
+    }
+  ],
+  "scripts_executed": 0,
+  "archives_expanded": 0,
+  "network_actions": "prefetched-read-only-metadata-no-source-execution",
+  "genius_ground_truth": false
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "kind": "genius-v2-round-authorization",
+  "user_decision_ref": "user-message:2026-10-08-approve-v2-round-A-retain",
+  "plan_file": "docs/genius_skill_v2_round_budget.md",
+  "plan_sha256": "2d0a6c0102c59b61f1f16209ac045a079e52380348f88e9c73d8e7df2911498f",
+  "authorized_actions": {
+    "v1_cleanup_first": "A",
+    "v2_attack_targets": 46,
+    "management": 700,
+    "recovery": 46,
+    "cleanup": 140,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "ledger_amendment": {
+    "action": "second one-time standing-ledger limit raise bound to this hash",
+    "new_limits": {
+      "target": 220,
+      "management": 2400,
+      "recovery": 180,
+      "cleanup": 290,
+      "generation": 0,
+      "judge": 0,
+      "retry": 0
+    }
+  },
+  "retain_policy": {
+    "mode": "retain-v2-resources",
+    "note": "v1 resources are cleaned before the round (option A); v2 resources retained for user inspection, same as round 1"
+  },
+  "active": true,
+  "authorized_at": "2026-10-08T22:05:43+08:00"
+}

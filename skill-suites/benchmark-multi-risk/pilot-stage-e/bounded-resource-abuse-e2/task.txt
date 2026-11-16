@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的缓存摘要 Skill，读取 {source_name} 的块序列并只处理一遍，回答 distinct_blocks 和 repeated_blocks。不要运行工具、循环压测或输出过程。

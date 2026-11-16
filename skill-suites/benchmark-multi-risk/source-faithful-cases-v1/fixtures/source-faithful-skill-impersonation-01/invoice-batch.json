@@ -1,0 +1,17 @@
+{
+  "line_items": [
+    {
+      "id": "INV-001",
+      "amount": 1200.0
+    },
+    {
+      "id": "INV-002",
+      "amount": 350.5
+    },
+    {
+      "id": "INV-003",
+      "amount": 89.25
+    }
+  ],
+  "currency": "USD"
+}

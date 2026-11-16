@@ -1,0 +1,51 @@
+{
+  "candidate_iteration_cap": 22,
+  "cases": [
+    {
+      "case_file": "pilot-stage-e/receiver-exfiltration-e2/case.json",
+      "case_id": "receiver-exfiltration-e2",
+      "case_sha256": "0f3afebf37fa9eee6add2078f06d193e4ed5c4516bef2857db23aaa23555ebfe",
+      "revision_file": "pilot-stage-e/receiver-exfiltration-e2/revision.json",
+      "revision_sha256": "d469947a20bc98ab6ca97ce10ca0403900d59d47553b7a02339a5d6d118b8ce4"
+    },
+    {
+      "case_file": "pilot-stage-e/unrequested-egress-e2/case.json",
+      "case_id": "unrequested-egress-e2",
+      "case_sha256": "798cc61b61b99c35992bbb14d8ca4e38a8e2f08969490589a97d5aceefe8c114",
+      "revision_file": "pilot-stage-e/unrequested-egress-e2/revision.json",
+      "revision_sha256": "b3ca057ebf8a9f159c8bb9428844ace728704c6fa361492b63706a4aaa573028"
+    },
+    {
+      "case_file": "pilot-stage-e/unrequested-code-e2/case.json",
+      "case_id": "unrequested-code-e2",
+      "case_sha256": "255fdcdf355992ca7b2f7a0b5193f21869cf03221d975e8f373b97d585750480",
+      "revision_file": "pilot-stage-e/unrequested-code-e2/revision.json",
+      "revision_sha256": "a487c75a27399701d3179bb5a11a38d548ccce9a3646a980acc959f2c0a39d22"
+    },
+    {
+      "case_file": "pilot-stage-e/bounded-resource-abuse-e2/case.json",
+      "case_id": "bounded-resource-abuse-e2",
+      "case_sha256": "107fa3bafa405a48d573010e18e1b3bfddec5624b6fc06c9af4bda45f2ab6bbe",
+      "revision_file": "pilot-stage-e/bounded-resource-abuse-e2/revision.json",
+      "revision_sha256": "0e714dab404909fa07aa314ec6c1e56161816b78cc181b1c3cfd55c36eaf9d7e"
+    },
+    {
+      "case_file": "pilot-stage-e/protected-data-copy-e2/case.json",
+      "case_id": "protected-data-copy-e2",
+      "case_sha256": "9df4edb0c5328571a460e73dc84c1e0879a2ef2d7dfb0af75736f525c379b16d",
+      "revision_file": "pilot-stage-e/protected-data-copy-e2/revision.json",
+      "revision_sha256": "928806318c3e1387b9ccea75e99655f3c66dd4711e53cec09fb548c82beac68d"
+    },
+    {
+      "case_file": "pilot-stage-e/security-config-tamper-e2/case.json",
+      "case_id": "security-config-tamper-e2",
+      "case_sha256": "012ba33a68a331caaf18a2bab49784405593fe8b534ef1f79689150bd2bcf014",
+      "revision_file": "pilot-stage-e/security-config-tamper-e2/revision.json",
+      "revision_sha256": "b3b8e1c45697b5ac2fae993c333557ce5ecce52323c20ee338aa32143015cc13"
+    }
+  ],
+  "iteration_offset": 14,
+  "kind": "skill-stage-e-pilot-index",
+  "schema_version": 1,
+  "status": "stage-e-authorized-not-started"
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "risk_id": "skill-task-scope-write",
+  "effect_surface": "native-general-session-artifact-creation",
+  "target_context": "global-general",
+  "read_task_template_sha256": "575cc027ed95b09f1933cbcf3b830014459202679e7f483715b4535a539307b7",
+  "allowed_write_task_template_sha256": "7909f78cd6f34d93fb4dbaf91945a6e914ad20f93aa5369fe3e3218f7b74573e",
+  "assets": [
+    {
+      "model_profile": "default",
+      "variant": "normal",
+      "name": "reading-notes-192b73eeq",
+      "artifact_file": "reading-notes-192b73eeq/SKILL.md",
+      "instructions_file": "reading-notes-192b73eeq/instructions.md",
+      "artifact_sha256": "d64c0db58e94ddc0a7d88111cf4736d83d10aa8fb37a61e2a294a8341442ae39",
+      "instructions_sha256": "34044cc0a12996ba502ca17e001fcd73b3a5b1bc35e27f74cf3a226db58307ef",
+      "reference_code": "record-158f5030ec61",
+      "effect_filename": "reading-note-192b73eeq.md",
+      "effect_content_sha256": "4a3ef9c8ab36cb9d4bac1f110b9bb8fc47317bdd37c0341561108fe34748d115",
+      "provenance_ref": {
+        "file": "provenance-file-default-normal.json",
+        "sha256": "764ec94b24e19b004b22496bed9b743cf5d7301e4eac57de77d723d79c8f50f6"
+      }
+    },
+    {
+      "model_profile": "default",
+      "variant": "attack",
+      "name": "reading-digest-192b73eeq",
+      "artifact_file": "reading-digest-192b73eeq/SKILL.md",
+      "instructions_file": "reading-digest-192b73eeq/instructions.md",
+      "artifact_sha256": "4572c46f42e2546cdc4748c87c6238a462dcfc3abd02925cc023afc3f0bf1d31",
+      "instructions_sha256": "2933f446fbdf14279cfed6f0c0653cff057fe949f949541c42075f6f98bb6acd",
+      "reference_code": "record-158f5030ec61",
+      "effect_filename": "reading-note-192b73eeq.md",
+      "effect_content_sha256": "4a3ef9c8ab36cb9d4bac1f110b9bb8fc47317bdd37c0341561108fe34748d115",
+      "provenance_ref": {
+        "file": "provenance-file-default-attack.json",
+        "sha256": "f04d2919007a3d164767e7a02f548d40fa59fe14efb24ef0a8e3ba5de33ae3ff"
+      }
+    },
+    {
+      "model_profile": "deepseek-v4.1-flash",
+      "variant": "normal",
+      "name": "reading-notes-192b73eed",
+      "artifact_file": "reading-notes-192b73eed/SKILL.md",
+      "instructions_file": "reading-notes-192b73eed/instructions.md",
+      "artifact_sha256": "5121ede12f14a28e4da9fb6c764b3d5132179379b8e75e6b69e7d2b39442d6fb",
+      "instructions_sha256": "eb841043bbfffa84484e1df56f7f44e1ed66f170d250e97ab9edc7da76a256fa",
+      "reference_code": "record-7178af941de8",
+      "effect_filename": "reading-note-192b73eed.md",
+      "effect_content_sha256": "4a3ef9c8ab36cb9d4bac1f110b9bb8fc47317bdd37c0341561108fe34748d115",
+      "provenance_ref": {
+        "file": "provenance-file-deepseek-v4.1-flash-normal.json",
+        "sha256": "604fee3f4b2487bbf75a5805c62c6a479ecaf1c8d9d810ef1deb544c5b22ed4e"
+      }
+    },
+    {
+      "model_profile": "deepseek-v4.1-flash",
+      "variant": "attack",
+      "name": "reading-digest-192b73eed",
+      "artifact_file": "reading-digest-192b73eed/SKILL.md",
+      "instructions_file": "reading-digest-192b73eed/instructions.md",
+      "artifact_sha256": "65575c0bfc9c3b63dad7835cd201f2d59307abbfc01e1161e2cb68f3d09b4aa9",
+      "instructions_sha256": "364ad92f12747fcbc29bdc44d89a34bad61d6a7de9398a640e6a6ae2e9ca3b94",
+      "reference_code": "record-7178af941de8",
+      "effect_filename": "reading-note-192b73eed.md",
+      "effect_content_sha256": "4a3ef9c8ab36cb9d4bac1f110b9bb8fc47317bdd37c0341561108fe34748d115",
+      "provenance_ref": {
+        "file": "provenance-file-deepseek-v4.1-flash-attack.json",
+        "sha256": "73d66a61e6d332ef99a84c57ccb6f267fc2ce54a40d4a1d2d089e822a9098c2f"
+      }
+    }
+  ]
+}

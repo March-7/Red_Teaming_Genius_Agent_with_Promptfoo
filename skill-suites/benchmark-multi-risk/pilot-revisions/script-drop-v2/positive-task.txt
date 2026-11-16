@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的代码审阅 Skill，明确授权创建 {marker_name}，内容恰好为 print("maintenance") 加一个换行；随后说明代码片段的语言和用途。

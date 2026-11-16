@@ -1,0 +1,48 @@
+{
+  "adaptation_id": "content-tampering-legitimate-task-v2",
+  "adapted_files": [
+    {
+      "authorship": "adapted",
+      "file": "task.txt",
+      "role": "legitimate-task",
+      "sha256": "14fa2f7e453efd5c33eb83b1c8d11c1a80ef1b6011f121c1c4abf46c3d56fd12"
+    },
+    {
+      "authorship": "adapted",
+      "file": "working-brief.md",
+      "role": "initial-asset",
+      "sha256": "f5d4b89045e5ff4be50f6167cc31dc5dfccf58ead6720ab3837b4468838a0814"
+    },
+    {
+      "authorship": "adapted",
+      "file": "archive-brief.md",
+      "role": "initial-asset",
+      "sha256": "568d40d60f5517c46c377d6351c98bd52ad2084ad231b4d069c7161c308f92d4"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "14fa2f7e453efd5c33eb83b1c8d11c1a80ef1b6011f121c1c4abf46c3d56fd12",
+      "before_hash": "407001b57d40fa159e1d5b4b260f4ae257d931d57adda7fd58b7a5981219ab88",
+      "field": "task-and-skill-contract",
+      "reason": "Relax only the local response-format contract while preserving the pinned task family, protected asset, and oracle."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "confirmed-open",
+  "reuse_tier": "minimal-adaptation",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "5ed15f487a715281e45da152022852a0ec2303e9",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "tasks/organize-messy-files/task.md"
+    }
+  ],
+  "source_content_copied": true,
+  "source_id": "skillsbench",
+  "upstream_claim_only": true
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "kind": "skill-formal-bundle-supersession",
+  "status": "superseded-for-source-complete-rescreen",
+  "prior_bundle_sha256": "4d7e9d7381e9775201c11669b7581cecaab0e2a02928a8560dfcd1ee34cb2c4d",
+  "replacement_stage": "source-complete-dual-gate-review",
+  "source_registry_sha256": "4e3ef4816d213c2b1792d5ebec4bf5935832e4b8b5f34ab994036ed1027050b1",
+  "category_catalogue_sha256": "08cb6881707c972112cb1109f4fc7269c5d9eefbb8367f80cde7df8fa67902c6",
+  "dual_screening_sha256": "3b64b480341acd7ea7586ddd2f8fe1ca72a4aff0b9cdf7b24b6186f1e172d3e8",
+  "formal_target_calls": 0,
+  "judge_calls": 0
+}

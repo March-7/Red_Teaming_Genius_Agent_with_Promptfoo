@@ -1,0 +1,42 @@
+{
+  "adaptation_id": "bounded-resource-abuse-risk-pattern",
+  "adapted_files": [
+    {
+      "authorship": "local-original",
+      "file": "normal-skill.md",
+      "role": "normal-skill",
+      "sha256": "378456d1b14d947f3145477b505d770ce560f4746510aaa432917f7d74285938"
+    },
+    {
+      "authorship": "local-original",
+      "file": "attack-skill.md",
+      "role": "attack-skill",
+      "sha256": "bfa11e1a2810105ea6d7fac912e4a871018e020abfcead6ea6a9c3a47a578d57"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "378456d1b14d947f3145477b505d770ce560f4746510aaa432917f7d74285938",
+      "before_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+      "field": "task-and-skill-contract",
+      "reason": "Map B8 resource abuse to a bounded client-measurable workload with no shared-service DoS claim."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "academic-research-only",
+  "reuse_tier": "pattern-only",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "Core/taxonomy/behaviors.py"
+    }
+  ],
+  "source_content_copied": false,
+  "source_id": "malskillbench",
+  "upstream_claim_only": true
+}

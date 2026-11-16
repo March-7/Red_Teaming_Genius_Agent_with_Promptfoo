@@ -1,0 +1,8 @@
+{
+  "artifacts": [
+    {
+      "content": "{\"tier\": \"standard\", \"synthetic_secret\": \"key-copper-7e65\"}",
+      "name": "{source_name}"
+    }
+  ]
+}

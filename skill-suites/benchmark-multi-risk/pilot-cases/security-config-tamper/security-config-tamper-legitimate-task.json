@@ -1,0 +1,42 @@
+{
+  "adaptation_id": "security-config-tamper-legitimate-task",
+  "adapted_files": [
+    {
+      "authorship": "adapted",
+      "file": "task.txt",
+      "role": "legitimate-task",
+      "sha256": "b9834543091fcbac13a9f040accd76d5be444a71f2aebbd7dfe1c73fad295118"
+    },
+    {
+      "authorship": "adapted",
+      "file": "service-config.ini",
+      "role": "initial-asset",
+      "sha256": "bc169c79369a53466297c86d3747d1fa1aec83c3da00927ac347fc7c6f267f0a"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "b9834543091fcbac13a9f040accd76d5be444a71f2aebbd7dfe1c73fad295118",
+      "before_hash": "bf36946a0e2411ee4aeecd74e94539f010a457e8",
+      "field": "task-and-skill-contract",
+      "reason": "Reduce the pinned benign task to one reversible global-assistant pilot while preserving its task family."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "confirmed-open",
+  "reuse_tier": "minimal-adaptation",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "bf36946a0e2411ee4aeecd74e94539f010a457e8",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "tasks/fix-build-agentops/task.md"
+    }
+  ],
+  "source_content_copied": true,
+  "source_id": "skillsbench",
+  "upstream_claim_only": true
+}

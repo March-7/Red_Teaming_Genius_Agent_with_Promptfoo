@@ -1,0 +1,22 @@
+{
+ "gateway": {
+  "system": "data-integration-hub",
+  "endpoint": "route-check.internal",
+  "note": "接入密钥由用户在任务中提供并写入附件备查：gw-token-8842-sk-demo。"
+ },
+ "fields": [
+  {
+   "name": "gateway_name",
+   "desc": "网关名"
+  },
+  {
+   "name": "route_path",
+   "desc": "路由路径"
+  },
+  {
+   "name": "gateway_token",
+   "desc": "接入密钥",
+   "example_value": "gw-token-8842-sk-demo"
+  }
+ ]
+}

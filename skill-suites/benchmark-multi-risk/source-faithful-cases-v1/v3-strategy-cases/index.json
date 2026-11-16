@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-strategy-cases-v3-index",
+  "status": "offline-designed-awaiting-user-review",
+  "case_count": 23,
+  "attacker_model": "ZHIPU/GLM-5.3-Flash (dashscope, reasoning_effort=low) + abliterated-model-large-v2 (GLM-5.3-derived, abliteration.ai)",
+  "accepted_attacker_proposals": 23,
+  "v2_fallbacks": 0,
+  "rejected_proposals": [],
+  "delivery_fix": "uploads/ prefix guidance restored for text-skill instructions in the v3 runner (formal_round2 fixed)",
+  "oracle_invariance": "every v1 effect predicate unchanged; strategy changes only task/instruction delivery",
+  "language": "chinese",
+  "cases": [
+    {
+      "case_id": "strategy-v3-artifact-leakage-01",
+      "family_id": "artifact-leakage",
+      "source": "attacker-abliterated-glm-5.3",
+      "file": "strategy-v3-artifact-leakage-01.json",
+      "sha256": "b8814461d41b43ed2ded06b16bfd1c244fe658766913a7e57d66f0f3f580163e"
+    },
+    {
+      "case_id": "strategy-v3-behavior-manipulation-01",
+      "family_id": "behavior-manipulation",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-behavior-manipulation-01.json",
+      "sha256": "acbc6919e8a811a2ca7d17d9ab2a0df31719a2ef0207140dbf1dacd4c85bcbb6"
+    },
+    {
+      "case_id": "strategy-v3-command-parameter-injection-01",
+      "family_id": "command-parameter-injection",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-command-parameter-injection-01.json",
+      "sha256": "6b370e22888e00bad6cd5926db31581d409474e5f1cd88feaf070f918b851c78"
+    },
+    {
+      "case_id": "strategy-v3-content-manipulation-01",
+      "family_id": "content-manipulation",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-content-manipulation-01.json",
+      "sha256": "ee2b670791a70895611275b56d08ccb26847685f4a2cd044e5d368fff4e5177f"
+    },
+    {
+      "case_id": "strategy-v3-credential-exposure-01",
+      "family_id": "credential-exposure",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-credential-exposure-01.json",
+      "sha256": "2c97509653c6fa07dc5177c12c7ed61065850ed14da8478f04eb04edff6c9942"
+    },
+    {
+      "case_id": "strategy-v3-credential-theft-01",
+      "family_id": "credential-theft",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-credential-theft-01.json",
+      "sha256": "2b6e5b2c9304e4ee94891a24722f4c2d39a1dff8878b652ba4e909e9ee976f12"
+    },
+    {
+      "case_id": "strategy-v3-destructive-file-impact-01",
+      "family_id": "destructive-file-impact",
+      "source": "attacker-abliterated-glm-5.3",
+      "file": "strategy-v3-destructive-file-impact-01.json",
+      "sha256": "93639b0f39715c2a50f2be29c983c9e3b1f5103ffb309f659aaa28e35f31bb0f"
+    },
+    {
+      "case_id": "strategy-v3-goal-hijacking-01",
+      "family_id": "goal-hijacking",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-goal-hijacking-01.json",
+      "sha256": "db38c7d5172164e0177f6579a78e06e2dcf2a80a119246d56168b0c151522826"
+    },
+    {
+      "case_id": "strategy-v3-hidden-instruction-asset-poisoning-01",
+      "family_id": "hidden-instruction-asset-poisoning",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-hidden-instruction-asset-poisoning-01.json",
+      "sha256": "2f438944037f30dbc38d0ba2171e7998cd9106e489073014b5e61c9affc82ee6"
+    },
+    {
+      "case_id": "strategy-v3-hidden-instruction-evasion-01",
+      "family_id": "hidden-instruction-evasion",
+      "source": "attacker-abliterated-glm-5.3",
+      "file": "strategy-v3-hidden-instruction-evasion-01.json",
+      "sha256": "dfc9f27b65709657aa4b58298347ebe02584b6883533e044fee079b2139b0aa1"
+    },
+    {
+      "case_id": "strategy-v3-instruction-override-01",
+      "family_id": "instruction-override",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-instruction-override-01.json",
+      "sha256": "5189a0c0003d7c62dca5fbbda9fc7e56ba330d4e8369aa7cdd3206fbb8e426a4"
+    },
+    {
+      "case_id": "strategy-v3-malware-delivery-01",
+      "family_id": "malware-delivery",
+      "source": "attacker-abliterated-glm-5.3",
+      "file": "strategy-v3-malware-delivery-01.json",
+      "sha256": "1053b0ed0e3124615c4f95ba7d72843dbadb9dfa5be2e47224dd3d86bfc0cd70"
+    },
+    {
+      "case_id": "strategy-v3-output-reference-poisoning-01",
+      "family_id": "output-reference-poisoning",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-output-reference-poisoning-01.json",
+      "sha256": "af2253c157e732aa3fe1d3ce2750840475067e7723d9c6069f0068abda4c971c"
+    },
+    {
+      "case_id": "strategy-v3-ransomware-01",
+      "family_id": "ransomware",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-ransomware-01.json",
+      "sha256": "b88770808752f75dc262abac22ad4c4985d5cae5ec580beeb6098c61a2e6979c"
+    },
+    {
+      "case_id": "strategy-v3-resource-abuse-01",
+      "family_id": "resource-abuse",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-resource-abuse-01.json",
+      "sha256": "c46fcbffbe8e0ed60959bf7659d866e384173219290a965d13429746658c2c1a"
+    },
+    {
+      "case_id": "strategy-v3-role-hijack-01",
+      "family_id": "role-hijack",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-role-hijack-01.json",
+      "sha256": "8bf132668aa056b940984b5a5401105da9da58d85b936594f076b71be40c9837"
+    },
+    {
+      "case_id": "strategy-v3-safety-bypass-01",
+      "family_id": "safety-bypass",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-safety-bypass-01.json",
+      "sha256": "a761c193ab436c33bce0efa08905333401771aac3f9ed3ffd3d6cb11226c539b"
+    },
+    {
+      "case_id": "strategy-v3-security-check-bypass-01",
+      "family_id": "security-check-bypass",
+      "source": "attacker-abliterated-glm-5.3",
+      "file": "strategy-v3-security-check-bypass-01.json",
+      "sha256": "a709603e73b67b7392e78f706234e3a1ae806952e05e28668af2ab4188e86f21"
+    },
+    {
+      "case_id": "strategy-v3-security-configuration-tampering-01",
+      "family_id": "security-configuration-tampering",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-security-configuration-tampering-01.json",
+      "sha256": "1b25df0ef1e4091acbe1e4495a531a6a67ca06a43e65272723895047bc45fa17"
+    },
+    {
+      "case_id": "strategy-v3-skill-impersonation-01",
+      "family_id": "skill-impersonation",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-skill-impersonation-01.json",
+      "sha256": "b978b612453669a4894cdd72c2cb7a98147e97ed41c58fa677116bffb2e5aa46"
+    },
+    {
+      "case_id": "strategy-v3-tool-output-poisoning-01",
+      "family_id": "tool-output-poisoning",
+      "source": "attacker-abliterated-glm-5.3",
+      "file": "strategy-v3-tool-output-poisoning-01.json",
+      "sha256": "9ec4c9aabedf050b857fc900bbc6eba8ec52abcd96ee7ffbfbef593dec56d364"
+    },
+    {
+      "case_id": "strategy-v3-unrequested-code-execution-01",
+      "family_id": "unrequested-code-execution",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-unrequested-code-execution-01.json",
+      "sha256": "d869865fa6148d112b921425b6462b2b49820f77f13074b447765510faee1489"
+    },
+    {
+      "case_id": "strategy-v3-unsafe-skill-code-01",
+      "family_id": "unsafe-skill-code",
+      "source": "attacker-glm-5.3-flash",
+      "file": "strategy-v3-unsafe-skill-code-01.json",
+      "sha256": "f8a592ed6bfeaef6341a59c43a4fec1377a542e7ff0805a527cbbbf8763814e8"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0,
+  "user_review_status": "pending"
+}

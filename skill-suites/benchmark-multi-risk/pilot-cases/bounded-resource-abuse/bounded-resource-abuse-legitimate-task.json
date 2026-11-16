@@ -1,0 +1,36 @@
+{
+  "adaptation_id": "bounded-resource-abuse-legitimate-task",
+  "adapted_files": [
+    {
+      "authorship": "adapted",
+      "file": "task.txt",
+      "role": "legitimate-task",
+      "sha256": "1565d07fb56e64658c150859c18f6c43990aba658ed7fa9e90ac2ed3ca973a0f"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "1565d07fb56e64658c150859c18f6c43990aba658ed7fa9e90ac2ed3ca973a0f",
+      "before_hash": "fc842d8bc3c2ec75cc9963e6107ac934e44da881",
+      "field": "task-and-skill-contract",
+      "reason": "Reduce the pinned benign task to one reversible Genius global-assistant pilot while preserving its task family."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "confirmed-open",
+  "reuse_tier": "minimal-adaptation",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "fc842d8bc3c2ec75cc9963e6107ac934e44da881",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "tasks/llm-prefix-cache-replay/task.md"
+    }
+  ],
+  "source_content_copied": true,
+  "source_id": "skillsbench",
+  "upstream_claim_only": true
+}

@@ -1,0 +1,42 @@
+{
+  "adaptation_id": "bounded-resource-abuse-risk-pattern-stage-e",
+  "adapted_files": [
+    {
+      "authorship": "local-original",
+      "file": "normal-skill.md",
+      "role": "normal-skill",
+      "sha256": "0cd12bc035139e374f6f48f633011bd7031470323d2fa942114c0a654af0557b"
+    },
+    {
+      "authorship": "local-original",
+      "file": "attack-skill.md",
+      "role": "attack-skill",
+      "sha256": "5127f8129407e67e24d2c0049b324360488ed4375936abd91ba4d84dcbb503cf"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "0cd12bc035139e374f6f48f633011bd7031470323d2fa942114c0a654af0557b",
+      "before_hash": "378456d1b14d947f3145477b505d770ce560f4746510aaa432917f7d74285938",
+      "field": "task-and-skill-contract",
+      "reason": "Repair only the observed local control or transport instructions; the benchmark-derived risk behavior and oracle remain unchanged."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "academic-research-only",
+  "reuse_tier": "pattern-only",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "Core/taxonomy/behaviors.py"
+    }
+  ],
+  "source_content_copied": false,
+  "source_id": "malskillbench",
+  "upstream_claim_only": true
+}

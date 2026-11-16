@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-retention-cases-v31-index",
+  "status": "goal-iteration-active",
+  "case_count": 1,
+  "families": [
+    "hidden-instruction-asset-poisoning"
+  ],
+  "cases": [
+    {
+      "case_id": "retention-v31-hidden-instruction-asset-poisoning-01",
+      "family_id": "hidden-instruction-asset-poisoning",
+      "file": "hidden-instruction-asset-poisoning-01.json",
+      "sha256": "6f9a95c5255989b50792023eb25740bb03f28bcd8cc57130957e3bc134a7b27c"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

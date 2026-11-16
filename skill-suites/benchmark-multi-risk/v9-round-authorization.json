@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "kind": "genius-v9-round-authorization",
+  "user_decision_ref": "user-message:2026-10-12-approve-v9-fixed-scorer",
+  "authorized_actions": {
+    "v8_cleanup": true,
+    "v9_attack_targets": 46,
+    "management": 700,
+    "recovery": 46,
+    "cleanup": 130,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "ledger_amendment": {
+    "action": "eighth one-time standing-ledger limit raise",
+    "new_limits": {
+      "target": 580,
+      "management": 6800,
+      "recovery": 180,
+      "cleanup": 1000,
+      "generation": 0,
+      "judge": 0,
+      "retry": 0
+    }
+  },
+  "retain_policy": {
+    "mode": "retain-v9-resources"
+  },
+  "active": true,
+  "authorized_at": "2026-10-12T14:35:37+08:00"
+}

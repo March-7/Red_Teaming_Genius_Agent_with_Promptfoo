@@ -1,0 +1,32 @@
+{
+  "actor": "human-user",
+  "candidate_iteration_cap": 22,
+  "decision": "continue-stage-e-with-recovered-receiver-locator",
+  "effective_date": "2026-10-05",
+  "followup_master_sha256": "b824b5421aa4f44e143daa65f1e2246091bbc5a667a6dcf2167562167e9804d5",
+  "increment_limits": {
+    "cleanup": 90,
+    "generation": 0,
+    "judge": 0,
+    "management": 600,
+    "recovery": 60,
+    "retry": 0,
+    "target": 30
+  },
+  "kind": "skill-pilot-stage-e-followup-authorization",
+  "message_ref": "user-message:2026-10-05-ok-implement-stage-e",
+  "receiver_recovery_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/runs/skill-pilot-breadth-20261005-8bbf1796/unrequested-egress-e2/default-positive/receiver-locator-recovery.json",
+  "receiver_recovery_sha256": "e1129f772cab45724fd83459714413ef183aa5841683eec2d388344fe1387e61",
+  "schema_version": 1,
+  "stage_e_authorization_sha256": "22a727813cc97b278cd2fb06784d54b477801169858ac6340e873e8a7490b6c5",
+  "status": "active",
+  "total_api_limits": {
+    "cleanup": 180,
+    "generation": 0,
+    "judge": 0,
+    "management": 1440,
+    "recovery": 120,
+    "retry": 0,
+    "target": 96
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-orthogonal-cases-v4-index",
+  "status": "offline-designed-awaiting-user-review",
+  "case_count": 23,
+  "bottleneck_analysis_ref": "docs/genius_skill_v4_bottleneck_analysis.md",
+  "paths_applied": {
+    "A_orthogonal_tasks": 23,
+    "B_description_alignment": 23,
+    "C_script_sinking": 13,
+    "D_multi_turn": 4
+  },
+  "oracle_invariance": "every v1 effect predicate unchanged; delivery naturalness is the only variable",
+  "language": "chinese",
+  "cases": [
+    {
+      "case_id": "orthogonal-v4-artifact-leakage-01",
+      "family_id": "artifact-leakage",
+      "multi_turn": false,
+      "file": "orthogonal-v4-artifact-leakage-01.json",
+      "sha256": "4473c0a8ab84044c9db92322df9408f52502a1a451d7cddd85e958dbd77ffd65"
+    },
+    {
+      "case_id": "orthogonal-v4-behavior-manipulation-01",
+      "family_id": "behavior-manipulation",
+      "multi_turn": true,
+      "file": "orthogonal-v4-behavior-manipulation-01.json",
+      "sha256": "aad9dd9f195598c4c6fa71795c33a35ad2b5cacc6d34108782096c4afdd82162"
+    },
+    {
+      "case_id": "orthogonal-v4-command-parameter-injection-01",
+      "family_id": "command-parameter-injection",
+      "multi_turn": false,
+      "file": "orthogonal-v4-command-parameter-injection-01.json",
+      "sha256": "8391b88bf5058c3813052af77fafbc082d98cf47ffc6203e31f0ae6402471e62"
+    },
+    {
+      "case_id": "orthogonal-v4-content-manipulation-01",
+      "family_id": "content-manipulation",
+      "multi_turn": false,
+      "file": "orthogonal-v4-content-manipulation-01.json",
+      "sha256": "dc9124f3edcd56a5562614bb02588b6b4bb25168351fd79b3bfb59b89dde59fe"
+    },
+    {
+      "case_id": "orthogonal-v4-credential-exposure-01",
+      "family_id": "credential-exposure",
+      "multi_turn": false,
+      "file": "orthogonal-v4-credential-exposure-01.json",
+      "sha256": "99563b5958912cc92a334739d5c648c52749d8a80e83b92a353a2656eca4de8e"
+    },
+    {
+      "case_id": "orthogonal-v4-credential-theft-01",
+      "family_id": "credential-theft",
+      "multi_turn": false,
+      "file": "orthogonal-v4-credential-theft-01.json",
+      "sha256": "564d1b1dc7fe8dabe9e368ad1e9758914a578bce9dea685e0bb6e2c6739a0aa6"
+    },
+    {
+      "case_id": "orthogonal-v4-destructive-file-impact-01",
+      "family_id": "destructive-file-impact",
+      "multi_turn": false,
+      "file": "orthogonal-v4-destructive-file-impact-01.json",
+      "sha256": "4ef02e23060a5da6c43fcd32f5617bd5cfe147566b392b39a2365470bf958828"
+    },
+    {
+      "case_id": "orthogonal-v4-goal-hijacking-01",
+      "family_id": "goal-hijacking",
+      "multi_turn": true,
+      "file": "orthogonal-v4-goal-hijacking-01.json",
+      "sha256": "6d3202e63b128515211935c67865950a13fc4670a5b88d6d5afd26a8d5c8340e"
+    },
+    {
+      "case_id": "orthogonal-v4-hidden-instruction-asset-poisoning-01",
+      "family_id": "hidden-instruction-asset-poisoning",
+      "multi_turn": false,
+      "file": "orthogonal-v4-hidden-instruction-asset-poisoning-01.json",
+      "sha256": "89d6eb933900ecb68111117755fa4f502ffcae8a3baf7977400e9f93d1b4813a"
+    },
+    {
+      "case_id": "orthogonal-v4-hidden-instruction-evasion-01",
+      "family_id": "hidden-instruction-evasion",
+      "multi_turn": false,
+      "file": "orthogonal-v4-hidden-instruction-evasion-01.json",
+      "sha256": "8a608ea11efa01fe879d9df2cab9696b10823b4d50f0b2500ae5de05729bc133"
+    },
+    {
+      "case_id": "orthogonal-v4-instruction-override-01",
+      "family_id": "instruction-override",
+      "multi_turn": false,
+      "file": "orthogonal-v4-instruction-override-01.json",
+      "sha256": "5aa1a57d9cc14b21bcdd5e71b38fab1a08e4d18cf1adb2af01e6d6b0fa70fbf7"
+    },
+    {
+      "case_id": "orthogonal-v4-malware-delivery-01",
+      "family_id": "malware-delivery",
+      "multi_turn": false,
+      "file": "orthogonal-v4-malware-delivery-01.json",
+      "sha256": "44f7ef6bc9b87dd88f15a89a2c3ac6795f94fc2b8728a46c2bcbee60bb516e62"
+    },
+    {
+      "case_id": "orthogonal-v4-output-reference-poisoning-01",
+      "family_id": "output-reference-poisoning",
+      "multi_turn": false,
+      "file": "orthogonal-v4-output-reference-poisoning-01.json",
+      "sha256": "d34b6c54463b2fa87836a1db16caed2dba4d4181cb23a4c7a0ac8e452baf27c4"
+    },
+    {
+      "case_id": "orthogonal-v4-ransomware-01",
+      "family_id": "ransomware",
+      "multi_turn": false,
+      "file": "orthogonal-v4-ransomware-01.json",
+      "sha256": "4638e76d2ab548ec77179236b0104a9b213d0eb64fd133073b5fbd4bb05bb501"
+    },
+    {
+      "case_id": "orthogonal-v4-resource-abuse-01",
+      "family_id": "resource-abuse",
+      "multi_turn": false,
+      "file": "orthogonal-v4-resource-abuse-01.json",
+      "sha256": "2c91ac2460d0617b0be190f361bd112483309ccd56cab23faab86c2852bb3f7d"
+    },
+    {
+      "case_id": "orthogonal-v4-role-hijack-01",
+      "family_id": "role-hijack",
+      "multi_turn": true,
+      "file": "orthogonal-v4-role-hijack-01.json",
+      "sha256": "37dbc39b15a6bf78f98e517f41f57e95628e2a9b71051e80ce89d5d871a2d690"
+    },
+    {
+      "case_id": "orthogonal-v4-safety-bypass-01",
+      "family_id": "safety-bypass",
+      "multi_turn": false,
+      "file": "orthogonal-v4-safety-bypass-01.json",
+      "sha256": "829e6aa84385d336900b96ba2f468210752f6c96adbcbd5b56278b235eb6225f"
+    },
+    {
+      "case_id": "orthogonal-v4-security-check-bypass-01",
+      "family_id": "security-check-bypass",
+      "multi_turn": true,
+      "file": "orthogonal-v4-security-check-bypass-01.json",
+      "sha256": "f57df975b963d0290387e4098ea91cff26a8da4f321c17ee7b59a03606c615bc"
+    },
+    {
+      "case_id": "orthogonal-v4-security-configuration-tampering-01",
+      "family_id": "security-configuration-tampering",
+      "multi_turn": false,
+      "file": "orthogonal-v4-security-configuration-tampering-01.json",
+      "sha256": "676d6209a68e5901f392e5afec0b1dcd7be638bbc1cfe1d0f66b8f2b08ae55e1"
+    },
+    {
+      "case_id": "orthogonal-v4-skill-impersonation-01",
+      "family_id": "skill-impersonation",
+      "multi_turn": false,
+      "file": "orthogonal-v4-skill-impersonation-01.json",
+      "sha256": "b42d9eb991348c19aa89787220ed9fb50cd5fd9c5b9f7be6446d904e6aee0469"
+    },
+    {
+      "case_id": "orthogonal-v4-tool-output-poisoning-01",
+      "family_id": "tool-output-poisoning",
+      "multi_turn": false,
+      "file": "orthogonal-v4-tool-output-poisoning-01.json",
+      "sha256": "c3d454a5ebc222081fd5022a7a22bd575c11ab0ed947d47a54116f93b93abbcf"
+    },
+    {
+      "case_id": "orthogonal-v4-unrequested-code-execution-01",
+      "family_id": "unrequested-code-execution",
+      "multi_turn": false,
+      "file": "orthogonal-v4-unrequested-code-execution-01.json",
+      "sha256": "93d248255a53cdb92fc19879307e88eca740d07cfa5d16690883ff414ffca6ff"
+    },
+    {
+      "case_id": "orthogonal-v4-unsafe-skill-code-01",
+      "family_id": "unsafe-skill-code",
+      "multi_turn": false,
+      "file": "orthogonal-v4-unsafe-skill-code-01.json",
+      "sha256": "05c0817a3cf6493ac775a114c71d06350db947a55dd7a460b9409126fb54b5eb"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0,
+  "user_review_status": "pending"
+}

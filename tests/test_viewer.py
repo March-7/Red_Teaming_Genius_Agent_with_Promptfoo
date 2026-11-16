@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 import subprocess
 import tempfile
 import threading
@@ -9,7 +10,7 @@ from pathlib import Path
 
 import httpx
 
-from viewer.server import ViewerHTTPServer, ViewerIndex, discover_sources, Source, _eval_user_events, _link_trace_turns, _normalize_event
+from viewer.server import ViewerHTTPServer, ViewerIndex, discover_sources, Source, _dual_gate_payload, _source_faithful_cases_payload, _eval_user_events, _link_trace_turns, _normalize_event
 
 
 def _write_jsonl(path: Path, rows: list[dict]) -> None:
@@ -142,6 +143,16 @@ def _make_root() -> Path:
         encoding="utf-8",
     )
     (run_dir / "summary.md").write_text("# Sweep summary\n", encoding="utf-8")
+    project = Path(__file__).resolve().parents[1]
+    source = project / "skill-suites/benchmark-multi-risk"
+    target = root / "skill-suites/benchmark-multi-risk"
+    target.mkdir(parents=True)
+    for name in ("dual-gate-screening.json", "dual-gate-trajectories.json",
+                 "risk-family-map.json", "source-category-catalogue.json",
+                 "source-registry.json", "formal-category-selection.json"):
+        shutil.copy2(source / name, target / name)
+    shutil.copytree(source / "source-faithful-cases-v1",
+                    target / "source-faithful-cases-v1")
     return root
 
 
@@ -192,6 +203,39 @@ class ViewerTests(unittest.TestCase):
         self.assertEqual(styles.status_code, 200)
         script = self.client.get(f"{self.base_url}/app.js")
         self.assertEqual(script.status_code, 200)
+        risks = self.client.get(f"{self.base_url}/risks.html")
+        self.assertEqual(risks.status_code, 200)
+        self.assertIn("Genius Skill 风险轨迹", risks.text)
+        self.assertEqual(self.client.get(f"{self.base_url}/risks.js").status_code, 200)
+        self.assertEqual(self.client.get(f"{self.base_url}/risks.css").status_code, 200)
+        cases = self.client.get(f"{self.base_url}/cases.html")
+        self.assertEqual(cases.status_code, 200)
+        self.assertIn("Genius Skill Case 审查", cases.text)
+        self.assertEqual(self.client.get(f"{self.base_url}/cases.js").status_code, 200)
+        self.assertEqual(self.client.get(f"{self.base_url}/cases.css").status_code, 200)
+
+    def test_dual_gate_review_api_joins_frozen_artifacts(self) -> None:
+        payload = self.client.get(f"{self.base_url}/api/dual-gate").json()
+        self.assertEqual(payload["status"], "ready-for-user-dual-gate-review")
+        self.assertEqual(payload["counts"]["observed_success"], 0)
+        self.assertEqual(payload["counts"]["source_faithful_testable"], 23)
+        b_only = [row for row in payload["families"]
+                  if row["family_id"] in payload["quadrants"]["b_only"]]
+        self.assertEqual(len(b_only), 23)
+        self.assertTrue(all(row["trajectory"]["executable_payload"] is False
+                            for row in b_only))
+        self.assertEqual(payload["new_online_calls"],
+                         {"target": 0, "generation": 0, "judge": 0})
+
+    def test_source_faithful_case_api_exposes_23_offline_blueprints(self) -> None:
+        payload = self.client.get(f"{self.base_url}/api/source-faithful-cases").json()
+        self.assertEqual((payload["case_count"], payload["family_count"]), (23, 23))
+        self.assertEqual(payload["carrier_counts"], {"catalogue-selection": 1,
+            "package-asset": 4, "package-script": 9, "text-skill": 9})
+        self.assertTrue(all(case["genius_case"]["payload_status"] ==
+                            "blueprint-no-executable-payload" for case in payload["cases"]))
+        self.assertEqual((payload["target_calls"], payload["generation_calls"],
+                          payload["judge_calls"]), (0, 0, 0))
 
     def test_api_index_run_session_and_request_routes(self) -> None:
         index = self.client.get(f"{self.base_url}/api/index").json()
@@ -293,6 +337,22 @@ class ViewerTests(unittest.TestCase):
         result = subprocess.run(["node", "tests/viewer_browser_qa.cjs", self.base_url], capture_output=True, text=True, timeout=60, cwd=Path(__file__).resolve().parents[1])
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
+    def test_risk_review_browser_interactions(self) -> None:
+        result = subprocess.run(
+            ["node", "tests/risk_viewer_browser_qa.cjs", self.base_url],
+            capture_output=True, text=True, timeout=60,
+            cwd=Path(__file__).resolve().parents[1],
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_case_review_browser_interactions(self) -> None:
+        result = subprocess.run(
+            ["node", "tests/case_viewer_browser_qa.cjs", self.base_url],
+            capture_output=True, text=True, timeout=60,
+            cwd=Path(__file__).resolve().parents[1],
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
     def test_deep_link_restores_selected_session(self) -> None:
         script = r"""
 const { chromium } = require('playwright');
@@ -392,6 +452,58 @@ class UserTurnRecoveryTests(unittest.TestCase):
         _link_trace_turns(events)
         self.assertIsNone(events[2]["session_id"])
         self.assertIsNone(events[3]["session_id"])
+
+
+class MultiRiskPilotViewerTests(unittest.TestCase):
+    def test_discovers_pilot_and_enriches_source_license_reuse_and_hash_fields(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            base = root / "skill-suites/benchmark-multi-risk"
+            case_id = "script-drop"
+            (base / "risk-cards").mkdir(parents=True)
+            (base / "pilot-cases" / case_id).mkdir(parents=True)
+            registry = {"sources": [
+                {"source_id": "malskillbench", "repository_url": "https://github.com/example/mal",
+                 "license_disposition": "academic-research-only"},
+                {"source_id": "skillsbench", "repository_url": "https://github.com/example/benign",
+                 "license_disposition": "confirmed-open"}]}
+            (base / "source-registry.json").write_text(json.dumps(registry))
+            card = {"risk_family": "malicious-script-drop", "disposition": "eligible-for-pilot",
+                    "sources": [{"source_id": "malskillbench", "reuse_tier": "pattern-only"},
+                                {"source_id": "skillsbench", "reuse_tier": "minimal-adaptation"}]}
+            (base / "risk-cards" / f"{case_id}.json").write_text(json.dumps(card))
+            adaptation = {"source_assets": [{"path": "Core/taxonomy/behaviors.py",
+                                              "content_hash": "a" * 40}],
+                          "adapted_files": [{"sha256": "b" * 64}]}
+            (base / "pilot-cases" / case_id / "adaptation.json").write_text(json.dumps(adaptation))
+            case = {"source_adaptations": [{"file": "adaptation.json"}]}
+            (base / "pilot-cases" / case_id / "case.json").write_text(json.dumps(case))
+            run = base / "runs/pilot-a124"
+            run.mkdir(parents=True)
+            (run / "run-manifest.json").write_text(json.dumps({"kind": "skill-multi-risk-pilot-run",
+                "run_id": "pilot-a124", "target_context": "global-general", "session_type": "general"}))
+            _write_jsonl(run / "genius_trace.jsonl", [{"kind": "request_completed", "timestamp": 1,
+                "case_id": case_id, "risk_family": "malicious-script-drop", "variant": "normal",
+                "row_id": "default-normal", "upstream_session_id": "chat:usr:a124",
+                "trace": {"request_id": "request-a124", "upstream_session_id": "chat:usr:a124"}}])
+            result_dir = run / case_id
+            result_dir.mkdir()
+            (result_dir / "pilot-result.json").write_text(json.dumps({"case_id": case_id,
+                "risk_family": "malicious-script-drop", "rows": [{"model_profile": "default",
+                "variant": "normal", "status": "normal-valid", "source_verified": True,
+                "task_valid": True, "independent_effect_observed": False}]}))
+            index = ViewerIndex(root)
+            self.assertEqual(next(source for source in index.sources if source.run_id == "pilot-a124").kind,
+                             "skill-pilot")
+            event = next(event for event in index.events if event["source_file"] == "pilot-result")
+            self.assertEqual(event["source_id"], "malskillbench,skillsbench")
+            self.assertEqual(event["risk_family"], "malicious-script-drop")
+            self.assertEqual(event["reuse_tier"], "pattern-only,minimal-adaptation")
+            self.assertEqual(event["license_disposition"],
+                             "academic-research-only,confirmed-open")
+            self.assertEqual(event["evaluation_stage"], "pilot")
+            self.assertEqual(event["original_hash"], "a" * 40)
+            self.assertEqual(event["adapted_hash"], "b" * 64)
 
 
 if __name__ == "__main__":

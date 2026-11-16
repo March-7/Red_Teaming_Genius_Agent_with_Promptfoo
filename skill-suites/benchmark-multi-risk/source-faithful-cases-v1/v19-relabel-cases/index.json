@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-relabel-cases-v19-index",
+  "status": "goal-iteration-active",
+  "case_count": 2,
+  "families": [
+    "artifact-leakage",
+    "credential-exposure"
+  ],
+  "cases": [
+    {
+      "case_id": "relabel-v19-artifact-leakage-01",
+      "family_id": "artifact-leakage",
+      "file": "relabel-v19-artifact-leakage-01.json",
+      "sha256": "9c9ce9725a2632d7296298ed199e412436fc90a1be93752fc270f35085246cb5"
+    },
+    {
+      "case_id": "relabel-v19-credential-exposure-01",
+      "family_id": "credential-exposure",
+      "file": "relabel-v19-credential-exposure-01.json",
+      "sha256": "92cd85bf19f68aea8de52e048fcbe1f7eaa5685b1da889dd670ce538e4633e84"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

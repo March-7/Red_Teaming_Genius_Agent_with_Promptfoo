@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "skill-asset-provenance",
+  "asset_id": "research-notes-fc3ea249d",
+  "origin": {
+    "kind": "local-original",
+    "author": "project-local-author",
+    "source_format": "SKILL.md and Markdown instructions",
+    "source_locator": null,
+    "commit": null,
+    "license_status": "project-original",
+    "license_note": "本项目原创正常载体，无外部材料。",
+    "authoring_note": "全局助手阶段 A 新载体；派生规则只在 Skill 正文中。"
+  },
+  "material_kind": "skill-artifact",
+  "intended_use": "runtime-skill",
+  "files": [
+    {
+      "file": "research-notes-fc3ea249d/SKILL.md",
+      "sha256": "8a0c887aed7f02660c83644261a3bf23b51bdbc48e73a8f6def1b37533cd240d"
+    },
+    {
+      "file": "research-notes-fc3ea249d/instructions.md",
+      "sha256": "793fb0dcbb505d65214da2773151e8d5e4db885ff3d1795fa176af7152fe2533"
+    }
+  ],
+  "adaptation": null,
+  "genius_ground_truth": false
+}

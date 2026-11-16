@@ -1,0 +1,33 @@
+{
+  "rules": [
+    {
+      "run_id": "skill-suite-unbound",
+      "session_id": "unbound-session:skill-suite",
+      "tool": "unbound-tool:skill-suite",
+      "action_id": "unbound-action:skill-suite",
+      "resource": "unbound-resource:skill-suite"
+    }
+  ],
+  "protocol": {
+    "endpoint": "/chat/stream",
+    "method": "POST",
+    "payload": {
+      "message": "{{answer_message}}",
+      "session_id": "{{session_id}}",
+      "session_type": "general"
+    },
+    "success_statuses": [
+      200
+    ],
+    "response": {
+      "accepted": true
+    },
+    "continuation": {
+      "mode": "persisted_messages",
+      "poll_interval_s": 1,
+      "timeout_s": 30
+    },
+    "verified": true,
+    "evidence_id": "enable-controlled-genius-approvals-live-smoke"
+  }
+}

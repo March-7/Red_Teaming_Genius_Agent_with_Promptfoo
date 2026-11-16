@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "kind": "skill-multi-risk-formal-start-bundle",
+  "status": "ready-to-request-formal-start",
+  "execution_enabled": false,
+  "evaluation_stage": "formal-prepared",
+  "target_context": "global-general",
+  "risk_family_count": 4,
+  "risk_families": [
+    "malicious-script-drop",
+    "synthetic-credential-theft",
+    "unrelated-file-content-tampering",
+    "audit-log-falsification"
+  ],
+  "case_count": 20,
+  "target_row_count": 80,
+  "family_cases": {
+    "malicious-script-drop": 5,
+    "synthetic-credential-theft": 5,
+    "unrelated-file-content-tampering": 5,
+    "audit-log-falsification": 5
+  },
+  "source_cases": {
+    "malskillbench": 5,
+    "aig-skilljack": 5,
+    "skillsbench": 10
+  },
+  "formal_plan_ref": {
+    "file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/formal-plan-v2.json",
+    "sha256": "3e848fa931fd0ffa29693b1fe900afb10189ac4e745242990496a35cfee48b18"
+  },
+  "pilot_summary_ref": {
+    "file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/pilot-summary-v2.json",
+    "sha256": "43b66274fd0d3aa5d2d6ecca77734f47dd4ed9f8f253e7dd6bf696f85cb55686"
+  },
+  "source_registry_ref": {
+    "file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/source-registry.json",
+    "sha256": "380824bd3c18d446fa868c851f5fb8ec36be7431b2a9b18d590fce249fd0d66a"
+  },
+  "risk_card_index_ref": {
+    "file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/risk-cards/index.json",
+    "sha256": "a73f9d162cc1deb03d1796e2206f0ffcc5e7e1610bbea2b8acd9cf69e8f19ac4"
+  },
+  "case_registry_ref": {
+    "file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/formal-cases-v2/index.json",
+    "sha256": "7707a7bc1056b6339723836bda394f2f6f8b2c82634aa74f9fe0024bae4cb40f"
+  },
+  "review_index_ref": {
+    "file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/formal-cases-v2/review-index.json",
+    "sha256": "2aefcad9af9a674af65d2260f79e3b4a6ff044904999953de61d5b6c9d5521e3"
+  },
+  "provisioning_plan_ref": {
+    "file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/formal-start-bundle-v2/provisioning-plan.json",
+    "sha256": "f46a765d593494c764e7120d313c84d85e679fe4d1cbe5942674003843b20854"
+  },
+  "budget": {
+    "target": 80,
+    "management": 900,
+    "recovery": 80,
+    "cleanup": 80,
+    "generation": 0,
+    "judge": 40,
+    "retry": 0
+  },
+  "data_flow": {
+    "genius": "frozen synthetic tasks, private Skills and run-owned resources",
+    "judge": "guarded outputs and deterministic oracle summary only",
+    "credentials_or_raw_management_receipts_externalized": false
+  },
+  "cleanup": {
+    "scope": "run-owned-resources-only",
+    "non_owned_resources": 0
+  },
+  "target_calls": 0,
+  "judge_calls": 0,
+  "formal_start_authorized": false,
+  "judge_authorized": false,
+  "stop_condition": "separate exact-bundle target authorization required"
+}

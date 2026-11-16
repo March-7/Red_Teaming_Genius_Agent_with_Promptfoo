@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "genius-package-skill-gate-authorization",
+  "status": "active",
+  "actor": "human-user",
+  "decision": "start-package-skill-capability-gate",
+  "message_ref": "user-message:2026-10-07-confirm-online-package-gate",
+  "effective_date": "2026-10-07",
+  "plan_sha256": "4a35fa94a18c0b662e0f399dc4e90eb17ff924ad841419431ac21d88febd6e39",
+  "limits": {
+    "target": 2,
+    "management": 64,
+    "recovery": 4,
+    "cleanup": 8,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "resources": {
+    "private_package_skills": 2,
+    "general_sessions": 2,
+    "projects": 0
+  },
+  "allowed_actions": [
+    "download-official-skill-templates",
+    "build-bounded-harmless-package",
+    "validate-confirm-private-package",
+    "read-sharing-download-test-owned-package",
+    "positive-package-target",
+    "read-only-recovery",
+    "owned-package-cleanup"
+  ],
+  "excluded_actions": [
+    "generation",
+    "judge",
+    "formal-target",
+    "malicious-script",
+    "external-network-from-package",
+    "real-sensitive-data",
+    "non-owned-resource",
+    "project-workspace-routing",
+    "retry",
+    "publish",
+    "share"
+  ]
+}

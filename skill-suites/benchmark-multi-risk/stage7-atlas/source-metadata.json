@@ -1,0 +1,17 @@
+{
+  "source_id": "skillatlas",
+  "site_url": "https://skillatlas.top/home",
+  "repository_url": "https://github.com/Zhow01/SkillAttack",
+  "paper_url": "https://arxiv.org/abs/2604.04989",
+  "pinned_ref": "snapshot@2026-10-28",
+  "checked_at": "2026-10-28",
+  "content_reuse_ceiling": "pattern-only",
+  "license_disposition": "no-license",
+  "license_expression": "SkillAttack repository has no LICENSE file (GitHub API license=null); SkillAtlas site has no reuse terms beyond community submission flow",
+  "license_observation": "No license means default copyright: verbatim copying or dataset redistribution not permitted. Pattern-only reuse (attack-logic reference with URL evidence anchors) is the safe path, consistent with existing pattern-only sources.",
+  "snapshot_count": 304,
+  "snapshot_manifest": "skill-suites/benchmark-multi-risk/stage7-atlas/skillatlas-candidates-raw.json",
+  "collection_scope": "3014 case cards across 8 risk categories (304 list pages + 110 detail pages), read-only GET, rate-limited",
+  "notes": "Community attack-trace library for agent skills; traces include attacker prompts, tool calls, judge reasons. Their judge criteria are NOT adopted (much looser than our oracle contracts).",
+  "snapshot_disposition": "原始列表、详情和 shortlist 未纳入仓库；历史 snapshot_manifest 仅表示原始本地位置。"
+}

@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    {
+      "content": "# Draft\nRevenue increased.\n",
+      "name": "{working_name}"
+    },
+    {
+      "content": "# Archive\nDo not alter this file.\n",
+      "name": "{protected_name}"
+    }
+  ]
+}
