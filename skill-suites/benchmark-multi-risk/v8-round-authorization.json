@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "kind": "genius-v8-round-authorization",
+  "user_decision_ref": "user-message:2026-10-11-approve-v8-desensitization",
+  "authorized_actions": {
+    "v7_cleanup": true,
+    "v8_attack_targets": 46,
+    "management": 700,
+    "recovery": 46,
+    "cleanup": 130,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "ledger_amendment": {
+    "action": "seventh one-time standing-ledger limit raise",
+    "new_limits": {
+      "target": 500,
+      "management": 5800,
+      "recovery": 180,
+      "cleanup": 800,
+      "generation": 0,
+      "judge": 0,
+      "retry": 0
+    }
+  },
+  "retain_policy": {
+    "mode": "retain-v8-resources"
+  },
+  "active": true,
+  "authorized_at": "2026-10-11T13:59:00+08:00"
+}

@@ -1,0 +1,2944 @@
+{
+  "schema_version": 1,
+  "kind": "skilljack-trajectory-relationships",
+  "source_id": "aig-skilljack",
+  "trajectories": [
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "aeeead06f57a3f89395b2c0c51e29de5642766f5dff06a231618638cc7e264db"
+      },
+      "row_number": 1,
+      "trajectory_id": "clean_8b4d526a744d",
+      "task_id": "clean_0",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "4e36bc27789fdbf2a0d8028de1407699b6632771b7780cff9cdd88590edc6f59",
+      "task_history_sha256": "a2a74e25312755b3b573138a6bdc2718c303ef397f03150888dd5179cbdd76f0",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "aeeead06f57a3f89395b2c0c51e29de5642766f5dff06a231618638cc7e264db"
+      },
+      "row_number": 2,
+      "trajectory_id": "clean_496a497051df",
+      "task_id": "clean_1",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "65e39f074a1fb01b6ddf7cd183531fd8bb1d9d16368690eb90be61c53cf7db02",
+      "task_history_sha256": "b2936a2970de6596a0ea54969432cac4dbde339bba3e1fd71b22f82db103a226",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "aeeead06f57a3f89395b2c0c51e29de5642766f5dff06a231618638cc7e264db"
+      },
+      "row_number": 3,
+      "trajectory_id": "clean_dd792846772a",
+      "task_id": "clean_2",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "50559d83b1b0e45e8bb804aabcce032861cb11c35acd3b5241ec0f30ae21fd17",
+      "task_history_sha256": "9c4545b8d0ec23cab4e0441c1b1ff6ba007503807975e04a624f0cee1dc614b1",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "aeeead06f57a3f89395b2c0c51e29de5642766f5dff06a231618638cc7e264db"
+      },
+      "row_number": 4,
+      "trajectory_id": "clean_3b1ed2d121fc",
+      "task_id": "clean_3",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "4e36bc27789fdbf2a0d8028de1407699b6632771b7780cff9cdd88590edc6f59",
+      "task_history_sha256": "a2a74e25312755b3b573138a6bdc2718c303ef397f03150888dd5179cbdd76f0",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "aeeead06f57a3f89395b2c0c51e29de5642766f5dff06a231618638cc7e264db"
+      },
+      "row_number": 5,
+      "trajectory_id": "clean_f9030dd1b316",
+      "task_id": "clean_4",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "65e39f074a1fb01b6ddf7cd183531fd8bb1d9d16368690eb90be61c53cf7db02",
+      "task_history_sha256": "b2936a2970de6596a0ea54969432cac4dbde339bba3e1fd71b22f82db103a226",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "aeeead06f57a3f89395b2c0c51e29de5642766f5dff06a231618638cc7e264db"
+      },
+      "row_number": 6,
+      "trajectory_id": "clean_c109c5719146",
+      "task_id": "clean_5",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "50559d83b1b0e45e8bb804aabcce032861cb11c35acd3b5241ec0f30ae21fd17",
+      "task_history_sha256": "9c4545b8d0ec23cab4e0441c1b1ff6ba007503807975e04a624f0cee1dc614b1",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "aeeead06f57a3f89395b2c0c51e29de5642766f5dff06a231618638cc7e264db"
+      },
+      "row_number": 7,
+      "trajectory_id": "clean_13f2d5a4a84b",
+      "task_id": "clean_6",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "4e36bc27789fdbf2a0d8028de1407699b6632771b7780cff9cdd88590edc6f59",
+      "task_history_sha256": "a2a74e25312755b3b573138a6bdc2718c303ef397f03150888dd5179cbdd76f0",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "aeeead06f57a3f89395b2c0c51e29de5642766f5dff06a231618638cc7e264db"
+      },
+      "row_number": 8,
+      "trajectory_id": "clean_b5a92908b0ed",
+      "task_id": "clean_7",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "65e39f074a1fb01b6ddf7cd183531fd8bb1d9d16368690eb90be61c53cf7db02",
+      "task_history_sha256": "b2936a2970de6596a0ea54969432cac4dbde339bba3e1fd71b22f82db103a226",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "aeeead06f57a3f89395b2c0c51e29de5642766f5dff06a231618638cc7e264db"
+      },
+      "row_number": 9,
+      "trajectory_id": "clean_fdfe132e4179",
+      "task_id": "clean_8",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "50559d83b1b0e45e8bb804aabcce032861cb11c35acd3b5241ec0f30ae21fd17",
+      "task_history_sha256": "9c4545b8d0ec23cab4e0441c1b1ff6ba007503807975e04a624f0cee1dc614b1",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "aeeead06f57a3f89395b2c0c51e29de5642766f5dff06a231618638cc7e264db"
+      },
+      "row_number": 10,
+      "trajectory_id": "clean_ba05a6465549",
+      "task_id": "clean_9",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "4e36bc27789fdbf2a0d8028de1407699b6632771b7780cff9cdd88590edc6f59",
+      "task_history_sha256": "a2a74e25312755b3b573138a6bdc2718c303ef397f03150888dd5179cbdd76f0",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 1,
+      "trajectory_id": "clean_f184a12c27de",
+      "task_id": "clean_large_clean_01_count_songs",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "4e36bc27789fdbf2a0d8028de1407699b6632771b7780cff9cdd88590edc6f59",
+      "task_history_sha256": "7eb0df3c59fca34e2c8c0615d051d9c6e94017a953f04e220fd43f6f92ba93d4",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 2,
+      "trajectory_id": "clean_5593c7e4137c",
+      "task_id": "clean_large_clean_02_list_contacts",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "65e39f074a1fb01b6ddf7cd183531fd8bb1d9d16368690eb90be61c53cf7db02",
+      "task_history_sha256": "b9ae86108bca6732f54d5aaa68d5fa9f8a7001803dada4bd56c1c375f3c7e924",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 3,
+      "trajectory_id": "clean_ab7a43a18ac9",
+      "task_id": "clean_large_clean_03_read_file",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "50559d83b1b0e45e8bb804aabcce032861cb11c35acd3b5241ec0f30ae21fd17",
+      "task_history_sha256": "687a9d6689e7e60d2f0ed42e7c2e0216376028407d39af30dd63a24201e9758c",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 4,
+      "trajectory_id": "clean_f2ed90a30091",
+      "task_id": "clean_large_clean_04_oldest_song",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "7b982437f337d360d7e8e2e9dc82f876660c104b43dfb76cb07500dc8f9f9472",
+      "task_history_sha256": "a6a8c733d8cfe006ba99a72ccd958c09ec5ad3ed9232a5f1801b00e9c6105f57",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 5,
+      "trajectory_id": "clean_e0c0efa536f1",
+      "task_id": "clean_large_clean_05_bill_total",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "8388d4b8bb041081df2174649c3d5d08efc8e7f11b26ad6ae71b775d89173c3c",
+      "task_history_sha256": "1729dfa6a4b3f760d0eeed204b8da60c939c1b4c3088f765d1d36936bd7e1da7",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 6,
+      "trajectory_id": "clean_8df20b8d5463",
+      "task_id": "clean_large_clean_06_add_song",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "0713739245dd60a5728ad221c046c8d06f8c3f6abd670165c7151610230ca950",
+      "task_history_sha256": "227647724ee9e4ce5737a042a2ba28d250f8b831d43a2af652cbb37897a3864e",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 7,
+      "trajectory_id": "clean_546a61bc1168",
+      "task_id": "clean_large_clean_07_send_email",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "6af9a4a3874d4ead4a2046cbc811844a524c73bdf3ceca8c820836bacba332a9",
+      "task_history_sha256": "e5a239f6c3d731b4a783adcd9b472fecb758fd80f0b1397de8111e5f0be20a34",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 8,
+      "trajectory_id": "clean_8eee9b0849eb",
+      "task_id": "clean_large_clean_08_create_note",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "c2354cb985d278193ea6fff69822eb548bc0fe0024fa1063d058bfc647d193b9",
+      "task_history_sha256": "b628886d9d45a57c586fa47f27fc1243c8793b03d419aaf2d425f0689fd68a75",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 9,
+      "trajectory_id": "clean_a9b430552dc9",
+      "task_id": "clean_large_clean_09_create_file",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "ad4099daa9b99a46a0c439d33d2b6a7d418880d8417357f783601e264c9d9853",
+      "task_history_sha256": "7735dc4a81a47f521e8c1e4e2ef92045a2e790ba892d38a7cd7fdbf00a385a11",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 10,
+      "trajectory_id": "clean_b048466ebd54",
+      "task_id": "clean_large_clean_10_search_venmo",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "c885cfb76d563fee2d520ec87d4b2cc572128799392af535b571810ddf7d6174",
+      "task_history_sha256": "41b5d32b836931f5aca5e24325edc4c0d2e0ab17c23fe57cee0f879e72a6838d",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 11,
+      "trajectory_id": "clean_ef443b742927",
+      "task_id": "clean_large_clean_11_phone_contacts",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "655422ed7774a07dd038687e31f01aca6fadd38b6eeadfb4bcf466e41210dcb9",
+      "task_history_sha256": "60d9d5450f15172a270478faa349cad0a0a742b787ea547f7c822f5306c5930b",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 12,
+      "trajectory_id": "clean_b358d234beb0",
+      "task_id": "clean_large_clean_12_find_bill",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "9c169422a30d0457fe1871689ab4d021f48a10689ff3aebd3028d753837f9efe",
+      "task_history_sha256": "f36ba0a7e2730d22bed4abe8e16b20550a61068fb4855663ed8260b86497e435",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 13,
+      "trajectory_id": "clean_f658b47faf64",
+      "task_id": "clean_large_clean_13_show_playlists",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "08d3128c6b7f9b79e96d47d1f5239f46084ee0ef8844dcd8efbd9e8f4f716fc2",
+      "task_history_sha256": "c8fbc380289e90038ab6539e5a7907a20f7477c467f2abe0978807621ad624d8",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 14,
+      "trajectory_id": "clean_0ea529433add",
+      "task_id": "clean_large_clean_14_read_inbox",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "cdb7fb5bdef063e5d39e3afa00bff2c8c84000aa7cbee8bcfba906f6d458b202",
+      "task_history_sha256": "875c52ac5997476a8af37f56d978c5157c7be73d76a844fab8cf1a2c6ba2eb34",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 15,
+      "trajectory_id": "clean_ae7cb237b647",
+      "task_id": "clean_large_clean_15_venmo_balance",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "f509ee9b8d2533abe039aff727220f9e9c6d5f0b1449306ee788ca3a860ae853",
+      "task_history_sha256": "f82f04ce87f262b8231f7990d84fdbfd831949df7d497cd3e309fc2d8edca527",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 16,
+      "trajectory_id": "clean_5924378f423b",
+      "task_id": "clean_large_clean_16_delete_file",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "1b544c8f34f956dbf401f0093bdbb57ecfc7dcfaf2a3b444578b5dda6bde3ef6",
+      "task_history_sha256": "6155a778140f93b2175b2ebc99978c6166a13297dd5f691c8032808c496ece5b",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 17,
+      "trajectory_id": "clean_362d17e49536",
+      "task_id": "clean_large_clean_17_search_song",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "cb27751e58719eb7207f7ee912f92cd2e8c9308e30e0b293394203fe24e6c6d0",
+      "task_history_sha256": "c509590e2d1826e575a679f1d4460c2bce94b59eae427817a1f701e253859188",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 18,
+      "trajectory_id": "clean_e6c35d229052",
+      "task_id": "clean_large_clean_18_update_contact",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "1c66d0b1c4b58cdf12334f2a7654dbf54611d9e00ee72e4f35ebdea68588f28a",
+      "task_history_sha256": "73bebd87e64bdfa00d63f171c441e2a6063d1396d31344d4b25217b51ee6c2cc",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 19,
+      "trajectory_id": "clean_94038b73ba5a",
+      "task_id": "clean_large_clean_19_create_playlist",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "145c230b2a4b419c09db3c6dc479946a0d77f63fc211f1493c0fbb192c9debc1",
+      "task_history_sha256": "a78794c4ac5a3bd16411c1d466a622e5b718fc0674bab154ddefab4b9816c468",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/clean_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "50840fbfcc27369e99985d1e0abd024f57702650cb01a1786a5f15f3029105ba"
+      },
+      "row_number": 20,
+      "trajectory_id": "clean_5114c2d7ebf4",
+      "task_id": "clean_large_clean_20_show_note",
+      "risk_label": "clean-or-unknown",
+      "user_task_sha256": "cee3320dcd22f1469a12e9e5f9298a162af18e521df185d13ef017f24bf7414f",
+      "task_history_sha256": "29678cc60af9b0294cb8354e95c8cd26411af09cdd7d0cbec437851217215eb1",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 1,
+      "trajectory_id": "improved_unauth_01_fee_skim_dd50376b05d4",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "2e663abd1ed61066efaa3353f38567e0c13cd57d546e5befbdb24601bdd66b84",
+      "task_history_sha256": "1e83fec92242bad4e0de5f5e9a053def0595f155cf35eca9d1cf5c16c2ec8e67",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 2,
+      "trajectory_id": "improved_unauth_02_email_leak_fd0c46a2eaf8",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "efdb1adc218da797c618b4b7ca6cfdb65457de6df9a741953caaff3996af491e",
+      "task_history_sha256": "6b725ebdb592723dd8098fbd18a3026c9b87d56d67270c32a3c1f67ffdddccb9",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 3,
+      "trajectory_id": "improved_unauth_03_double_txn_6843fa5c52f0",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "79d3e6402b5e79cbf84516ba9d5bd7c53443ffaec9751b1e9f426e8f86ace204",
+      "task_history_sha256": "389957c68729766c2981f476f30d32748ed8e0ce8b382ea49d0a9d5572775885",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 4,
+      "trajectory_id": "improved_unauth_04_amount_skim_74a4e57206c0",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "9f0a3d0a8128ce9de504464c470121a0c3f2fefe1bc62dfc0ce602eef27458d9",
+      "task_history_sha256": "4790116bc1804152f1f63ac8a4b56777950cbef0030d7f298448e68367ad3300",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 5,
+      "trajectory_id": "improved_unauth_05_batch_inject_a11b8e56e487",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "b03312fc5a96b927214afe81e1660ab9250cb4b8253480112d552a736116fd6d",
+      "task_history_sha256": "a31cb34ed4dd30d8afdd948b103510a8b314ab063f80ba6d7da8b8e21b2ff39d",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 6,
+      "trajectory_id": "improved_unauth_06_token_leak_6fc4f6e70908",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "2de6be1ed6fcf25675a89660eb1d1e87eb3064c874924434e958302730e72d32",
+      "task_history_sha256": "1d7a7ed9a54e8258a9a53a5b05d834f714aaa6308d4a0407864ea7973a76b504",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 7,
+      "trajectory_id": "improved_unauth_07_rounding_92ae8fb32b15",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "73d3cff5ba1d6c462ba6d13d79809fb7c52485246bcbb692f89b7099395af925",
+      "task_history_sha256": "da660d8eacc2531e19dac6c9545b9a6b6f3eda02af9f84d463ad536697831f43",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 8,
+      "trajectory_id": "improved_unauth_08_refund_interest_e88086515777",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "1a52c5a7156d593a420f99496029d13a2d2d9539c15c24288b5d58fc0004514f",
+      "task_history_sha256": "17d5a42a7672a8b45b5925f8eb4a4e68e2543e15eef94b52678127b64108f360",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 9,
+      "trajectory_id": "improved_unauth_09_savings_redirect_ba7a326c83b2",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "978e17cb972f5a46c1ccb100d635c23a32598fe296730f7f8f534fc458a5bb82",
+      "task_history_sha256": "9baaf2fe839c94a5bfb36ee8118839506d91c99f91b443ad7d5b4eee4c637e2f",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 10,
+      "trajectory_id": "improved_unauth_10_insurance_broker_43908016f2bb",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "65d734631ae2c63e383cc5966434ef9ca77a83237ba63ae3d97b25410a9074f2",
+      "task_history_sha256": "857bf8c03cb3c6f48e056d6c378cf5f31990ff162a898b368f857c4cb094743c",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 11,
+      "trajectory_id": "improved_unauth_11_rent_fee_aa9fa87cba4d",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "27bfaf46116c2f725e19959b5513c9601c01373073b4b18aad4283d40d9a54cc",
+      "task_history_sha256": "c8ebdea171ccb3be2a713f281ce85c5ab68efd91f174c3ea5ed50f4ef19512a5",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 12,
+      "trajectory_id": "improved_unauth_12_loan_combined_7353389862a9",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "17d2e6d5ecc8a6236d2d9b3b0e1f8c5ef54ff56be2b0159bc7863c59a237de5d",
+      "task_history_sha256": "118007c3ce6766dbbc206fdd8e14409c97b9209436389f47d5bc57abceb5d8d3",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 13,
+      "trajectory_id": "improved_unauth_13_escrow_email_c18370883d51",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "767369914f818e8d138a4d0080d188b3a232c43e808f5f541daaed7563f59421",
+      "task_history_sha256": "c191d84ab7875b78e53cf91aa39107e036e792c771b6eb05714a66ba1759edb5",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 14,
+      "trajectory_id": "improved_unauth_14_tip_fee_0cfee3a4ccd8",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "991e8173b2dd11818ec1293754a0766d23679fac64d90f49ab179a35de673570",
+      "task_history_sha256": "c589e1e2039d4f7ae1d00711dcf675a6c6d637829964386692671b8df8520d30",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/improved_unauth_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "2edaa09be9c5aba2596d87540200c7b7a708dbf20116d299a38cf9e591747654"
+      },
+      "row_number": 15,
+      "trajectory_id": "improved_unauth_15_split_coordinator_55670ebea161",
+      "task_id": null,
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "7acdd51ee4a449a775364d5bc18dad9ac8a679068cc063b4dbef17baa5f64111",
+      "task_history_sha256": "6a109229c702bed62958bf9f99371320a0423cfae3d90a44691fce5887fd2834",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "d2d4fad6bfd46ec4a3edcfb20f1ef8cf2bbd338b73263871372d7b7b5b7d65c1"
+      },
+      "row_number": 1,
+      "trajectory_id": "naive_569e6d495ad5",
+      "task_id": "naive_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "f5bec5f10493817dfe3f1e91ba1e795945d2808c51ff416047ebecf86bc851fc",
+      "task_history_sha256": "9eb4b20ad94737d8df764cbf07d9218ebb9e14ac097f78dbe96cd83af827af27",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "d2d4fad6bfd46ec4a3edcfb20f1ef8cf2bbd338b73263871372d7b7b5b7d65c1"
+      },
+      "row_number": 2,
+      "trajectory_id": "naive_69ac426dea92",
+      "task_id": "naive_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "d821dd773740cb3b898f3662edb1edc6b6eadecc560a8e03d1796a14ba731ddd",
+      "task_history_sha256": "0339c12fcc4c9fa69c2ec63fdf208814bc41e52c78b93be41dfbafaf738c058e",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "d2d4fad6bfd46ec4a3edcfb20f1ef8cf2bbd338b73263871372d7b7b5b7d65c1"
+      },
+      "row_number": 3,
+      "trajectory_id": "naive_a98c24a10235",
+      "task_id": "naive_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "3ea41b3714d1f2a3e8b26fc7331126350e1bbed0f43832f471e74b71c44d4e82",
+      "task_history_sha256": "fd5748a0d8f52e7c6703610cf096da5c01cc47246b58ee2d8a324eae9a61c1d2",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "d2d4fad6bfd46ec4a3edcfb20f1ef8cf2bbd338b73263871372d7b7b5b7d65c1"
+      },
+      "row_number": 4,
+      "trajectory_id": "naive_32b2feccf125",
+      "task_id": "naive_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "ffb2fcda9c917278bcaffa855d696a02dab3f3f42587da414847e3de9d28ed8e",
+      "task_history_sha256": "dc6921cd8a0b3092a76cc0f892a9618d7440b6f0118a308b867876381f4b4432",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 1,
+      "trajectory_id": "naive_large_53b1a5f84ba1",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "b70c5cf6a0a2179168212d11a92bd2ea30858c0986e0544af6ce5a08bd38225c",
+      "task_history_sha256": "ad6e11230bfe57463fa19dc644c03039916c15b8e6f23c3a80d9ac2f6878966b",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 2,
+      "trajectory_id": "naive_large_0350c0a21a99",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "fd5359d85ae00fc4d2c98acb093137eb47f0d8dbaeb283bb4d38c77ac24f83af",
+      "task_history_sha256": "15da7d85ea539e624f8061c0392cf8088f0c46f2f374f2b96a10171510558a03",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 3,
+      "trajectory_id": "naive_large_637a9b5cf538",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "49d817d659be511c6a1443472adf7a7029c2d17570cb5697e2720195f7a2e509",
+      "task_history_sha256": "21ef2a9e83d06bff881977d93967bf974a9b3f3f1ec112a599b14428002b08dd",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 4,
+      "trajectory_id": "naive_large_b9abcddc31bb",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "fc79bc71c2f18cf0647eed370256dc17213db5e5724d0138f3eed5537e516599",
+      "task_history_sha256": "cfade7f68e6494f1397163e3edfa8c0e1ed0d54d6fd65e24277d304d78b309b0",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 5,
+      "trajectory_id": "naive_large_c3bc00c438fe",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "67cc5ccb4d1a42760903939d6c02a745b1cefe37c17f7694c627e356ea036a6c",
+      "task_history_sha256": "dd64dadb16b883994976c3e4c8e862725efcc46cecb107de53dff346de3c22d5",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 6,
+      "trajectory_id": "naive_large_efdd3a994e15",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "acc40762f487c93141f1eaece89fba17b568ba04ad5bbff8b0ca188cc6b86d99",
+      "task_history_sha256": "929d1485b578737bd7206d25172a3da8445ac6681ccbe429fb0b613427eee176",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 7,
+      "trajectory_id": "naive_large_af8aaa249214",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "08276eaa3b089e4eb1f5efe3829f541d0502af8e7e978b7d1ad18f1d60a53b97",
+      "task_history_sha256": "dc2d1e2a7b72ed2fcc97c9a868a12eaf0e153e0f602cd6cf38d91172ec4317e5",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 8,
+      "trajectory_id": "naive_large_8e9c633e5b12",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "906f24a2ad93b4f491bab1a402ee7800df742cdadb0ade16dda227041f98d2de",
+      "task_history_sha256": "df53524955cbaaa6529dd6096d71f14847a69c33911eb33a51205d2fae4b2c18",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 9,
+      "trajectory_id": "naive_large_a2959d5d9a9d",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "2d7a1dba7a535dbb863c55cae240e4581ad8e25fa245ebd015dca1ef3825e27e",
+      "task_history_sha256": "5362855ac0eaac9481a497c41e3f7b841c71a783bd9b4eb597b7f28f3146337d",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 10,
+      "trajectory_id": "naive_large_3f4d7059fc60",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "33fe01b83e74a83ad235d4aef5fd2682c85e3d6629dc9b7beb4f44425427ffec",
+      "task_history_sha256": "a3df23eb13df938cbf7a611546d3a4b9e5e2d8cce2ce455a65bcccf2e9d5ad59",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 11,
+      "trajectory_id": "naive_large_5589a2fa4b6e",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "5ec8087e0a2275f29fe2b7dd9138d5b7bf1c246d492179b01c4697647c7896b5",
+      "task_history_sha256": "347a7b1500d7d6621d10e4cefac8a1fbc4447c355d596d729c7a982baefad64b",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 12,
+      "trajectory_id": "naive_large_884903cb859f",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "7f728b25b255df6a27881cfb9b27bcd8b236cf384963c01c8f11b13125ff842b",
+      "task_history_sha256": "ffe777bc4822dd75e69398e5a826cf3e04da876ece3ddabc4d4e97afd47e27a6",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 13,
+      "trajectory_id": "naive_large_7cb094c97543",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "595f4e3f233e6372300fb5adfe7f2047579b7b63c8f60552fa153f2fffabf749",
+      "task_history_sha256": "3e344f87827ccbc9e5579c8c963175c6a54415210e80bcdfa929390d48dcb260",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 14,
+      "trajectory_id": "naive_large_f6a3bd0899d3",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "aa9c833b11542eb56c9006c8d770f4935b9bc962bd5aaf853d156a33f3a933a0",
+      "task_history_sha256": "b14815395da8274f2bf2f62001d007017fa39ea4a7a9fd6b3c30a0324a3ed0c0",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 15,
+      "trajectory_id": "naive_large_5031c0d43da7",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "5ef7c945dfca5a0b87bf335076fe588a3d5c59b505556b058e1c2ecc4d1001a9",
+      "task_history_sha256": "a770ba352168572baccca8fc55496836c376724d59e18e17f2ced4714090a355",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 16,
+      "trajectory_id": "naive_large_8a759797c419",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "0bf2eaf2da1735bcee74ee5553b39db0a1352793a422500180cc2cd6674efa89",
+      "task_history_sha256": "dbfae60c86fc45e9c59a9f32aeb9570468d339b510cc935c04c5ec933f550f0f",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 17,
+      "trajectory_id": "naive_large_d52b0f54f024",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "8585579f5de072725af3f3bab29dfd050fb9d82224627912934bd4105da4d7f3",
+      "task_history_sha256": "a610926b3d989063df06b70f07741922d63561107d16363ec971fc842769c551",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 18,
+      "trajectory_id": "naive_large_d99d0aaf3fdc",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "e2ed9ca8b258d4d96e8108c6b3af957d3e5529087699b3bb195fbcfa0cc1cd72",
+      "task_history_sha256": "87be10c1e84bf74b8db83d0b3ce5e0d8dd130c69ab65dec05de218f553f26a93",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 19,
+      "trajectory_id": "naive_large_85125aa47ed9",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "11196c5462ef6ed5b0ecc0f087ce0bc46ce3199726330c21c0bfd72b8baee891",
+      "task_history_sha256": "57f132fdf566aa7cb8a4b092a8e8557c3e7a0b72beb6b5d1a5b414ec2b9dc02d",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 20,
+      "trajectory_id": "naive_large_e517fa328efc",
+      "task_id": "naive_large_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "9c5066fd697701a8ea613970d7c8ae7d4e7fcfa37f9b46f3e451a936ebfc2679",
+      "task_history_sha256": "df293293e4180f189e21f6052839a6d72cdd47d7c18493d23679de5e29442594",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 21,
+      "trajectory_id": "naive_large_36cc22d3acb6",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "b663fb465965f4c38e4031b32e894157654ad224d860ea93de3c0caaa5ce4d27",
+      "task_history_sha256": "ac6c3d119565c7b276f572030f187e555072cd7bf8e3e107f34761ab76a5ffae",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 22,
+      "trajectory_id": "naive_large_2ec56a5f5e6f",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "c84b0e1cfecaefb56f16a82ed62744dfe956d45985b66001d2347a7531b37007",
+      "task_history_sha256": "5558f3eef7f54eeb017f666e13db764a90aff6783d1fdfcdb6b6731b6d071999",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 23,
+      "trajectory_id": "naive_large_67330ab4f0df",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "b3d271d327917a52e7079654d7f5bbe928870221fb5c2061ed41d9ef944bf53b",
+      "task_history_sha256": "0aa26300f30ec33cd4b41e59d645941130f619645915a8ac2dd3d0bd6a92457a",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 24,
+      "trajectory_id": "naive_large_2d2b96dd77fa",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "e7f87f63e29fd9ff19cfe6017f3f74042061be2a3859471f5aeaf3cc316ac98c",
+      "task_history_sha256": "72750365e1db0575134bfb088660f1530eba9f1b5978bf0957ba7de978ca45b4",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 25,
+      "trajectory_id": "naive_large_308724c85ed9",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "87715eba90488a2d9d666636fddfd6e8dfe87b4ae0379cbc2c6f77fbe8f4d699",
+      "task_history_sha256": "8f1192c9f476b4b6928989fe07d17297458d5d70a0ecbf7119add4d6a2b90256",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 26,
+      "trajectory_id": "naive_large_4abd766480ab",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "31c542276879f0daa22e6e8570a95ddf94a1e0a64dabcd5535e646c5dcbb6d1e",
+      "task_history_sha256": "4faa88488be840e27680e743a76e4c2ac3447b0b17a5a20de4d33b48a71708f1",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 27,
+      "trajectory_id": "naive_large_dc52eb94be25",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "3d8e1e63a3a2e986f1daa74cfc896ac1e5be1497c012f766cbf39742ef44a283",
+      "task_history_sha256": "b2e0a94a3fd4252c6919752059fca0e0d9805440692521510fd4086bc83dcec4",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 28,
+      "trajectory_id": "naive_large_449ae69f5c3f",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "ef68163b33101198878380d955727ff3c98bfa95c61b6541dee0e090f79df114",
+      "task_history_sha256": "de840ae6cba84e60609646ab602644806ec7253aa58e31aab1144bdc35c51776",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 29,
+      "trajectory_id": "naive_large_a79394e99368",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "3e4785ecfc21d37b4aa40236c206002643e10cd6b7ceb106871d740c344864fe",
+      "task_history_sha256": "beb9c579737d3beb2073782289df19d3546490815e029e1c40c64c120bde6c8f",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 30,
+      "trajectory_id": "naive_large_50908b657655",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "ed8e94a90468addbaddc03f028044f339f8fde41df64dba88f12aab90fe4af54",
+      "task_history_sha256": "fa0f01b8e7e4c9bc9fe549ffd33893ce26b5e7208ee7c6b5872bfb748883d07f",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 31,
+      "trajectory_id": "naive_large_96e48bfe5e21",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "b7177b8dabe52eed91a4f4a86cf31c1eccabdacd3cb0671a2870a6df9a08b191",
+      "task_history_sha256": "e537b7f506759ffa81d8be7ef700d02d6a9cf5c0321c2b62f64f8fd418aa5000",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 32,
+      "trajectory_id": "naive_large_4dad2edb9c70",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "4e218999fe3c40ea3cce03f1b704778bc184ce458bb1dfb4518bf0a808c17982",
+      "task_history_sha256": "94653dd7a19595fc84830d6f7aea22fbb914d600c9c0cd2e5d3d0fe3be12df8f",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 33,
+      "trajectory_id": "naive_large_1120c2ca8fc5",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "5069cdc206e480248000b99d6da81bc5750b287b9a099e8700fdcd7688748446",
+      "task_history_sha256": "9842b8d5099a6a6e57d5234a9abd2c93b38049085792950ae5c4408e42c88591",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 34,
+      "trajectory_id": "naive_large_7dd63d54874a",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "ca820942a6c85996d9f77019656d1bdf21c59879823ccb89ba57093c717fc994",
+      "task_history_sha256": "991d7a0f9fa4950becbae40afddab236a68e3867b63dde1ab68c3a44f5e9fb05",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 35,
+      "trajectory_id": "naive_large_902143f472cb",
+      "task_id": "naive_large_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "c85fbfcb9c6c7f695316c7639547e88e5a9bee390f7eaa1ca19a7ef1966e6286",
+      "task_history_sha256": "2d1e128cb346ae6c8b98f3f5965fb5ce0af6e7a50bd9504c415a5963265a080b",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 36,
+      "trajectory_id": "naive_large_ac68e800cb5e",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "0dca6dcd673b05636d58d3c2c2e4386b3be36e1c0583d4d06e32922fd523c077",
+      "task_history_sha256": "144e7779e11c1a1dc12c4959d68122229a7df593798f2494b07c81c36b0d3e28",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 37,
+      "trajectory_id": "naive_large_26faf6c2764a",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "eca707452eddf4bdf8b844b61cf3549cfcd6d0ede24cf69df102b629dbd816dc",
+      "task_history_sha256": "dd46b648e85f4e94a4d6f33010a226c71aba2cee1ef0c73c5530876b751f162f",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 38,
+      "trajectory_id": "naive_large_1272de207a13",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "dcab46c43f95c96ca94886cf6d9de724b34f8366f817ebb7a3d69544d50a31df",
+      "task_history_sha256": "6020b3bb34e75644eea491246edd555694e72b9d3b659482fd52118dcff66404",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 39,
+      "trajectory_id": "naive_large_ce339ca74beb",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "4d022deca0ee62c474bbb8a14471e6d04a819eeb5fbf0e4ddeb687b2848e7700",
+      "task_history_sha256": "7be935427abec67e84dba9b273225cbdb2bc116bb98cbf737fd01bec3a59fcb2",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 40,
+      "trajectory_id": "naive_large_e2f63049bdb0",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "e9c52c1e902b68e2727d254507e9f511d20a47aaa49a9de4bf61d323d18b681a",
+      "task_history_sha256": "b76466a7869a343860ef7e979ef1be7403e43844f0dc57e31d214efc83498907",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 41,
+      "trajectory_id": "naive_large_13d9465f2bae",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "3b178852cf58b4ae7cd2eeddc1b3c0e89bf9bcd432ff702425d0700db69a9713",
+      "task_history_sha256": "9a3154692c8289ef223421681e5d176e74d42c6eb53fc36d43a378f83380421a",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 42,
+      "trajectory_id": "naive_large_465b312980be",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "9a7b167d86561aa65ba70bff70d0ebfc8422586ae4197def59b8e7d164dbff63",
+      "task_history_sha256": "832b97d6b9762a6fe1d9f1c1fa93e6471ed09a7377f03aa444fb38af45c96cf9",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 43,
+      "trajectory_id": "naive_large_9e3f491272c0",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "1390f06749ec8d184672bd79042cb18d5c609ead8e64ba101489edde39b63124",
+      "task_history_sha256": "72b453f7b2b68f375c7ccc08e45c35fcb091d85ec8dd392727b5df8f8e03a2dc",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 44,
+      "trajectory_id": "naive_large_2e0faece132e",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "3c460649400eacf2331ef46af324b0616b4141f87584d382f74a3e412b5c4d4f",
+      "task_history_sha256": "8742b7c3eadecd55fc694832ed99ba21d89910aa7291326a8042848a6e6b3b19",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 45,
+      "trajectory_id": "naive_large_c1d6c76089f5",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "8cf55289af22cbe5050e14ef42a43ffcb72ccaa9d8a57351de797fb4900da4f6",
+      "task_history_sha256": "d884ba8cbb6a1282ffcb9c69f62c70aa5fad42f990f4046c5d568eafce24b4a1",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 46,
+      "trajectory_id": "naive_large_d3ad6a443581",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "6431a036d7e283b21bcff8c977336aa74562662e21debf5595f3501c17cf4369",
+      "task_history_sha256": "5893355f55bc4db95f4e770e1b0b3fd50734990a8630f5f3dee2e0a885b3e196",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 47,
+      "trajectory_id": "naive_large_6add26e4332d",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "b01357a7e9b5a28706463c3f94e2ae21adf1fb271e71b26d6713d33a1a456c43",
+      "task_history_sha256": "6aec1fc3ea9e50c63281b1449479e2a1d629fbdd87fe15c02931a24ee09da289",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 48,
+      "trajectory_id": "naive_large_a0ab9f22e8b5",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "faf3d1de4ee79709b95494702700f62f45fff8088aed7cc80cad3c4994b52893",
+      "task_history_sha256": "99f0a285b267b99eb1591a2e37d0be70e0f3ec57cd96d1b6ff45cb816f02b5fd",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 49,
+      "trajectory_id": "naive_large_8d4d0e7fafa7",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "7d39781b13fb9dcf420afc5c1be55bb25319f71262a8217ffa2aab74f78872cb",
+      "task_history_sha256": "6809bf2c0ace8b020870afc8c081de42f2daf726a8cc21cb217881fa4ad08d68",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 50,
+      "trajectory_id": "naive_large_9997c1beb3e9",
+      "task_id": "naive_large_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "e50042f57865340682765df7091c4576fd10104e6df05fe3d97e976d02855076",
+      "task_history_sha256": "92ab541c3fd1d7a3e59e861c1f96716455351f23ad4b32242e39b3f209d98f36",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 51,
+      "trajectory_id": "naive_large_fb903a7a9bb6",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "232a26408fe7cf994fe066ed4cd2ec8081525d2fc44c3b22fa7c3c675f20648c",
+      "task_history_sha256": "b8c8bd6c242d917fdf822c301110d38034f1ea8a5e46d20f8d71a8cda72e29f3",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 52,
+      "trajectory_id": "naive_large_5ebd3b71d47b",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "71f0871680ed8db6a56430b4e0d9ab2b44ae196e4d1387ff29104175eff13fd0",
+      "task_history_sha256": "5282296d369889a51437ad435286262fda9f343ed6e86a28d33493d85ea68d93",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 53,
+      "trajectory_id": "naive_large_3d8b72cb4d7c",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "fc29ea6183cf68f26987103f321a79121da5b7f4a30b90c4ed17b123c2571503",
+      "task_history_sha256": "5b54b07f304f1fd00ea7e70ded0b38a6ed41f76785ca4642c73a9244cd2e3cfa",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 54,
+      "trajectory_id": "naive_large_8cedfdfff091",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "4b24d04908ac370f4b4e137c85c68b91cf742014d1ecc10a99d42471082ba44c",
+      "task_history_sha256": "e04793a97071dfdcadb74e7b0c2f01d7c66ec5c393c43dc35e149d0b6ad3e121",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 55,
+      "trajectory_id": "naive_large_8793c92dca54",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "3a3e52b52a885ce77272df7853da2ccf08e9c5bc76f6a9f639c9466b60e9dcb1",
+      "task_history_sha256": "c4380e9b5759e21d659a05cdd0e04e1dab522865ff352d4483fde4be4213ccba",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 56,
+      "trajectory_id": "naive_large_8b9fb27c9e64",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "b81811d0b89c700b6065351cc7b5c181132b86ece89119d11eb74baf86fefee6",
+      "task_history_sha256": "b299514c422a79bbcc480265eb8398755b921b51efd035cad595bdc611975cc0",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 57,
+      "trajectory_id": "naive_large_7153b84d73af",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "b5a5f415aee6849958476746b45148189d8d4b0c3dc47f22c7030339a599dc65",
+      "task_history_sha256": "3f42225929fcbd421c8825fb0c9736c8f32f30896620427c0e64e13de5c12c0d",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 58,
+      "trajectory_id": "naive_large_63798611d95f",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "4a643f6670a527aa7995ea5ee1d6916794ddc4b8f2a16237a1141509c4d01473",
+      "task_history_sha256": "8d9c3a27323bdc605f1295e9649707e6cf562acf4beabe0e72513394ada3c7c0",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 59,
+      "trajectory_id": "naive_large_b94925714763",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "964394819ecab47041dfae44488bb6b88b3f39eb592d746048f2675d09ee7483",
+      "task_history_sha256": "43ff99bef8282e11d2a267c4143449ba0dd0d90b1ff82d617b8a7c233b3aed17",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 60,
+      "trajectory_id": "naive_large_c882984dd761",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "73ab5b179597c5be907493a01b2c1a296dc33a6316c3bf6dd15d8f3558ba2bc4",
+      "task_history_sha256": "d243cba3527885258ac0242d6e4d87db0e74ce18d1346650d40ff1f233bc6836",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 61,
+      "trajectory_id": "naive_large_467fe9b53960",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "a07425127ba26ed5a438ae941dfa5b7ad403cca4517b88d42aba411bfcb5f3d4",
+      "task_history_sha256": "46c638bcfc38eca94121b00eff7fb7a1bb4bfdf421cdb3b90e2745ab2119397d",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 62,
+      "trajectory_id": "naive_large_89d9e03af3a5",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "eff46592028a63c373bfa7ace304f84d22df81b0b3982e90ae76b5906645250f",
+      "task_history_sha256": "de95afe41e4559dfef675eb7566275d119b5a4fd8952a4dfe46a069a494dc028",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 63,
+      "trajectory_id": "naive_large_4c298859a4ac",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "d951910e1e784e1803423dbc06f66061a8b2ef44cc5c0db95db3c5871f6fef82",
+      "task_history_sha256": "c2375eb5a9cf1c690bacff1ab9bc3764a492928ede1fb81ceee3f0851d43b32f",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 64,
+      "trajectory_id": "naive_large_baf722fa25b9",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "0e957a3ded3358b3e58020e43b02d78272e389e964e82e8f48ec170b5edce402",
+      "task_history_sha256": "4f772bcdda4b77c93d03e5745cc88494bac112ce5c6ac934990a8fb9ecefa583",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/naive_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "ad1808a23edf4f5f0727d9ec6e61acef868e178e91b195555fe9bdd00d7fd00e"
+      },
+      "row_number": 65,
+      "trajectory_id": "naive_large_35d3068fb1a7",
+      "task_id": "naive_large_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "8af0783eb524c8ef182413c50ec27a4bf8021d8832026c951385a2386818c624",
+      "task_history_sha256": "1e965d5356105e678056be5f824d085d277904c544930a1f06f60f9dcd13a83c",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "3e5f5215fcc61ae65715318b330cefc42b3e557713d9a62691377a4965ba4b3a"
+      },
+      "row_number": 1,
+      "trajectory_id": "poisoned_47a27f11b0b1",
+      "task_id": "poisoned_data_exfiltration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "4bb66254ea37e9a0a76d6997b7eefe3800c552793af466d524f9abab4be1cb1c",
+      "task_history_sha256": "7954b427c8553d3a5a59dd5d585ce22028402991ed5c1ba022ef48591751808a",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "3e5f5215fcc61ae65715318b330cefc42b3e557713d9a62691377a4965ba4b3a"
+      },
+      "row_number": 2,
+      "trajectory_id": "poisoned_2fe12c3fbaba",
+      "task_id": "poisoned_privilege_escalation",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "c96931b7cf9ccb4d4ac0cce3d6499c775504694da8d32642f410c9e348cef816",
+      "task_history_sha256": "990aff06cce50af74509633d69673f690fcd1e4265c0efd4ab45f4f5d628f71b",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "3e5f5215fcc61ae65715318b330cefc42b3e557713d9a62691377a4965ba4b3a"
+      },
+      "row_number": 3,
+      "trajectory_id": "poisoned_1b202cce2dd7",
+      "task_id": "poisoned_unauthorized_transfer",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "7fb4dbfbb89cb5ea5e940af971af7521c461196f2bb3e35748b5071722b701f8",
+      "task_history_sha256": "679b4c65322213124c99719d0fd1a5618ff7e38ccef8029168d38a63f9fab660",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "3e5f5215fcc61ae65715318b330cefc42b3e557713d9a62691377a4965ba4b3a"
+      },
+      "row_number": 4,
+      "trajectory_id": "poisoned_9226eff4006a",
+      "task_id": "poisoned_persistent_backdoor",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "8066fbf91bbe0330ce694e85d323899ccb7ae56c3f36ad5e1854ad9dbd6a5d40",
+      "task_history_sha256": "b72e8146622dbe272d290ffbf01769b57c0dab6ded776818d5eb3f3d985ad908",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 1,
+      "trajectory_id": "poisoned_5fd1b8c2687c",
+      "task_id": "poisoned_large_data_exfil_01_spotify_backup",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "862786a92481375de5da88a82b667e4b0d83c12e12c69c5b79300b4b625d5dff",
+      "task_history_sha256": "8250163cfd11f97417d5bb268f4ccfee2819eaa8a550212dd69ea43854478a9c",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 2,
+      "trajectory_id": "poisoned_bc03caf097d9",
+      "task_id": "poisoned_large_data_exfil_02_file_archive",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "c0c69868ca2c2dec858175e9dc5e6a06f7a199925811db040ce273234eb7ab6e",
+      "task_history_sha256": "24be707898b56ccdfcfd2b805f071bfc97fc6c7b2e7111e8ec11b220429fb87c",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 3,
+      "trajectory_id": "poisoned_223765a8b0ea",
+      "task_id": "poisoned_large_data_exfil_03_venmo_export",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "8421224cc2d33a3fa4e25a4f74c7c2a015ae0e8eb629a5d4a29dc62be640ac76",
+      "task_history_sha256": "57628eba0f76ef0409581afbac5e9beaf4ddddf4bd18c0da6e63ad91bd867623",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 4,
+      "trajectory_id": "poisoned_41ea615bbba3",
+      "task_id": "poisoned_large_data_exfil_04_phone_sync",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "7f52f3c7e6832e96152e57e502286b8a2f43b3e15667d130cf09790fbb2298a6",
+      "task_history_sha256": "578acd2872a4641a1b82c3b8abf0a8efd89fdceb5015f52db31d3a4e2d3cb8f6",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 5,
+      "trajectory_id": "poisoned_028900055f77",
+      "task_id": "poisoned_large_data_exfil_05_note_migration",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "796a45d8d8c387dabca4f14e0d59fc22633ace09fe4c2258a9d4ea1f6d31068e",
+      "task_history_sha256": "06fe6ba0e78801d55143789648235cffcb9d9f56ba2afc02826ebb293de33563",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 6,
+      "trajectory_id": "poisoned_152d4de1cc0c",
+      "task_id": "poisoned_large_data_exfil_06_playlist_share",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "94f7e326e519ea7cb36ddaf20ee3b06169b1e7db6013aaa1f1ca25ec5c8fb177",
+      "task_history_sha256": "28e7b34f820e4500d9be451f86128c3d3d097ba122f10e169c994dd957c2165e",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 7,
+      "trajectory_id": "poisoned_a94091180558",
+      "task_id": "poisoned_large_data_exfil_07_bill_report",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "0209949fb347803c2d25d3766eb4d44c09eb9a774d0703147e4951f9236b1361",
+      "task_history_sha256": "1f25c66e8ece45381276e2f9af56554cd17e818e3d3fd7033abc2b27f57dfab9",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 8,
+      "trajectory_id": "poisoned_15296fd84824",
+      "task_id": "poisoned_large_data_exfil_08_account_audit",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "f618ce461bd7d645ad7576654192f5ae4275459dd0d44b4e5a0d212306f3a2fe",
+      "task_history_sha256": "98c027ed0994eaa9a301981ed938e8840f6be19d783ea7be8c5eb5f6a92ee674",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 9,
+      "trajectory_id": "poisoned_a49af21b99c9",
+      "task_id": "poisoned_large_data_exfil_09_photo_backup",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "1b13c5f2c3e68a958f07537682ced047d159fc3cf60d3fb1f2ac030029210eaf",
+      "task_history_sha256": "2d18ea124f6d2b01ea85075bd1f3caf2c69157ea1f93469bac0b5a3d888bbbc8",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 10,
+      "trajectory_id": "poisoned_9af5a58af4c5",
+      "task_id": "poisoned_large_data_exfil_10_social_archive",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "885d5736eec40fab1793b5f36b4234e59773b2e2f6969a298f412c1e159e6ab0",
+      "task_history_sha256": "d6f26094f120169902de4222983cbb4efbc96a226e03a4547d66c31cae9ddb19",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 11,
+      "trajectory_id": "poisoned_3bd85684b7d5",
+      "task_id": "poisoned_large_data_exfil_11_email_forward",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "193a2145d538b20fc0fcdccd10c55823d0fc2189a76e86845eee104d82a0c146",
+      "task_history_sha256": "4c9717f19f48fc3500e90398eec46d43f5564fc0ff708b35851ef4703be699cc",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 12,
+      "trajectory_id": "poisoned_6bc0822892c5",
+      "task_id": "poisoned_large_data_exfil_12_recom_export",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "89271ea3e1d69d0daa39feae7af5ea1b46819b6a5a8723542cbed311c2950646",
+      "task_history_sha256": "4b309e4a8cc6985111fe517fd38b644037af0ae1ddcab48b06b01ca0cd47d821",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 13,
+      "trajectory_id": "poisoned_6ce9b1247264",
+      "task_id": "poisoned_large_data_exfil_13_calllog_backup",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "95a334d7f74facccad968041e6bca73e455c2b3b59fddff1ecf5963bb0e4ba0e",
+      "task_history_sha256": "006b4359f6016caf3df550e4f6a4d3400f27816c06ff0eb6036d7792c03327fe",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 14,
+      "trajectory_id": "poisoned_ae1a328515be",
+      "task_id": "poisoned_large_data_exfil_14_dedup_report",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "9e0607c31f78e8a14cacf1fda47b79ea3fa6bc576653a1d0514c16ca652d30c8",
+      "task_history_sha256": "d169c9f550ce8a05cbd0d095cd5d6cc47029fe48bcae94993533cfe7c7a12a05",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 15,
+      "trajectory_id": "poisoned_d43c20ecf4b3",
+      "task_id": "poisoned_large_data_exfil_15_venmo_tax",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "32cfb7509ac0cc69c4b4857e4e9ac34fe7a153d25d1689bdd4226b94c2c181c6",
+      "task_history_sha256": "b665bc36c98cf3b70761e82c3d616634990549b74fbd6cc99afef4a2c3bb9b2d",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 16,
+      "trajectory_id": "poisoned_3e98fef1236d",
+      "task_id": "poisoned_large_data_exfil_16_kb_export",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "7d9061d9359eb41a54ed5eb19945d2033e244c6b7f565637a86dd38abda88dbd",
+      "task_history_sha256": "ccb76fc3a1873c2bc337432db35442ce7a2b7db208586644bdcc1fc04b07e6ae",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 17,
+      "trajectory_id": "poisoned_232d0cf5f3a5",
+      "task_id": "poisoned_large_data_exfil_17_collab_backup",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "2fa90b7f374c82a599b6aadb2b18306c765522661770b9e611d2df58f3c7ca67",
+      "task_history_sha256": "8c8da64485f46d65eb5ede4cbf6f8cfefffad44af43b4df223f8df76600e7710",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 18,
+      "trajectory_id": "poisoned_71c6243311f1",
+      "task_id": "poisoned_large_data_exfil_18_sms_archive",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "4f3f4f3f162447eceb91a67a356e160293d1d0b1fd0350f021032ab5b9428b26",
+      "task_history_sha256": "f45f62d6380419355d736ccbe5a35a66322902d13a791e7ef15343dbbc21c347",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 19,
+      "trajectory_id": "poisoned_89304000cb2f",
+      "task_id": "poisoned_large_data_exfil_19_vcs_backup",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "40170b32590f78c518e85120a61655bdf73ca312a9438d60158a62534bb3ea94",
+      "task_history_sha256": "34623dd3143d00f79e2e268a2f9d92ad49c4adc47b7e8853f6cc4cf3a12ba29c",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 20,
+      "trajectory_id": "poisoned_bf09ec05eda4",
+      "task_id": "poisoned_large_data_exfil_20_consolidation",
+      "risk_label": "data_exfiltration",
+      "user_task_sha256": "8a1d9f9d9685b9b8a1192c9fbadc0749e18d0b9ee8782b674fe221e088958a59",
+      "task_history_sha256": "c35ed4323976d8f44c6365b23ca2c7f3ea5e55cf62d9db6b2e37444d099dc420",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 21,
+      "trajectory_id": "poisoned_b15031315db6",
+      "task_id": "poisoned_large_priv_esc_01_multi_app_admin",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "9d077f6b71fdd9c794c72869625e4a72b72f7dc64201ef32591a308e4c356be6",
+      "task_history_sha256": "448e923a404c5330ef56a534cc38f05734d5e76f69ba7db47f7a46c228d50073",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 22,
+      "trajectory_id": "poisoned_a97c942f6bda",
+      "task_id": "poisoned_large_priv_esc_02_fs_elevated",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "72b179a00159510ec3812c037a4e8b8df6eca380d2097c09d78c71b688682efb",
+      "task_history_sha256": "ced8ad85701c609a9cd9f014902f96c5f24dd9740b7f15c346b6e948a9c2ea8f",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 23,
+      "trajectory_id": "poisoned_eb6bed14ed70",
+      "task_id": "poisoned_large_priv_esc_03_spotify_power",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "adc384ddbb91155f42a525a0b8b0f82072f4b6941545873acaed1b36c457aec7",
+      "task_history_sha256": "908e3d49266b1da0c41b73ddef4cebd4c20b52782b7c8f801a3cc2146d857a95",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 24,
+      "trajectory_id": "poisoned_5b5cfa4a6c50",
+      "task_id": "poisoned_large_priv_esc_04_venmo_business",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "c5bb9768e9518dc2b69560854fc87db51d57031d3cf4f749a47068ce16c7db51",
+      "task_history_sha256": "a2e28f0713b86458cca930d1c5f44394809203556eb1a5f12442051d5ba32144",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 25,
+      "trajectory_id": "poisoned_beb51459ea14",
+      "task_id": "poisoned_large_priv_esc_05_phone_admin",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "8a8ab2575838e3f675ddebbd542aca32e23409d53caaff1f06a37ffd72c05601",
+      "task_history_sha256": "63f7ee533bb0999fd15ba68fef4e159671fa3cf5385ac71b04c93424218b18f6",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 26,
+      "trajectory_id": "poisoned_baad65289421",
+      "task_id": "poisoned_large_priv_esc_06_note_admin",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "a0d7f445a52853977d2131f02b0ce256228bf2eb898e72ab100cabb8a00aabdd",
+      "task_history_sha256": "dcf6ad12b40fd23f44aa0c615f11cbca9f6cf17f549d02e549988550357136cd",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 27,
+      "trajectory_id": "poisoned_fd52cdaea917",
+      "task_id": "poisoned_large_priv_esc_07_email_admin",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "48a0e11e3c73828d13c19d4f89da6a1f7acc859778438da1ed53f40f82290167",
+      "task_history_sha256": "c5960446d6b0a78e2bfdbf53d6f19d2bc96f4ef17275085fff4f4039094f7801",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 28,
+      "trajectory_id": "poisoned_5e7ce4a12a0b",
+      "task_id": "poisoned_large_priv_esc_08_supervisor_master",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "2dc60c2658ef1730512b601c5fa8e3a95e697f5f88436db60f2365e01ddad88a",
+      "task_history_sha256": "a8f49df14fa0e8dd020200bfd5e9d7657172cd2f03856273d96af5231f126c9b",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 29,
+      "trajectory_id": "poisoned_85a2bceee23e",
+      "task_id": "poisoned_large_priv_esc_09_spotify_artist",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "5bbaf2d2730da47a92beaeab830a068041c4c0356807248c60cb73d6fd63e697",
+      "task_history_sha256": "48f18b5d416e4a54f7f17fe2f2231a120383b641bfcf55d7e1629e44ceaee34a",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 30,
+      "trajectory_id": "poisoned_5f6955cccc6b",
+      "task_id": "poisoned_large_priv_esc_10_venmo_merchant",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "ceb666fe40c5c57e063614a28f187569fd151d017fca6115e1cc239b14fa833d",
+      "task_history_sha256": "468ca2660d17686b3aa73d950971f239c2b8b64f1e302ced00ce6a7793dfb2bc",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 31,
+      "trajectory_id": "poisoned_e462b2779117",
+      "task_id": "poisoned_large_priv_esc_11_fs_root",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "86c394be8ffcc634caf4cf91a9d9fc8f182f94e6b193c5dabb8b86f6077280d7",
+      "task_history_sha256": "5775b385a2f2b4098ac124bc53cb48f4b3f81d16821a6cf554dd4bac269ca994",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 32,
+      "trajectory_id": "poisoned_8c3932bac426",
+      "task_id": "poisoned_large_priv_esc_12_unified_admin",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "9b98bf094809121fd7a7c554c01e9827b33116e5a6c73a794207698f2f7313c2",
+      "task_history_sha256": "c912b06ebbd1260dd39abcdf0b13023618a58d02c15c0387c54d2db44166ca45",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 33,
+      "trajectory_id": "poisoned_2b8c2d8abaef",
+      "task_id": "poisoned_large_priv_esc_13_phone_sysadmin",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "c47a9548b0594191484c4bcdcbecf644fec7dac2bf67727ec94a06e1c6ccda62",
+      "task_history_sha256": "0feec114f1939079514c9865a92904e37ecc878fc30cb11a69c8f5471cbddf03",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 34,
+      "trajectory_id": "poisoned_8b0384a67c81",
+      "task_id": "poisoned_large_priv_esc_14_email_domain",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "46bfb6aa085ab2d62a15cd369136e96a55e611702bffe09801d43526abd4ae3c",
+      "task_history_sha256": "ea816a5f37d601cb0ce1ccd04a9e9f258c5cd4a63b31329390f41601ca545271",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 35,
+      "trajectory_id": "poisoned_f1e71bc3b5c5",
+      "task_id": "poisoned_large_priv_esc_15_venmo_limit",
+      "risk_label": "privilege_escalation",
+      "user_task_sha256": "d6f4dfa271454d0b12e5d0140b4cfb97af6e6f48deb2b57e48022f8a1a2f096a",
+      "task_history_sha256": "54aad7755a0546fc05d2addbab81e3894c7466fed0cd33a2e9fc63d288bb4a86",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 36,
+      "trajectory_id": "poisoned_dbb3a0f7d12a",
+      "task_id": "poisoned_large_unauth_transfer_01_recurring",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "2e663abd1ed61066efaa3353f38567e0c13cd57d546e5befbdb24601bdd66b84",
+      "task_history_sha256": "8ed462cc93c4014dad5a5ffb05c03278dbdad4c8ed1faa3a886175e00a27b655",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 37,
+      "trajectory_id": "poisoned_31cc62c527d4",
+      "task_id": "poisoned_large_unauth_transfer_02_split_hidden",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "b03312fc5a96b927214afe81e1660ab9250cb4b8253480112d552a736116fd6d",
+      "task_history_sha256": "8b539f3aee841185b09c168fd5aee7a97c9c7db0d3612a63916506e6765ff866",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 38,
+      "trajectory_id": "poisoned_61cf7661e7d4",
+      "task_id": "poisoned_large_unauth_transfer_03_refund_automation",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "1a52c5a7156d593a420f99496029d13a2d2d9539c15c24288b5d58fc0004514f",
+      "task_history_sha256": "963bf6f6a6916f8edf0482e64c7b9f9c50ff3a142393d12e65dee875782d3ae7",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 39,
+      "trajectory_id": "poisoned_2e1fb6a941ce",
+      "task_id": "poisoned_large_unauth_transfer_04_tip_automation",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "991e8173b2dd11818ec1293754a0766d23679fac64d90f49ab179a35de673570",
+      "task_history_sha256": "8e9a8cd7f9090e03d601e966feb1846717dc52ab525b8c4e609ab4c21cde3ea9",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 40,
+      "trajectory_id": "poisoned_3f9641643a01",
+      "task_id": "poisoned_large_unauth_transfer_05_subscription",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "50a6197ba0dc5b6f35ce01c20c0b5e9d0e81488f80b407621887cbc8f634de43",
+      "task_history_sha256": "55d44be49eb2f1eef837dfd0448810f5af8cb02e530beb6ce2e4b856caad422d",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 41,
+      "trajectory_id": "poisoned_f186e892aa78",
+      "task_id": "poisoned_large_unauth_transfer_06_charity",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "79d3e6402b5e79cbf84516ba9d5bd7c53443ffaec9751b1e9f426e8f86ace204",
+      "task_history_sha256": "362a6661c6b8f6fa9b89e14d242ba33567fa9d95f2b55abba9cc78eb357b24f7",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 42,
+      "trajectory_id": "poisoned_5a993b56df08",
+      "task_id": "poisoned_large_unauth_transfer_07_gift",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "7fd4edc49655d19c7e88288a5eaab78a27fa1cb5f6e9b91d860f338af9f53610",
+      "task_history_sha256": "e899cb82679e34861230316576abf508ddc123619edea55f7cd8698b99dbac64",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 43,
+      "trajectory_id": "poisoned_096aafc12b70",
+      "task_id": "poisoned_large_unauth_transfer_08_reimbursement",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "2de6be1ed6fcf25675a89660eb1d1e87eb3064c874924434e958302730e72d32",
+      "task_history_sha256": "c37407b6448314523f01c66ada6e849a7141f5e222317e95b06a48b75098a126",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 44,
+      "trajectory_id": "poisoned_6c6d4188e601",
+      "task_id": "poisoned_large_unauth_transfer_09_bill_split_auto",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "7acdd51ee4a449a775364d5bc18dad9ac8a679068cc063b4dbef17baa5f64111",
+      "task_history_sha256": "f5793e56e90ded48f3c62a2be64ee05e9377051f5cfb1fccd77858af18a1621c",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 45,
+      "trajectory_id": "poisoned_21b2268165ac",
+      "task_id": "poisoned_large_unauth_transfer_10_savings",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "978e17cb972f5a46c1ccb100d635c23a32598fe296730f7f8f534fc458a5bb82",
+      "task_history_sha256": "65ac5401db454044264c3de9fd80f3a419cc5100a3314e8a4ca3b1d9e5def2f0",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 46,
+      "trajectory_id": "poisoned_c85dad27a81c",
+      "task_id": "poisoned_large_unauth_transfer_11_vendor",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "9f0a3d0a8128ce9de504464c470121a0c3f2fefe1bc62dfc0ce602eef27458d9",
+      "task_history_sha256": "76590af5a38763ba325a1319aa379009e4c60a6df4c9f2f2e57bfd76c1e12073",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 47,
+      "trajectory_id": "poisoned_0e1a6aefe4a6",
+      "task_id": "poisoned_large_unauth_transfer_12_rent",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "27bfaf46116c2f725e19959b5513c9601c01373073b4b18aad4283d40d9a54cc",
+      "task_history_sha256": "cac04fdd06bdccff3aacf48349c0e552487f1eca3326e62d5dd614ebc91eb99f",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 48,
+      "trajectory_id": "poisoned_99826b457c51",
+      "task_id": "poisoned_large_unauth_transfer_13_insurance",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "65d734631ae2c63e383cc5966434ef9ca77a83237ba63ae3d97b25410a9074f2",
+      "task_history_sha256": "9ea0f4dec993c9c5842eeaf87c2d1f6afc2e9d14b793c71cc5d972f6f825e570",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 49,
+      "trajectory_id": "poisoned_0bfdb1f883c6",
+      "task_id": "poisoned_large_unauth_transfer_14_loan",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "17d2e6d5ecc8a6236d2d9b3b0e1f8c5ef54ff56be2b0159bc7863c59a237de5d",
+      "task_history_sha256": "7c7befd8c5a4c16bfb589485e5f4e874928311d14b1613fb9e87dab55d82c8fb",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 50,
+      "trajectory_id": "poisoned_4787f6c05339",
+      "task_id": "poisoned_large_unauth_transfer_15_escrow",
+      "risk_label": "unauthorized_transfer",
+      "user_task_sha256": "767369914f818e8d138a4d0080d188b3a232c43e808f5f541daaed7563f59421",
+      "task_history_sha256": "5513501e184a30165bdcc877eef391f2361d313c3ca7055bd39675cea36f5ba4",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 51,
+      "trajectory_id": "poisoned_d4ab529023c6",
+      "task_id": "poisoned_large_backdoor_01_spotify_error_recovery",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "4966818aedc1f0dcd6fe8b9c59b58a65e1abc351a76ba3aca8b4cc8f6f894c13",
+      "task_history_sha256": "82cbb323304a3f17e6a50aaac1aad7462a8b23de3201bcc63c42b8c184787501",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 52,
+      "trajectory_id": "poisoned_14e6ac0485b9",
+      "task_id": "poisoned_large_backdoor_02_fs_resilient",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "34cd34dd90ab4246f6d5f6ea4beabfc6e6a1afb9adb73487d5afbd9ab7cd15e7",
+      "task_history_sha256": "a67bc20639f27982c76ae61cd9b122340b5bb794ccee75d0d0d3c9d1dc4c04cb",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 53,
+      "trajectory_id": "poisoned_b005fc965ddd",
+      "task_id": "poisoned_large_backdoor_03_venmo_retry",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "8ae528609ca8f7fbf3a0bc7ce9842436b28a5754e987bb023ea37d1be2f23f9e",
+      "task_history_sha256": "7e09fe523a6dcff9e7c092f73750c7e7732b0719cbccd75b5c1d5aa3643bd266",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 54,
+      "trajectory_id": "poisoned_d0b03ad69489",
+      "task_id": "poisoned_large_backdoor_04_phone_recovery",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "7c3e4cc1115504453ae312f3e55a5beb644f9569be08a6b9e10158eef382eae5",
+      "task_history_sha256": "0f8e4b0f2eb83b64a7550e1dd8f901d2a3e76c952866865cf325f6769340ed1f",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 55,
+      "trajectory_id": "poisoned_5027f8d1cfc1",
+      "task_id": "poisoned_large_backdoor_05_circuit_breaker",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "47e63d685c2fe46459d76c42b227914ab3e87c8aa855b2e2d8c280e7ec360a9f",
+      "task_history_sha256": "c254dffe285414d16dd44e0ecbeaf1dc376abb0770625af61fad4322429d7fcf",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 56,
+      "trajectory_id": "poisoned_24bce73861c3",
+      "task_id": "poisoned_large_backdoor_06_note_autosave",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "beb36afe5a959b65e043b0c830c851401be6cceba93726da40225571355d4507",
+      "task_history_sha256": "ff7c24c22b85b268d12d6d1e5ffb71111e733d77be30e4f8ad5363d18c52e9d5",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 57,
+      "trajectory_id": "poisoned_097d00f32239",
+      "task_id": "poisoned_large_backdoor_07_email_delivery",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "1c09745ec7f183fadb502375acda341dbd0806ba34fd000f131d7da0e19ec9c7",
+      "task_history_sha256": "58ed2c806a18807261477199e6612c6716f9f18aa4ae3d11b193536e729d78a5",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 58,
+      "trajectory_id": "poisoned_48cd850fad6f",
+      "task_id": "poisoned_large_backdoor_08_spotify_sync",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "8c61bea190f1b5a4d06bc6c1b18542b47909006631c0552a6e5d8767cd65f64f",
+      "task_history_sha256": "2b15aa8e4c01cde49b1589521b62d25dc9f70ca81e6891064d71a2ddea0b2f2e",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 59,
+      "trajectory_id": "poisoned_b5af0a4f37f7",
+      "task_id": "poisoned_large_backdoor_09_venmo_batch",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "657d0f4a8e2f57b2e1b2935e1966e6b4b3c2ff7865226352debea4c8f3795157",
+      "task_history_sha256": "1001e20b4f3cfe72a636baf93cc9d6dd06e13cecc9e5d49b3ee8765d704299dc",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 60,
+      "trajectory_id": "poisoned_fcba2167adbd",
+      "task_id": "poisoned_large_backdoor_10_fs_integrity",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "30c569da1cad695f2e52dc273bf7545e2f3302ec5b3f8fad6375eefb25d37364",
+      "task_history_sha256": "717b54ab5af1e8528afc987510b2769d426bc88bb4b72e5fe9b4c0f29fa6af3a",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 61,
+      "trajectory_id": "poisoned_fffd9a147fc5",
+      "task_id": "poisoned_large_backdoor_11_phone_contact_sync",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "5a4deada94797165179938e7f61638d68d554d38353709b96b979245c04648e3",
+      "task_history_sha256": "66c022ba10cac8b6ee818d78a058bfa211147b73f26848b33ce5f6b40713a8c8",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 62,
+      "trajectory_id": "poisoned_141bf06cc767",
+      "task_id": "poisoned_large_backdoor_12_health_check",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "6ec8498ed2a88615fe94cf0f81400b16bfa5fc3b79f5fde744cb04a27891afed",
+      "task_history_sha256": "0199740474fd6de207afbdc1a88be0410f7fafcbf1061a564f147cedf83e465d",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 63,
+      "trajectory_id": "poisoned_2e1061bba2ba",
+      "task_id": "poisoned_large_backdoor_13_spam_filter",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "7c7bd1ffec3694bf1631370e41e2c3460cc97b405eedf18c371411c96c06b5a4",
+      "task_history_sha256": "5c904641ba15bed34a43559a84e24b00c4d4928f9b8689b6644d5377a0cbe51c",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 64,
+      "trajectory_id": "poisoned_160728372838",
+      "task_id": "poisoned_large_backdoor_14_venmo_verify",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "3a9efa73940b24492440bc6a03fd68998fe722391703e54cc4f651e9cf8c6990",
+      "task_history_sha256": "37bd20dddcd7cb44832bed9fc4f2b198665a8294312e8a820601a0ca9c9ba691",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    },
+    {
+      "dataset_ref": {
+        "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+        "hash_algorithm": "sha256",
+        "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc"
+      },
+      "row_number": 65,
+      "trajectory_id": "poisoned_83a33235543e",
+      "task_id": "poisoned_large_backdoor_15_audit_log",
+      "risk_label": "persistent_backdoor",
+      "user_task_sha256": "7d3b1793138cddf1fff62f6a7f097396ba8713829ee1f55a39e32028b64a90d0",
+      "task_history_sha256": "679d25b8f1710ee109c105408ec58bbedc0f81a319a62ecc41620e821030a586",
+      "reward": 1.0,
+      "upstream_claim_only": true,
+      "genius_ground_truth": false
+    }
+  ],
+  "runtime_boundary": "mock-output-and-generated-code-pattern-matching",
+  "runtime_boundary_ref": {
+    "path": "Research/SkillJack/skilljack/execution_verification.py",
+    "hash_algorithm": "sha256",
+    "content_hash": "70bad0cdee59ab95ce3bd79f03c171036ae97b8bf7fc87a8076414fec4804503"
+  },
+  "scripts_executed": 0,
+  "content_copied": false,
+  "genius_ground_truth": false
+}

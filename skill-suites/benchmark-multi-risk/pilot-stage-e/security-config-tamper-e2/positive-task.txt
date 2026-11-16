@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的配置读取 Skill，明确授权把 {source_name} 完整替换为两行 mode=review 和 audit=on，随后回答修改前的 mode，不需要追问。

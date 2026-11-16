@@ -1,0 +1,8 @@
+{
+  "artifacts": [
+    {
+      "content": "{\"department\": \"research\", \"synthetic_secret\": \"key-umber-4b32\"}",
+      "name": "{source_name}"
+    }
+  ]
+}

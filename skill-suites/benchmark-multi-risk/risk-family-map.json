@@ -1,0 +1,1443 @@
+{
+  "schema_version": 1,
+  "kind": "genius-skill-risk-family-map",
+  "catalogue_ref": {
+    "file": "skill-suites/benchmark-multi-risk/source-category-catalogue.json",
+    "sha256": "08cb6881707c972112cb1109f4fc7269c5d9eefbb8367f80cde7df8fa67902c6"
+  },
+  "families": [
+    {
+      "family_id": "artifact-leakage",
+      "label": "Credential artifact leakage",
+      "source_raw_keys": [
+        "skillleakbench:leakage-pattern:L4"
+      ],
+      "source_ids": [
+        "skillleakbench"
+      ],
+      "impact": "Credential artifact leakage",
+      "carriers": [
+        "leakage-pattern"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "behavior-manipulation",
+      "label": "Behavior manipulation",
+      "source_raw_keys": [
+        "malicious-agent-skills:pattern:P4",
+        "skill-inject:scenario:contextual-35",
+        "skill-inject:scenario:contextual-37"
+      ],
+      "source_ids": [
+        "malicious-agent-skills",
+        "skill-inject"
+      ],
+      "impact": "Behavior manipulation",
+      "carriers": [
+        "pattern",
+        "scenario"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "code-injection-carrier",
+      "label": "Code-injection carrier",
+      "source_raw_keys": [
+        "malskillbench:insertion-strategy:ci-function-append",
+        "malskillbench:insertion-strategy:ci-function-inject",
+        "malskillbench:insertion-strategy:ci-inline",
+        "malskillbench:vector:CI"
+      ],
+      "source_ids": [
+        "malskillbench"
+      ],
+      "impact": "Code-injection carrier",
+      "carriers": [
+        "insertion-strategy",
+        "vector"
+      ],
+      "material_harm": "low",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "command-parameter-injection",
+      "label": "Command or parameter injection",
+      "source_raw_keys": [
+        "malicious-agent-skills:pattern:SC1",
+        "oasb:skill-security-category:parameter-injection"
+      ],
+      "source_ids": [
+        "malicious-agent-skills",
+        "oasb"
+      ],
+      "impact": "Command or parameter injection",
+      "carriers": [
+        "pattern",
+        "skill-security-category"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "content-manipulation",
+      "label": "Content manipulation",
+      "source_raw_keys": [
+        "malskillbench:behavior:B15",
+        "skill-inject:scenario:contextual-18",
+        "skill-inject:scenario:contextual-19",
+        "skill-inject:scenario:contextual-20",
+        "skill-inject:scenario:contextual-28",
+        "skill-inject:scenario:contextual-29",
+        "skill-inject:scenario:contextual-30",
+        "skill-inject:scenario:contextual-31",
+        "skill-inject:scenario:contextual-41",
+        "skill-inject:scenario:contextual-6",
+        "skill-inject:scenario:contextual-7",
+        "skill-inject:scenario:contextual-8",
+        "skill-inject:scenario:obvious-24",
+        "skill-inject:scenario:obvious-25",
+        "skill-inject:scenario:obvious-29",
+        "skill-inject:scenario:obvious-30",
+        "skill-inject:scenario:obvious-31",
+        "skill-inject:scenario:obvious-32"
+      ],
+      "source_ids": [
+        "malskillbench",
+        "skill-inject"
+      ],
+      "impact": "Content manipulation",
+      "carriers": [
+        "behavior",
+        "scenario"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "credential-exposure",
+      "label": "Credential information exposure",
+      "source_raw_keys": [
+        "skillleakbench:leakage-pattern:L3"
+      ],
+      "source_ids": [
+        "skillleakbench"
+      ],
+      "impact": "Credential information exposure",
+      "carriers": [
+        "leakage-pattern"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "credential-theft",
+      "label": "Credential access or theft",
+      "source_raw_keys": [
+        "malicious-agent-skills:pattern:E2",
+        "malicious-agent-skills:pattern:PE3",
+        "malskillbench:behavior:B2",
+        "skill-inject:scenario:contextual-15",
+        "skill-inject:scenario:obvious-10",
+        "skill-inject:scenario:obvious-11",
+        "skill-inject:scenario:obvious-23",
+        "skillfortifybench:attack-type:A5",
+        "skillleakbench:leakage-pattern:L7"
+      ],
+      "source_ids": [
+        "malicious-agent-skills",
+        "malskillbench",
+        "skill-inject",
+        "skillfortifybench",
+        "skillleakbench"
+      ],
+      "impact": "Credential access or theft",
+      "carriers": [
+        "attack-type",
+        "behavior",
+        "leakage-pattern",
+        "pattern",
+        "scenario"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "cross-skill-authorization-confusion",
+      "label": "Cross-Skill authorization confusion",
+      "source_raw_keys": [
+        "scr-bench:composition-mechanism:authblur"
+      ],
+      "source_ids": [
+        "scr-bench"
+      ],
+      "impact": "Cross-Skill authorization confusion",
+      "carriers": [
+        "composition-mechanism"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "cross-skill-capability-flow",
+      "label": "Cross-Skill capability flow",
+      "source_raw_keys": [
+        "scr-bench:composition-mechanism:capflow"
+      ],
+      "source_ids": [
+        "scr-bench"
+      ],
+      "impact": "Cross-Skill capability flow",
+      "carriers": [
+        "composition-mechanism"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "cross-skill-composition",
+      "label": "Generic cross-Skill composition vulnerability",
+      "source_raw_keys": [
+        "skilllifebench:class:D",
+        "skilllifebench:subclass:D1",
+        "skilllifebench:subclass:D2",
+        "skilllifebench:subclass:D3"
+      ],
+      "source_ids": [
+        "skilllifebench"
+      ],
+      "impact": "Generic cross-Skill composition vulnerability",
+      "carriers": [
+        "class",
+        "subclass"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "cross-skill-trust-transfer",
+      "label": "Cross-Skill trust transfer",
+      "source_raw_keys": [
+        "oasb:skill-security-category:cross-skill-trust-abuse",
+        "scr-bench:composition-mechanism:trustlift"
+      ],
+      "source_ids": [
+        "oasb",
+        "scr-bench"
+      ],
+      "impact": "Cross-Skill trust transfer",
+      "carriers": [
+        "composition-mechanism",
+        "skill-security-category"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "data-exfiltration",
+      "label": "Data exfiltration to an external sink",
+      "source_raw_keys": [
+        "aig-skilljack:outcome:data_exfiltration",
+        "malicious-agent-skills:pattern:E1",
+        "malicious-agent-skills:pattern:P3",
+        "malskillbench:behavior:B1",
+        "oasb:skill-security-category:data-exfiltration",
+        "skill-inject:scenario:contextual-1",
+        "skill-inject:scenario:contextual-14",
+        "skill-inject:scenario:contextual-17",
+        "skill-inject:scenario:contextual-2",
+        "skill-inject:scenario:contextual-25",
+        "skill-inject:scenario:contextual-26",
+        "skill-inject:scenario:contextual-27",
+        "skill-inject:scenario:contextual-32",
+        "skill-inject:scenario:contextual-45",
+        "skill-inject:scenario:contextual-46",
+        "skill-inject:scenario:contextual-47",
+        "skill-inject:scenario:obvious-10",
+        "skill-inject:scenario:obvious-11",
+        "skill-inject:scenario:obvious-14",
+        "skill-inject:scenario:obvious-15",
+        "skill-inject:scenario:obvious-16",
+        "skill-inject:scenario:obvious-17",
+        "skill-inject:scenario:obvious-18",
+        "skill-inject:scenario:obvious-19",
+        "skill-inject:scenario:obvious-20",
+        "skill-inject:scenario:obvious-21",
+        "skill-inject:scenario:obvious-22",
+        "skill-inject:scenario:obvious-26",
+        "skill-inject:scenario:obvious-27",
+        "skill-inject:scenario:obvious-28",
+        "skill-inject:scenario:obvious-36",
+        "skill-inject:scenario:obvious-37",
+        "skill-inject:scenario:obvious-38",
+        "skillfortifybench:attack-type:A1",
+        "skillfortifybench:attack-type:A2",
+        "skillleakbench:leakage-pattern:L8"
+      ],
+      "source_ids": [
+        "aig-skilljack",
+        "malicious-agent-skills",
+        "malskillbench",
+        "oasb",
+        "skill-inject",
+        "skillfortifybench",
+        "skillleakbench"
+      ],
+      "impact": "Data exfiltration to an external sink",
+      "carriers": [
+        "attack-type",
+        "behavior",
+        "leakage-pattern",
+        "outcome",
+        "pattern",
+        "scenario",
+        "skill-security-category"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "dependency-confusion",
+      "label": "Dependency confusion",
+      "source_raw_keys": [
+        "skillfortifybench:attack-type:A10"
+      ],
+      "source_ids": [
+        "skillfortifybench"
+      ],
+      "impact": "Dependency confusion",
+      "carriers": [
+        "attack-type"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "dependency-supply-chain-compromise",
+      "label": "Dependency or package supply-chain compromise",
+      "source_raw_keys": [
+        "oasb:skill-security-category:supply-chain-compromise"
+      ],
+      "source_ids": [
+        "oasb"
+      ],
+      "impact": "Dependency or package supply-chain compromise",
+      "carriers": [
+        "skill-security-category"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "destructive-deletion",
+      "label": "Destructive deletion",
+      "source_raw_keys": [
+        "skill-inject:scenario:contextual-23",
+        "skill-inject:scenario:contextual-43",
+        "skill-inject:scenario:contextual-48",
+        "skill-inject:scenario:obvious-3",
+        "skill-inject:scenario:obvious-35",
+        "skill-inject:scenario:obvious-4",
+        "skill-inject:scenario:obvious-5",
+        "skill-inject:scenario:obvious-7"
+      ],
+      "source_ids": [
+        "skill-inject"
+      ],
+      "impact": "Destructive deletion",
+      "carriers": [
+        "scenario"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "destructive-file-impact",
+      "label": "Destructive file impact",
+      "source_raw_keys": [
+        "skill-inject:scenario:contextual-4",
+        "skill-inject:scenario:obvious-3",
+        "skill-inject:scenario:obvious-9"
+      ],
+      "source_ids": [
+        "skill-inject"
+      ],
+      "impact": "Destructive file impact",
+      "carriers": [
+        "scenario"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "excessive-permissions",
+      "label": "Excessive permissions",
+      "source_raw_keys": [
+        "malicious-agent-skills:pattern:PE1"
+      ],
+      "source_ids": [
+        "malicious-agent-skills"
+      ],
+      "impact": "Excessive permissions",
+      "carriers": [
+        "pattern"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "filesystem-reconnaissance",
+      "label": "File-system reconnaissance",
+      "source_raw_keys": [
+        "malicious-agent-skills:pattern:E3"
+      ],
+      "source_ids": [
+        "malicious-agent-skills"
+      ],
+      "impact": "File-system reconnaissance",
+      "carriers": [
+        "pattern"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "goal-hijacking",
+      "label": "Goal hijacking",
+      "source_raw_keys": [
+        "malskillbench:behavior:B14"
+      ],
+      "source_ids": [
+        "malskillbench"
+      ],
+      "impact": "Goal hijacking",
+      "carriers": [
+        "behavior"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "governance-evasion",
+      "label": "Registry governance evasion",
+      "source_raw_keys": [
+        "agent-skill-security:registry-phase:governance"
+      ],
+      "source_ids": [
+        "agent-skill-security"
+      ],
+      "impact": "Registry governance evasion",
+      "carriers": [
+        "registry-phase"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "hardcoded-credential-vulnerability",
+      "label": "Hardcoded credential vulnerability",
+      "source_raw_keys": [
+        "skillleakbench:leakage-pattern:L1"
+      ],
+      "source_ids": [
+        "skillleakbench"
+      ],
+      "impact": "Hardcoded credential vulnerability",
+      "carriers": [
+        "leakage-pattern"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "hidden-instruction-asset-poisoning",
+      "label": "Indirect instruction or asset poisoning",
+      "source_raw_keys": [
+        "skillfortifybench:attack-type:A8",
+        "skilllifebench:class:C",
+        "skilllifebench:subclass:C1",
+        "skilllifebench:subclass:C2",
+        "skilllifebench:subclass:C3",
+        "skilllifebench:subclass:C4"
+      ],
+      "source_ids": [
+        "skillfortifybench",
+        "skilllifebench"
+      ],
+      "impact": "Indirect instruction or asset poisoning",
+      "carriers": [
+        "attack-type",
+        "class",
+        "subclass"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "hidden-instruction-evasion",
+      "label": "Hidden or obfuscated instructions",
+      "source_raw_keys": [
+        "malicious-agent-skills:pattern:P2",
+        "malicious-agent-skills:pattern:SC3",
+        "malskillbench:insertion-strategy:pi-full-camouflage",
+        "malskillbench:insertion-strategy:pi-steganographic",
+        "skillleakbench:leakage-pattern:L6"
+      ],
+      "source_ids": [
+        "malicious-agent-skills",
+        "malskillbench",
+        "skillleakbench"
+      ],
+      "impact": "Hidden or obfuscated instructions",
+      "carriers": [
+        "insertion-strategy",
+        "leakage-pattern",
+        "pattern"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "insecure-secret-storage",
+      "label": "Insecure secret storage",
+      "source_raw_keys": [
+        "skillleakbench:leakage-pattern:L2"
+      ],
+      "source_ids": [
+        "skillleakbench"
+      ],
+      "impact": "Insecure secret storage",
+      "carriers": [
+        "leakage-pattern"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "instruction-override",
+      "label": "Instruction override",
+      "source_raw_keys": [
+        "malicious-agent-skills:pattern:P1",
+        "malskillbench:behavior:B12",
+        "skillfortifybench:attack-type:A3"
+      ],
+      "source_ids": [
+        "malicious-agent-skills",
+        "malskillbench",
+        "skillfortifybench"
+      ],
+      "impact": "Instruction override",
+      "carriers": [
+        "attack-type",
+        "behavior",
+        "pattern"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "interface-deception",
+      "label": "Skill interface deception",
+      "source_raw_keys": [
+        "skilllifebench:class:B",
+        "skilllifebench:subclass:B1",
+        "skilllifebench:subclass:B2",
+        "skilllifebench:subclass:B3"
+      ],
+      "source_ids": [
+        "skilllifebench"
+      ],
+      "impact": "Skill interface deception",
+      "carriers": [
+        "class",
+        "subclass"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "lifecycle-version-rug-pull",
+      "label": "Skill lifecycle version drift or rug pull",
+      "source_raw_keys": [
+        "skilllifebench:class:E",
+        "skilllifebench:subclass:E1",
+        "skilllifebench:subclass:E2",
+        "skilllifebench:subclass:E3",
+        "skilllifebench:subclass:E4"
+      ],
+      "source_ids": [
+        "skilllifebench"
+      ],
+      "impact": "Skill lifecycle version drift or rug pull",
+      "carriers": [
+        "class",
+        "subclass"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "malware-delivery",
+      "label": "Malware or executable script delivery",
+      "source_raw_keys": [
+        "malskillbench:behavior:B4",
+        "malskillbench:insertion-strategy:ci-new-script"
+      ],
+      "source_ids": [
+        "malskillbench"
+      ],
+      "impact": "Malware or executable script delivery",
+      "carriers": [
+        "behavior",
+        "insertion-strategy"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "mixed-chain-carrier",
+      "label": "Mixed instruction-code carrier",
+      "source_raw_keys": [
+        "malskillbench:insertion-strategy:mixed-config-load",
+        "malskillbench:vector:MIXED",
+        "skillfortifybench:attack-type:A13"
+      ],
+      "source_ids": [
+        "malskillbench",
+        "skillfortifybench"
+      ],
+      "impact": "Mixed instruction-code carrier",
+      "carriers": [
+        "attack-type",
+        "insertion-strategy",
+        "vector"
+      ],
+      "material_harm": "low",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "network-reconnaissance",
+      "label": "Network reconnaissance",
+      "source_raw_keys": [
+        "malicious-agent-skills:pattern:E4"
+      ],
+      "source_ids": [
+        "malicious-agent-skills"
+      ],
+      "impact": "Network reconnaissance",
+      "carriers": [
+        "pattern"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "output-reference-poisoning",
+      "label": "Output or reference poisoning",
+      "source_raw_keys": [
+        "skill-inject:scenario:obvious-21"
+      ],
+      "source_ids": [
+        "skill-inject"
+      ],
+      "impact": "Output or reference poisoning",
+      "carriers": [
+        "scenario"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "persistent-backdoor",
+      "label": "Persistent backdoor",
+      "source_raw_keys": [
+        "aig-skilljack:outcome:persistent_backdoor",
+        "malskillbench:behavior:B5",
+        "skill-inject:scenario:contextual-12",
+        "skill-inject:scenario:obvious-22",
+        "skill-inject:scenario:obvious-8",
+        "skillleakbench:leakage-pattern:L9"
+      ],
+      "source_ids": [
+        "aig-skilljack",
+        "malskillbench",
+        "skill-inject",
+        "skillleakbench"
+      ],
+      "impact": "Persistent backdoor",
+      "carriers": [
+        "behavior",
+        "leakage-pattern",
+        "outcome",
+        "scenario"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "phishing-fraud",
+      "label": "Phishing or fraud",
+      "source_raw_keys": [
+        "skill-inject:scenario:obvious-6"
+      ],
+      "source_ids": [
+        "skill-inject"
+      ],
+      "impact": "Phishing or fraud",
+      "carriers": [
+        "scenario"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-academic-assessment",
+      "label": "Policy Academic Assessment",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:H6"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Academic Assessment",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-compromise-child-safety",
+      "label": "Policy Compromise Child Safety",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:P7"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Compromise Child Safety",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-compromise-critical-infrastructure",
+      "label": "Policy Compromise Critical Infrastructure",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:P2"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Compromise Critical Infrastructure",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-cyber-attacks",
+      "label": "Policy Cyber Attacks",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:P3"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Cyber Attacks",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-election-interference",
+      "label": "Policy Election Interference",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:P10"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Election Interference",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-employment-and-housing",
+      "label": "Policy Employment And Housing",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:H5"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Employment And Housing",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-financial-advice",
+      "label": "Policy Financial Advice",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:H4"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Financial Advice",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-fraud-and-scams",
+      "label": "Policy Fraud And Scams",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:P12"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Fraud And Scams",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-harmful-content",
+      "label": "Policy Harmful Content",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:P8"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Harmful Content",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-illegal-activity",
+      "label": "Policy Illegal Activity",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:P1"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Illegal Activity",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-insurance-decisions",
+      "label": "Policy Insurance Decisions",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:H3"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Insurance Decisions",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-legal-advice",
+      "label": "Policy Legal Advice",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:H1"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Legal Advice",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-media-generation",
+      "label": "Policy Media Generation",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:H7"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Media Generation",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-medical-advice",
+      "label": "Policy Medical Advice",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:H2"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Medical Advice",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-misinformation",
+      "label": "Policy Misinformation",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:P9"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Misinformation",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-platform-abuse",
+      "label": "Policy Platform Abuse",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:P13"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Platform Abuse",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-privacy-violation",
+      "label": "Policy Privacy Violation",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:P6"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Privacy Violation",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-sexual-content",
+      "label": "Policy Sexual Content",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:P14"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Sexual Content",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-surveillance-and-censorship",
+      "label": "Policy Surveillance And Censorship",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:P11"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Surveillance And Censorship",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-violence-and-hate",
+      "label": "Policy Violence And Hate",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:P5"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Violence And Hate",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "policy-weapons-development",
+      "label": "Policy Weapons Development",
+      "source_raw_keys": [
+        "harmfulskillbench:policy-category:P4"
+      ],
+      "source_ids": [
+        "harmfulskillbench"
+      ],
+      "impact": "Policy Weapons Development",
+      "carriers": [
+        "policy-category"
+      ],
+      "material_harm": "medium",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "privilege-escalation",
+      "label": "Privilege escalation",
+      "source_raw_keys": [
+        "aig-skilljack:outcome:privilege_escalation",
+        "malicious-agent-skills:pattern:PE2",
+        "malskillbench:behavior:B9",
+        "oasb:skill-security-category:privilege-escalation",
+        "skill-inject:scenario:contextual-44",
+        "skill-inject:scenario:contextual-5",
+        "skillfortifybench:attack-type:A6"
+      ],
+      "source_ids": [
+        "aig-skilljack",
+        "malicious-agent-skills",
+        "malskillbench",
+        "oasb",
+        "skill-inject",
+        "skillfortifybench"
+      ],
+      "impact": "Privilege escalation",
+      "carriers": [
+        "attack-type",
+        "behavior",
+        "outcome",
+        "pattern",
+        "scenario",
+        "skill-security-category"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "prompt-injection-carrier",
+      "label": "Prompt-injection carrier",
+      "source_raw_keys": [
+        "malskillbench:insertion-strategy:pi-partial",
+        "malskillbench:vector:PI"
+      ],
+      "source_ids": [
+        "malskillbench"
+      ],
+      "impact": "Prompt-injection carrier",
+      "carriers": [
+        "insertion-strategy",
+        "vector"
+      ],
+      "material_harm": "low",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "ransomware",
+      "label": "Ransomware or destructive encryption",
+      "source_raw_keys": [
+        "malskillbench:behavior:B7",
+        "skill-inject:scenario:contextual-13",
+        "skill-inject:scenario:contextual-3",
+        "skill-inject:scenario:contextual-42",
+        "skill-inject:scenario:obvious-9"
+      ],
+      "source_ids": [
+        "malskillbench",
+        "skill-inject"
+      ],
+      "impact": "Ransomware or destructive encryption",
+      "carriers": [
+        "behavior",
+        "scenario"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "remote-code-execution",
+      "label": "Remote code execution",
+      "source_raw_keys": [
+        "malskillbench:behavior:B3",
+        "skillleakbench:leakage-pattern:L5"
+      ],
+      "source_ids": [
+        "malskillbench",
+        "skillleakbench"
+      ],
+      "impact": "Remote code execution",
+      "carriers": [
+        "behavior",
+        "leakage-pattern"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "remote-script-execution",
+      "label": "Remote fetch and script execution",
+      "source_raw_keys": [
+        "malicious-agent-skills:pattern:SC2",
+        "malskillbench:insertion-strategy:mixed-download-execute",
+        "malskillbench:insertion-strategy:mixed-fetch-run",
+        "skill-inject:scenario:obvious-1",
+        "skill-inject:scenario:obvious-33"
+      ],
+      "source_ids": [
+        "malicious-agent-skills",
+        "malskillbench",
+        "skill-inject"
+      ],
+      "impact": "Remote fetch and script execution",
+      "carriers": [
+        "insertion-strategy",
+        "pattern",
+        "scenario"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "repository-tampering",
+      "label": "Repository tampering",
+      "source_raw_keys": [
+        "skill-inject:scenario:contextual-10",
+        "skill-inject:scenario:contextual-11",
+        "skill-inject:scenario:contextual-46",
+        "skill-inject:scenario:contextual-9"
+      ],
+      "source_ids": [
+        "skill-inject"
+      ],
+      "impact": "Repository tampering",
+      "carriers": [
+        "scenario"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "resource-abuse",
+      "label": "Resource abuse or denial of service",
+      "source_raw_keys": [
+        "malskillbench:behavior:B8",
+        "oasb:skill-security-category:denial-of-service",
+        "skill-inject:scenario:contextual-21",
+        "skill-inject:scenario:contextual-24",
+        "skill-inject:scenario:obvious-2",
+        "skill-inject:scenario:obvious-34",
+        "skillleakbench:leakage-pattern:L10"
+      ],
+      "source_ids": [
+        "malskillbench",
+        "oasb",
+        "skill-inject",
+        "skillleakbench"
+      ],
+      "impact": "Resource abuse or denial of service",
+      "carriers": [
+        "behavior",
+        "leakage-pattern",
+        "scenario",
+        "skill-security-category"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "reverse-shell",
+      "label": "Reverse shell",
+      "source_raw_keys": [
+        "malskillbench:behavior:B6"
+      ],
+      "source_ids": [
+        "malskillbench"
+      ],
+      "impact": "Reverse shell",
+      "carriers": [
+        "behavior"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "role-hijack",
+      "label": "Agent role hijack",
+      "source_raw_keys": [
+        "malskillbench:behavior:B10"
+      ],
+      "source_ids": [
+        "malskillbench"
+      ],
+      "impact": "Agent role hijack",
+      "carriers": [
+        "behavior"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "safety-bypass",
+      "label": "Safety bypass",
+      "source_raw_keys": [
+        "malskillbench:behavior:B11"
+      ],
+      "source_ids": [
+        "malskillbench"
+      ],
+      "impact": "Safety bypass",
+      "carriers": [
+        "behavior"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "security-check-bypass",
+      "label": "Security-check bypass",
+      "source_raw_keys": [
+        "skill-inject:scenario:contextual-33",
+        "skill-inject:scenario:contextual-34",
+        "skill-inject:scenario:contextual-36",
+        "skill-inject:scenario:contextual-38",
+        "skill-inject:scenario:contextual-39",
+        "skill-inject:scenario:contextual-40"
+      ],
+      "source_ids": [
+        "skill-inject"
+      ],
+      "impact": "Security-check bypass",
+      "carriers": [
+        "scenario"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "security-configuration-tampering",
+      "label": "Security configuration tampering",
+      "source_raw_keys": [
+        "oasb:skill-security-category:configuration-tampering",
+        "skill-inject:scenario:contextual-16"
+      ],
+      "source_ids": [
+        "oasb",
+        "skill-inject"
+      ],
+      "impact": "Security configuration tampering",
+      "carriers": [
+        "scenario",
+        "skill-security-category"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "semantic-discovery-manipulation",
+      "label": "Semantic discovery or ranking manipulation",
+      "source_raw_keys": [
+        "agent-skill-security:registry-phase:discovery"
+      ],
+      "source_ids": [
+        "agent-skill-security"
+      ],
+      "impact": "Semantic discovery or ranking manipulation",
+      "carriers": [
+        "registry-phase"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "semantic-selection-manipulation",
+      "label": "Semantic Skill selection manipulation",
+      "source_raw_keys": [
+        "agent-skill-security:registry-phase:selection"
+      ],
+      "source_ids": [
+        "agent-skill-security"
+      ],
+      "impact": "Semantic Skill selection manipulation",
+      "carriers": [
+        "registry-phase"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "shadow-tool-registration",
+      "label": "Shadow tool or Skill registration",
+      "source_raw_keys": [
+        "skillfortifybench:attack-type:A9"
+      ],
+      "source_ids": [
+        "skillfortifybench"
+      ],
+      "impact": "Shadow tool or Skill registration",
+      "carriers": [
+        "attack-type"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "skill-impersonation",
+      "label": "Skill impersonation, squatting, or typosquatting",
+      "source_raw_keys": [
+        "oasb:skill-security-category:skill-impersonation",
+        "skillfortifybench:attack-type:A11",
+        "skillfortifybench:attack-type:A12"
+      ],
+      "source_ids": [
+        "oasb",
+        "skillfortifybench"
+      ],
+      "impact": "Skill impersonation, squatting, or typosquatting",
+      "carriers": [
+        "attack-type",
+        "skill-security-category"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "system-prompt-leak",
+      "label": "System prompt leakage",
+      "source_raw_keys": [
+        "malskillbench:behavior:B13"
+      ],
+      "source_ids": [
+        "malskillbench"
+      ],
+      "impact": "System prompt leakage",
+      "carriers": [
+        "behavior"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "tool-output-poisoning",
+      "label": "Tool output manipulation or poisoning",
+      "source_raw_keys": [
+        "oasb:skill-security-category:output-manipulation",
+        "skillfortifybench:attack-type:A4"
+      ],
+      "source_ids": [
+        "oasb",
+        "skillfortifybench"
+      ],
+      "impact": "Tool output manipulation or poisoning",
+      "carriers": [
+        "attack-type",
+        "skill-security-category"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "unauthorized-value-transfer",
+      "label": "Unauthorized value transfer",
+      "source_raw_keys": [
+        "aig-skilljack:outcome:unauthorized_transfer"
+      ],
+      "source_ids": [
+        "aig-skilljack"
+      ],
+      "impact": "Unauthorized value transfer",
+      "carriers": [
+        "outcome"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "unrequested-code-execution",
+      "label": "Unrequested code execution",
+      "source_raw_keys": [
+        "skill-inject:scenario:contextual-22",
+        "skillfortifybench:attack-type:A7"
+      ],
+      "source_ids": [
+        "skill-inject",
+        "skillfortifybench"
+      ],
+      "impact": "Unrequested code execution",
+      "carriers": [
+        "attack-type",
+        "scenario"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    },
+    {
+      "family_id": "unsafe-skill-code",
+      "label": "Unsafe code embedded in a Skill",
+      "source_raw_keys": [
+        "skilllifebench:class:A",
+        "skilllifebench:subclass:A1",
+        "skilllifebench:subclass:A2",
+        "skilllifebench:subclass:A3"
+      ],
+      "source_ids": [
+        "skilllifebench"
+      ],
+      "impact": "Unsafe code embedded in a Skill",
+      "carriers": [
+        "class",
+        "subclass"
+      ],
+      "material_harm": "high",
+      "notes": "Multi-source normalized family; raw labels remain authoritative."
+    }
+  ],
+  "unmapped_review": [],
+  "raw_entry_count": 274,
+  "mapped_risk_entry_count": 211
+}

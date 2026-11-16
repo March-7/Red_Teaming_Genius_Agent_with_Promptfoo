@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "kind": "skill-asset-index",
+  "assets": [
+    {
+      "file": "reading-note-b5-2c90dd36/asset-default-normal/provenance-file-default-normal.json",
+      "sha256": "7f7d35e55e0ed9a38131f5ac9f1a2387a1a2841f77f1e80270cfcc1cb264cf25"
+    },
+    {
+      "file": "reading-note-b5-2c90dd36/asset-default-attack/provenance-file-default-attack.json",
+      "sha256": "2a402d797615f209e08c65133a2091ca28ebf29e5a5f12e0586bbdda3118384c"
+    },
+    {
+      "file": "reading-note-b5-2c90dd36/asset-deepseek-v4.1-flash-normal/provenance-file-deepseek-v4.1-flash-normal.json",
+      "sha256": "240eedf243ab88d5ca801afbbe7be451c58577d565852e8d26b3d2d02a973849"
+    },
+    {
+      "file": "reading-note-b5-2c90dd36/asset-deepseek-v4.1-flash-attack/provenance-file-deepseek-v4.1-flash-attack.json",
+      "sha256": "c847725cde361eda396a3718fc4d84048f84ca3f9dcad4dfd1f7c595d78fcbd0"
+    }
+  ]
+}

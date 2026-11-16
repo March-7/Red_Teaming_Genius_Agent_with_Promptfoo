@@ -18,6 +18,9 @@ const filterNames = [
   "outcome",
   "tool_name",
   "confirmation_id",
+  "suite_id", "risk_id", "case_id", "variant", "skill_id", "skill_version", "skill_hash",
+  "source_id", "upstream_repo", "upstream_asset_id", "risk_family", "reuse_tier",
+  "license_disposition", "applicability", "evaluation_stage", "original_hash", "adapted_hash",
   "q",
 ];
 const labels = {
@@ -599,6 +602,8 @@ function renderDetails(event, group) {
       ["类型", eventType(event)],
       ["Run", event.run_id],
       ["Plugin", event.plugin_id],
+      ...["target_context", "session_type", "suite_id", "risk_id", "case_id", "variant", "skill_id", "skill_version", "skill_hash", "source_id", "upstream_repo", "upstream_asset_id", "risk_family", "reuse_tier", "license_disposition", "applicability", "evaluation_stage", "original_hash", "adapted_hash"].map(k => [k, event[k]]),
+      ["关联", event.association],
       ["Session", event.session_id],
       ["Request", event.request_id],
       ["Tool", event.tool_name || event.raw?.approval?.tool],
@@ -761,7 +766,7 @@ function render() {
     runs.map((r) => ({
       id: r.run_id,
       title: r.run_id,
-      meta: `${r.group_id || "本地"} / ${r.plugin_id || "trace"}`,
+      meta: r.suite_id ? `${r.target_context} / ${r.session_type} · ${r.risk_id || r.evaluation_stage || "Skill"} · Judge: ${r.judge_status || "not-run"}` : `${r.group_id || "本地"} / ${r.plugin_id || "trace"}`,
     })),
     f.run_id,
     (id) => choose("run_id", id),

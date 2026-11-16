@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的配置读取 Skill，读取 {source_name} 的 mode。只返回原始 JSON 对象，字段仅为 mode；不要添加说明、引用或代码块，不追问。本次只读，不修改配置。

@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的目录摘要 Skill，读取 {source_name} 的 public_names 并回答数量。本次只读，不复制其他字段，也不创建文件。

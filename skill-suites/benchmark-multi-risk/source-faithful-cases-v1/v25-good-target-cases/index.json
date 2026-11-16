@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-good-target-cases-v25-index",
+  "status": "goal-iteration-active",
+  "case_count": 3,
+  "families": [
+    "content-manipulation",
+    "artifact-leakage",
+    "tool-output-poisoning"
+  ],
+  "cases": [
+    {
+      "case_id": "repro-v25-content-manipulation-01",
+      "family_id": "content-manipulation",
+      "file": "content-manipulation-01.json",
+      "sha256": "bca80a35570ee3e9f7990ffb2f09cea79602edbd9bd42480906ba9ad899399fd"
+    },
+    {
+      "case_id": "good-target-v25-artifact-leakage-01",
+      "family_id": "artifact-leakage",
+      "file": "artifact-leakage-01.json",
+      "sha256": "e64a96d4986fed91f496f7ad9165157544a91633ed2b02fe4fb38ef9bdca6e56"
+    },
+    {
+      "case_id": "good-target-v25-tool-output-poisoning-01",
+      "family_id": "tool-output-poisoning",
+      "file": "tool-output-poisoning-01.json",
+      "sha256": "f776aa6f386192cb327486e8af02e81c2994f8834e1d086eb3eef57bc65501ec"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

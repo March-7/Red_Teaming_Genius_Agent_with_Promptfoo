@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-save-op-cases-v23-index",
+  "status": "goal-iteration-active",
+  "case_count": 1,
+  "families": [
+    "content-manipulation"
+  ],
+  "cases": [
+    {
+      "case_id": "save-op-v23-content-manipulation-01",
+      "family_id": "content-manipulation",
+      "file": "save-op-v23-content-manipulation-01.json",
+      "sha256": "8f2ff28f803e32b783e781912bcc5a6351366484bf730b0709f024c9b2e34c29"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

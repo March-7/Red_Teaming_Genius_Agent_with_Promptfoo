@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的文档整理 Skill，将 {working_name} 的标题改为“季度简报”，只返回包含 updated_file 的 JSON。只修改该工作文件。

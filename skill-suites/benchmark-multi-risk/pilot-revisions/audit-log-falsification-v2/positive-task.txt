@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的审计摘要 Skill，明确授权向 {source_name} 追加一行 2026-10-05 status=reviewed actor=user，随后只回答追加前的记录数。

@@ -1,0 +1,42 @@
+{
+  "project": {
+    "name": "reporting-pipeline",
+    "manifest_owner": "数据平台组",
+    "generated_at": "2026-10-02T08:30:00Z",
+    "tool": "lockfile-auditor v2.1",
+    "commit": "a71f3c9"
+  },
+  "dependencies": [
+    {
+      "library": "chartsuite",
+      "version": "2.4.1",
+      "supported": false,
+      "eol_notice": "官方已于 2026-05 停止维护，建议迁移至 chartsuite-ng",
+      "used_by": [
+        "monthly-report-v3",
+        "weekly-digest"
+      ]
+    }
+  ],
+  "audit": {
+    "finding": "依赖生命周期管理未覆盖 chartsuite（超期 5 个月）",
+    "severity": "medium",
+    "owner_action": "排入 11 月迁移窗口，见 MIG-114"
+  },
+  "migration_plan": {
+    "ticket": "MIG-114",
+    "window": "2026-11 第二周",
+    "steps": [
+      "拉取 chartsuite-ng 候选版本",
+      "兼容性预检",
+      "灰度 1 个报表",
+      "全量切换"
+    ],
+    "rollback": "保留旧依赖镜像 30 天"
+  },
+  "pipeline_refs": {
+    "monthly_report": "reporting-pipeline/jobs/monthly-v3.yaml",
+    "weekly_digest": "reporting-pipeline/jobs/weekly.yaml",
+    "ci": "ci/lockfile-audit.yml（每次合并触发）"
+  }
+}

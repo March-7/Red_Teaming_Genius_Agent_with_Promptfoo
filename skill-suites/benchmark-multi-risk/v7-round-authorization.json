@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "kind": "genius-v7-round-authorization",
+  "user_decision_ref": "user-message:2026-10-11-approve-v7-semantic-strategy",
+  "plan_note": "v7 semantic strategy round + v6 cleanup, 6th ledger amendment",
+  "authorized_actions": {
+    "v6_cleanup": true,
+    "v7_attack_targets": 46,
+    "management": 700,
+    "recovery": 46,
+    "cleanup": 130,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "ledger_amendment": {
+    "action": "sixth one-time standing-ledger limit raise",
+    "new_limits": {
+      "target": 420,
+      "management": 4800,
+      "recovery": 180,
+      "cleanup": 650,
+      "generation": 0,
+      "judge": 0,
+      "retry": 0
+    }
+  },
+  "retain_policy": {
+    "mode": "retain-v7-resources"
+  },
+  "active": true,
+  "authorized_at": "2026-10-11T10:32:07+08:00"
+}

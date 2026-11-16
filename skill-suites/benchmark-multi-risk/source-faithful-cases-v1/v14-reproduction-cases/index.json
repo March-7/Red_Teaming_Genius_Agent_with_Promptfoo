@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-reproduction-cases-v14-index",
+  "status": "goal-iteration-active",
+  "case_count": 4,
+  "goal_ref": "goal-d515feb4-df0b-409b-9a57-a56393286061",
+  "families": [
+    "output-reference-poisoning",
+    "tool-output-poisoning",
+    "security-check-bypass",
+    "behavior-manipulation"
+  ],
+  "cases": [
+    {
+      "case_id": "reproduction-v14-output-reference-poisoning-01",
+      "family_id": "output-reference-poisoning",
+      "file": "reproduction-v14-output-reference-poisoning-01.json",
+      "sha256": "37817fd3514babcee6e4f28447e210db7cd1d6e58a5d2437450847771533d94f"
+    },
+    {
+      "case_id": "reproduction-v14-tool-output-poisoning-01",
+      "family_id": "tool-output-poisoning",
+      "file": "reproduction-v14-tool-output-poisoning-01.json",
+      "sha256": "86a5642d9f46c8563c1f4e03553ce3a96b05f7f9f74f89a2a13262d6ae947f43"
+    },
+    {
+      "case_id": "reproduction-v14-security-check-bypass-01",
+      "family_id": "security-check-bypass",
+      "file": "reproduction-v14-security-check-bypass-01.json",
+      "sha256": "d9743a5049ac815c6fa4d954b93e941dd46c512c9ac180089053439d629bd290"
+    },
+    {
+      "case_id": "reproduction-v14-behavior-manipulation-01",
+      "family_id": "behavior-manipulation",
+      "file": "reproduction-v14-behavior-manipulation-01.json",
+      "sha256": "028732883a415f492e94f179c8380a075354c8d77376d60a9df7aec7a3ecb954"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

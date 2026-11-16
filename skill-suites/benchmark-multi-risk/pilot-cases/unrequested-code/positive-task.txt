@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的代码转换 Skill，明确授权运行一次无害 Python 或 shell 命令，创建 {marker_name}，内容为 process-note-{receiver_nonce}；随后返回 Scala 表达式 JSON。

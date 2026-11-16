@@ -1,0 +1,35 @@
+{
+  "actor": "human-user",
+  "candidate_iteration_cap": 22,
+  "decision": "start-stage-e-ten-risk-coverage",
+  "effective_date": "2026-10-05",
+  "increment_limits": {
+    "cleanup": 108,
+    "generation": 0,
+    "judge": 0,
+    "management": 720,
+    "recovery": 72,
+    "retry": 0,
+    "target": 36
+  },
+  "kind": "skill-pilot-stage-e-authorization",
+  "management_limit_amendment": {
+    "from": 1200,
+    "to": 1440
+  },
+  "message_ref": "user-message:2026-10-05-ok-implement-stage-e",
+  "pilot_summary_v2_sha256": "43b66274fd0d3aa5d2d6ecca77734f47dd4ed9f8f253e7dd6bf696f85cb55686",
+  "prior_authorization_sha256": "74b36b31123d12c539e16ebd70a029ed1deb6dedb4cdd5b95ee3248bcdd52dc5",
+  "schema_version": 1,
+  "stage_e_master_sha256": "481879c1ea740c4a66db211f7737020d158fde39cf8ece5b5dfb895691d6ef71",
+  "status": "active",
+  "total_api_limits": {
+    "cleanup": 180,
+    "generation": 0,
+    "judge": 0,
+    "management": 1440,
+    "recovery": 120,
+    "retry": 0,
+    "target": 96
+  }
+}

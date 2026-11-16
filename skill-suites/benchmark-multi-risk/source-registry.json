@@ -1,0 +1,666 @@
+{
+  "checked_at": "2026-10-08",
+  "kind": "skill-benchmark-source-registry",
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "agent-skill-security",
+      "repository_url": "https://github.com/ShoumikSaha/agent-skill-security",
+      "pinned_commit": "b8804eaafd70288f0382d08b6becc5d6ca02f102",
+      "pinned_ref": "main@2026-05-13",
+      "pinned_url": "https://github.com/ShoumikSaha/agent-skill-security/tree/b8804eaafd70288f0382d08b6becc5d6ca02f102",
+      "tree_hash": "2b397fafa6209947bb37939c4f9c46ed6cf3574d",
+      "root_license": {
+        "path": null,
+        "sha256": null
+      },
+      "license_expression": "No LICENSE observed at pinned revision",
+      "license_observation": "Pinned tree exposes no root LICENSE; taxonomy metadata only.",
+      "license_disposition": "ambiguous-attribution",
+      "content_reuse_ceiling": "metadata-only",
+      "third_party_note": "Do not copy triggers or generated variants; retain phase names and aggregate method claims only.",
+      "relevant_roots": [
+        "README.md"
+      ],
+      "upstream_claims": [
+        {
+          "kind": "risk-taxonomy",
+          "value": [
+            "Discovery",
+            "Selection",
+            "Governance"
+          ],
+          "evidence_path": "README.md",
+          "genius_ground_truth": false
+        }
+      ]
+    },
+    {
+      "content_reuse_ceiling": "pattern-only",
+      "license_disposition": "research-only",
+      "license_expression": "Apache-2.0 at repository root; SkillJack README adds research-purposes-only text",
+      "license_observation": "The root license grants Apache-2.0, while the scoped SkillJack README states research purposes only without a separate license file.",
+      "pinned_commit": "cb6d7386232eabd7f5202b3884e4211ba21efa80",
+      "pinned_ref": "v4.6.4",
+      "pinned_url": "https://github.com/Tencent/AI-Infra-Guard/tree/cb6d7386232eabd7f5202b3884e4211ba21efa80/Research/SkillJack",
+      "relevant_roots": [
+        "LICENSE",
+        "Research/SkillJack/README.md",
+        "Research/SkillJack/data/poisoned_trajectories",
+        "Research/SkillJack/skilljack"
+      ],
+      "repository_url": "https://github.com/Tencent/AI-Infra-Guard",
+      "root_license": {
+        "path": "LICENSE",
+        "sha256": "e77b34bf79aede74ad23d3fe9b54bfd24e428fdf70e1359d2e846966cc08f138"
+      },
+      "source_id": "aig-skilljack",
+      "third_party_note": "Trajectories target AppWorld and external SkillX/Anything2Skill systems; their underlying task rights are not established by the root license alone.",
+      "tree_hash": "ab7175eae641726cd6ad42cbdb63a116c3958eb0",
+      "upstream_claims": [
+        {
+          "evidence_path": "Research/SkillJack/README.md",
+          "genius_ground_truth": false,
+          "kind": "readme-dataset-counts",
+          "value": {
+            "clean": 20,
+            "disguised": 65,
+            "improved_unauthorized_transfer": 15,
+            "naive": 65
+          }
+        },
+        {
+          "evidence_path": "Research/SkillJack/data/poisoned_trajectories",
+          "genius_ground_truth": false,
+          "kind": "measured-trajectory-counts",
+          "value": {
+            "clean_large": 20,
+            "improved_unauthorized_transfer": 15,
+            "naive_large": 65,
+            "poisoned_large": 65
+          }
+        },
+        {
+          "evidence_path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl",
+          "genius_ground_truth": false,
+          "kind": "risk-taxonomy",
+          "value": [
+            "data_exfiltration",
+            "privilege_escalation",
+            "unauthorized_transfer",
+            "persistent_backdoor"
+          ]
+        },
+        {
+          "evidence_path": "Research/SkillJack/skilljack/execution_verification.py",
+          "genius_ground_truth": false,
+          "kind": "execution-boundary",
+          "value": "Agent-generated code is not executed; mock outputs and pattern matching are used."
+        }
+      ]
+    },
+    {
+      "source_id": "harmfulskillbench",
+      "repository_url": "https://github.com/TrustAIRLab/HarmfulSkillBench",
+      "pinned_commit": "b891e4d228447367a1e9997a4048b18e41b24a71",
+      "pinned_ref": "main@2026-05-02",
+      "pinned_url": "https://github.com/TrustAIRLab/HarmfulSkillBench/tree/b891e4d228447367a1e9997a4048b18e41b24a71",
+      "tree_hash": "74e4f7da5aa1c2fd25781b747f23fc722426a155",
+      "root_license": {
+        "path": "LICENSE",
+        "sha256": "564c44f8788dec6d44fa07613a07e9637bfa999e87b025e252bdf4a70e30a544"
+      },
+      "license_expression": "MIT",
+      "license_observation": "Pinned root LICENSE is MIT.",
+      "license_disposition": "confirmed-open",
+      "content_reuse_ceiling": "pattern-only",
+      "third_party_note": "Marketplace descriptions and policy-harm tasks remain a separate policy track; P7 is upstream-excluded.",
+      "relevant_roots": [
+        "LICENSE",
+        "README.md"
+      ],
+      "upstream_claims": [
+        {
+          "kind": "dataset-counts",
+          "value": {
+            "skills": 200,
+            "tier1": 130,
+            "tier2": 70,
+            "categories": 21
+          },
+          "evidence_path": "README.md",
+          "genius_ground_truth": false
+        },
+        {
+          "kind": "risk-taxonomy",
+          "value": [
+            "P1",
+            "P2",
+            "P3",
+            "P4",
+            "P5",
+            "P6",
+            "P7",
+            "P8",
+            "P9",
+            "P10",
+            "P11",
+            "P12",
+            "P13",
+            "P14",
+            "H1",
+            "H2",
+            "H3",
+            "H4",
+            "H5",
+            "H6",
+            "H7"
+          ],
+          "evidence_path": "README.md",
+          "genius_ground_truth": false
+        }
+      ]
+    },
+    {
+      "source_id": "malicious-agent-skills",
+      "repository_url": "https://github.com/protectskills/MaliciousAgentSkillsBench",
+      "pinned_commit": "f7d28b1a9de4eb33d552529cf79d1065d765f6c3",
+      "pinned_ref": "main@2026-08-03",
+      "pinned_url": "https://github.com/protectskills/MaliciousAgentSkillsBench/tree/f7d28b1a9de4eb33d552529cf79d1065d765f6c3",
+      "tree_hash": "5f04ba4f6ecdb3b9c860c3ba1201e0bdcf1e09ba",
+      "root_license": {
+        "path": "LICENSE",
+        "sha256": "0c3b3d03c55336619c6cb6c86fa536a06fa2717954d98b7b477117de809667df"
+      },
+      "license_expression": "MIT",
+      "license_observation": "Pinned root LICENSE is MIT; real-world skill contents may retain third-party rights.",
+      "license_disposition": "confirmed-open",
+      "content_reuse_ceiling": "pattern-only",
+      "third_party_note": "Confirmed malicious rows derive from marketplace skills; use taxonomy and sanitized structure, not live payload bytes.",
+      "relevant_roots": [
+        "LICENSE",
+        "README.md",
+        "code/analysis/patterns.py"
+      ],
+      "upstream_claims": [
+        {
+          "kind": "dataset-counts",
+          "value": {
+            "ecosystem": 98380,
+            "suspicious_candidates": 4287,
+            "confirmed_malicious": 157
+          },
+          "evidence_path": "README.md",
+          "genius_ground_truth": false
+        },
+        {
+          "kind": "risk-taxonomy",
+          "value": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "P1",
+            "P2",
+            "P3",
+            "P4",
+            "PE1",
+            "PE2",
+            "PE3",
+            "SC1",
+            "SC2",
+            "SC3"
+          ],
+          "evidence_path": "code/analysis/patterns.py",
+          "genius_ground_truth": false
+        }
+      ]
+    },
+    {
+      "content_reuse_ceiling": "pattern-only",
+      "license_disposition": "academic-research-only",
+      "license_expression": "Academic research use only in README; no root LICENSE file",
+      "license_observation": "The pinned root tree has no LICENSE file and the README limits use to academic research.",
+      "pinned_commit": "06e083125d5ec5dd7a189dfedadfe587a70635b9",
+      "pinned_ref": "main@2026-10-05",
+      "pinned_url": "https://github.com/lxyeternal/MalSkillBench/tree/06e083125d5ec5dd7a189dfedadfe587a70635b9",
+      "relevant_roots": [
+        "README.md",
+        "Core/taxonomy",
+        "Core/verification",
+        "Dataset/Skills"
+      ],
+      "repository_url": "https://github.com/lxyeternal/MalSkillBench",
+      "root_license": {
+        "path": null,
+        "sha256": null
+      },
+      "source_id": "malskillbench",
+      "third_party_note": "Wild malicious and benign packages were collected from public registries; per-package ownership is not established by a repository-level license.",
+      "tree_hash": "cf82e1ffb53a9361aa29e2f25998ceca4abb94c0",
+      "upstream_claims": [
+        {
+          "evidence_path": "README.md",
+          "genius_ground_truth": false,
+          "kind": "readme-dataset-counts",
+          "value": {
+            "benign": 4000,
+            "generated": 3214,
+            "malicious_total": 3944,
+            "tool_test": 27,
+            "wild": 703
+          }
+        },
+        {
+          "evidence_path": "Dataset/Skills",
+          "genius_ground_truth": false,
+          "kind": "measured-skill-package-counts",
+          "value": {
+            "benign_skill_md": 4000,
+            "malicious_skill_md": 3944
+          }
+        },
+        {
+          "evidence_path": "Core/taxonomy",
+          "genius_ground_truth": false,
+          "kind": "risk-taxonomy",
+          "value": {
+            "behaviors": 15,
+            "cells": 108,
+            "vectors": [
+              "CI",
+              "PI",
+              "MIXED"
+            ]
+          }
+        },
+        {
+          "evidence_path": "README.md",
+          "genius_ground_truth": false,
+          "kind": "runtime-boundary",
+          "value": "CI/MIXED use Docker syscall evidence plus LLM judgment; PI uses response-only LLM classification; generation-time runtime artifacts are not released."
+        }
+      ]
+    },
+    {
+      "source_id": "oasb",
+      "repository_url": "https://github.com/opena2a-org/oasb",
+      "pinned_commit": "fddf2b1379c5597a3e83a3c6f7833b8e5613a04e",
+      "pinned_ref": "main@2026-09-09",
+      "pinned_url": "https://github.com/opena2a-org/oasb/tree/fddf2b1379c5597a3e83a3c6f7833b8e5613a04e",
+      "tree_hash": "688c48bdabfd9540fd76935641ab1eb22c4a25e0",
+      "root_license": {
+        "path": "LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      "license_expression": "Apache-2.0",
+      "license_observation": "Pinned root LICENSE is Apache-2.0.",
+      "license_disposition": "confirmed-open",
+      "content_reuse_ceiling": "pattern-only",
+      "third_party_note": "Use the nine category definitions only; README withdraws precision/FPR claims affected by benign-label construction.",
+      "relevant_roots": [
+        "LICENSE",
+        "README.md"
+      ],
+      "upstream_claims": [
+        {
+          "kind": "risk-taxonomy",
+          "value": [
+            "Parameter injection",
+            "Output manipulation",
+            "Privilege escalation",
+            "Cross-skill trust abuse",
+            "Data exfiltration via skills",
+            "Denial of service",
+            "Skill impersonation",
+            "Configuration tampering",
+            "Supply chain compromise"
+          ],
+          "evidence_path": "README.md",
+          "genius_ground_truth": false
+        },
+        {
+          "kind": "method-boundary",
+          "value": "Scanner benchmark metrics are not Genius target evidence.",
+          "evidence_path": "README.md",
+          "genius_ground_truth": false
+        }
+      ]
+    },
+    {
+      "source_id": "scr-bench",
+      "repository_url": "https://github.com/saint-viperx/SCR_Bench",
+      "pinned_commit": "b8bb3e9e3cf7e72db091655f2d5e8ef15b273848",
+      "pinned_ref": "main@2026-06-21",
+      "pinned_url": "https://github.com/saint-viperx/SCR_Bench/tree/b8bb3e9e3cf7e72db091655f2d5e8ef15b273848",
+      "tree_hash": "796494caea38958f4b44fb1d3afe64666fd32dd8",
+      "root_license": {
+        "path": "LICENSE",
+        "sha256": "a79b2c7855e4da8874b6c132d4568a7c418e6993a13a542adc7efe7c346d8f9f"
+      },
+      "license_expression": "MIT",
+      "license_observation": "Pinned root LICENSE is MIT.",
+      "license_disposition": "confirmed-open",
+      "content_reuse_ceiling": "minimal-adaptation",
+      "third_party_note": "Published scripts currently target Claude Code; Genius needs its own multi-Skill path evidence.",
+      "relevant_roots": [
+        "LICENSE",
+        "README.md"
+      ],
+      "upstream_claims": [
+        {
+          "kind": "risk-taxonomy",
+          "value": [
+            "SCR-CapFlow",
+            "SCR-TrustLift",
+            "SCR-AuthBlur"
+          ],
+          "evidence_path": "README.md",
+          "genius_ground_truth": false
+        }
+      ]
+    },
+    {
+      "content_reuse_ceiling": "metadata-only",
+      "license_disposition": "ambiguous-attribution",
+      "license_expression": "MIT text with Bootstrap Authors copyright attribution",
+      "license_observation": "The repository exposes an MIT-form license, but its named copyright holder appears unrelated to SKILL-INJECT; individual task files and skill packages also contain third-party material.",
+      "pinned_commit": "182f3d9d9836e81cdae213e9b9cec1d9be96eea3",
+      "pinned_ref": "main@2026-10-05",
+      "pinned_url": "https://github.com/aisa-group/skill-inject/tree/182f3d9d9836e81cdae213e9b9cec1d9be96eea3",
+      "relevant_roots": [
+        "LICENSE",
+        "README.md",
+        "config.py",
+        "data/contextual_injections.json",
+        "data/obvious_injections.json",
+        "data/tasks.json",
+        "data/task_files.json",
+        "data/unified_security_policy.md",
+        "data/skills",
+        "data/task_files",
+        "data/task_scripts",
+        "judges"
+      ],
+      "repository_url": "https://github.com/aisa-group/skill-inject",
+      "root_license": {
+        "path": "LICENSE",
+        "sha256": "bc0cd18d94c028f1c0b62ec9fdaddcb9921c1e07c29cf52dc7df8cca9daf2488"
+      },
+      "source_id": "skill-inject",
+      "third_party_note": "Task documents, databases, archives, credentials fixtures, clean skill packages, and scripts require per-asset provenance before any content reuse.",
+      "tree_hash": "7b68eed5c87d00e654bfbed395506502f7a98a39",
+      "upstream_claims": [
+        {
+          "evidence_path": "README.md",
+          "genius_ground_truth": false,
+          "kind": "readme-counts",
+          "value": {
+            "contextual_injections": 41,
+            "obvious_injections": 30,
+            "skill_definitions": 44,
+            "tasks": 66
+          }
+        },
+        {
+          "evidence_path": "data",
+          "genius_ground_truth": false,
+          "kind": "measured-counts",
+          "value": {
+            "contextual_injections": 48,
+            "obvious_injections": 36,
+            "skill_files": 352,
+            "task_files": 76,
+            "task_records": 58,
+            "task_scripts": 29
+          }
+        },
+        {
+          "evidence_path": "README.md",
+          "genius_ground_truth": false,
+          "kind": "policy-conditions",
+          "value": [
+            "normal",
+            "legitimizing",
+            "warning"
+          ]
+        },
+        {
+          "evidence_path": "README.md",
+          "genius_ground_truth": false,
+          "kind": "runtime-boundary",
+          "value": "Docker or Apptainer coding-agent sandbox with LLM judge; not a Genius execution result."
+        }
+      ]
+    },
+    {
+      "source_id": "skillfortifybench",
+      "repository_url": "https://github.com/qualixar/skillfortifybench",
+      "pinned_commit": "eb9d5a9cbfa13b82ec3392d26dbae82fc6454b39",
+      "pinned_ref": "main@2026-04-24",
+      "pinned_url": "https://github.com/qualixar/skillfortifybench/tree/eb9d5a9cbfa13b82ec3392d26dbae82fc6454b39",
+      "tree_hash": "2b83f431b9ab528fbfa6cac54f6ef46a9e6c3088",
+      "root_license": {
+        "path": "LICENSE",
+        "sha256": "5d7583bd223abaa84a8069bac590e7e16a2d99a853698d5eccc3dac1c1a84661"
+      },
+      "license_expression": "MIT",
+      "license_observation": "Pinned benchmark repository and generated corpus are MIT.",
+      "license_disposition": "confirmed-open",
+      "content_reuse_ceiling": "minimal-adaptation",
+      "third_party_note": "Synthetic scanner corpus labels do not prove Genius runtime behavior.",
+      "relevant_roots": [
+        "LICENSE",
+        "README.md",
+        "attack_taxonomy.json"
+      ],
+      "upstream_claims": [
+        {
+          "kind": "dataset-counts",
+          "value": {
+            "malicious": 270,
+            "benign": 270,
+            "attack_types": 13
+          },
+          "evidence_path": "README.md",
+          "genius_ground_truth": false
+        },
+        {
+          "kind": "risk-taxonomy",
+          "value": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5",
+            "A6",
+            "A7",
+            "A8",
+            "A9",
+            "A10",
+            "A11",
+            "A12",
+            "A13"
+          ],
+          "evidence_path": "attack_taxonomy.json",
+          "genius_ground_truth": false
+        }
+      ]
+    },
+    {
+      "source_id": "skillleakbench",
+      "repository_url": "https://github.com/AgentSkillsPrivacy/SkillLeakBench",
+      "pinned_commit": "682521a54f65045725e1e01076db449e402a78f9",
+      "pinned_ref": "main@2026-06-23",
+      "pinned_url": "https://github.com/AgentSkillsPrivacy/SkillLeakBench/tree/682521a54f65045725e1e01076db449e402a78f9",
+      "tree_hash": "4882674cf2dd5e5208fe02a1e347ea41e8c99662",
+      "root_license": {
+        "path": "LICENSE",
+        "sha256": "ac56c9da9c4ff08b632ce9fc2de0fac487d9bc5ccd2421f3605e8690e18d5e94"
+      },
+      "license_expression": "MIT",
+      "license_observation": "Pinned root LICENSE is MIT; released dataset is sanitized and derived from marketplace skills.",
+      "license_disposition": "confirmed-open",
+      "content_reuse_ceiling": "pattern-only",
+      "third_party_note": "Do not copy live credentials or execute collected skills; reuse forged-secret methodology and taxonomy only.",
+      "relevant_roots": [
+        "LICENSE",
+        "README.md",
+        "code/analysis/rq2_taxonomy.py"
+      ],
+      "upstream_claims": [
+        {
+          "kind": "dataset-counts",
+          "value": {
+            "affected_skills": 520,
+            "issues": 1708,
+            "vulnerable": 437,
+            "malicious": 83
+          },
+          "evidence_path": "README.md",
+          "genius_ground_truth": false
+        },
+        {
+          "kind": "risk-taxonomy",
+          "value": [
+            "Hardcoded Credentials",
+            "Insecure Storage",
+            "Information Exposure",
+            "Artifact Leakage",
+            "Remote Exploitation",
+            "Defense Evasion",
+            "Credential Compromise",
+            "Data Exfiltration",
+            "Persistence",
+            "Resource Hijacking"
+          ],
+          "evidence_path": "code/analysis/rq2_taxonomy.py",
+          "genius_ground_truth": false
+        }
+      ]
+    },
+    {
+      "source_id": "skilllifebench",
+      "repository_url": "https://huggingface.co/datasets/SkillLifeBench2026/SkillLifeBench",
+      "pinned_commit": "d4eb7f5",
+      "pinned_ref": "main@d4eb7f5",
+      "pinned_url": "https://huggingface.co/datasets/SkillLifeBench2026/SkillLifeBench/tree/d4eb7f5",
+      "tree_hash": null,
+      "root_license": {
+        "path": null,
+        "sha256": null
+      },
+      "license_expression": "Dataset card states CC BY 4.0; raw license bytes not pinned in this audit",
+      "license_observation": "Hugging Face dataset card exposes revision d4eb7f5 and CC BY 4.0, but local direct fetch was unavailable.",
+      "license_disposition": "ambiguous-attribution",
+      "content_reuse_ceiling": "metadata-only",
+      "third_party_note": "Anonymous 2026 benchmark; use class/subclass metadata as secondary taxonomy only.",
+      "relevant_roots": [
+        "dataset-card@d4eb7f5"
+      ],
+      "upstream_claims": [
+        {
+          "kind": "dataset-counts",
+          "value": {
+            "entries": 194,
+            "classes": 5,
+            "subclasses": 17
+          },
+          "evidence_path": "dataset-card@d4eb7f5",
+          "genius_ground_truth": false
+        },
+        {
+          "kind": "risk-taxonomy",
+          "value": {
+            "A": [
+              "A1",
+              "A2",
+              "A3"
+            ],
+            "B": [
+              "B1",
+              "B2",
+              "B3"
+            ],
+            "C": [
+              "C1",
+              "C2",
+              "C3",
+              "C4"
+            ],
+            "D": [
+              "D1",
+              "D2",
+              "D3"
+            ],
+            "E": [
+              "E1",
+              "E2",
+              "E3",
+              "E4"
+            ]
+          },
+          "evidence_path": "dataset-card@d4eb7f5",
+          "genius_ground_truth": false
+        }
+      ]
+    },
+    {
+      "content_reuse_ceiling": "minimal-adaptation",
+      "license_disposition": "confirmed-open",
+      "license_expression": "Apache-2.0",
+      "license_observation": "The pinned repository has a root Apache-2.0 license; task-bundled third-party license files still apply per asset.",
+      "pinned_commit": "b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+      "pinned_ref": "v1.1",
+      "pinned_url": "https://github.com/benchflow-ai/skillsbench/tree/b63b7b2850226b6aa4fb5929a8c1ac7bc4d9a6af",
+      "relevant_roots": [
+        "LICENSE",
+        "README.md",
+        "registry.json",
+        "taxonomy.md",
+        "taxonomy.yaml",
+        "tasks"
+      ],
+      "repository_url": "https://github.com/benchflow-ai/skillsbench",
+      "root_license": {
+        "path": "LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      "source_id": "skillsbench",
+      "third_party_note": "Many task skill directories contain their own license files and bundled projects; direct reuse remains subject to each selected task package.",
+      "tree_hash": "489cf7e23f5075718d646f44023cb0591882a927",
+      "upstream_claims": [
+        {
+          "evidence_path": "README.md",
+          "genius_ground_truth": false,
+          "kind": "task-package-contract",
+          "value": [
+            "task.md",
+            "environment/skills",
+            "oracle/solve.sh",
+            "verifier/test.sh",
+            "verifier/test_outputs.py"
+          ]
+        },
+        {
+          "evidence_path": "tasks",
+          "genius_ground_truth": false,
+          "kind": "measured-default-task-counts",
+          "value": {
+            "oracle_files": 116,
+            "skill_md": 232,
+            "task_files": 2160,
+            "task_packages": 87,
+            "verifier_files": 220
+          }
+        },
+        {
+          "evidence_path": "README.md",
+          "genius_ground_truth": false,
+          "kind": "benchmark-role",
+          "value": "Benign skill effectiveness and task completion source; no malicious ground truth."
+        }
+      ]
+    }
+  ]
+}

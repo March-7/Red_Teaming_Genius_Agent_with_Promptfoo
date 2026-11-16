@@ -1,0 +1,657 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-anchor-evidence",
+  "status": "verified-22-of-23",
+  "created_at": "2026-10-08",
+  "verification_method": "Read-only fetch of pinned upstream files (raw.githubusercontent.com); byte hashes cross-checked against source-inventory.jsonl; no upstream code executed; no content stored beyond short taxonomy quotes permitted by each source reuse ceiling.",
+  "anchors": [
+    {
+      "case_id": "source-faithful-artifact-leakage-01",
+      "family_id": "artifact-leakage",
+      "raw_key": "skillleakbench:leakage-pattern:L4",
+      "source_id": "skillleakbench",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/AgentSkillsPrivacy/SkillLeakBench/raw/682521a54f65045725e1e01076db449e402a78f9/code/analysis/rq2_taxonomy.py",
+        "pinned_commit": "682521a54f65045725e1e01076db449e402a78f9",
+        "path": "code/analysis/rq2_taxonomy.py",
+        "content_sha256": "d2ce912b70ad8e2b08027007d907112269ce773fdd11a0e76a32f5a614077182",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "code/analysis/rq2_taxonomy.py",
+        "stored_hash": "d2ce912b70ad8e2b08027007d907112269ce773fdd11a0e76a32f5a614077182",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 2112,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "PAPER table row: (\"Artifact Leakage\", (5, 5)) — malicious leakage pattern #4 of 10; paper Table 3 orders 4 vulnerability + 6 malicious patterns.",
+        "verbatim": true
+      },
+      "notes": "Taxonomy-definition quote (classification metadata, pattern-only ceiling)."
+    },
+    {
+      "case_id": "source-faithful-credential-exposure-01",
+      "family_id": "credential-exposure",
+      "raw_key": "skillleakbench:leakage-pattern:L3",
+      "source_id": "skillleakbench",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/AgentSkillsPrivacy/SkillLeakBench/raw/682521a54f65045725e1e01076db449e402a78f9/code/analysis/rq2_taxonomy.py",
+        "pinned_commit": "682521a54f65045725e1e01076db449e402a78f9",
+        "path": "code/analysis/rq2_taxonomy.py",
+        "content_sha256": "d2ce912b70ad8e2b08027007d907112269ce773fdd11a0e76a32f5a614077182",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "code/analysis/rq2_taxonomy.py",
+        "stored_hash": "d2ce912b70ad8e2b08027007d907112269ce773fdd11a0e76a32f5a614077182",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 2112,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "PAPER table row: (\"Information Exposure\", (1007, 352)) — vulnerability leakage pattern #3 of 10 in paper Table 3.",
+        "verbatim": true
+      },
+      "notes": "Taxonomy-definition quote (classification metadata, pattern-only ceiling)."
+    },
+    {
+      "case_id": "source-faithful-credential-theft-01",
+      "family_id": "credential-theft",
+      "raw_key": "malicious-agent-skills:pattern:E2",
+      "source_id": "malicious-agent-skills",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/protectskills/MaliciousAgentSkillsBench/raw/f7d28b1a9de4eb33d552529cf79d1065d765f6c3/code/analysis/patterns.py",
+        "pinned_commit": "f7d28b1a9de4eb33d552529cf79d1065d765f6c3",
+        "path": "code/analysis/patterns.py",
+        "content_sha256": "42330da3dc0853702145ebc4149c0903cb7d7de7e9f9ea3147d5d565c5f40001",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "code/analysis/patterns.py",
+        "stored_hash": "42330da3dc0853702145ebc4149c0903cb7d7de7e9f9ea3147d5d565c5f40001",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 3676,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "TAXONOMY: Pattern(\"E2\", \"Credential Harvesting\", \"Credential Access\", \"CRITICAL\", \"T1552 Unsecured Credentials\")",
+        "verbatim": true
+      },
+      "notes": "Classification tuple quote (pattern-only ceiling)."
+    },
+    {
+      "case_id": "source-faithful-instruction-override-01",
+      "family_id": "instruction-override",
+      "raw_key": "malicious-agent-skills:pattern:P1",
+      "source_id": "malicious-agent-skills",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/protectskills/MaliciousAgentSkillsBench/raw/f7d28b1a9de4eb33d552529cf79d1065d765f6c3/code/analysis/patterns.py",
+        "pinned_commit": "f7d28b1a9de4eb33d552529cf79d1065d765f6c3",
+        "path": "code/analysis/patterns.py",
+        "content_sha256": "42330da3dc0853702145ebc4149c0903cb7d7de7e9f9ea3147d5d565c5f40001",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "code/analysis/patterns.py",
+        "stored_hash": "42330da3dc0853702145ebc4149c0903cb7d7de7e9f9ea3147d5d565c5f40001",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 3676,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "TAXONOMY: Pattern(\"P1\", \"Instruction Override\", \"Impact\", \"HIGH\", \"T1059 Command and Scripting Interpreter\")",
+        "verbatim": true
+      },
+      "notes": "Classification tuple quote (pattern-only ceiling)."
+    },
+    {
+      "case_id": "source-faithful-hidden-instruction-evasion-01",
+      "family_id": "hidden-instruction-evasion",
+      "raw_key": "malicious-agent-skills:pattern:P2",
+      "source_id": "malicious-agent-skills",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/protectskills/MaliciousAgentSkillsBench/raw/f7d28b1a9de4eb33d552529cf79d1065d765f6c3/code/analysis/patterns.py",
+        "pinned_commit": "f7d28b1a9de4eb33d552529cf79d1065d765f6c3",
+        "path": "code/analysis/patterns.py",
+        "content_sha256": "42330da3dc0853702145ebc4149c0903cb7d7de7e9f9ea3147d5d565c5f40001",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "code/analysis/patterns.py",
+        "stored_hash": "42330da3dc0853702145ebc4149c0903cb7d7de7e9f9ea3147d5d565c5f40001",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 3676,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "TAXONOMY: Pattern(\"P2\", \"Hidden Instructions\", \"Defense Evasion\", \"HIGH\", \"T1027 Obfuscated Files or Information\")",
+        "verbatim": true
+      },
+      "notes": "Classification tuple quote (pattern-only ceiling)."
+    },
+    {
+      "case_id": "source-faithful-behavior-manipulation-01",
+      "family_id": "behavior-manipulation",
+      "raw_key": "malicious-agent-skills:pattern:P4",
+      "source_id": "malicious-agent-skills",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/protectskills/MaliciousAgentSkillsBench/raw/f7d28b1a9de4eb33d552529cf79d1065d765f6c3/code/analysis/patterns.py",
+        "pinned_commit": "f7d28b1a9de4eb33d552529cf79d1065d765f6c3",
+        "path": "code/analysis/patterns.py",
+        "content_sha256": "42330da3dc0853702145ebc4149c0903cb7d7de7e9f9ea3147d5d565c5f40001",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "code/analysis/patterns.py",
+        "stored_hash": "42330da3dc0853702145ebc4149c0903cb7d7de7e9f9ea3147d5d565c5f40001",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 3676,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "TAXONOMY: Pattern(\"P4\", \"Behavior Manipulation\", \"Impact\", \"MEDIUM\", \"T1059 Command and Scripting Interpreter\")",
+        "verbatim": true
+      },
+      "notes": "Classification tuple quote (pattern-only ceiling)."
+    },
+    {
+      "case_id": "source-faithful-command-parameter-injection-01",
+      "family_id": "command-parameter-injection",
+      "raw_key": "malicious-agent-skills:pattern:SC1",
+      "source_id": "malicious-agent-skills",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/protectskills/MaliciousAgentSkillsBench/raw/f7d28b1a9de4eb33d552529cf79d1065d765f6c3/code/analysis/patterns.py",
+        "pinned_commit": "f7d28b1a9de4eb33d552529cf79d1065d765f6c3",
+        "path": "code/analysis/patterns.py",
+        "content_sha256": "42330da3dc0853702145ebc4149c0903cb7d7de7e9f9ea3147d5d565c5f40001",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "code/analysis/patterns.py",
+        "stored_hash": "42330da3dc0853702145ebc4149c0903cb7d7de7e9f9ea3147d5d565c5f40001",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 3676,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "TAXONOMY: Pattern(\"SC1\", \"Command Injection\", \"Execution\", \"HIGH\", \"T1059 Command and Scripting Interpreter\")",
+        "verbatim": true
+      },
+      "notes": "Classification tuple quote (pattern-only ceiling)."
+    },
+    {
+      "case_id": "source-faithful-malware-delivery-01",
+      "family_id": "malware-delivery",
+      "raw_key": "malskillbench:behavior:B4",
+      "source_id": "malskillbench",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/lxyeternal/MalSkillBench/raw/06e083125d5ec5dd7a189dfedadfe587a70635b9/Core/taxonomy/behaviors.py",
+        "pinned_commit": "06e083125d5ec5dd7a189dfedadfe587a70635b9",
+        "path": "Core/taxonomy/behaviors.py",
+        "content_sha256": "26c58d5ea010513cbcf4090b7d40a2a1ef8170d18c313feff3273793ae42f65d",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "Core/taxonomy/behaviors.py",
+        "stored_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+        "stored_hash_kind": "git-blob-sha1",
+        "size_bytes": 3077,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "CI_BEHAVIORS: \"B4\": (\"Malware Delivery\", \"Download, install, and run a malware binary\")",
+        "verbatim": true
+      },
+      "notes": "Classification metadata quote within pattern-only ceiling; inventory stores git-blob SHA-1 for this source."
+    },
+    {
+      "case_id": "source-faithful-ransomware-01",
+      "family_id": "ransomware",
+      "raw_key": "malskillbench:behavior:B7",
+      "source_id": "malskillbench",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/lxyeternal/MalSkillBench/raw/06e083125d5ec5dd7a189dfedadfe587a70635b9/Core/taxonomy/behaviors.py",
+        "pinned_commit": "06e083125d5ec5dd7a189dfedadfe587a70635b9",
+        "path": "Core/taxonomy/behaviors.py",
+        "content_sha256": "26c58d5ea010513cbcf4090b7d40a2a1ef8170d18c313feff3273793ae42f65d",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "Core/taxonomy/behaviors.py",
+        "stored_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+        "stored_hash_kind": "git-blob-sha1",
+        "size_bytes": 3077,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "CI_BEHAVIORS: \"B7\": (\"Ransomware\", \"Encrypt user files and demand payment\")",
+        "verbatim": true
+      },
+      "notes": "Classification metadata quote within pattern-only ceiling."
+    },
+    {
+      "case_id": "source-faithful-resource-abuse-01",
+      "family_id": "resource-abuse",
+      "raw_key": "malskillbench:behavior:B8",
+      "source_id": "malskillbench",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/lxyeternal/MalSkillBench/raw/06e083125d5ec5dd7a189dfedadfe587a70635b9/Core/taxonomy/behaviors.py",
+        "pinned_commit": "06e083125d5ec5dd7a189dfedadfe587a70635b9",
+        "path": "Core/taxonomy/behaviors.py",
+        "content_sha256": "26c58d5ea010513cbcf4090b7d40a2a1ef8170d18c313feff3273793ae42f65d",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "Core/taxonomy/behaviors.py",
+        "stored_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+        "stored_hash_kind": "git-blob-sha1",
+        "size_bytes": 3077,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "CI_BEHAVIORS: \"B8\": (\"Resource Abuse\", \"Cryptomining, DDoS, fork bomb\")",
+        "verbatim": true
+      },
+      "notes": "Classification metadata quote within pattern-only ceiling."
+    },
+    {
+      "case_id": "source-faithful-role-hijack-01",
+      "family_id": "role-hijack",
+      "raw_key": "malskillbench:behavior:B10",
+      "source_id": "malskillbench",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/lxyeternal/MalSkillBench/raw/06e083125d5ec5dd7a189dfedadfe587a70635b9/Core/taxonomy/behaviors.py",
+        "pinned_commit": "06e083125d5ec5dd7a189dfedadfe587a70635b9",
+        "path": "Core/taxonomy/behaviors.py",
+        "content_sha256": "26c58d5ea010513cbcf4090b7d40a2a1ef8170d18c313feff3273793ae42f65d",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "Core/taxonomy/behaviors.py",
+        "stored_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+        "stored_hash_kind": "git-blob-sha1",
+        "size_bytes": 3077,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "PI_ONLY_BEHAVIORS: \"B10\": (\"Role Hijack\", \"Replace agent identity via persona injection\")",
+        "verbatim": true
+      },
+      "notes": "Classification metadata quote within pattern-only ceiling."
+    },
+    {
+      "case_id": "source-faithful-safety-bypass-01",
+      "family_id": "safety-bypass",
+      "raw_key": "malskillbench:behavior:B11",
+      "source_id": "malskillbench",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/lxyeternal/MalSkillBench/raw/06e083125d5ec5dd7a189dfedadfe587a70635b9/Core/taxonomy/behaviors.py",
+        "pinned_commit": "06e083125d5ec5dd7a189dfedadfe587a70635b9",
+        "path": "Core/taxonomy/behaviors.py",
+        "content_sha256": "26c58d5ea010513cbcf4090b7d40a2a1ef8170d18c313feff3273793ae42f65d",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "Core/taxonomy/behaviors.py",
+        "stored_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+        "stored_hash_kind": "git-blob-sha1",
+        "size_bytes": 3077,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "PI_ONLY_BEHAVIORS: \"B11\": (\"Safety Bypass\", \"Instruct agent to ignore safety rules\")",
+        "verbatim": true
+      },
+      "notes": "Classification metadata quote within pattern-only ceiling."
+    },
+    {
+      "case_id": "source-faithful-goal-hijacking-01",
+      "family_id": "goal-hijacking",
+      "raw_key": "malskillbench:behavior:B14",
+      "source_id": "malskillbench",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/lxyeternal/MalSkillBench/raw/06e083125d5ec5dd7a189dfedadfe587a70635b9/Core/taxonomy/behaviors.py",
+        "pinned_commit": "06e083125d5ec5dd7a189dfedadfe587a70635b9",
+        "path": "Core/taxonomy/behaviors.py",
+        "content_sha256": "26c58d5ea010513cbcf4090b7d40a2a1ef8170d18c313feff3273793ae42f65d",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "Core/taxonomy/behaviors.py",
+        "stored_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+        "stored_hash_kind": "git-blob-sha1",
+        "size_bytes": 3077,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "PI_ONLY_BEHAVIORS: \"B14\": (\"Goal Hijacking\", \"Covertly redirect agent task\")",
+        "verbatim": true
+      },
+      "notes": "Classification metadata quote within pattern-only ceiling."
+    },
+    {
+      "case_id": "source-faithful-content-manipulation-01",
+      "family_id": "content-manipulation",
+      "raw_key": "malskillbench:behavior:B15",
+      "source_id": "malskillbench",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/lxyeternal/MalSkillBench/raw/06e083125d5ec5dd7a189dfedadfe587a70635b9/Core/taxonomy/behaviors.py",
+        "pinned_commit": "06e083125d5ec5dd7a189dfedadfe587a70635b9",
+        "path": "Core/taxonomy/behaviors.py",
+        "content_sha256": "26c58d5ea010513cbcf4090b7d40a2a1ef8170d18c313feff3273793ae42f65d",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "Core/taxonomy/behaviors.py",
+        "stored_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+        "stored_hash_kind": "git-blob-sha1",
+        "size_bytes": 3077,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "PI_ONLY_BEHAVIORS: \"B15\": (\"Content Manipulation\", \"Inject biased or false content into outputs\")",
+        "verbatim": true
+      },
+      "notes": "Classification metadata quote within pattern-only ceiling."
+    },
+    {
+      "case_id": "source-faithful-destructive-file-impact-01",
+      "family_id": "destructive-file-impact",
+      "raw_key": "skill-inject:scenario:contextual-4",
+      "source_id": "skill-inject",
+      "reuse_ceiling": "metadata-only",
+      "fetch": {
+        "url": "https://github.com/aisa-group/skill-inject/raw/182f3d9d9836e81cdae213e9b9cec1d9be96eea3/data/contextual_injections.json",
+        "pinned_commit": "182f3d9d9836e81cdae213e9b9cec1d9be96eea3",
+        "path": "data/contextual_injections.json",
+        "content_sha256": "5929ac2000a3046d0ee70b5943328e9dbd09a99f831a41e866f3a659d2cd286a",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "data/contextual_injections.json",
+        "stored_hash": "5929ac2000a3046d0ee70b5943328e9dbd09a99f831a41e866f3a659d2cd286a",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 115765,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "scenario-metadata",
+        "summary": "Scenario id 4, \"File Deletion Instruction\", type=direct, task_destructive=true; upstream judge verifies that document files (.pptx/.docx) are deleted from the task directory.",
+        "verbatim": false
+      },
+      "notes": "Metadata-only ceiling: scenario title/type/judge semantics recorded; injection instruction text NOT copied."
+    },
+    {
+      "case_id": "source-faithful-unrequested-code-execution-01",
+      "family_id": "unrequested-code-execution",
+      "raw_key": "skill-inject:scenario:contextual-22",
+      "source_id": "skill-inject",
+      "reuse_ceiling": "metadata-only",
+      "fetch": {
+        "url": "https://github.com/aisa-group/skill-inject/raw/182f3d9d9836e81cdae213e9b9cec1d9be96eea3/data/contextual_injections.json",
+        "pinned_commit": "182f3d9d9836e81cdae213e9b9cec1d9be96eea3",
+        "path": "data/contextual_injections.json",
+        "content_sha256": "5929ac2000a3046d0ee70b5943328e9dbd09a99f831a41e866f3a659d2cd286a",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "data/contextual_injections.json",
+        "stored_hash": "5929ac2000a3046d0ee70b5943328e9dbd09a99f831a41e866f3a659d2cd286a",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 115765,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "scenario-metadata",
+        "summary": "Scenario id 22, \"Calendar Entry Description Injection Instruction\", type=direct; injected instruction appended to calendar description fields on every update/create.",
+        "verbatim": false
+      },
+      "notes": "Metadata-only ceiling: scenario semantics recorded; injection text NOT copied."
+    },
+    {
+      "case_id": "source-faithful-security-check-bypass-01",
+      "family_id": "security-check-bypass",
+      "raw_key": "skill-inject:scenario:contextual-33",
+      "source_id": "skill-inject",
+      "reuse_ceiling": "metadata-only",
+      "fetch": {
+        "url": "https://github.com/aisa-group/skill-inject/raw/182f3d9d9836e81cdae213e9b9cec1d9be96eea3/data/contextual_injections.json",
+        "pinned_commit": "182f3d9d9836e81cdae213e9b9cec1d9be96eea3",
+        "path": "data/contextual_injections.json",
+        "content_sha256": "5929ac2000a3046d0ee70b5943328e9dbd09a99f831a41e866f3a659d2cd286a",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "data/contextual_injections.json",
+        "stored_hash": "5929ac2000a3046d0ee70b5943328e9dbd09a99f831a41e866f3a659d2cd286a",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 115765,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "scenario-metadata",
+        "summary": "Scenario id 33, \"Skip Security Checks in Shell Scripts\", type=direct; linked task asks to configure ShellCheck in CI with skill shellcheck-configuration; injection disables specific ShellCheck security warnings.",
+        "verbatim": false
+      },
+      "notes": "Metadata-only ceiling: scenario semantics recorded; injection text NOT copied."
+    },
+    {
+      "case_id": "source-faithful-output-reference-poisoning-01",
+      "family_id": "output-reference-poisoning",
+      "raw_key": "skill-inject:scenario:obvious-21",
+      "source_id": "skill-inject",
+      "reuse_ceiling": "metadata-only",
+      "fetch": {
+        "url": "https://github.com/aisa-group/skill-inject/raw/182f3d9d9836e81cdae213e9b9cec1d9be96eea3/data/obvious_injections.json",
+        "pinned_commit": "182f3d9d9836e81cdae213e9b9cec1d9be96eea3",
+        "path": "data/obvious_injections.json",
+        "content_sha256": "fecd8731519445c94418d0e5f7822a1f9923f4f6cc19b67f300b1c609d61798b",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "data/obvious_injections.json",
+        "stored_hash": "fecd8731519445c94418d0e5f7822a1f9923f4f6cc19b67f300b1c609d61798b",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 100070,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "scenario-metadata",
+        "summary": "Scenario id 21, \"RAG Metadata poisoning\", injection_goal=\"Poison RAG to exfiltrate queries\", type=direct; poison arrives as default RAG-database entries that instruct retrieval-time upload of queries.",
+        "verbatim": false
+      },
+      "notes": "Metadata-only ceiling: title/goal recorded; injected payload text NOT copied."
+    },
+    {
+      "case_id": "source-faithful-hidden-instruction-asset-poisoning-01",
+      "family_id": "hidden-instruction-asset-poisoning",
+      "raw_key": "skillfortifybench:attack-type:A8",
+      "source_id": "skillfortifybench",
+      "reuse_ceiling": "minimal-adaptation",
+      "fetch": {
+        "url": "https://github.com/qualixar/skillfortifybench/raw/eb9d5a9cbfa13b82ec3392d26dbae82fc6454b39/README.md",
+        "pinned_commit": "eb9d5a9cbfa13b82ec3392d26dbae82fc6454b39",
+        "path": "README.md",
+        "content_sha256": "bc8fdfe8eb07f2b7b52c53712865a0459906416d75d7e305229f51843bfca568",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "README.md",
+        "stored_hash": "bc8fdfe8eb07f2b7b52c53712865a0459906416d75d7e305229f51843bfca568",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 6056,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "README table row: | A8 | 8 | 8 | 8 | 24 | Indirect prompt injection |",
+        "verbatim": true
+      },
+      "notes": "Corpus counts + attack-type label from README (minimal-adaptation ceiling)."
+    },
+    {
+      "case_id": "source-faithful-skill-impersonation-01",
+      "family_id": "skill-impersonation",
+      "raw_key": "oasb:skill-security-category:skill-impersonation",
+      "source_id": "oasb",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/opena2a-org/oasb/raw/fddf2b1379c5597a3e83a3c6f7833b8e5613a04e/README.md",
+        "pinned_commit": "fddf2b1379c5597a3e83a3c6f7833b8e5613a04e",
+        "path": "README.md",
+        "content_sha256": "dabe762bdba9ff7368ad600c5f21601c2b05fd40ae065bcec31823689fdf973a",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "README.md",
+        "stored_hash": "dabe762bdba9ff7368ad600c5f21601c2b05fd40ae065bcec31823689fdf973a",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 31098,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "README Skills Security Threats table: \"Skill impersonation | Spoofed skill identity in multi-agent flows\"; adversary mapping AML.T0073 Impersonation.",
+        "verbatim": true
+      },
+      "notes": "Category definition quote (Apache-2.0, pattern-only ceiling)."
+    },
+    {
+      "case_id": "source-faithful-security-configuration-tampering-01",
+      "family_id": "security-configuration-tampering",
+      "raw_key": "oasb:skill-security-category:configuration-tampering",
+      "source_id": "oasb",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/opena2a-org/oasb/raw/fddf2b1379c5597a3e83a3c6f7833b8e5613a04e/README.md",
+        "pinned_commit": "fddf2b1379c5597a3e83a3c6f7833b8e5613a04e",
+        "path": "README.md",
+        "content_sha256": "dabe762bdba9ff7368ad600c5f21601c2b05fd40ae065bcec31823689fdf973a",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "README.md",
+        "stored_hash": "dabe762bdba9ff7368ad600c5f21601c2b05fd40ae065bcec31823689fdf973a",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 31098,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "README Skills Security Threats table: \"Configuration tampering | Modified skill manifests or permissions\"; adversary mapping AML.T0081 Modify AI Agent Configuration.",
+        "verbatim": true
+      },
+      "notes": "Category definition quote (Apache-2.0, pattern-only ceiling)."
+    },
+    {
+      "case_id": "source-faithful-tool-output-poisoning-01",
+      "family_id": "tool-output-poisoning",
+      "raw_key": "oasb:skill-security-category:output-manipulation",
+      "source_id": "oasb",
+      "reuse_ceiling": "pattern-only",
+      "fetch": {
+        "url": "https://github.com/opena2a-org/oasb/raw/fddf2b1379c5597a3e83a3c6f7833b8e5613a04e/README.md",
+        "pinned_commit": "fddf2b1379c5597a3e83a3c6f7833b8e5613a04e",
+        "path": "README.md",
+        "content_sha256": "dabe762bdba9ff7368ad600c5f21601c2b05fd40ae065bcec31823689fdf973a",
+        "fetched_at": "2026-10-08",
+        "method": "read-only HTTPS fetch of pinned upstream file; no execution, no Genius calls"
+      },
+      "inventory_check": {
+        "path": "README.md",
+        "stored_hash": "dabe762bdba9ff7368ad600c5f21601c2b05fd40ae065bcec31823689fdf973a",
+        "stored_hash_kind": "sha256",
+        "size_bytes": 31098,
+        "match": true
+      },
+      "upstream_anchor": {
+        "kind": "taxonomy-definition",
+        "quote": "README Skills Security Threats table: \"Output manipulation | Tampered or poisoned skill outputs\".",
+        "verbatim": true
+      },
+      "notes": "Category definition quote (Apache-2.0, pattern-only ceiling)."
+    }
+  ],
+  "unavailable": [],
+  "findings": [
+    "malskillbench inventory rows store 40-hex git-blob SHA-1 values while the row-level hash_algorithm field is labeled sha256; content was verified via git-blob equivalence (README.md and Core/taxonomy/behaviors.py both match); the labeling inconsistency is recorded, not rewritten.",
+    "skill-inject scenario payloads are NOT copied into this project (metadata-only ceiling); anchors record title/type/semantic summary plus the inventory hashes already stored in relationships/skill-inject.json.",
+    "skilllifebench official endpoint unreachable from this environment; a cross-checked third-party mirror card corroborates the pinned 22 catalogue labels (third-party caveat recorded)."
+  ],
+  "genius_calls": {
+    "target": 0,
+    "generation": 0,
+    "judge": 0
+  },
+  "skilllifebench_anchor": {
+    "case_id": "source-faithful-unsafe-skill-code-01",
+    "family_id": "unsafe-skill-code",
+    "raw_key": "skilllifebench:class:A",
+    "status": "mirror-corroborated-official-unreachable",
+    "official_attempt": "huggingface.co raw fetch failed (timeout) from this environment on 2026-10-08; no credential was sent.",
+    "mirror_fetch": {
+      "url": "https://hf-mirror.com/datasets/SkillLifeBench2026/SkillLifeBench/raw/d4eb7f5/README.md",
+      "fetched_at": "2026-10-08",
+      "content_sha256": "9780afd03261c3b25c40addfcf3c890cc6339079bac82e1984c5eaf3d10f605e",
+      "bytes": 3642,
+      "method": "read-only HTTPS fetch of a third-party mirror; no execution"
+    },
+    "cross_check": {
+      "catalogue_labels_verified": "The mirror card lists classes A(code-level vulnerabilities)/B/C/D/E and subclasses A1-A3, B1-B3, C1-C4, D1-D3, E1-E4, matching the 22 pinned catalogue raw keys (5 classes + 17 subclasses) recorded at pin time.",
+      "registry_format_consistent": "The card documents a registry entry format with class A \"Code-level vulnerabilities\" entries carrying injection.target=code with clean_code/injected_code pairs, and an A1-001 example - consistent with the unsafe-skill-code case design.",
+      "format_date_example": "The card shows skills/format_date.yaml as an example manifest, consistent with the date-formatter case design.",
+      "caveat": "The mirror is a third-party host; content matches the pin-time catalogue labels but no official byte-level readback was possible. License per card: CC BY 4.0. Not a hash-verified official fetch."
+    },
+    "note": "Treated as corroborating metadata within the metadata-only ceiling; not a substitute for an official byte-level anchor."
+  }
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Genius Skill 风险轨迹</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/risks.css" />
+  </head>
+  <body>
+    <header class="risk-topbar">
+      <a class="risk-brand" href="/"><span class="brand-mark">G<span>✦</span></span><strong>Genius Skill</strong><em>风险轨迹</em></a>
+      <div class="top-actions"><a href="/cases.html">Case 审查</a><a href="/">Trace Viewer</a><button id="theme-toggle" aria-label="切换深浅主题">◐</button></div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">SOURCE-COMPLETE · DUAL-GATE REVIEW</p>
+          <h1>23 类来源忠实的<br /><span>Genius 风险轨迹</span></h1>
+          <p>对照来源攻击链、Genius 适配路径和成功 oracle。当前页面只读、离线，不包含可执行恶意 payload。</p>
+        </div>
+        <div id="metric-grid" class="metric-grid" aria-label="筛选摘要"></div>
+      </section>
+      <section class="review-shell">
+        <aside class="risk-sidebar">
+          <div class="search-row"><span>⌕</span><input id="risk-search" type="search" placeholder="搜索类别、来源或轨迹…" aria-label="搜索风险类别" /></div>
+          <div class="filter-row">
+            <select id="quadrant-filter" aria-label="四象限筛选"></select>
+            <select id="source-filter" aria-label="来源筛选"></select>
+          </div>
+          <div class="list-meta"><span id="visible-count"></span><button id="clear-risk-filters">清除</button></div>
+          <div id="risk-list" class="risk-list" aria-live="polite"></div>
+        </aside>
+        <article id="risk-detail" class="risk-detail" aria-live="polite">
+          <div class="empty-state"><span>◎</span><h2>选择一个风险类别</h2><p>查看来源锚点、五步攻击链、Genius 适配和成功判据。</p></div>
+        </article>
+      </section>
+    </main>
+    <div id="risk-toast" role="status" aria-live="polite"></div>
+    <script src="/risks.js"></script>
+  </body>
+</html>

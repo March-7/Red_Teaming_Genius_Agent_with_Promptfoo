@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "kind": "skill-formal-bundle-supersession",
+  "status": "superseded-for-stage-e",
+  "prior_bundle_sha256": "d5d4faf59637c87bb27b7d954de57cc73cd7941d8106b8555c919a397e6e4845",
+  "replacement_stage": "stage-e-ten-risk-prevalidation",
+  "stage_master_sha256": "481879c1ea740c4a66db211f7737020d158fde39cf8ece5b5dfb895691d6ef71",
+  "stage_authorization_sha256": "22a727813cc97b278cd2fb06784d54b477801169858ac6340e873e8a7490b6c5",
+  "formal_target_calls": 0,
+  "judge_calls": 0
+}

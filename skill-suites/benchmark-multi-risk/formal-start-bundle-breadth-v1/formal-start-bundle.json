@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "kind": "skill-multi-risk-formal-start-bundle",
+  "status": "ready-for-user-case-review",
+  "execution_enabled": false,
+  "evaluation_stage": "formal-prepared",
+  "target_context": "global-general",
+  "portfolio_mode": "breadth-first",
+  "risk_family_count": 7,
+  "risk_families": [
+    "unrelated-file-content-tampering",
+    "unrequested-code-execution",
+    "unauthorized-data-replication",
+    "malicious-script-drop",
+    "synthetic-credential-theft",
+    "security-configuration-tampering",
+    "audit-log-falsification"
+  ],
+  "case_count": 14,
+  "target_row_count": 56,
+  "family_cases": {
+    "unrelated-file-content-tampering": 2,
+    "unrequested-code-execution": 2,
+    "unauthorized-data-replication": 2,
+    "malicious-script-drop": 2,
+    "synthetic-credential-theft": 2,
+    "security-configuration-tampering": 2,
+    "audit-log-falsification": 2
+  },
+  "source_cases": {
+    "skillsbench": 7,
+    "malskillbench": 4,
+    "aig-skilljack": 3
+  },
+  "formal_plan_ref": {
+    "file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/formal-plan-breadth-v1.json",
+    "sha256": "92cb5588fef5c75e0d9d50dc12c9f71fb7d9eb737c42bc9abfee9f508b9d9d24"
+  },
+  "pilot_summary_ref": {
+    "file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/pilot-summary-stage-e.json",
+    "sha256": "6a93ac38b521683a308405a312388cc221f0ff8552ea651811b1e5ea734570de"
+  },
+  "source_registry_ref": {
+    "file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/source-registry.json",
+    "sha256": "380824bd3c18d446fa868c851f5fb8ec36be7431b2a9b18d590fce249fd0d66a"
+  },
+  "risk_card_index_ref": {
+    "file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/risk-cards/index.json",
+    "sha256": "a73f9d162cc1deb03d1796e2206f0ffcc5e7e1610bbea2b8acd9cf69e8f19ac4"
+  },
+  "case_registry_ref": {
+    "file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/formal-cases-breadth-v1/index.json",
+    "sha256": "d1bfdc1ea6842e7f38234e26088d891824ce6dcf3b433e7d848c8e9e789452e1"
+  },
+  "review_index_ref": {
+    "file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/formal-cases-breadth-v1/review-index.json",
+    "sha256": "90a3b0cae866ad1d79a788db0612669c947b56f87b961fb8b36532e18c9ff4df"
+  },
+  "provisioning_plan_ref": {
+    "file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/formal-start-bundle-breadth-v1/provisioning-plan.json",
+    "sha256": "123304f0c81585e44c1a691991c21aab02828a6b7acbf3625e3e2561b8e1a744"
+  },
+  "budget": {
+    "target": 56,
+    "management": 700,
+    "recovery": 56,
+    "cleanup": 56,
+    "generation": 0,
+    "judge": 28,
+    "retry": 0
+  },
+  "data_flow": {
+    "genius": "frozen synthetic tasks, private Skills and run-owned resources",
+    "judge": "guarded outputs and deterministic oracle summary only",
+    "credentials_or_raw_management_receipts_externalized": false
+  },
+  "cleanup": {
+    "scope": "run-owned-resources-only",
+    "non_owned_resources": 0
+  },
+  "target_calls": 0,
+  "judge_calls": 0,
+  "formal_start_authorized": false,
+  "judge_authorized": false,
+  "stop_condition": "user case review and separate exact-bundle target authorization required"
+}

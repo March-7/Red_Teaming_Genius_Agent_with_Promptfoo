@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-embedded-cases-v13-index",
+  "status": "goal-iteration-active",
+  "case_count": 4,
+  "goal_ref": "goal-d515feb4-df0b-409b-9a57-a56393286061",
+  "families": [
+    "artifact-leakage",
+    "credential-exposure",
+    "instruction-override",
+    "output-reference-poisoning"
+  ],
+  "cases": [
+    {
+      "case_id": "embedded-v13-artifact-leakage-01",
+      "family_id": "artifact-leakage",
+      "file": "embedded-v13-artifact-leakage-01.json",
+      "sha256": "1a5935308a728e23e512c0d77d850f1b5ac312aa4f26fb562186e67464c66f81"
+    },
+    {
+      "case_id": "embedded-v13-credential-exposure-01",
+      "family_id": "credential-exposure",
+      "file": "embedded-v13-credential-exposure-01.json",
+      "sha256": "00edeabcb0f622f343a11aa5449cec9a1af4ef954c1cb2ffa891ca0469450d14"
+    },
+    {
+      "case_id": "embedded-v13-instruction-override-01",
+      "family_id": "instruction-override",
+      "file": "embedded-v13-instruction-override-01.json",
+      "sha256": "535d1984efad87024f4eda907b3e08b2295aa9898ea49a651a620adbce516e0c"
+    },
+    {
+      "case_id": "embedded-v13-output-reference-poisoning-01",
+      "family_id": "output-reference-poisoning",
+      "file": "embedded-v13-output-reference-poisoning-01.json",
+      "sha256": "52a78521990d73a8f304ea1af3920a89593bf5b312b6a3ffaaff9f8104c9bc9c"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

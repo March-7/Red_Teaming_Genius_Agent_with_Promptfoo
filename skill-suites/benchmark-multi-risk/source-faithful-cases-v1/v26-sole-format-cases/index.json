@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-sole-format-cases-v26-index",
+  "status": "goal-iteration-active",
+  "case_count": 1,
+  "families": [
+    "role-hijack"
+  ],
+  "cases": [
+    {
+      "case_id": "sole-format-v26-role-hijack-01",
+      "family_id": "role-hijack",
+      "file": "role-hijack-01.json",
+      "sha256": "24f82a6ae0bf26f5a598f7d69b1bcf928cde47ac102d277c04d2a0c5e07312c1"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-case-index",
+  "status": "user-approved",
+  "selection_ref": {
+    "file": "skill-suites/benchmark-multi-risk/formal-category-selection.json",
+    "sha256": "fea337f84ea75a046f2287410632d333b752ecc79c24a989c83aea9158f2a43e"
+  },
+  "catalogue_ref": {
+    "file": "skill-suites/benchmark-multi-risk/source-category-catalogue.json",
+    "sha256": "08cb6881707c972112cb1109f4fc7269c5d9eefbb8367f80cde7df8fa67902c6"
+  },
+  "anchor_evidence_ref": {
+    "file": "source-anchor-evidence.json",
+    "sha256": "98867e97ed5802f103e1406b6c0c34701b03763ce058a89f62cff06793d4e44e"
+  },
+  "case_count": 23,
+  "family_count": 23,
+  "cases": [
+    {
+      "family_id": "artifact-leakage",
+      "case_id": "source-faithful-artifact-leakage-01",
+      "file": "source-faithful-artifact-leakage-01.json",
+      "sha256": "9347085c10d79c5a91db564c905978a50b956fe3f3b98a25e479dfe072c4c7b5"
+    },
+    {
+      "family_id": "behavior-manipulation",
+      "case_id": "source-faithful-behavior-manipulation-01",
+      "file": "source-faithful-behavior-manipulation-01.json",
+      "sha256": "215b23b252d026195262c8386c47cd829f77e2d39e187c15cd35de4b8e203342"
+    },
+    {
+      "family_id": "command-parameter-injection",
+      "case_id": "source-faithful-command-parameter-injection-01",
+      "file": "source-faithful-command-parameter-injection-01.json",
+      "sha256": "b2547c666f5778ed12c500dd41372ae3afea501a038f8c666cd2e8aa80b67887"
+    },
+    {
+      "family_id": "content-manipulation",
+      "case_id": "source-faithful-content-manipulation-01",
+      "file": "source-faithful-content-manipulation-01.json",
+      "sha256": "32e66368357a26b82039ed43433f4ba447576528e250459fa8242e7ff701f6bb"
+    },
+    {
+      "family_id": "credential-exposure",
+      "case_id": "source-faithful-credential-exposure-01",
+      "file": "source-faithful-credential-exposure-01.json",
+      "sha256": "c676f9bc51e659705d231f48291e804ae42bbc534a382e993992381374e9e321"
+    },
+    {
+      "family_id": "credential-theft",
+      "case_id": "source-faithful-credential-theft-01",
+      "file": "source-faithful-credential-theft-01.json",
+      "sha256": "da6168ab7a2704d7a9043c60b84a9d458ad66f47ff80021407bbb0865cf843f2"
+    },
+    {
+      "family_id": "destructive-file-impact",
+      "case_id": "source-faithful-destructive-file-impact-01",
+      "file": "source-faithful-destructive-file-impact-01.json",
+      "sha256": "f1d8d50155bed0ba0bd8bb7d540141a67d01a10df173853ca0bae70c1950b8ca"
+    },
+    {
+      "family_id": "goal-hijacking",
+      "case_id": "source-faithful-goal-hijacking-01",
+      "file": "source-faithful-goal-hijacking-01.json",
+      "sha256": "efb4365fbe7dfc01d85ec0e3f25ac98e5f8b6c2d3ce342c5431e9ac58852f285"
+    },
+    {
+      "family_id": "hidden-instruction-asset-poisoning",
+      "case_id": "source-faithful-hidden-instruction-asset-poisoning-01",
+      "file": "source-faithful-hidden-instruction-asset-poisoning-01.json",
+      "sha256": "7cc6223ff61593c12e27ca447ee84087be8827abe73651549c244bfb425c0b8c"
+    },
+    {
+      "family_id": "hidden-instruction-evasion",
+      "case_id": "source-faithful-hidden-instruction-evasion-01",
+      "file": "source-faithful-hidden-instruction-evasion-01.json",
+      "sha256": "dc4d61ab551aff87d79fb9883dc29a7a6f7edd669819ee61ebb714d6c1f9643d"
+    },
+    {
+      "family_id": "instruction-override",
+      "case_id": "source-faithful-instruction-override-01",
+      "file": "source-faithful-instruction-override-01.json",
+      "sha256": "857fdd86a349bb138daf9a08a0c7e14efcd131f9329f560a33163cd54db92453"
+    },
+    {
+      "family_id": "malware-delivery",
+      "case_id": "source-faithful-malware-delivery-01",
+      "file": "source-faithful-malware-delivery-01.json",
+      "sha256": "f0e2219ee235ba25824fbcdf3303a1ad2b58d4b9c3df53147ae0eab9ea78383a"
+    },
+    {
+      "family_id": "output-reference-poisoning",
+      "case_id": "source-faithful-output-reference-poisoning-01",
+      "file": "source-faithful-output-reference-poisoning-01.json",
+      "sha256": "9c37c6f6f6ee4a45aa25a1ae5ad9b55a54f632be816b0cef6cacd663786d0ba1"
+    },
+    {
+      "family_id": "ransomware",
+      "case_id": "source-faithful-ransomware-01",
+      "file": "source-faithful-ransomware-01.json",
+      "sha256": "0843c79ba1c96841411b7e7b7fcafc566382ad66c7c6d733a211c176906a22b5"
+    },
+    {
+      "family_id": "resource-abuse",
+      "case_id": "source-faithful-resource-abuse-01",
+      "file": "source-faithful-resource-abuse-01.json",
+      "sha256": "52bc6884578408abdb51ca60ff2a1b10dd14365baa81464e5ca8fcd3bd09f0a8"
+    },
+    {
+      "family_id": "role-hijack",
+      "case_id": "source-faithful-role-hijack-01",
+      "file": "source-faithful-role-hijack-01.json",
+      "sha256": "95797cb7884009ba124ed62a9446b99fc6fcc26a884f88ff7f8659f0c79a4566"
+    },
+    {
+      "family_id": "safety-bypass",
+      "case_id": "source-faithful-safety-bypass-01",
+      "file": "source-faithful-safety-bypass-01.json",
+      "sha256": "1cd69098cf37a9cbc864bc4b1e6a2f78f21b0f03b10fe019c0b3eadcdbd7f09e"
+    },
+    {
+      "family_id": "security-check-bypass",
+      "case_id": "source-faithful-security-check-bypass-01",
+      "file": "source-faithful-security-check-bypass-01.json",
+      "sha256": "b45f691fb8d95bac54ed03c959efd1dc16ebb9c297887d39edaf5d8c81650d43"
+    },
+    {
+      "family_id": "security-configuration-tampering",
+      "case_id": "source-faithful-security-configuration-tampering-01",
+      "file": "source-faithful-security-configuration-tampering-01.json",
+      "sha256": "7a72946b0cf399e12f1b5798d365cfee7034891f044e0b0b1b3a5f2f9b84f460"
+    },
+    {
+      "family_id": "skill-impersonation",
+      "case_id": "source-faithful-skill-impersonation-01",
+      "file": "source-faithful-skill-impersonation-01.json",
+      "sha256": "74e5df903138e8f0661443629b30b38c46df51270c26418063ebd769ce605146"
+    },
+    {
+      "family_id": "tool-output-poisoning",
+      "case_id": "source-faithful-tool-output-poisoning-01",
+      "file": "source-faithful-tool-output-poisoning-01.json",
+      "sha256": "412e6a70bc51fe494d9bcfc15fe97d7c76ff00adf5cee99c4f6c9b4a6ea5c3ac"
+    },
+    {
+      "family_id": "unrequested-code-execution",
+      "case_id": "source-faithful-unrequested-code-execution-01",
+      "file": "source-faithful-unrequested-code-execution-01.json",
+      "sha256": "fd52b5f23c6196a3326f5af256b37915065d192709e6e4f494d748908a4f8dce"
+    },
+    {
+      "family_id": "unsafe-skill-code",
+      "case_id": "source-faithful-unsafe-skill-code-01",
+      "file": "source-faithful-unsafe-skill-code-01.json",
+      "sha256": "7eac5272053d2abcec9d108a941377cff1a26630398e58df3a4220c03fe577b7"
+    }
+  ],
+  "carrier_counts": {
+    "catalogue-selection": 1,
+    "package-asset": 4,
+    "package-script": 9,
+    "text-skill": 9
+  },
+  "language": "upstream-language",
+  "normal_cases": 0,
+  "positive_cases": 0,
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0,
+  "user_review_status": "approved",
+  "user_decision_ref": "user-message:2026-10-08-approve-all-23-cases-and-proceed",
+  "oracle_contracts_ref": {
+    "file": "oracle-contracts.json",
+    "sha256": "d7f98a255c58dfc2173299bcb7192730cdc2261a090cdaef27688a4aad8b1ea8"
+  },
+  "adaptation_manifests_ref": {
+    "file": "adaptation-manifests.json",
+    "sha256": "f20f678ed29f753262a16463c7aba5f9fa9b1ef06614112455681247d39a499d"
+  },
+  "distinction_predicates_ref": {
+    "file": "distinction-predicates.json",
+    "sha256": "51cd5715653e549791f3547c89359bb8e8fb187e890194bc4c0684d5967e7bc0"
+  }
+}

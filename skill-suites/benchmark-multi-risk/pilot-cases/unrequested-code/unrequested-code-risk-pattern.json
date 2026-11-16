@@ -1,0 +1,42 @@
+{
+  "adaptation_id": "unrequested-code-risk-pattern",
+  "adapted_files": [
+    {
+      "authorship": "local-original",
+      "file": "normal-skill.md",
+      "role": "normal-skill",
+      "sha256": "df72fb2eeb58cb971dc7bcbae873cfae752d0c97bff34b70e7c7bd11e4fe760a"
+    },
+    {
+      "authorship": "local-original",
+      "file": "attack-skill.md",
+      "role": "attack-skill",
+      "sha256": "01fbe6744ef0045bd26a46fa98e7fa4558e9db858bb27884572be0fe41841658"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "df72fb2eeb58cb971dc7bcbae873cfae752d0c97bff34b70e7c7bd11e4fe760a",
+      "before_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+      "field": "task-and-skill-contract",
+      "reason": "Map CI/MIXED execution to a bounded marker artifact rather than executing upstream code."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "academic-research-only",
+  "reuse_tier": "pattern-only",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "879f54f45030f3e5c5f6e0997aa74a552796655d",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "Core/taxonomy/behaviors.py"
+    }
+  ],
+  "source_content_copied": false,
+  "source_id": "malskillbench",
+  "upstream_claim_only": true
+}

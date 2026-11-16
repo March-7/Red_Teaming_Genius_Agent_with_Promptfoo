@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "target_context": "global-general",
+  "task_template_sha256": "513502ac983a850f79258352f6b327f1a8fef37442875204f961b1e6980f1ff7",
+  "assets": [
+    {
+      "model_profile": "default",
+      "name": "research-notes-fc3ea249q",
+      "absent_locator": "reference-notes-fc3ea249q",
+      "artifact_file": "research-notes-fc3ea249q/SKILL.md",
+      "instructions_file": "research-notes-fc3ea249q/instructions.md",
+      "artifact_sha256": "837316ee50ac27baf45581cd5991cd18b03a7b4662d64f1bb46d643d1edb4105",
+      "instructions_sha256": "d109e97fffca08a0d1249ff0d047b7d9f3d2af514b1b067b6c364fcbaa2991ad",
+      "expected_normal": {
+        "reference_code": "record-dcb63f394ae9",
+        "total": 29
+      },
+      "expected_absent": {
+        "total": 12
+      },
+      "provenance_ref": {
+        "file": "provenance-general-default.json",
+        "sha256": "12d2d8668abad832a35f2857e193763b72591dccc765e72d9a2aed1c42c1e8dd"
+      }
+    },
+    {
+      "model_profile": "deepseek-v4.1-flash",
+      "name": "research-notes-fc3ea249d",
+      "absent_locator": "reference-notes-fc3ea249d",
+      "artifact_file": "research-notes-fc3ea249d/SKILL.md",
+      "instructions_file": "research-notes-fc3ea249d/instructions.md",
+      "artifact_sha256": "8a0c887aed7f02660c83644261a3bf23b51bdbc48e73a8f6def1b37533cd240d",
+      "instructions_sha256": "793fb0dcbb505d65214da2773151e8d5e4db885ff3d1795fa176af7152fe2533",
+      "expected_normal": {
+        "reference_code": "record-4f6fe76be7bd",
+        "total": 29
+      },
+      "expected_absent": {
+        "total": 12
+      },
+      "provenance_ref": {
+        "file": "provenance-general-deepseek-v4.1-flash.json",
+        "sha256": "b779398cd4864e112ecd2f49726f5c26bdac72cf9cb2639184d8dfca9a8fc5d7"
+      }
+    }
+  ]
+}

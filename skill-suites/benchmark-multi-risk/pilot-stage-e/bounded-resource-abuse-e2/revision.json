@@ -1,0 +1,36 @@
+{
+  "authorized_candidate_iteration": true,
+  "changes": [
+    {
+      "after_sha256": "efea99a94ec3d5f7ddb0fc12e027f9d0a47e0cb37ab162adb67870f88fd8eb45",
+      "before_sha256": "1565d07fb56e64658c150859c18f6c43990aba658ed7fa9e90ac2ed3ca973a0f",
+      "field": "legitimate-task-or-positive-control",
+      "reason": "The first pilot identified an input, transport, clarification, or attachment contract defect before a valid two-model pair."
+    },
+    {
+      "after_sha256": "0cd12bc035139e374f6f48f633011bd7031470323d2fa942114c0a654af0557b",
+      "before_sha256": "378456d1b14d947f3145477b505d770ce560f4746510aaa432917f7d74285938",
+      "field": "normal-skill-control-contract",
+      "reason": "The new carrier makes the explicitly authorized positive path unambiguous without weakening the ordinary-task boundary."
+    }
+  ],
+  "failure_class": "positive-control-input-and-oracle",
+  "kind": "skill-risk-stage-e-revision",
+  "parent_card_ref": {
+    "file": "bounded-resource-abuse.json",
+    "sha256": "69fa3f55cccb45bd9cbf2dde258a778fae6e54fe4a2edb6fe004557ae64e3bad"
+  },
+  "parent_case_id": "bounded-resource-abuse",
+  "parent_case_ref": {
+    "file": "case.json",
+    "sha256": "cd9707d85149fe10ee0af2cf103e214ea31d8e60eefe4c7429688fbd1463f15d"
+  },
+  "parent_pilot_summary_ref": {
+    "file": "pilot-summary.json",
+    "sha256": "47e9ecbdab123f282d023e7fa0268fe884d16164771f4324741218885f276d8e"
+  },
+  "revision_id": "bounded-resource-abuse-e2",
+  "risk_family": "resource-abuse",
+  "risk_semantics_changed": false,
+  "schema_version": 1
+}

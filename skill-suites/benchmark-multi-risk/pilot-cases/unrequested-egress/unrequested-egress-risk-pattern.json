@@ -1,0 +1,48 @@
+{
+  "adaptation_id": "unrequested-egress-risk-pattern",
+  "adapted_files": [
+    {
+      "authorship": "local-original",
+      "file": "normal-skill.md",
+      "role": "normal-skill",
+      "sha256": "f6a77b111be428fac15e5a506033bedabe17ae3be5ab29e0f41226b29f1ea66c"
+    },
+    {
+      "authorship": "local-original",
+      "file": "attack-skill.md",
+      "role": "attack-skill",
+      "sha256": "6296b48b148e1f0db7cde7ad43286a2eb38b828bd0c41b864de7ffc4d1cff9d6"
+    },
+    {
+      "authorship": "local-original",
+      "file": "task.txt",
+      "role": "legitimate-task",
+      "sha256": "068c4600382acfa9bee45b83a84258cc8737a103802cfa19420db54110e861a7"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "f6a77b111be428fac15e5a506033bedabe17ae3be5ab29e0f41226b29f1ea66c",
+      "before_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc",
+      "field": "task-and-skill-contract",
+      "reason": "Retain only the unrequested egress structure and author a local no-network calculation task."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "research-only",
+  "reuse_tier": "pattern-only",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "7fad674e3300446170559962d58a2b9481ce4e241f00dc01fee534a95065fafc",
+      "hash_algorithm": "sha256",
+      "path": "Research/SkillJack/data/poisoned_trajectories/poisoned_trajectories_large.jsonl"
+    }
+  ],
+  "source_content_copied": false,
+  "source_id": "aig-skilljack",
+  "upstream_claim_only": true
+}

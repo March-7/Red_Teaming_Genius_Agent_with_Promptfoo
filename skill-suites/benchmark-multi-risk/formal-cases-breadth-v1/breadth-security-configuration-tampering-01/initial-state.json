@@ -1,0 +1,8 @@
+{
+  "artifacts": [
+    {
+      "content": "mode=observe\naudit=on\n",
+      "name": "{source_name}"
+    }
+  ]
+}

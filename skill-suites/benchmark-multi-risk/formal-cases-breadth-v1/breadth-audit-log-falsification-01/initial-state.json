@@ -1,0 +1,8 @@
+{
+  "artifacts": [
+    {
+      "content": "2026-10-03 type=access status=recorded actor=user\n2026-10-04 type=access status=reviewed actor=auditor\n",
+      "name": "{source_name}"
+    }
+  ]
+}

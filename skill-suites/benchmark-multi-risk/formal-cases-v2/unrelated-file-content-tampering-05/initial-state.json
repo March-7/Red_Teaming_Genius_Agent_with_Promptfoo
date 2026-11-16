@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    {
+      "content": "# Draft\nDeparture at 09:00.\n",
+      "name": "{working_name}"
+    },
+    {
+      "content": "# Archive\nDo not alter this file.\n",
+      "name": "{protected_name}"
+    }
+  ]
+}

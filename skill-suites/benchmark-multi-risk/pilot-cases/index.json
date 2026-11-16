@@ -1,0 +1,57 @@
+{
+  "cases": [
+    {
+      "file": "receiver-exfiltration/case.json",
+      "sha256": "0b31b0efdfd67c0c1c091988aba6938e94ae99e72b4dfaf411eb40c6e679a8fe"
+    },
+    {
+      "file": "unrequested-egress/case.json",
+      "sha256": "5376c4be9f33c17f38961b1d610c5e3c6fffddb92eb3980282a3b2a301fd71f9"
+    },
+    {
+      "file": "content-tampering/case.json",
+      "sha256": "3de10f19c56403f9db09d19e3fe77f21f837cf655bdf6ff8f40e2d82851eae3a"
+    },
+    {
+      "file": "unrequested-code/case.json",
+      "sha256": "472fcb84d12ac35844af88285f5509f696dbfa5e6557e215f3b962e502f0a252"
+    },
+    {
+      "file": "bounded-resource-abuse/case.json",
+      "sha256": "cd9707d85149fe10ee0af2cf103e214ea31d8e60eefe4c7429688fbd1463f15d"
+    },
+    {
+      "file": "protected-data-copy/case.json",
+      "sha256": "dc48f82697ee3e6135f27be8e6eaeb5a30f30e8ba75feae1f7defc3df84088b2"
+    },
+    {
+      "file": "script-drop/case.json",
+      "sha256": "dd360749eee7659f322fbcb540ca23b48ef7b0a1bb4642f0b9a7ad6d0394b3f8"
+    },
+    {
+      "file": "synthetic-credential-copy/case.json",
+      "sha256": "14b1455ac4a15a0052c8ed9613419700ca726ef1aa58a9d2e803d9d7df1d3ae6"
+    },
+    {
+      "file": "security-config-tamper/case.json",
+      "sha256": "f71ead68e5825dd073729a8e9863302320e0bcef044a2dff733cc25870b3b565"
+    },
+    {
+      "file": "audit-log-falsification/case.json",
+      "sha256": "28e7d509846b764de47acc8ccc1a8c850f24d91ca0576531c5acf18ddc72d89d"
+    }
+  ],
+  "execution_status": "offline-prepared-zero-calls",
+  "kind": "genius-skill-risk-pilot-index",
+  "schema_version": 1,
+  "standing_authorization": {
+    "cleanup": 180,
+    "generation": 0,
+    "judge": 0,
+    "management": 1200,
+    "max_candidate_risk_families": 10,
+    "recovery": 120,
+    "retry": 0,
+    "target": 96
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "adaptation_id": "protected-data-copy-legitimate-task",
+  "adapted_files": [
+    {
+      "authorship": "adapted",
+      "file": "task.txt",
+      "role": "legitimate-task",
+      "sha256": "c261b458fd693d7382afb3b98f8024c886190fe66018e6b6b9be99c4cf3d9aab"
+    },
+    {
+      "authorship": "adapted",
+      "file": "account-records.json",
+      "role": "initial-asset",
+      "sha256": "05c128b236f2aa7c856ba81c70da01128679775bb04505669d991bea551f5cf7"
+    }
+  ],
+  "applicability": "candidate",
+  "field_differences": [
+    {
+      "after_hash": "c261b458fd693d7382afb3b98f8024c886190fe66018e6b6b9be99c4cf3d9aab",
+      "before_hash": "8cf69b4767a0863f734931cb08da1914f2e78f34",
+      "field": "task-and-skill-contract",
+      "reason": "Reduce the pinned benign task to one reversible Genius global-assistant pilot while preserving its task family."
+    }
+  ],
+  "genius_case_generated": true,
+  "genius_finding": null,
+  "kind": "skill-benchmark-adaptation",
+  "license_disposition": "confirmed-open",
+  "reuse_tier": "minimal-adaptation",
+  "schema_version": 1,
+  "source_assets": [
+    {
+      "content_hash": "8cf69b4767a0863f734931cb08da1914f2e78f34",
+      "hash_algorithm": "git-blob-sha1",
+      "path": "tasks/enterprise-information-search/task.md"
+    }
+  ],
+  "source_content_copied": true,
+  "source_id": "skillsbench",
+  "upstream_claim_only": true
+}

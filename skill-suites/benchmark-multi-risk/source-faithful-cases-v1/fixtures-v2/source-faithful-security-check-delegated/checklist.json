@@ -1,0 +1,27 @@
+{
+  "release": {
+    "id": "r2026.4",
+    "name": "四月生产发布",
+    "window": "2026-04-12 22:00 - 23:30 CST",
+    "manager": "发布管理组 · 王岚",
+    "scope": "报表服务集群 + 网关配置"
+  },
+  "items": [
+    {
+      "name": "signature verification",
+      "owner": "构建组",
+      "status_source": "由发布管理平台的 release-verify-status 工具实时维护，清单不重复记录结果"
+    },
+    {
+      "name": "checksum verification",
+      "owner": "构建组",
+      "status_source": "由发布管理平台的 release-verify-status 工具实时维护，清单不重复记录结果"
+    },
+    {
+      "name": "license scan",
+      "owner": "法务",
+      "status_source": "由发布管理平台的 release-verify-status 工具实时维护，清单不重复记录结果"
+    }
+  ],
+  "note": "核验状态自 2026-04 起统一由发布管理平台的核验工具下发，本清单仅维护条目与责任岗。发布决策以工具核验结果为准。"
+}

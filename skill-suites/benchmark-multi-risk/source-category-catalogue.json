@@ -1,0 +1,3694 @@
+{
+  "schema_version": 1,
+  "kind": "genius-skill-source-category-catalogue",
+  "source_registry_ref": {
+    "file": "skill-suites/benchmark-multi-risk/source-registry.json",
+    "sha256": "4e3ef4816d213c2b1792d5ebec4bf5935832e4b8b5f34ab994036ed1027050b1"
+  },
+  "source_inventory_ref": {
+    "file": "skill-suites/benchmark-multi-risk/source-inventory.jsonl",
+    "sha256": "4f5525e733fa1cc777ace7c2084db4eeac5759d2bb5cf6aa77191780416648e8"
+  },
+  "source_count": 12,
+  "raw_entry_count": 274,
+  "taxonomy_cell_count": 108,
+  "sources": [
+    {
+      "source_id": "agent-skill-security",
+      "raw_entry_count": 3,
+      "entries": [
+        {
+          "source_id": "agent-skill-security",
+          "raw_key": "agent-skill-security:registry-phase:discovery",
+          "axis": "registry-phase",
+          "raw_id": "discovery",
+          "label": "Discovery",
+          "description": "Registry-facing semantic supply-chain phase.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "semantic-discovery-manipulation"
+          ]
+        },
+        {
+          "source_id": "agent-skill-security",
+          "raw_key": "agent-skill-security:registry-phase:selection",
+          "axis": "registry-phase",
+          "raw_id": "selection",
+          "label": "Selection",
+          "description": "Registry-facing semantic supply-chain phase.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "semantic-selection-manipulation"
+          ]
+        },
+        {
+          "source_id": "agent-skill-security",
+          "raw_key": "agent-skill-security:registry-phase:governance",
+          "axis": "registry-phase",
+          "raw_id": "governance",
+          "label": "Governance",
+          "description": "Registry-facing semantic supply-chain phase.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "governance-evasion"
+          ]
+        }
+      ],
+      "taxonomy_cells": [],
+      "evidence_boundaries": [
+        "No license observed; taxonomy metadata only."
+      ]
+    },
+    {
+      "source_id": "aig-skilljack",
+      "raw_entry_count": 4,
+      "entries": [
+        {
+          "source_id": "aig-skilljack",
+          "raw_key": "aig-skilljack:outcome:data_exfiltration",
+          "axis": "outcome",
+          "raw_id": "data_exfiltration",
+          "label": "Data Exfiltration",
+          "description": "SkillJack trajectory risk label.",
+          "evidence_path": "Research/SkillJack/data/poisoned_trajectories",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "aig-skilljack",
+          "raw_key": "aig-skilljack:outcome:privilege_escalation",
+          "axis": "outcome",
+          "raw_id": "privilege_escalation",
+          "label": "Privilege Escalation",
+          "description": "SkillJack trajectory risk label.",
+          "evidence_path": "Research/SkillJack/data/poisoned_trajectories",
+          "risk_semantics": true,
+          "family_ids": [
+            "privilege-escalation"
+          ]
+        },
+        {
+          "source_id": "aig-skilljack",
+          "raw_key": "aig-skilljack:outcome:unauthorized_transfer",
+          "axis": "outcome",
+          "raw_id": "unauthorized_transfer",
+          "label": "Unauthorized Transfer",
+          "description": "SkillJack trajectory risk label.",
+          "evidence_path": "Research/SkillJack/data/poisoned_trajectories",
+          "risk_semantics": true,
+          "family_ids": [
+            "unauthorized-value-transfer"
+          ]
+        },
+        {
+          "source_id": "aig-skilljack",
+          "raw_key": "aig-skilljack:outcome:persistent_backdoor",
+          "axis": "outcome",
+          "raw_id": "persistent_backdoor",
+          "label": "Persistent Backdoor",
+          "description": "SkillJack trajectory risk label.",
+          "evidence_path": "Research/SkillJack/data/poisoned_trajectories",
+          "risk_semantics": true,
+          "family_ids": [
+            "persistent-backdoor"
+          ]
+        }
+      ],
+      "taxonomy_cells": [],
+      "evidence_boundaries": [
+        "Mock output and generated-code pattern matching are upstream claims, not Genius effects."
+      ]
+    },
+    {
+      "source_id": "harmfulskillbench",
+      "raw_entry_count": 21,
+      "entries": [
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:P1",
+          "axis": "policy-category",
+          "raw_id": "P1",
+          "label": "Illegal Activity",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-illegal-activity"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:P2",
+          "axis": "policy-category",
+          "raw_id": "P2",
+          "label": "Compromise Critical Infrastructure",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-compromise-critical-infrastructure"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:P3",
+          "axis": "policy-category",
+          "raw_id": "P3",
+          "label": "Cyber Attacks",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-cyber-attacks"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:P4",
+          "axis": "policy-category",
+          "raw_id": "P4",
+          "label": "Weapons Development",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-weapons-development"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:P5",
+          "axis": "policy-category",
+          "raw_id": "P5",
+          "label": "Violence & Hate",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-violence-and-hate"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:P6",
+          "axis": "policy-category",
+          "raw_id": "P6",
+          "label": "Privacy Violation",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-privacy-violation"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:P7",
+          "axis": "policy-category",
+          "raw_id": "P7",
+          "label": "Compromise Child Safety",
+          "description": "Upstream-excluded category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-compromise-child-safety"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:P8",
+          "axis": "policy-category",
+          "raw_id": "P8",
+          "label": "Harmful Content",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-harmful-content"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:P9",
+          "axis": "policy-category",
+          "raw_id": "P9",
+          "label": "Misinformation",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-misinformation"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:P10",
+          "axis": "policy-category",
+          "raw_id": "P10",
+          "label": "Election Interference",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-election-interference"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:P11",
+          "axis": "policy-category",
+          "raw_id": "P11",
+          "label": "Surveillance & Censorship",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-surveillance-and-censorship"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:P12",
+          "axis": "policy-category",
+          "raw_id": "P12",
+          "label": "Fraud & Scams",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-fraud-and-scams"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:P13",
+          "axis": "policy-category",
+          "raw_id": "P13",
+          "label": "Platform Abuse",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-platform-abuse"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:P14",
+          "axis": "policy-category",
+          "raw_id": "P14",
+          "label": "Sexual Content",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-sexual-content"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:H1",
+          "axis": "policy-category",
+          "raw_id": "H1",
+          "label": "Legal Advice",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-legal-advice"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:H2",
+          "axis": "policy-category",
+          "raw_id": "H2",
+          "label": "Medical Advice",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-medical-advice"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:H3",
+          "axis": "policy-category",
+          "raw_id": "H3",
+          "label": "Insurance Decisions",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-insurance-decisions"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:H4",
+          "axis": "policy-category",
+          "raw_id": "H4",
+          "label": "Financial Advice",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-financial-advice"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:H5",
+          "axis": "policy-category",
+          "raw_id": "H5",
+          "label": "Employment & Housing",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-employment-and-housing"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:H6",
+          "axis": "policy-category",
+          "raw_id": "H6",
+          "label": "Academic Assessment",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-academic-assessment"
+          ]
+        },
+        {
+          "source_id": "harmfulskillbench",
+          "raw_key": "harmfulskillbench:policy-category:H7",
+          "axis": "policy-category",
+          "raw_id": "H7",
+          "label": "Media Generation",
+          "description": "Policy-harm benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "policy-media-generation"
+          ]
+        }
+      ],
+      "taxonomy_cells": [],
+      "evidence_boundaries": [
+        "Policy-harm categories remain separate from malicious-skill boundary ASR.",
+        "P7 is retained as an upstream-excluded label."
+      ]
+    },
+    {
+      "source_id": "malicious-agent-skills",
+      "raw_entry_count": 14,
+      "entries": [
+        {
+          "source_id": "malicious-agent-skills",
+          "raw_key": "malicious-agent-skills:pattern:E1",
+          "axis": "pattern",
+          "raw_id": "E1",
+          "label": "External Transmission",
+          "description": "Real-world confirmed-skill pattern taxonomy.",
+          "evidence_path": "code/analysis/patterns.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "malicious-agent-skills",
+          "raw_key": "malicious-agent-skills:pattern:E2",
+          "axis": "pattern",
+          "raw_id": "E2",
+          "label": "Credential Harvesting",
+          "description": "Real-world confirmed-skill pattern taxonomy.",
+          "evidence_path": "code/analysis/patterns.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "credential-theft"
+          ]
+        },
+        {
+          "source_id": "malicious-agent-skills",
+          "raw_key": "malicious-agent-skills:pattern:E3",
+          "axis": "pattern",
+          "raw_id": "E3",
+          "label": "File System Enumeration",
+          "description": "Real-world confirmed-skill pattern taxonomy.",
+          "evidence_path": "code/analysis/patterns.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "filesystem-reconnaissance"
+          ]
+        },
+        {
+          "source_id": "malicious-agent-skills",
+          "raw_key": "malicious-agent-skills:pattern:E4",
+          "axis": "pattern",
+          "raw_id": "E4",
+          "label": "Network Reconnaissance",
+          "description": "Real-world confirmed-skill pattern taxonomy.",
+          "evidence_path": "code/analysis/patterns.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "network-reconnaissance"
+          ]
+        },
+        {
+          "source_id": "malicious-agent-skills",
+          "raw_key": "malicious-agent-skills:pattern:P1",
+          "axis": "pattern",
+          "raw_id": "P1",
+          "label": "Instruction Override",
+          "description": "Real-world confirmed-skill pattern taxonomy.",
+          "evidence_path": "code/analysis/patterns.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "instruction-override"
+          ]
+        },
+        {
+          "source_id": "malicious-agent-skills",
+          "raw_key": "malicious-agent-skills:pattern:P2",
+          "axis": "pattern",
+          "raw_id": "P2",
+          "label": "Hidden Instructions",
+          "description": "Real-world confirmed-skill pattern taxonomy.",
+          "evidence_path": "code/analysis/patterns.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "hidden-instruction-evasion"
+          ]
+        },
+        {
+          "source_id": "malicious-agent-skills",
+          "raw_key": "malicious-agent-skills:pattern:P3",
+          "axis": "pattern",
+          "raw_id": "P3",
+          "label": "Context Leakage and Data Exfiltration",
+          "description": "Real-world confirmed-skill pattern taxonomy.",
+          "evidence_path": "code/analysis/patterns.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "malicious-agent-skills",
+          "raw_key": "malicious-agent-skills:pattern:P4",
+          "axis": "pattern",
+          "raw_id": "P4",
+          "label": "Behavior Manipulation",
+          "description": "Real-world confirmed-skill pattern taxonomy.",
+          "evidence_path": "code/analysis/patterns.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "behavior-manipulation"
+          ]
+        },
+        {
+          "source_id": "malicious-agent-skills",
+          "raw_key": "malicious-agent-skills:pattern:PE1",
+          "axis": "pattern",
+          "raw_id": "PE1",
+          "label": "Excessive Permissions",
+          "description": "Real-world confirmed-skill pattern taxonomy.",
+          "evidence_path": "code/analysis/patterns.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "excessive-permissions"
+          ]
+        },
+        {
+          "source_id": "malicious-agent-skills",
+          "raw_key": "malicious-agent-skills:pattern:PE2",
+          "axis": "pattern",
+          "raw_id": "PE2",
+          "label": "Privilege Escalation",
+          "description": "Real-world confirmed-skill pattern taxonomy.",
+          "evidence_path": "code/analysis/patterns.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "privilege-escalation"
+          ]
+        },
+        {
+          "source_id": "malicious-agent-skills",
+          "raw_key": "malicious-agent-skills:pattern:PE3",
+          "axis": "pattern",
+          "raw_id": "PE3",
+          "label": "Credential File Access",
+          "description": "Real-world confirmed-skill pattern taxonomy.",
+          "evidence_path": "code/analysis/patterns.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "credential-theft"
+          ]
+        },
+        {
+          "source_id": "malicious-agent-skills",
+          "raw_key": "malicious-agent-skills:pattern:SC1",
+          "axis": "pattern",
+          "raw_id": "SC1",
+          "label": "Command Injection",
+          "description": "Real-world confirmed-skill pattern taxonomy.",
+          "evidence_path": "code/analysis/patterns.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "command-parameter-injection"
+          ]
+        },
+        {
+          "source_id": "malicious-agent-skills",
+          "raw_key": "malicious-agent-skills:pattern:SC2",
+          "axis": "pattern",
+          "raw_id": "SC2",
+          "label": "Remote Script Execution",
+          "description": "Real-world confirmed-skill pattern taxonomy.",
+          "evidence_path": "code/analysis/patterns.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "remote-script-execution"
+          ]
+        },
+        {
+          "source_id": "malicious-agent-skills",
+          "raw_key": "malicious-agent-skills:pattern:SC3",
+          "axis": "pattern",
+          "raw_id": "SC3",
+          "label": "Obfuscated Code",
+          "description": "Real-world confirmed-skill pattern taxonomy.",
+          "evidence_path": "code/analysis/patterns.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "hidden-instruction-evasion"
+          ]
+        }
+      ],
+      "taxonomy_cells": [],
+      "evidence_boundaries": [
+        "Pattern labels are real-world corpus claims; live payload bytes are not reused."
+      ]
+    },
+    {
+      "source_id": "malskillbench",
+      "raw_entry_count": 28,
+      "entries": [
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B1",
+          "axis": "behavior",
+          "raw_id": "B1",
+          "label": "Data Exfiltration",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B2",
+          "axis": "behavior",
+          "raw_id": "B2",
+          "label": "Credential Theft",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "credential-theft"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B3",
+          "axis": "behavior",
+          "raw_id": "B3",
+          "label": "Remote Code Execution",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "remote-code-execution"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B4",
+          "axis": "behavior",
+          "raw_id": "B4",
+          "label": "Malware Delivery",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "malware-delivery"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B5",
+          "axis": "behavior",
+          "raw_id": "B5",
+          "label": "Persistence",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "persistent-backdoor"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B6",
+          "axis": "behavior",
+          "raw_id": "B6",
+          "label": "Reverse Shell",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "reverse-shell"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B7",
+          "axis": "behavior",
+          "raw_id": "B7",
+          "label": "Ransomware",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "ransomware"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B8",
+          "axis": "behavior",
+          "raw_id": "B8",
+          "label": "Resource Abuse",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "resource-abuse"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B9",
+          "axis": "behavior",
+          "raw_id": "B9",
+          "label": "Privilege Escalation",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "privilege-escalation"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B10",
+          "axis": "behavior",
+          "raw_id": "B10",
+          "label": "Role Hijack",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "role-hijack"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B11",
+          "axis": "behavior",
+          "raw_id": "B11",
+          "label": "Safety Bypass",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "safety-bypass"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B12",
+          "axis": "behavior",
+          "raw_id": "B12",
+          "label": "Instruction Override",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "instruction-override"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B13",
+          "axis": "behavior",
+          "raw_id": "B13",
+          "label": "System Prompt Leak",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "system-prompt-leak"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B14",
+          "axis": "behavior",
+          "raw_id": "B14",
+          "label": "Goal Hijacking",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "goal-hijacking"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:behavior:B15",
+          "axis": "behavior",
+          "raw_id": "B15",
+          "label": "Content Manipulation",
+          "description": "Malicious behavior taxonomy.",
+          "evidence_path": "Core/taxonomy",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:vector:CI",
+          "axis": "vector",
+          "raw_id": "CI",
+          "label": "Code Injection",
+          "description": "Attack delivery vector.",
+          "evidence_path": "Core/generation/ATTACK_VECTORS_AND_STRATEGIES.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "code-injection-carrier"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:vector:PI",
+          "axis": "vector",
+          "raw_id": "PI",
+          "label": "Prompt Injection",
+          "description": "Attack delivery vector.",
+          "evidence_path": "Core/generation/ATTACK_VECTORS_AND_STRATEGIES.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "prompt-injection-carrier"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:vector:MIXED",
+          "axis": "vector",
+          "raw_id": "MIXED",
+          "label": "Mixed instruction-code chain",
+          "description": "Attack delivery vector.",
+          "evidence_path": "Core/generation/ATTACK_VECTORS_AND_STRATEGIES.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "mixed-chain-carrier"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:insertion-strategy:ci-new-script",
+          "axis": "insertion-strategy",
+          "raw_id": "ci-new-script",
+          "label": "New Script File",
+          "description": "Insertion strategy.",
+          "evidence_path": "Core/generation/ATTACK_VECTORS_AND_STRATEGIES.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "malware-delivery"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:insertion-strategy:ci-function-append",
+          "axis": "insertion-strategy",
+          "raw_id": "ci-function-append",
+          "label": "Function Append",
+          "description": "Insertion strategy.",
+          "evidence_path": "Core/generation/ATTACK_VECTORS_AND_STRATEGIES.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "code-injection-carrier"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:insertion-strategy:ci-function-inject",
+          "axis": "insertion-strategy",
+          "raw_id": "ci-function-inject",
+          "label": "Function Inject",
+          "description": "Insertion strategy.",
+          "evidence_path": "Core/generation/ATTACK_VECTORS_AND_STRATEGIES.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "code-injection-carrier"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:insertion-strategy:ci-inline",
+          "axis": "insertion-strategy",
+          "raw_id": "ci-inline",
+          "label": "Inline Code Block",
+          "description": "Insertion strategy.",
+          "evidence_path": "Core/generation/ATTACK_VECTORS_AND_STRATEGIES.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "code-injection-carrier"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:insertion-strategy:pi-full-camouflage",
+          "axis": "insertion-strategy",
+          "raw_id": "pi-full-camouflage",
+          "label": "Full Camouflage",
+          "description": "Insertion strategy.",
+          "evidence_path": "Core/generation/ATTACK_VECTORS_AND_STRATEGIES.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "hidden-instruction-evasion"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:insertion-strategy:pi-partial",
+          "axis": "insertion-strategy",
+          "raw_id": "pi-partial",
+          "label": "Partial Injection",
+          "description": "Insertion strategy.",
+          "evidence_path": "Core/generation/ATTACK_VECTORS_AND_STRATEGIES.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "prompt-injection-carrier"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:insertion-strategy:pi-steganographic",
+          "axis": "insertion-strategy",
+          "raw_id": "pi-steganographic",
+          "label": "Steganographic",
+          "description": "Insertion strategy.",
+          "evidence_path": "Core/generation/ATTACK_VECTORS_AND_STRATEGIES.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "hidden-instruction-evasion"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:insertion-strategy:mixed-download-execute",
+          "axis": "insertion-strategy",
+          "raw_id": "mixed-download-execute",
+          "label": "Download+Execute",
+          "description": "Insertion strategy.",
+          "evidence_path": "Core/generation/ATTACK_VECTORS_AND_STRATEGIES.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "remote-script-execution"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:insertion-strategy:mixed-config-load",
+          "axis": "insertion-strategy",
+          "raw_id": "mixed-config-load",
+          "label": "Config+Load",
+          "description": "Insertion strategy.",
+          "evidence_path": "Core/generation/ATTACK_VECTORS_AND_STRATEGIES.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "mixed-chain-carrier"
+          ]
+        },
+        {
+          "source_id": "malskillbench",
+          "raw_key": "malskillbench:insertion-strategy:mixed-fetch-run",
+          "axis": "insertion-strategy",
+          "raw_id": "mixed-fetch-run",
+          "label": "Fetch+Run",
+          "description": "Insertion strategy.",
+          "evidence_path": "Core/generation/ATTACK_VECTORS_AND_STRATEGIES.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "remote-script-execution"
+          ]
+        }
+      ],
+      "taxonomy_cells": [
+        "CI:B1:New Script File",
+        "CI:B1:Function Append",
+        "CI:B1:Function Inject",
+        "CI:B1:Inline Code Block",
+        "CI:B2:New Script File",
+        "CI:B2:Function Append",
+        "CI:B2:Function Inject",
+        "CI:B2:Inline Code Block",
+        "CI:B3:New Script File",
+        "CI:B3:Function Append",
+        "CI:B3:Function Inject",
+        "CI:B3:Inline Code Block",
+        "CI:B4:New Script File",
+        "CI:B4:Function Append",
+        "CI:B4:Function Inject",
+        "CI:B4:Inline Code Block",
+        "CI:B5:New Script File",
+        "CI:B5:Function Append",
+        "CI:B5:Function Inject",
+        "CI:B5:Inline Code Block",
+        "CI:B6:New Script File",
+        "CI:B6:Function Append",
+        "CI:B6:Function Inject",
+        "CI:B6:Inline Code Block",
+        "CI:B7:New Script File",
+        "CI:B7:Function Append",
+        "CI:B7:Function Inject",
+        "CI:B7:Inline Code Block",
+        "CI:B8:New Script File",
+        "CI:B8:Function Append",
+        "CI:B8:Function Inject",
+        "CI:B8:Inline Code Block",
+        "CI:B9:New Script File",
+        "CI:B9:Function Append",
+        "CI:B9:Function Inject",
+        "CI:B9:Inline Code Block",
+        "PI:B1:Full Camouflage",
+        "PI:B1:Partial Injection",
+        "PI:B1:Steganographic",
+        "PI:B2:Full Camouflage",
+        "PI:B2:Partial Injection",
+        "PI:B2:Steganographic",
+        "PI:B3:Full Camouflage",
+        "PI:B3:Partial Injection",
+        "PI:B3:Steganographic",
+        "PI:B4:Full Camouflage",
+        "PI:B4:Partial Injection",
+        "PI:B4:Steganographic",
+        "PI:B5:Full Camouflage",
+        "PI:B5:Partial Injection",
+        "PI:B5:Steganographic",
+        "PI:B6:Full Camouflage",
+        "PI:B6:Partial Injection",
+        "PI:B6:Steganographic",
+        "PI:B7:Full Camouflage",
+        "PI:B7:Partial Injection",
+        "PI:B7:Steganographic",
+        "PI:B8:Full Camouflage",
+        "PI:B8:Partial Injection",
+        "PI:B8:Steganographic",
+        "PI:B9:Full Camouflage",
+        "PI:B9:Partial Injection",
+        "PI:B9:Steganographic",
+        "PI:B10:Full Camouflage",
+        "PI:B10:Partial Injection",
+        "PI:B10:Steganographic",
+        "PI:B11:Full Camouflage",
+        "PI:B11:Partial Injection",
+        "PI:B11:Steganographic",
+        "PI:B12:Full Camouflage",
+        "PI:B12:Partial Injection",
+        "PI:B12:Steganographic",
+        "PI:B13:Full Camouflage",
+        "PI:B13:Partial Injection",
+        "PI:B13:Steganographic",
+        "PI:B14:Full Camouflage",
+        "PI:B14:Partial Injection",
+        "PI:B14:Steganographic",
+        "PI:B15:Full Camouflage",
+        "PI:B15:Partial Injection",
+        "PI:B15:Steganographic",
+        "MIXED:B1:Download+Execute",
+        "MIXED:B1:Config+Load",
+        "MIXED:B1:Fetch+Run",
+        "MIXED:B2:Download+Execute",
+        "MIXED:B2:Config+Load",
+        "MIXED:B2:Fetch+Run",
+        "MIXED:B3:Download+Execute",
+        "MIXED:B3:Config+Load",
+        "MIXED:B3:Fetch+Run",
+        "MIXED:B4:Download+Execute",
+        "MIXED:B4:Config+Load",
+        "MIXED:B4:Fetch+Run",
+        "MIXED:B5:Download+Execute",
+        "MIXED:B5:Config+Load",
+        "MIXED:B5:Fetch+Run",
+        "MIXED:B6:Download+Execute",
+        "MIXED:B6:Config+Load",
+        "MIXED:B6:Fetch+Run",
+        "MIXED:B7:Download+Execute",
+        "MIXED:B7:Config+Load",
+        "MIXED:B7:Fetch+Run",
+        "MIXED:B8:Download+Execute",
+        "MIXED:B8:Config+Load",
+        "MIXED:B8:Fetch+Run",
+        "MIXED:B9:Download+Execute",
+        "MIXED:B9:Config+Load",
+        "MIXED:B9:Fetch+Run"
+      ],
+      "evidence_boundaries": [
+        "Released package labels and sandbox/LLM verification are upstream claims only."
+      ]
+    },
+    {
+      "source_id": "oasb",
+      "raw_entry_count": 9,
+      "entries": [
+        {
+          "source_id": "oasb",
+          "raw_key": "oasb:skill-security-category:parameter-injection",
+          "axis": "skill-security-category",
+          "raw_id": "parameter-injection",
+          "label": "Parameter injection",
+          "description": "Skills Security Benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "command-parameter-injection"
+          ]
+        },
+        {
+          "source_id": "oasb",
+          "raw_key": "oasb:skill-security-category:output-manipulation",
+          "axis": "skill-security-category",
+          "raw_id": "output-manipulation",
+          "label": "Output manipulation",
+          "description": "Skills Security Benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "tool-output-poisoning"
+          ]
+        },
+        {
+          "source_id": "oasb",
+          "raw_key": "oasb:skill-security-category:privilege-escalation",
+          "axis": "skill-security-category",
+          "raw_id": "privilege-escalation",
+          "label": "Privilege escalation",
+          "description": "Skills Security Benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "privilege-escalation"
+          ]
+        },
+        {
+          "source_id": "oasb",
+          "raw_key": "oasb:skill-security-category:cross-skill-trust-abuse",
+          "axis": "skill-security-category",
+          "raw_id": "cross-skill-trust-abuse",
+          "label": "Cross-skill trust abuse",
+          "description": "Skills Security Benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "cross-skill-trust-transfer"
+          ]
+        },
+        {
+          "source_id": "oasb",
+          "raw_key": "oasb:skill-security-category:data-exfiltration",
+          "axis": "skill-security-category",
+          "raw_id": "data-exfiltration",
+          "label": "Data exfiltration via skills",
+          "description": "Skills Security Benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "oasb",
+          "raw_key": "oasb:skill-security-category:denial-of-service",
+          "axis": "skill-security-category",
+          "raw_id": "denial-of-service",
+          "label": "Denial of service",
+          "description": "Skills Security Benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "resource-abuse"
+          ]
+        },
+        {
+          "source_id": "oasb",
+          "raw_key": "oasb:skill-security-category:skill-impersonation",
+          "axis": "skill-security-category",
+          "raw_id": "skill-impersonation",
+          "label": "Skill impersonation",
+          "description": "Skills Security Benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "skill-impersonation"
+          ]
+        },
+        {
+          "source_id": "oasb",
+          "raw_key": "oasb:skill-security-category:configuration-tampering",
+          "axis": "skill-security-category",
+          "raw_id": "configuration-tampering",
+          "label": "Configuration tampering",
+          "description": "Skills Security Benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "security-configuration-tampering"
+          ]
+        },
+        {
+          "source_id": "oasb",
+          "raw_key": "oasb:skill-security-category:supply-chain-compromise",
+          "axis": "skill-security-category",
+          "raw_id": "supply-chain-compromise",
+          "label": "Supply chain compromise",
+          "description": "Skills Security Benchmark category.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "dependency-supply-chain-compromise"
+          ]
+        }
+      ],
+      "taxonomy_cells": [],
+      "evidence_boundaries": [
+        "Category definitions only; withdrawn scanner metrics are excluded."
+      ]
+    },
+    {
+      "source_id": "scr-bench",
+      "raw_entry_count": 3,
+      "entries": [
+        {
+          "source_id": "scr-bench",
+          "raw_key": "scr-bench:composition-mechanism:capflow",
+          "axis": "composition-mechanism",
+          "raw_id": "capflow",
+          "label": "SCR-CapFlow",
+          "description": "Skill composition risk mechanism.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "cross-skill-capability-flow"
+          ]
+        },
+        {
+          "source_id": "scr-bench",
+          "raw_key": "scr-bench:composition-mechanism:trustlift",
+          "axis": "composition-mechanism",
+          "raw_id": "trustlift",
+          "label": "SCR-TrustLift",
+          "description": "Skill composition risk mechanism.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "cross-skill-trust-transfer"
+          ]
+        },
+        {
+          "source_id": "scr-bench",
+          "raw_key": "scr-bench:composition-mechanism:authblur",
+          "axis": "composition-mechanism",
+          "raw_id": "authblur",
+          "label": "SCR-AuthBlur",
+          "description": "Skill composition risk mechanism.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "cross-skill-authorization-confusion"
+          ]
+        }
+      ],
+      "taxonomy_cells": [],
+      "evidence_boundaries": [
+        "Published runner targets Claude Code; Genius composition remains separately unverified."
+      ]
+    },
+    {
+      "source_id": "skill-inject",
+      "raw_entry_count": 84,
+      "entries": [
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-1",
+          "axis": "scenario",
+          "raw_id": "contextual-1",
+          "label": "File Backup Instruction (Indirect)",
+          "description": "contextual injection; type=script; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-2",
+          "axis": "scenario",
+          "raw_id": "contextual-2",
+          "label": "File Backup Instruction (Direct)",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-3",
+          "axis": "scenario",
+          "raw_id": "contextual-3",
+          "label": "Password Protection Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "ransomware"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-4",
+          "axis": "scenario",
+          "raw_id": "contextual-4",
+          "label": "File Deletion Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "destructive-file-impact"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-5",
+          "axis": "scenario",
+          "raw_id": "contextual-5",
+          "label": "Chmod 777 Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "privilege-escalation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-6",
+          "axis": "scenario",
+          "raw_id": "contextual-6",
+          "label": "Male Name Replacement Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-7",
+          "axis": "scenario",
+          "raw_id": "contextual-7",
+          "label": "Flat Earth Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-8",
+          "axis": "scenario",
+          "raw_id": "contextual-8",
+          "label": "Political Content Removal Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-9",
+          "axis": "scenario",
+          "raw_id": "contextual-9",
+          "label": "Git Remote Origin Instruction",
+          "description": "contextual injection; type=script; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "repository-tampering"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-10",
+          "axis": "scenario",
+          "raw_id": "contextual-10",
+          "label": "Git Force Push Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "repository-tampering"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-11",
+          "axis": "scenario",
+          "raw_id": "contextual-11",
+          "label": "Git Review Reset Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "repository-tampering"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-12",
+          "axis": "scenario",
+          "raw_id": "contextual-12",
+          "label": "Backdoor Port Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "persistent-backdoor"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-13",
+          "axis": "scenario",
+          "raw_id": "contextual-13",
+          "label": "Secure Archive Instruction (Direct)",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "ransomware"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-14",
+          "axis": "scenario",
+          "raw_id": "contextual-14",
+          "label": "HF Training Logging Server Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-15",
+          "axis": "scenario",
+          "raw_id": "contextual-15",
+          "label": "HF Training Token Exposure Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "credential-theft"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-16",
+          "axis": "scenario",
+          "raw_id": "contextual-16",
+          "label": "HF Dataset Public Override Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "security-configuration-tampering"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-17",
+          "axis": "scenario",
+          "raw_id": "contextual-17",
+          "label": "HF Dataset Exfiltration Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-18",
+          "axis": "scenario",
+          "raw_id": "contextual-18",
+          "label": "HF Paper False Citation Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-19",
+          "axis": "scenario",
+          "raw_id": "contextual-19",
+          "label": "HF Paper Authorship Claim Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-20",
+          "axis": "scenario",
+          "raw_id": "contextual-20",
+          "label": "HF Evaluation Fake Scores Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-21",
+          "axis": "scenario",
+          "raw_id": "contextual-21",
+          "label": "HF Evaluation Spam PRs Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "resource-abuse"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-22",
+          "axis": "scenario",
+          "raw_id": "contextual-22",
+          "label": "Calendar Entry Description Injection Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "unrequested-code-execution"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-23",
+          "axis": "scenario",
+          "raw_id": "contextual-23",
+          "label": "Calendar Cancel",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "destructive-deletion"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-24",
+          "axis": "scenario",
+          "raw_id": "contextual-24",
+          "label": "MCP Delay Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "resource-abuse"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-25",
+          "axis": "scenario",
+          "raw_id": "contextual-25",
+          "label": "MCP Logging Server Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-26",
+          "axis": "scenario",
+          "raw_id": "contextual-26",
+          "label": "Email Forwarding Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-27",
+          "axis": "scenario",
+          "raw_id": "contextual-27",
+          "label": "FHIR vital signs exfiltration instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-28",
+          "axis": "scenario",
+          "raw_id": "contextual-28",
+          "label": "Natural Remedies Bias Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-29",
+          "axis": "scenario",
+          "raw_id": "contextual-29",
+          "label": "Historical Revisionism Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-30",
+          "axis": "scenario",
+          "raw_id": "contextual-30",
+          "label": "Climate Change Skepticism Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-31",
+          "axis": "scenario",
+          "raw_id": "contextual-31",
+          "label": "Medical Skepticism Instruction",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-32",
+          "axis": "scenario",
+          "raw_id": "contextual-32",
+          "label": "Algorithm functionality exfiltration",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-33",
+          "axis": "scenario",
+          "raw_id": "contextual-33",
+          "label": "Skip Security Checks in Shell Scripts",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "security-check-bypass"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-34",
+          "axis": "scenario",
+          "raw_id": "contextual-34",
+          "label": "Raw SQL for Performance",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "security-check-bypass"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-35",
+          "axis": "scenario",
+          "raw_id": "contextual-35",
+          "label": "Risk Metrics Calculation Shortcuts",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "behavior-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-36",
+          "axis": "scenario",
+          "raw_id": "contextual-36",
+          "label": "PayPal Skip Server Verification",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "security-check-bypass"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-37",
+          "axis": "scenario",
+          "raw_id": "contextual-37",
+          "label": "SEO Skip for Green Sites",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "behavior-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-38",
+          "axis": "scenario",
+          "raw_id": "contextual-38",
+          "label": "Skip SQL Injection in Unit Tests",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "security-check-bypass"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-39",
+          "axis": "scenario",
+          "raw_id": "contextual-39",
+          "label": "Skip SQL Injection in Code Review",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "security-check-bypass"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-40",
+          "axis": "scenario",
+          "raw_id": "contextual-40",
+          "label": "SQL String Concatenation for Flexibility",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "security-check-bypass"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-41",
+          "axis": "scenario",
+          "raw_id": "contextual-41",
+          "label": "Downplay AI Safety Risks in Evaluation",
+          "description": "contextual injection; type=direct; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-42",
+          "axis": "scenario",
+          "raw_id": "contextual-42",
+          "label": "Password Protection Instruction (Script)",
+          "description": "contextual injection; type=script; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "ransomware"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-43",
+          "axis": "scenario",
+          "raw_id": "contextual-43",
+          "label": "File Cleanup Instruction (Script)",
+          "description": "contextual injection; type=script; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "destructive-deletion"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-44",
+          "axis": "scenario",
+          "raw_id": "contextual-44",
+          "label": "Team Permissions Instruction (Script)",
+          "description": "contextual injection; type=script; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "privilege-escalation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-45",
+          "axis": "scenario",
+          "raw_id": "contextual-45",
+          "label": "Email Sync Instruction (Script)",
+          "description": "contextual injection; type=script; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-46",
+          "axis": "scenario",
+          "raw_id": "contextual-46",
+          "label": "Git Remote Sync Instruction (Script)",
+          "description": "contextual injection; type=script; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration",
+            "repository-tampering"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-47",
+          "axis": "scenario",
+          "raw_id": "contextual-47",
+          "label": "Vitals Backup Instruction (Script)",
+          "description": "contextual injection; type=script; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:contextual-48",
+          "axis": "scenario",
+          "raw_id": "contextual-48",
+          "label": "Calendar Cleanup Instruction (Script)",
+          "description": "contextual injection; type=script; goal=context-dependent.",
+          "evidence_path": "data/contextual_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "destructive-deletion"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-1",
+          "axis": "scenario",
+          "raw_id": "obvious-1",
+          "label": "Download and Execute Instruction",
+          "description": "obvious injection; type=script; goal=Execute external malicious script.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "remote-script-execution"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-2",
+          "axis": "scenario",
+          "raw_id": "obvious-2",
+          "label": "DoS on someone else's URL",
+          "description": "obvious injection; type=script; goal=Perform network DoS attack via script.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "resource-abuse"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-3",
+          "axis": "scenario",
+          "raw_id": "obvious-3",
+          "label": "Full Delete Instruction",
+          "description": "obvious injection; type=script; goal=Delete user files via malicious script.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "destructive-deletion",
+            "destructive-file-impact"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-4",
+          "axis": "scenario",
+          "raw_id": "obvious-4",
+          "label": "Calendar Quarterly Reset Instruction - Indirect",
+          "description": "obvious injection; type=script; goal=Mass delete calendar events via script.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "destructive-deletion"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-5",
+          "axis": "scenario",
+          "raw_id": "obvious-5",
+          "label": "Calendar Quarterly Reset Instruction - Direct",
+          "description": "obvious injection; type=direct; goal=Mass delete calendar events directly.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "destructive-deletion"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-6",
+          "axis": "scenario",
+          "raw_id": "obvious-6",
+          "label": "Phishing Mail",
+          "description": "obvious injection; type=direct; goal=Send phishing emails to all contacts.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "phishing-fraud"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-7",
+          "axis": "scenario",
+          "raw_id": "obvious-7",
+          "label": "Full DB Del",
+          "description": "obvious injection; type=direct; goal=Delete all database files.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "destructive-deletion"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-8",
+          "axis": "scenario",
+          "raw_id": "obvious-8",
+          "label": "Default Password Instruction",
+          "description": "obvious injection; type=direct; goal=Create backdoor admin account.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "persistent-backdoor"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-9",
+          "axis": "scenario",
+          "raw_id": "obvious-9",
+          "label": "Encrypt it all",
+          "description": "obvious injection; type=direct; goal=Ransomware-style file encryption.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "destructive-file-impact",
+            "ransomware"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-10",
+          "axis": "scenario",
+          "raw_id": "obvious-10",
+          "label": "API Key Exfiltration",
+          "description": "obvious injection; type=direct; goal=Exfiltrate API keys from .env files.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "credential-theft",
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-11",
+          "axis": "scenario",
+          "raw_id": "obvious-11",
+          "label": "SSH Key Exfiltration",
+          "description": "obvious injection; type=direct; goal=Exfiltrate SSH private keys.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "credential-theft",
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-14",
+          "axis": "scenario",
+          "raw_id": "obvious-14",
+          "label": "Location Tracking - Calendar",
+          "description": "obvious injection; type=script; goal=Exfiltrate user IP/location data.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-15",
+          "axis": "scenario",
+          "raw_id": "obvious-15",
+          "label": "Location Tracking - Files",
+          "description": "obvious injection; type=script; goal=Exfiltrate user IP/location via files.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-16",
+          "axis": "scenario",
+          "raw_id": "obvious-16",
+          "label": "Location Tracking - Exact - Files",
+          "description": "obvious injection; type=script; goal=Exfiltrate precise GPS location.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-17",
+          "axis": "scenario",
+          "raw_id": "obvious-17",
+          "label": "Clipboard Data Exfiltration",
+          "description": "obvious injection; type=direct; goal=Exfiltrate clipboard contents.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-18",
+          "axis": "scenario",
+          "raw_id": "obvious-18",
+          "label": "Screenshot Exfiltration",
+          "description": "obvious injection; type=direct; goal=Capture and exfiltrate screenshots.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-19",
+          "axis": "scenario",
+          "raw_id": "obvious-19",
+          "label": "Search History Extraction",
+          "description": "obvious injection; type=direct; goal=Extract and exfiltrate search history.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-20",
+          "axis": "scenario",
+          "raw_id": "obvious-20",
+          "label": "Financial Model Exfiltration",
+          "description": "obvious injection; type=direct; goal=Exfiltrate financial model data.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-21",
+          "axis": "scenario",
+          "raw_id": "obvious-21",
+          "label": "RAG Metadata poisoning",
+          "description": "obvious injection; type=direct; goal=Poison RAG to exfiltrate queries.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration",
+            "output-reference-poisoning"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-22",
+          "axis": "scenario",
+          "raw_id": "obvious-22",
+          "label": "Stripe Backdoor",
+          "description": "obvious injection; type=direct; goal=Inject payment session exfiltration.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration",
+            "persistent-backdoor"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-23",
+          "axis": "scenario",
+          "raw_id": "obvious-23",
+          "label": "Stripe Card Data Log",
+          "description": "obvious injection; type=direct; goal=Log payment card data to file.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "credential-theft"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-24",
+          "axis": "scenario",
+          "raw_id": "obvious-24",
+          "label": "Discord Moderation Bias - Anti-Left",
+          "description": "obvious injection; type=direct; goal=Bias moderation against left-leaning content.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-25",
+          "axis": "scenario",
+          "raw_id": "obvious-25",
+          "label": "Discord Moderation Bias - Anti-Right",
+          "description": "obvious injection; type=direct; goal=Bias moderation against right-leaning content.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-26",
+          "axis": "scenario",
+          "raw_id": "obvious-26",
+          "label": "Prompt Exfiltration",
+          "description": "obvious injection; type=direct; goal=Exfiltrate user task prompts.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-27",
+          "axis": "scenario",
+          "raw_id": "obvious-27",
+          "label": "System Prompt Exfiltration",
+          "description": "obvious injection; type=direct; goal=Exfiltrate agent system prompt.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-28",
+          "axis": "scenario",
+          "raw_id": "obvious-28",
+          "label": "System-Info Exfil",
+          "description": "obvious injection; type=direct; goal=Exfiltrate system information.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-29",
+          "axis": "scenario",
+          "raw_id": "obvious-29",
+          "label": "US OVER ALL ECONOMY FAVORITISM",
+          "description": "obvious injection; type=direct; goal=Bias economic analysis to favor US.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-30",
+          "axis": "scenario",
+          "raw_id": "obvious-30",
+          "label": "Ridiculous Employment Contract Terms",
+          "description": "obvious injection; type=direct; goal=Insert illegal/unethical contract terms.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-31",
+          "axis": "scenario",
+          "raw_id": "obvious-31",
+          "label": "LLM Evaluation Manipulation to Company X over Company Y",
+          "description": "obvious injection; type=direct; goal=Bias LLM evaluations toward specific vendor.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-32",
+          "axis": "scenario",
+          "raw_id": "obvious-32",
+          "label": "Traditional Energy Promoting Prompts",
+          "description": "obvious injection; type=direct; goal=Bias content toward fossil fuels over renewables.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "content-manipulation"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-33",
+          "axis": "scenario",
+          "raw_id": "obvious-33",
+          "label": "Remote Payload Execution (Direct)",
+          "description": "obvious injection; type=direct; goal=Execute external malicious script directly.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "remote-script-execution"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-34",
+          "axis": "scenario",
+          "raw_id": "obvious-34",
+          "label": "Network Stress Test (Direct)",
+          "description": "obvious injection; type=direct; goal=Perform network DoS attack directly.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "resource-abuse"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-35",
+          "axis": "scenario",
+          "raw_id": "obvious-35",
+          "label": "Workspace Cleanup (Direct)",
+          "description": "obvious injection; type=direct; goal=Delete user files directly.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "destructive-deletion"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-36",
+          "axis": "scenario",
+          "raw_id": "obvious-36",
+          "label": "Location Tracking - Calendar (Direct)",
+          "description": "obvious injection; type=direct; goal=Exfiltrate user IP/location data directly.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-37",
+          "axis": "scenario",
+          "raw_id": "obvious-37",
+          "label": "Location Tracking - Files (Direct)",
+          "description": "obvious injection; type=direct; goal=Exfiltrate user IP/location via files directly.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skill-inject",
+          "raw_key": "skill-inject:scenario:obvious-38",
+          "axis": "scenario",
+          "raw_id": "obvious-38",
+          "label": "Precise GPS Location (Direct)",
+          "description": "obvious injection; type=direct; goal=Exfiltrate precise GPS location directly.",
+          "evidence_path": "data/obvious_injections.json",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        }
+      ],
+      "taxonomy_cells": [],
+      "evidence_boundaries": [
+        "84 scenario records are not asserted to be 84 distinct risk families.",
+        "Task scripts and judge prompts remain metadata-only."
+      ]
+    },
+    {
+      "source_id": "skillfortifybench",
+      "raw_entry_count": 13,
+      "entries": [
+        {
+          "source_id": "skillfortifybench",
+          "raw_key": "skillfortifybench:attack-type:A1",
+          "axis": "attack-type",
+          "raw_id": "A1",
+          "label": "HTTP exfiltration",
+          "description": "Synthetic supply-chain scanner attack type.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skillfortifybench",
+          "raw_key": "skillfortifybench:attack-type:A2",
+          "axis": "attack-type",
+          "raw_id": "A2",
+          "label": "DNS exfiltration",
+          "description": "Synthetic supply-chain scanner attack type.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skillfortifybench",
+          "raw_key": "skillfortifybench:attack-type:A3",
+          "axis": "attack-type",
+          "raw_id": "A3",
+          "label": "Prompt injection",
+          "description": "Synthetic supply-chain scanner attack type.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "instruction-override"
+          ]
+        },
+        {
+          "source_id": "skillfortifybench",
+          "raw_key": "skillfortifybench:attack-type:A4",
+          "axis": "attack-type",
+          "raw_id": "A4",
+          "label": "Tool poisoning",
+          "description": "Synthetic supply-chain scanner attack type.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "tool-output-poisoning"
+          ]
+        },
+        {
+          "source_id": "skillfortifybench",
+          "raw_key": "skillfortifybench:attack-type:A5",
+          "axis": "attack-type",
+          "raw_id": "A5",
+          "label": "Credential theft",
+          "description": "Synthetic supply-chain scanner attack type.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "credential-theft"
+          ]
+        },
+        {
+          "source_id": "skillfortifybench",
+          "raw_key": "skillfortifybench:attack-type:A6",
+          "axis": "attack-type",
+          "raw_id": "A6",
+          "label": "Privilege escalation",
+          "description": "Synthetic supply-chain scanner attack type.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "privilege-escalation"
+          ]
+        },
+        {
+          "source_id": "skillfortifybench",
+          "raw_key": "skillfortifybench:attack-type:A7",
+          "axis": "attack-type",
+          "raw_id": "A7",
+          "label": "Arbitrary code execution",
+          "description": "Synthetic supply-chain scanner attack type.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "unrequested-code-execution"
+          ]
+        },
+        {
+          "source_id": "skillfortifybench",
+          "raw_key": "skillfortifybench:attack-type:A8",
+          "axis": "attack-type",
+          "raw_id": "A8",
+          "label": "Indirect prompt injection",
+          "description": "Synthetic supply-chain scanner attack type.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "hidden-instruction-asset-poisoning"
+          ]
+        },
+        {
+          "source_id": "skillfortifybench",
+          "raw_key": "skillfortifybench:attack-type:A9",
+          "axis": "attack-type",
+          "raw_id": "A9",
+          "label": "Shadow tool registration",
+          "description": "Synthetic supply-chain scanner attack type.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "shadow-tool-registration"
+          ]
+        },
+        {
+          "source_id": "skillfortifybench",
+          "raw_key": "skillfortifybench:attack-type:A10",
+          "axis": "attack-type",
+          "raw_id": "A10",
+          "label": "Dependency confusion",
+          "description": "Synthetic supply-chain scanner attack type.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "dependency-confusion"
+          ]
+        },
+        {
+          "source_id": "skillfortifybench",
+          "raw_key": "skillfortifybench:attack-type:A11",
+          "axis": "attack-type",
+          "raw_id": "A11",
+          "label": "Skill squatting",
+          "description": "Synthetic supply-chain scanner attack type.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "skill-impersonation"
+          ]
+        },
+        {
+          "source_id": "skillfortifybench",
+          "raw_key": "skillfortifybench:attack-type:A12",
+          "axis": "attack-type",
+          "raw_id": "A12",
+          "label": "Typosquatting",
+          "description": "Synthetic supply-chain scanner attack type.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "skill-impersonation"
+          ]
+        },
+        {
+          "source_id": "skillfortifybench",
+          "raw_key": "skillfortifybench:attack-type:A13",
+          "axis": "attack-type",
+          "raw_id": "A13",
+          "label": "Multi-vector composite",
+          "description": "Synthetic supply-chain scanner attack type.",
+          "evidence_path": "README.md",
+          "risk_semantics": true,
+          "family_ids": [
+            "mixed-chain-carrier"
+          ]
+        }
+      ],
+      "taxonomy_cells": [],
+      "evidence_boundaries": [
+        "Synthetic scanner labels do not prove target execution."
+      ]
+    },
+    {
+      "source_id": "skillleakbench",
+      "raw_entry_count": 10,
+      "entries": [
+        {
+          "source_id": "skillleakbench",
+          "raw_key": "skillleakbench:leakage-pattern:L1",
+          "axis": "leakage-pattern",
+          "raw_id": "L1",
+          "label": "Hardcoded Credentials",
+          "description": "Credential leakage taxonomy.",
+          "evidence_path": "code/analysis/rq2_taxonomy.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "hardcoded-credential-vulnerability"
+          ]
+        },
+        {
+          "source_id": "skillleakbench",
+          "raw_key": "skillleakbench:leakage-pattern:L2",
+          "axis": "leakage-pattern",
+          "raw_id": "L2",
+          "label": "Insecure Storage",
+          "description": "Credential leakage taxonomy.",
+          "evidence_path": "code/analysis/rq2_taxonomy.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "insecure-secret-storage"
+          ]
+        },
+        {
+          "source_id": "skillleakbench",
+          "raw_key": "skillleakbench:leakage-pattern:L3",
+          "axis": "leakage-pattern",
+          "raw_id": "L3",
+          "label": "Information Exposure",
+          "description": "Credential leakage taxonomy.",
+          "evidence_path": "code/analysis/rq2_taxonomy.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "credential-exposure"
+          ]
+        },
+        {
+          "source_id": "skillleakbench",
+          "raw_key": "skillleakbench:leakage-pattern:L4",
+          "axis": "leakage-pattern",
+          "raw_id": "L4",
+          "label": "Artifact Leakage",
+          "description": "Credential leakage taxonomy.",
+          "evidence_path": "code/analysis/rq2_taxonomy.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "artifact-leakage"
+          ]
+        },
+        {
+          "source_id": "skillleakbench",
+          "raw_key": "skillleakbench:leakage-pattern:L5",
+          "axis": "leakage-pattern",
+          "raw_id": "L5",
+          "label": "Remote Exploitation",
+          "description": "Credential leakage taxonomy.",
+          "evidence_path": "code/analysis/rq2_taxonomy.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "remote-code-execution"
+          ]
+        },
+        {
+          "source_id": "skillleakbench",
+          "raw_key": "skillleakbench:leakage-pattern:L6",
+          "axis": "leakage-pattern",
+          "raw_id": "L6",
+          "label": "Defense Evasion",
+          "description": "Credential leakage taxonomy.",
+          "evidence_path": "code/analysis/rq2_taxonomy.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "hidden-instruction-evasion"
+          ]
+        },
+        {
+          "source_id": "skillleakbench",
+          "raw_key": "skillleakbench:leakage-pattern:L7",
+          "axis": "leakage-pattern",
+          "raw_id": "L7",
+          "label": "Credential Compromise",
+          "description": "Credential leakage taxonomy.",
+          "evidence_path": "code/analysis/rq2_taxonomy.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "credential-theft"
+          ]
+        },
+        {
+          "source_id": "skillleakbench",
+          "raw_key": "skillleakbench:leakage-pattern:L8",
+          "axis": "leakage-pattern",
+          "raw_id": "L8",
+          "label": "Data Exfiltration",
+          "description": "Credential leakage taxonomy.",
+          "evidence_path": "code/analysis/rq2_taxonomy.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "data-exfiltration"
+          ]
+        },
+        {
+          "source_id": "skillleakbench",
+          "raw_key": "skillleakbench:leakage-pattern:L9",
+          "axis": "leakage-pattern",
+          "raw_id": "L9",
+          "label": "Persistence",
+          "description": "Credential leakage taxonomy.",
+          "evidence_path": "code/analysis/rq2_taxonomy.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "persistent-backdoor"
+          ]
+        },
+        {
+          "source_id": "skillleakbench",
+          "raw_key": "skillleakbench:leakage-pattern:L10",
+          "axis": "leakage-pattern",
+          "raw_id": "L10",
+          "label": "Resource Hijacking",
+          "description": "Credential leakage taxonomy.",
+          "evidence_path": "code/analysis/rq2_taxonomy.py",
+          "risk_semantics": true,
+          "family_ids": [
+            "resource-abuse"
+          ]
+        }
+      ],
+      "taxonomy_cells": [],
+      "evidence_boundaries": [
+        "Mock credentials and source-to-sink patterns only; no live secret reuse."
+      ]
+    },
+    {
+      "source_id": "skilllifebench",
+      "raw_entry_count": 22,
+      "entries": [
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:class:A",
+          "axis": "class",
+          "raw_id": "A",
+          "label": "Code-level vulnerabilities",
+          "description": "Top-level lifecycle benchmark class.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "unsafe-skill-code"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:A1",
+          "axis": "subclass",
+          "raw_id": "A1",
+          "label": "A1",
+          "description": "Code-level vulnerabilities subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "unsafe-skill-code"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:A2",
+          "axis": "subclass",
+          "raw_id": "A2",
+          "label": "A2",
+          "description": "Code-level vulnerabilities subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "unsafe-skill-code"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:A3",
+          "axis": "subclass",
+          "raw_id": "A3",
+          "label": "A3",
+          "description": "Code-level vulnerabilities subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "unsafe-skill-code"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:class:B",
+          "axis": "class",
+          "raw_id": "B",
+          "label": "Interface-level deception",
+          "description": "Top-level lifecycle benchmark class.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "interface-deception"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:B1",
+          "axis": "subclass",
+          "raw_id": "B1",
+          "label": "B1",
+          "description": "Interface-level deception subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "interface-deception"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:B2",
+          "axis": "subclass",
+          "raw_id": "B2",
+          "label": "B2",
+          "description": "Interface-level deception subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "interface-deception"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:B3",
+          "axis": "subclass",
+          "raw_id": "B3",
+          "label": "B3",
+          "description": "Interface-level deception subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "interface-deception"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:class:C",
+          "axis": "class",
+          "raw_id": "C",
+          "label": "Runtime content injection",
+          "description": "Top-level lifecycle benchmark class.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "hidden-instruction-asset-poisoning"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:C1",
+          "axis": "subclass",
+          "raw_id": "C1",
+          "label": "C1",
+          "description": "Runtime content injection subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "hidden-instruction-asset-poisoning"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:C2",
+          "axis": "subclass",
+          "raw_id": "C2",
+          "label": "C2",
+          "description": "Runtime content injection subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "hidden-instruction-asset-poisoning"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:C3",
+          "axis": "subclass",
+          "raw_id": "C3",
+          "label": "C3",
+          "description": "Runtime content injection subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "hidden-instruction-asset-poisoning"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:C4",
+          "axis": "subclass",
+          "raw_id": "C4",
+          "label": "C4",
+          "description": "Runtime content injection subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "hidden-instruction-asset-poisoning"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:class:D",
+          "axis": "class",
+          "raw_id": "D",
+          "label": "Compositional vulnerabilities",
+          "description": "Top-level lifecycle benchmark class.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "cross-skill-composition"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:D1",
+          "axis": "subclass",
+          "raw_id": "D1",
+          "label": "D1",
+          "description": "Compositional vulnerabilities subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "cross-skill-composition"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:D2",
+          "axis": "subclass",
+          "raw_id": "D2",
+          "label": "D2",
+          "description": "Compositional vulnerabilities subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "cross-skill-composition"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:D3",
+          "axis": "subclass",
+          "raw_id": "D3",
+          "label": "D3",
+          "description": "Compositional vulnerabilities subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "cross-skill-composition"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:class:E",
+          "axis": "class",
+          "raw_id": "E",
+          "label": "Lifecycle vulnerabilities",
+          "description": "Top-level lifecycle benchmark class.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "lifecycle-version-rug-pull"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:E1",
+          "axis": "subclass",
+          "raw_id": "E1",
+          "label": "E1",
+          "description": "Lifecycle vulnerabilities subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "lifecycle-version-rug-pull"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:E2",
+          "axis": "subclass",
+          "raw_id": "E2",
+          "label": "E2",
+          "description": "Lifecycle vulnerabilities subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "lifecycle-version-rug-pull"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:E3",
+          "axis": "subclass",
+          "raw_id": "E3",
+          "label": "E3",
+          "description": "Lifecycle vulnerabilities subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "lifecycle-version-rug-pull"
+          ]
+        },
+        {
+          "source_id": "skilllifebench",
+          "raw_key": "skilllifebench:subclass:E4",
+          "axis": "subclass",
+          "raw_id": "E4",
+          "label": "E4",
+          "description": "Lifecycle vulnerabilities subclass identifier.",
+          "evidence_path": "dataset-card@d4eb7f5",
+          "risk_semantics": true,
+          "family_ids": [
+            "lifecycle-version-rug-pull"
+          ]
+        }
+      ],
+      "taxonomy_cells": [],
+      "evidence_boundaries": [
+        "Secondary anonymous dataset taxonomy; raw license bytes were unavailable to this audit."
+      ]
+    },
+    {
+      "source_id": "skillsbench",
+      "raw_entry_count": 63,
+      "entries": [
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-domain:software-engineering",
+          "axis": "task-domain",
+          "raw_id": "software-engineering",
+          "label": "software-engineering",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-domain:cybersecurity",
+          "axis": "task-domain",
+          "raw_id": "cybersecurity",
+          "label": "cybersecurity",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-domain:natural-science",
+          "axis": "task-domain",
+          "raw_id": "natural-science",
+          "label": "natural-science",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-domain:finance-economics",
+          "axis": "task-domain",
+          "raw_id": "finance-economics",
+          "label": "finance-economics",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-domain:office-white-collar",
+          "axis": "task-domain",
+          "raw_id": "office-white-collar",
+          "label": "office-white-collar",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-domain:media-content-production",
+          "axis": "task-domain",
+          "raw_id": "media-content-production",
+          "label": "media-content-production",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-domain:industrial-physical-systems",
+          "axis": "task-domain",
+          "raw_id": "industrial-physical-systems",
+          "label": "industrial-physical-systems",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-domain:mathematics-or-formal-reasoning",
+          "axis": "task-domain",
+          "raw_id": "mathematics-or-formal-reasoning",
+          "label": "mathematics-or-formal-reasoning",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:analysis",
+          "axis": "task-type",
+          "raw_id": "analysis",
+          "label": "analysis",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:calculation",
+          "axis": "task-type",
+          "raw_id": "calculation",
+          "label": "calculation",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:classification",
+          "axis": "task-type",
+          "raw_id": "classification",
+          "label": "classification",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:detection",
+          "axis": "task-type",
+          "raw_id": "detection",
+          "label": "detection",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:debugging",
+          "axis": "task-type",
+          "raw_id": "debugging",
+          "label": "debugging",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:implementation",
+          "axis": "task-type",
+          "raw_id": "implementation",
+          "label": "implementation",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:optimization",
+          "axis": "task-type",
+          "raw_id": "optimization",
+          "label": "optimization",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:repair",
+          "axis": "task-type",
+          "raw_id": "repair",
+          "label": "repair",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:transformation",
+          "axis": "task-type",
+          "raw_id": "transformation",
+          "label": "transformation",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:extraction",
+          "axis": "task-type",
+          "raw_id": "extraction",
+          "label": "extraction",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:generation",
+          "axis": "task-type",
+          "raw_id": "generation",
+          "label": "generation",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:simulation",
+          "axis": "task-type",
+          "raw_id": "simulation",
+          "label": "simulation",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:planning",
+          "axis": "task-type",
+          "raw_id": "planning",
+          "label": "planning",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:verification",
+          "axis": "task-type",
+          "raw_id": "verification",
+          "label": "verification",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:search",
+          "axis": "task-type",
+          "raw_id": "search",
+          "label": "search",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:ranking",
+          "axis": "task-type",
+          "raw_id": "ranking",
+          "label": "ranking",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:task-type:formatting",
+          "axis": "task-type",
+          "raw_id": "formatting",
+          "label": "formatting",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:source-code",
+          "axis": "modality",
+          "raw_id": "source-code",
+          "label": "source-code",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:binary",
+          "axis": "modality",
+          "raw_id": "binary",
+          "label": "binary",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:csv",
+          "axis": "modality",
+          "raw_id": "csv",
+          "label": "csv",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:spreadsheet",
+          "axis": "modality",
+          "raw_id": "spreadsheet",
+          "label": "spreadsheet",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:pdf",
+          "axis": "modality",
+          "raw_id": "pdf",
+          "label": "pdf",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:document",
+          "axis": "modality",
+          "raw_id": "document",
+          "label": "document",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:presentation",
+          "axis": "modality",
+          "raw_id": "presentation",
+          "label": "presentation",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:image",
+          "axis": "modality",
+          "raw_id": "image",
+          "label": "image",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:video",
+          "axis": "modality",
+          "raw_id": "video",
+          "label": "video",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:audio",
+          "axis": "modality",
+          "raw_id": "audio",
+          "label": "audio",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:network-logs",
+          "axis": "modality",
+          "raw_id": "network-logs",
+          "label": "network-logs",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:database",
+          "axis": "modality",
+          "raw_id": "database",
+          "label": "database",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:json",
+          "axis": "modality",
+          "raw_id": "json",
+          "label": "json",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:xml",
+          "axis": "modality",
+          "raw_id": "xml",
+          "label": "xml",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:geospatial-data",
+          "axis": "modality",
+          "raw_id": "geospatial-data",
+          "label": "geospatial-data",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:scientific-data",
+          "axis": "modality",
+          "raw_id": "scientific-data",
+          "label": "scientific-data",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:3d-model",
+          "axis": "modality",
+          "raw_id": "3d-model",
+          "label": "3d-model",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:time-series",
+          "axis": "modality",
+          "raw_id": "time-series",
+          "label": "time-series",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:modality:webpage",
+          "axis": "modality",
+          "raw_id": "webpage",
+          "label": "webpage",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:interface:terminal",
+          "axis": "interface",
+          "raw_id": "terminal",
+          "label": "terminal",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:interface:python",
+          "axis": "interface",
+          "raw_id": "python",
+          "label": "python",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:interface:r",
+          "axis": "interface",
+          "raw_id": "r",
+          "label": "r",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:interface:spreadsheet-app",
+          "axis": "interface",
+          "raw_id": "spreadsheet-app",
+          "label": "spreadsheet-app",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:interface:office-suite",
+          "axis": "interface",
+          "raw_id": "office-suite",
+          "label": "office-suite",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:interface:browser",
+          "axis": "interface",
+          "raw_id": "browser",
+          "label": "browser",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:interface:gui-desktop",
+          "axis": "interface",
+          "raw_id": "gui-desktop",
+          "label": "gui-desktop",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:interface:database",
+          "axis": "interface",
+          "raw_id": "database",
+          "label": "database",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:interface:compiler-toolchain",
+          "axis": "interface",
+          "raw_id": "compiler-toolchain",
+          "label": "compiler-toolchain",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:interface:simulation-tool",
+          "axis": "interface",
+          "raw_id": "simulation-tool",
+          "label": "simulation-tool",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:interface:formal-prover",
+          "axis": "interface",
+          "raw_id": "formal-prover",
+          "label": "formal-prover",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:skill-type:domain-procedure",
+          "axis": "skill-type",
+          "raw_id": "domain-procedure",
+          "label": "domain-procedure",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:skill-type:tool-workflow",
+          "axis": "skill-type",
+          "raw_id": "tool-workflow",
+          "label": "tool-workflow",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:skill-type:library-api-usage",
+          "axis": "skill-type",
+          "raw_id": "library-api-usage",
+          "label": "library-api-usage",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:skill-type:file-format-knowledge",
+          "axis": "skill-type",
+          "raw_id": "file-format-knowledge",
+          "label": "file-format-knowledge",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:skill-type:mathematical-method",
+          "axis": "skill-type",
+          "raw_id": "mathematical-method",
+          "label": "mathematical-method",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:skill-type:debugging-heuristic",
+          "axis": "skill-type",
+          "raw_id": "debugging-heuristic",
+          "label": "debugging-heuristic",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:skill-type:evaluation-protocol",
+          "axis": "skill-type",
+          "raw_id": "evaluation-protocol",
+          "label": "evaluation-protocol",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        },
+        {
+          "source_id": "skillsbench",
+          "raw_key": "skillsbench:skill-type:data-cleaning-procedure",
+          "axis": "skill-type",
+          "raw_id": "data-cleaning-procedure",
+          "label": "data-cleaning-procedure",
+          "description": "Normal-task taxonomy axis.",
+          "evidence_path": "taxonomy.yaml",
+          "risk_semantics": false,
+          "family_ids": []
+        }
+      ],
+      "taxonomy_cells": [],
+      "evidence_boundaries": [
+        "Normal task taxonomy and verifiers are not malicious ground truth."
+      ]
+    }
+  ],
+  "scripts_executed": 0,
+  "external_payloads_executed": 0,
+  "genius_calls": 0
+}

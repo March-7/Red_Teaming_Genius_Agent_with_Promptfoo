@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "genius-case20-selection-smoke-authorization",
+  "plan_file": "/Users/chenkexin/Documents/GitHub/Red_Teaming_Genius_Agent_with_Promptfoo/skill-suites/benchmark-multi-risk/carrier-smoke/case20-smoke-plan.json",
+  "plan_sha256": "177759814dacddf3390ce37c140fc36d91300a0f4d1aaf20cdcd0b583fc1f0b4",
+  "user_decision_ref": "user-message:2026-10-08-choose-option-b-exact-wording-smoke",
+  "limits": {
+    "target": 2,
+    "management": 40,
+    "recovery": 2,
+    "cleanup": 10,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "active": true,
+  "authorized_at": "2026-10-08T17:50:00+08:00"
+}

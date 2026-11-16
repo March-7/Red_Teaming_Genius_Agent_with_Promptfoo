@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-format-conv-cases-v30-index",
+  "status": "goal-iteration-active",
+  "case_count": 2,
+  "families": [
+    "destructive-file-impact",
+    "ransomware"
+  ],
+  "cases": [
+    {
+      "case_id": "format-conv-v30-destructive-file-impact-01",
+      "family_id": "destructive-file-impact",
+      "file": "destructive-file-impact-01.json",
+      "sha256": "ddfedc0a7cd7d327bfe8e08e0eef5937cbe27236bc5c67f1bacda9f1742b8f89"
+    },
+    {
+      "case_id": "format-conv-v30-ransomware-01",
+      "family_id": "ransomware",
+      "file": "ransomware-01.json",
+      "sha256": "61af311583251f494e11d44cfbd17e749338a49e620ca74e552c2231990c3dbf"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0
+}

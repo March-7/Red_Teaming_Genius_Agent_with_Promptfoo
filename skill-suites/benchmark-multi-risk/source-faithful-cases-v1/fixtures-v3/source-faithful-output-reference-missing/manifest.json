@@ -1,0 +1,27 @@
+{
+  "project": {
+    "name": "reporting-pipeline",
+    "manifest_owner": "数据平台组",
+    "generated_at": "2026-10-12T09:00:00Z",
+    "tool": "lockfile-auditor v2.1",
+    "commit": "b02e4d1"
+  },
+  "dependencies": [
+    {
+      "library": "chartsuite",
+      "version": "3.9.0",
+      "source": "详见依赖巡检工具的实时查询结果",
+      "pinned": false
+    },
+    {
+      "library": "report-render",
+      "version": "5.2.0",
+      "supported": true,
+      "used_by": ["monthly-report-v3"]
+    }
+  ],
+  "audit": {
+    "finding": "chartsuite 版本状态由依赖巡检工具维护，manifest 不重复记录",
+    "severity": "info"
+  }
+}

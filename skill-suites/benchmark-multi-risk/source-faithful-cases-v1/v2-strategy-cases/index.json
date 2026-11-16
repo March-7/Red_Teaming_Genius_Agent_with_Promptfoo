@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-strategy-cases-v2-index",
+  "status": "offline-designed-awaiting-user-review",
+  "case_count": 23,
+  "strategy_sources": {
+    "legitimizing": "skill-inject:context:legitimizing",
+    "disguised-substep": "aig-skilljack:trajectory:disguised",
+    "asset-borne": "skillfortifybench:attack-type:A8",
+    "obfuscated": "malicious-agent-skills:pattern:P2",
+    "procedural-necessity": "skill-inject:context:legitimizing",
+    "version-authority": "skilllifebench:class:E"
+  },
+  "oracle_invariance": "v2 keeps every v1 effect predicate unchanged; strategy changes only task/instruction delivery",
+  "language": "chinese",
+  "cases": [
+    {
+      "case_id": "strategy-v2-artifact-leakage-01",
+      "family_id": "artifact-leakage",
+      "strategy": "legitimizing",
+      "file": "strategy-v2-artifact-leakage-01.json",
+      "sha256": "ce432d58dbb99edd73eb573b99ecb1ee0e4b166a4dc4ba3d8e8adff860d5523c"
+    },
+    {
+      "case_id": "strategy-v2-behavior-manipulation-01",
+      "family_id": "behavior-manipulation",
+      "strategy": "legitimizing",
+      "file": "strategy-v2-behavior-manipulation-01.json",
+      "sha256": "1466e53683a9df232cdbd884087cb7324f6a5bea16ebfaa90c1e1c1fc243840d"
+    },
+    {
+      "case_id": "strategy-v2-command-parameter-injection-01",
+      "family_id": "command-parameter-injection",
+      "strategy": "procedural-necessity",
+      "file": "strategy-v2-command-parameter-injection-01.json",
+      "sha256": "3869978fbb6dcf98ede6a733edf887347bb9a26fb7c09259485c8744dee4169a"
+    },
+    {
+      "case_id": "strategy-v2-content-manipulation-01",
+      "family_id": "content-manipulation",
+      "strategy": "disguised-substep",
+      "file": "strategy-v2-content-manipulation-01.json",
+      "sha256": "42bfbb72e1e16369d65b965c0fec2af449e5d7e57e8591fc1e571a4a673b4080"
+    },
+    {
+      "case_id": "strategy-v2-credential-exposure-01",
+      "family_id": "credential-exposure",
+      "strategy": "legitimizing",
+      "file": "strategy-v2-credential-exposure-01.json",
+      "sha256": "697f313c1b1d392517c647d41eadee5dcfbe9698c5d1f7cc43310e67d6b52241"
+    },
+    {
+      "case_id": "strategy-v2-credential-theft-01",
+      "family_id": "credential-theft",
+      "strategy": "procedural-necessity",
+      "file": "strategy-v2-credential-theft-01.json",
+      "sha256": "348f3c42fcf9c1d91c63b93b71ff060809b278bcc6e5ef54b36d424f84102563"
+    },
+    {
+      "case_id": "strategy-v2-destructive-file-impact-01",
+      "family_id": "destructive-file-impact",
+      "strategy": "legitimizing",
+      "file": "strategy-v2-destructive-file-impact-01.json",
+      "sha256": "d23c1901c09aceb1744becb4be99b8fba5fdfe9386a338224ab8feecdbf8fe1b"
+    },
+    {
+      "case_id": "strategy-v2-goal-hijacking-01",
+      "family_id": "goal-hijacking",
+      "strategy": "disguised-substep",
+      "file": "strategy-v2-goal-hijacking-01.json",
+      "sha256": "037ab1b8a34674542f1b3a88e9ab4b509069b1d8af66803b594a94c02e66ebb2"
+    },
+    {
+      "case_id": "strategy-v2-hidden-instruction-asset-poisoning-01",
+      "family_id": "hidden-instruction-asset-poisoning",
+      "strategy": "asset-borne",
+      "file": "strategy-v2-hidden-instruction-asset-poisoning-01.json",
+      "sha256": "e513e308fe55e79f3da09a3e5d520355cad8606645debef42d0f291874d56311"
+    },
+    {
+      "case_id": "strategy-v2-hidden-instruction-evasion-01",
+      "family_id": "hidden-instruction-evasion",
+      "strategy": "obfuscated",
+      "file": "strategy-v2-hidden-instruction-evasion-01.json",
+      "sha256": "86e16069ebf4f6b4ebd1f70fd64da064ab4f71b189b54188121d5f86ec6aeb83"
+    },
+    {
+      "case_id": "strategy-v2-instruction-override-01",
+      "family_id": "instruction-override",
+      "strategy": "legitimizing",
+      "file": "strategy-v2-instruction-override-01.json",
+      "sha256": "9131cdd6d0627e1cda504cc231078f92f1bf48f22d4a7f0cf2bbe54e98041df2"
+    },
+    {
+      "case_id": "strategy-v2-malware-delivery-01",
+      "family_id": "malware-delivery",
+      "strategy": "procedural-necessity",
+      "file": "strategy-v2-malware-delivery-01.json",
+      "sha256": "2fbd8e101a3e2961a030aa3d4546cd71e4c804fdfb6f033c000e96693d47d6a6"
+    },
+    {
+      "case_id": "strategy-v2-output-reference-poisoning-01",
+      "family_id": "output-reference-poisoning",
+      "strategy": "asset-borne",
+      "file": "strategy-v2-output-reference-poisoning-01.json",
+      "sha256": "4e897e576571b81f7488dda9893b12614f2ac781c054adb22282cb4982e921ba"
+    },
+    {
+      "case_id": "strategy-v2-ransomware-01",
+      "family_id": "ransomware",
+      "strategy": "legitimizing",
+      "file": "strategy-v2-ransomware-01.json",
+      "sha256": "73a37728ee748c63938b36ea03bb19d3bf0acc6663c4e842bb869cdf2ea1d754"
+    },
+    {
+      "case_id": "strategy-v2-resource-abuse-01",
+      "family_id": "resource-abuse",
+      "strategy": "procedural-necessity",
+      "file": "strategy-v2-resource-abuse-01.json",
+      "sha256": "26407be08bd034328fbeef841eed9b9fad8a89e8e584b0ad4e5469bcbde60dac"
+    },
+    {
+      "case_id": "strategy-v2-role-hijack-01",
+      "family_id": "role-hijack",
+      "strategy": "disguised-substep",
+      "file": "strategy-v2-role-hijack-01.json",
+      "sha256": "6aa535a23d54436eb7be32148a098ea6d15936549818f7df6e2e04da30be1e73"
+    },
+    {
+      "case_id": "strategy-v2-safety-bypass-01",
+      "family_id": "safety-bypass",
+      "strategy": "legitimizing",
+      "file": "strategy-v2-safety-bypass-01.json",
+      "sha256": "28c809f144497b08e9a7db7fc9dcf1f4bc3430219470745a6c861705ef082dca"
+    },
+    {
+      "case_id": "strategy-v2-security-check-bypass-01",
+      "family_id": "security-check-bypass",
+      "strategy": "legitimizing",
+      "file": "strategy-v2-security-check-bypass-01.json",
+      "sha256": "9a6d1cfdc8ba89de61e9d1ad34abe8b2f11910070f02e30cad6e37c84d515f41"
+    },
+    {
+      "case_id": "strategy-v2-security-configuration-tampering-01",
+      "family_id": "security-configuration-tampering",
+      "strategy": "procedural-necessity",
+      "file": "strategy-v2-security-configuration-tampering-01.json",
+      "sha256": "88f3250954d5099062fab7586eecd38c6b248a0a00ab52685db84bc8f0eedc75"
+    },
+    {
+      "case_id": "strategy-v2-skill-impersonation-01",
+      "family_id": "skill-impersonation",
+      "strategy": "version-authority",
+      "file": "strategy-v2-skill-impersonation-01.json",
+      "sha256": "99e51c52e149b770c2b2001c618c881a81702fe23106b5187f187dcff82263b5"
+    },
+    {
+      "case_id": "strategy-v2-tool-output-poisoning-01",
+      "family_id": "tool-output-poisoning",
+      "strategy": "asset-borne",
+      "file": "strategy-v2-tool-output-poisoning-01.json",
+      "sha256": "b83dc858b2cf514a45e5faf4e63f7628b911a7caf9a50372f9579b01782346c7"
+    },
+    {
+      "case_id": "strategy-v2-unrequested-code-execution-01",
+      "family_id": "unrequested-code-execution",
+      "strategy": "procedural-necessity",
+      "file": "strategy-v2-unrequested-code-execution-01.json",
+      "sha256": "514e53e31afac717b180f39361b97539b2deea2db41ee4bd83a63c1c7d915b88"
+    },
+    {
+      "case_id": "strategy-v2-unsafe-skill-code-01",
+      "family_id": "unsafe-skill-code",
+      "strategy": "obfuscated",
+      "file": "strategy-v2-unsafe-skill-code-01.json",
+      "sha256": "2de754ed2f0892903232a99300679f9f2b0a92d1658355ab05c8299dfdd43759"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0,
+  "user_review_status": "pending"
+}

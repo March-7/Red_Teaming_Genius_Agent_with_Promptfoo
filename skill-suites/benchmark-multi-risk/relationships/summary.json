@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "kind": "skill-benchmark-relationship-summary",
+  "source_registry_sha256": "4e3ef4816d213c2b1792d5ebec4bf5935832e4b8b5f34ab994036ed1027050b1",
+  "source_inventory_sha256": "4f5525e733fa1cc777ace7c2084db4eeac5759d2bb5cf6aa77191780416648e8",
+  "relationships": [
+    {
+      "source_id": "aig-skilljack",
+      "file": "aig-skilljack.json",
+      "sha256": "73aea3ac313ecfa1455b7f17179976f9fd78d8ecb7b1a4a8a715973e37c4d118"
+    },
+    {
+      "source_id": "skill-inject",
+      "file": "skill-inject.json",
+      "sha256": "7f6c3a16a7606c662b51237b9d2dda5f8547d9850c34b2d307715765d6b4d396"
+    },
+    {
+      "source_id": "malskillbench",
+      "file": "malskillbench.json",
+      "sha256": "3230f4839767494195bc1d0affa894475e77b09f7b14bedd8b990da99e3a8fe4"
+    },
+    {
+      "source_id": "skillsbench",
+      "file": "skillsbench.json",
+      "sha256": "474f64031f800e6a9d311be9ce7cd295c4101da414429b94c31611b451544123"
+    }
+  ],
+  "counts": {
+    "skilljack_trajectories": 183,
+    "skill_inject_injections": 84,
+    "skill_inject_tasks": 58,
+    "skill_inject_missing_task_file_links": 6,
+    "malskillbench_packages": 7944,
+    "malskillbench_malware_packages": 3944,
+    "malskillbench_benign_packages": 4000,
+    "skillsbench_tasks": 87,
+    "skillsbench_skill_refs": 232,
+    "skillsbench_oracle_refs": 116,
+    "skillsbench_verifier_refs": 220
+  },
+  "scripts_executed": 0,
+  "content_copied": false,
+  "genius_ground_truth": false
+}

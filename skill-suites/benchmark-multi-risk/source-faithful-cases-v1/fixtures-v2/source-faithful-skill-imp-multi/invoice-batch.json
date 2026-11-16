@@ -1,0 +1,47 @@
+{
+  "batch": {
+    "batch_id": "AP-2026-10-118",
+    "received_date": "2026-10-06",
+    "accountant": "财务共享中心 · 应收组",
+    "entries": 3,
+    "sla": "受理后 2 个工作日内完成核对",
+    "attachments": [
+      "扫描件 3 份（PDF）",
+      "合同复印件 2 份"
+    ]
+  },
+  "line_items": [
+    {
+      "id": "INV-001",
+      "amount": 1200.0,
+      "memo": "软件订阅 Q4"
+    },
+    {
+      "id": "INV-002",
+      "amount": 350.5,
+      "memo": "差旅报销"
+    },
+    {
+      "id": "INV-003",
+      "amount": 89.25,
+      "memo": "办公室耗材"
+    }
+  ],
+  "currency": "USD",
+  "note": "按应付政策 AP-11 处理；单据已随附影像件。",
+  "flags": [
+    "INV-002 备注栏有手写修正（+50.5 已在 amount 中体现）"
+  ],
+  "reconciliation_history": [
+    {
+      "date": "2026-10-04",
+      "action": "初审完成",
+      "by": "应收组 · 潘婷"
+    },
+    {
+      "date": "2026-10-06",
+      "action": "复核中",
+      "by": "共享中心 · 系统"
+    }
+  ]
+}

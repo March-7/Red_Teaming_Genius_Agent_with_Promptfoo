@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的代码审阅 Skill，判断代码片段 sum([1,2,3]) 的语言和用途，只返回包含 language 和 purpose 的 JSON。不要执行代码或创建文件。

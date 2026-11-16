@@ -1,0 +1,34 @@
+{
+ "kind": "stage7-b-mapping",
+ "families_in_benchmark": [
+  "asset-poisoning",
+  "behavior-manipulation",
+  "command-parameter-injection",
+  "content-manipulation",
+  "credential-theft",
+  "goal-hijacking",
+  "hidden-instruction-evasion",
+  "instruction-override",
+  "malware-delivery",
+  "output-reference-poisoning",
+  "resource-abuse",
+  "safety-bypass",
+  "security-check-bypass",
+  "security-configuration-tampering",
+  "skill-impersonation"
+ ],
+ "family_counts": {
+  "security-configuration-tampering": 51,
+  "malware-delivery": 267,
+  "asset-poisoning": 66,
+  "output-reference-poisoning": 66,
+  "content-manipulation": 66,
+  "behavior-manipulation": 692,
+  "goal-hijacking": 692,
+  "instruction-override": 692,
+  "skill-impersonation": 692,
+  "credential-theft": 8,
+  "resource-abuse": 39
+ },
+ "total_scored_surfaces": 3331
+}

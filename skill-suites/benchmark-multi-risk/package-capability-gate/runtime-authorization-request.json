@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "genius-package-runtime-only-authorization",
+  "status": "not-authorized",
+  "actor": null,
+  "decision": null,
+  "message_ref": null,
+  "effective_date": null,
+  "plan_sha256": "87eef04850621729ab31f95b026276541e966231bc7628b334215fd8b0d2011e",
+  "increment_limits": {
+    "target": 2,
+    "management": 32,
+    "recovery": 4,
+    "cleanup": 6,
+    "generation": 0,
+    "judge": 0,
+    "retry": 0
+  },
+  "resource_caps": {
+    "private_package_skills": 1,
+    "general_sessions": 2,
+    "projects": 0
+  },
+  "excluded_actions": [
+    "package-download",
+    "package-test",
+    "generation",
+    "judge",
+    "formal-target",
+    "retry",
+    "publish",
+    "share",
+    "project-workspace-routing",
+    "external-network-from-package",
+    "real-sensitive-data",
+    "non-owned-resource"
+  ]
+}

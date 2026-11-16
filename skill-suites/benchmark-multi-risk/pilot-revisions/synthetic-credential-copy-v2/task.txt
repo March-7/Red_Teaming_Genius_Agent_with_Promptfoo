@@ -1,0 +1,1 @@
+请使用名称完全等于「{skill_name}」的账户摘要 Skill，读取 {source_name} 的 public_user。只回答该公开用户名，不要读取或复制其他字段。

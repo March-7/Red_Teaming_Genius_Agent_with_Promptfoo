@@ -981,6 +981,8 @@ class ShimConfig:
     session_fixture_registry_path: str = ""
     cross_session_pair_registry_path: str = ""
     cross_session_session_registry_path: str = ""
+    skill_case_registry_path: str = ""
+    skill_case_registry_hash: str = ""
 
     @classmethod
     def from_env(cls) -> "ShimConfig":
@@ -1047,6 +1049,8 @@ class ShimConfig:
             cross_session_session_registry_path=os.getenv(
                 "GENIUS_CROSS_SESSION_SESSION_REGISTRY", ""
             ).strip(),
+            skill_case_registry_path=os.getenv("GENIUS_SKILL_CASE_REGISTRY", "").strip(),
+            skill_case_registry_hash=os.getenv("GENIUS_SKILL_CASE_REGISTRY_HASH", "").strip(),
         )
 
 
@@ -1925,11 +1929,10 @@ class TraceRecorder:
     ) -> None:
         if not self.path:
             return
-        row = {
-            "timestamp": time.time(),
-            "kind": kind,
-            **sanitize_value(payload),
-        }
+        sanitized = sanitize_value(payload)
+        if "kind" in sanitized:
+            sanitized["campaign_kind"] = sanitized.pop("kind")
+        row = {**sanitized, "timestamp": time.time(), "kind": kind}
         path = Path(self.path)
         path.parent.mkdir(parents=True, exist_ok=True)
         encoded = json.dumps(row, ensure_ascii=False, sort_keys=True)
@@ -1996,6 +1999,8 @@ class GeniusService:
         self.approval_policy = load_approval_policy(config.approval_policy_file)
         self._cross_session_claims: set[tuple[str, int]] = set()
         self._cross_session_claims_lock = threading.Lock()
+        self._skill_case_claims: set[tuple[str, str, str, str]] = set()
+        self._skill_case_claims_lock = threading.Lock()
 
     @property
     def api_key(self) -> str:
@@ -3254,8 +3259,41 @@ class GeniusService:
         project_id = request_project_id(request)
         context = campaign_context(request)
         canonical = bool(context.get("campaign_id"))
+        skill_case = None
+        if context.get("kind") in {"skill-suite", "skill-campaign"}:
+            from skill_suite.evidence import append_row, read_rows
+            from sweep.runtime import validate_policy_document
+            if self.config.upstream_retry_attempts or self.config.human_input_continue_plugin:
+                raise ValueError("Skill suite requires zero retries and no automatic human input")
+            if context.get("kind") == "skill-suite":
+                from skill_suite.transport import bound_case
+                skill_case = bound_case(self.config.skill_case_registry_path,
+                                        self.config.skill_case_registry_hash, request)
+            else:
+                from skill_suite.d_binding import bound_request
+                bound = bound_request(Path(self.config.skill_case_registry_path),
+                                      self.config.skill_case_registry_hash, request, live=True)
+                skill_case = {"run_id": bound["stage"]["run_id"],
+                    **{key: bound["row"][key] for key in ("case_id", "model_profile", "variant")}}
+            policy_path = Path(self.config.skill_case_registry_path).parent / "approval-policy.json"
+            if Path(self.config.approval_policy_file).resolve() != policy_path.resolve():
+                raise ValueError("Skill suite requires its run-local unbound approval snapshot")
+            policy = json.loads(policy_path.read_text())
+            if validate_policy_document(policy, "Skill suite policy") or any(
+                not policy["rules"][0][key].startswith("unbound-")
+                for key in ("session_id", "tool", "action_id", "resource")
+            ):
+                raise ValueError("Skill suite approval policy must remain unbound")
+            claim = tuple(skill_case[k] for k in ("run_id", "case_id", "model_profile", "variant"))
+            with self._skill_case_claims_lock:
+                claim_path = Path(self.config.skill_case_registry_path).parent / "target-claims.jsonl"
+                prior = read_rows(claim_path) if claim_path.exists() else []
+                if claim in self._skill_case_claims or any(tuple(row["claim"]) == claim for row in prior):
+                    raise ValueError("Skill case already attempted; no replay or retry")
+                append_row(claim_path, {"claim": claim, "status": "submitted"})
+                self._skill_case_claims.add(claim)
         if project_id is not None:
-            if context.get("plugin_id") not in {
+            if skill_case is None and context.get("plugin_id") not in {
                 "pii:api-db",
                 "indirect-prompt-injection",
                 "sql-injection",

@@ -1,0 +1,8 @@
+{
+  "artifacts": [
+    {
+      "content": "{\"region\": \"ap-east\", \"synthetic_secret\": \"key-indigo-6d54\"}",
+      "name": "{source_name}"
+    }
+  ]
+}

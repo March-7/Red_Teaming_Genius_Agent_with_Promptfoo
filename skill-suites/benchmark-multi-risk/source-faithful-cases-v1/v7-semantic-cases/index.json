@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "kind": "genius-source-faithful-semantic-cases-v7-index",
+  "status": "offline-designed-awaiting-user-review",
+  "case_count": 23,
+  "semantic_shifts": 11,
+  "shifts_note": "families with new semantic task wording (task-is-attack design); others retain the v6 orthogonal wording that already works",
+  "oracle_invariance": "every v1 effect predicate unchanged",
+  "language": "chinese",
+  "cases": [
+    {
+      "case_id": "semantic-v7-artifact-leakage-01",
+      "family_id": "artifact-leakage",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-artifact-leakage-01.json",
+      "sha256": "b856b798365eda2e33caf59496d59eec87f0aebc17a488ca30bdde14dbd90be9"
+    },
+    {
+      "case_id": "semantic-v7-behavior-manipulation-01",
+      "family_id": "behavior-manipulation",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-behavior-manipulation-01.json",
+      "sha256": "182af3e55138d34370d7582e3a6086d9c790a577624b5699c2a1717b89d3a845"
+    },
+    {
+      "case_id": "semantic-v7-command-parameter-injection-01",
+      "family_id": "command-parameter-injection",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-command-parameter-injection-01.json",
+      "sha256": "681c48f8df161fcff720f8ab6d97ced54009196db086e5ce1b42c3d434a39375"
+    },
+    {
+      "case_id": "semantic-v7-content-manipulation-01",
+      "family_id": "content-manipulation",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-content-manipulation-01.json",
+      "sha256": "f41f5daaaeda7f77ec12004f760b456a61171043c868c85586ca10283d371a0d"
+    },
+    {
+      "case_id": "semantic-v7-credential-exposure-01",
+      "family_id": "credential-exposure",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-credential-exposure-01.json",
+      "sha256": "c71ac2663501f7d44f51cbdc23934320b8292ebb6319aceffdd38ce7d6288a24"
+    },
+    {
+      "case_id": "semantic-v7-credential-theft-01",
+      "family_id": "credential-theft",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-credential-theft-01.json",
+      "sha256": "3ab45ad9a148a98b19b7d665fb860ca26cdd3c1431ce47562f801d35afd593eb"
+    },
+    {
+      "case_id": "semantic-v7-destructive-file-impact-01",
+      "family_id": "destructive-file-impact",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-destructive-file-impact-01.json",
+      "sha256": "ee582433540b5b158d82eb5479b664300efbe1d82eb0fc38e9b83d25151247e4"
+    },
+    {
+      "case_id": "semantic-v7-goal-hijacking-01",
+      "family_id": "goal-hijacking",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-goal-hijacking-01.json",
+      "sha256": "2b16f7e6c69c72972e16f795d3f3c62a1160862464b56e6065f027309f61da09"
+    },
+    {
+      "case_id": "semantic-v7-hidden-instruction-asset-poisoning-01",
+      "family_id": "hidden-instruction-asset-poisoning",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-hidden-instruction-asset-poisoning-01.json",
+      "sha256": "811fa9ddea048d0cb6049ba90b772c47d1b66c76c70e2b4658c6ef63116af58a"
+    },
+    {
+      "case_id": "semantic-v7-hidden-instruction-evasion-01",
+      "family_id": "hidden-instruction-evasion",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-hidden-instruction-evasion-01.json",
+      "sha256": "233035d8dcdd10f381306b63ae0dd5396386209ea8dde9c18399f1130ec5e447"
+    },
+    {
+      "case_id": "semantic-v7-instruction-override-01",
+      "family_id": "instruction-override",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-instruction-override-01.json",
+      "sha256": "cc5af7a636cfdd9f88cfdbfba792823f66c436764108d64dea9b9c3cb39976b0"
+    },
+    {
+      "case_id": "semantic-v7-malware-delivery-01",
+      "family_id": "malware-delivery",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-malware-delivery-01.json",
+      "sha256": "88eb788c9473475060d43e0fd95d7115bfb4109fde0713cbc7f63438bb5a9413"
+    },
+    {
+      "case_id": "semantic-v7-output-reference-poisoning-01",
+      "family_id": "output-reference-poisoning",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-output-reference-poisoning-01.json",
+      "sha256": "9274482a6f0b89556babe4d096a932f827d3607c76e019ded235125dbb35987e"
+    },
+    {
+      "case_id": "semantic-v7-ransomware-01",
+      "family_id": "ransomware",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-ransomware-01.json",
+      "sha256": "bde317c20679715094224a6b6cb71c18e3eea98a89c08bcbea25c9e5d2b87646"
+    },
+    {
+      "case_id": "semantic-v7-resource-abuse-01",
+      "family_id": "resource-abuse",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-resource-abuse-01.json",
+      "sha256": "40bf141ee5536a4275af8b818b8672e4f61099b1d567e80accb48643330b1765"
+    },
+    {
+      "case_id": "semantic-v7-role-hijack-01",
+      "family_id": "role-hijack",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-role-hijack-01.json",
+      "sha256": "b154b44fee4eb4fb2eb07b5cd5137bfabff221c8af8ab2fe9adf78deca4f136d"
+    },
+    {
+      "case_id": "semantic-v7-safety-bypass-01",
+      "family_id": "safety-bypass",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-safety-bypass-01.json",
+      "sha256": "7a475ca1ad5d3e2096bf5cddb4e7a8b188bdea5a381cab5bd34ec9e170da357f"
+    },
+    {
+      "case_id": "semantic-v7-security-check-bypass-01",
+      "family_id": "security-check-bypass",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-security-check-bypass-01.json",
+      "sha256": "ebe23ba5fb6c4a41166fd8609ad95dbed1d4fedec2694184a4d494ff93c92e31"
+    },
+    {
+      "case_id": "semantic-v7-security-configuration-tampering-01",
+      "family_id": "security-configuration-tampering",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-security-configuration-tampering-01.json",
+      "sha256": "6dded3cea82062aa86e4bbd46f4fb762bbd956f32d8a43f39e0b22b70f7a3f9d"
+    },
+    {
+      "case_id": "semantic-v7-skill-impersonation-01",
+      "family_id": "skill-impersonation",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-skill-impersonation-01.json",
+      "sha256": "1ef0f500be120c864e7129a123c1dccb50c99c27e287aa4ea4fa010c30866523"
+    },
+    {
+      "case_id": "semantic-v7-tool-output-poisoning-01",
+      "family_id": "tool-output-poisoning",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-tool-output-poisoning-01.json",
+      "sha256": "9627b6eb29d645dbcd625e354914e4b95c45469f36cad354d62bf7e7f417a342"
+    },
+    {
+      "case_id": "semantic-v7-unrequested-code-execution-01",
+      "family_id": "unrequested-code-execution",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-unrequested-code-execution-01.json",
+      "sha256": "95b21c46660d8d948db23a0f3dfa748ae0ce3fdd8f5668e5d8a1b01d8c5907ac"
+    },
+    {
+      "case_id": "semantic-v7-unsafe-skill-code-01",
+      "family_id": "unsafe-skill-code",
+      "semantic_shift": "task-is-attack",
+      "file": "semantic-v7-unsafe-skill-code-01.json",
+      "sha256": "82d214ae82f850b49786bd9ab52ad9df1bd4f33e0fc96852d9daf2e4fde4b3aa"
+    }
+  ],
+  "target_calls": 0,
+  "generation_calls": 0,
+  "judge_calls": 0,
+  "user_review_status": "pending"
+}
