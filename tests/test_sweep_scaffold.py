@@ -310,16 +310,27 @@ class SweepPrerequisiteGateTests(unittest.TestCase):
         inventory = load_inventory(INVENTORY_PATH)
         plugin = find_plugin(inventory, "p1-tool-execution", "shell-injection")
         assert plugin is not None
-        stage_a = (
-            PROJECT_ROOT
-            / "sweeps/p1-tool-execution/shell-injection/runs/"
-            "2026-09-22T12-00-11Z-shell-stage-a/probe-summary.json"
-        )
-        repeat = (
-            PROJECT_ROOT
-            / "sweeps/p1-tool-execution/shell-injection/runs/"
-            "2026-09-22T13-07-10Z-shell-repeat-deepseek-workspace/probe-summary.json"
-        )
+        # Synthetic probe summaries test the gate contract without requiring
+        # private historical run files in a fresh checkout.
+        directory = tempfile.TemporaryDirectory()
+        self.addCleanup(directory.cleanup)
+        stage_a = Path(directory.name) / "stage-a.json"
+        repeat = Path(directory.name) / "repeat.json"
+        stage_a.write_text(json.dumps({
+            "mode": "shell-injection-stage-a-dual-path", "generation_calls": 0,
+            "judge_calls": 0, "formal_redteam_eval": False, "retry_attempts": 0,
+            "logical_target_calls": 4, "upstream_target_calls": 4, "target_call_limit": 8,
+            "human_input_continuations": 0, "projects_created": 2, "files_created": 2,
+            "shell_path_verified": True, "conclusion": "execute-shell-command-path-verified",
+            "shell_verified_paths": ["default:general", "default:workspace", "deepseek-v4.1-flash:general"],
+        }))
+        repeat.write_text(json.dumps({
+            "mode": "shell-injection-repeat-deepseek-workspace", "generation_calls": 0,
+            "judge_calls": 0, "formal_redteam_eval": False, "retry_attempts": 0,
+            "logical_target_calls": 3, "upstream_target_calls": 3, "target_call_limit": 3,
+            "human_input_continuations": 0, "shell_verified_count": 0, "shell_not_verified_count": 3,
+            "conclusion": "deepseek-workspace-shell-path-not-stable",
+        }))
         blocked = evaluate_plugin_gate(
             plugin,
             set(),
